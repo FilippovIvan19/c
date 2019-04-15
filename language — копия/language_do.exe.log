@@ -1,0 +1,2952 @@
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: C:\Users\иван\Google Диск\C\language\language_do.exe,
+
+ВНЕЗАПНО: Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x747B24A9 в функции $I10_OUTPUT(). Попытка записать данные по адресу NULL. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+#1: TXLib [Ver: 00173a, Rev: 105, Date: 2018-06-12 00:00:00 +0300], Instance: 0x00505600 (32-bit), Flags: Cmdre0, Thread: 0x3014 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x747B24A9 in C:\WINDOWS\System32\msvcrt.dll: $I10_OUTPUT()
+# 1 0x7479F950 in C:\WINDOWS\System32\msvcrt.dll: ungetwc()
+# 2 0x74794C57 in C:\WINDOWS\System32\msvcrt.dll: scanf()
+# 3 0x74794BF8 in C:\WINDOWS\System32\msvcrt.dll: scanf()
+
+# 4 0x0042ADF8 in C:\Users\иван\Google Диск\C\language\language_do.exe: do_oper_node() at C:/Users/иван/Google Диск/C/language/language_do.cpp (167):
+
+    165:         case OPER_IN:
+    166:             adress = take_adress(node, name_table);
+=>  167:             scanf("%lf", memory[BP - adress]);
+    168:             break;
+    169: 
+
+# 5 0x0042AD19 in C:\Users\иван\Google Диск\C\language\language_do.exe: do_oper_node() at C:/Users/иван/Google Диск/C/language/language_do.cpp (146):
+
+    144:     if (node->type == OPERATOR)
+    145:     {
+=>  146:         do_oper_node(big_root, node->left,  name_table);
+    147:         do_oper_node(big_root, node->right, name_table);
+    148:         return 0;
+
+# 6 0x0042AD35 in C:\Users\иван\Google Диск\C\language\language_do.exe: do_oper_node() at C:/Users/иван/Google Диск/C/language/language_do.cpp (147):
+
+    145:     {
+    146:         do_oper_node(big_root, node->left,  name_table);
+=>  147:         do_oper_node(big_root, node->right, name_table);
+    148:         return 0;
+    149:     }
+
+# 7 0x0042AFFB in C:\Users\иван\Google Диск\C\language\language_do.exe: do_func() at C:/Users/иван/Google Диск/C/language/language_do.cpp (222):
+
+    220: 
+    221: 
+=>  222:     do_oper_node(big_root, node->right, name_table);
+    223: 
+    224: 
+
+# 8 0x0042B227 in C:\Users\иван\Google Диск\C\language\language_do.exe: main() at C:/Users/иван/Google Диск/C/language/language_do.cpp (269):
+
+    267: 
+    268:     //do_oper_node(big_root, big_root[0]->right, char** name_table)
+=>  269:     do_func(big_root, big_root[0], nullptr);
+    270: 
+    271: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 105, Date: 2018-06-12 00:00:00 +0300]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\ФАЙЛЫ\загрузки\TX\TXLib.h
+Compiled:	Dec 10 2018 20:25:43, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Dec 10 2018 20:25:50
+
+Run file:	C:\Users\иван\Google Диск\C\language\language_do.exe
+Directory:	C:\Users\иван\Google Диск\C\language
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\иван\Google Диск\C\language\language_do.exe,
+
+ВНЕЗАПНО: signal (11, 0x00): SIGSEGV: Доступ по неверному указателю. Ставьте ассерты! 
+
+Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x747B24A9 в функции $I10_OUTPUT(). Попытка записать данные по адресу NULL. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#2: TXLib [Ver: 00173a, Rev: 105, Date: 2018-06-12 00:00:00 +0300], Instance: 0x00505600 (32-bit), Flags: Cmdre0, Thread: 0x3014 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x747B24A9 in C:\WINDOWS\System32\msvcrt.dll: $I10_OUTPUT()
+# 1 0x7479F950 in C:\WINDOWS\System32\msvcrt.dll: ungetwc()
+# 2 0x74794C57 in C:\WINDOWS\System32\msvcrt.dll: scanf()
+# 3 0x74794BF8 in C:\WINDOWS\System32\msvcrt.dll: scanf()
+
+# 4 0x0042ADF8 in C:\Users\иван\Google Диск\C\language\language_do.exe: do_oper_node() at C:/Users/иван/Google Диск/C/language/language_do.cpp (167):
+
+    165:         case OPER_IN:
+    166:             adress = take_adress(node, name_table);
+=>  167:             scanf("%lf", memory[BP - adress]);
+    168:             break;
+    169: 
+
+# 5 0x0042AD19 in C:\Users\иван\Google Диск\C\language\language_do.exe: do_oper_node() at C:/Users/иван/Google Диск/C/language/language_do.cpp (146):
+
+    144:     if (node->type == OPERATOR)
+    145:     {
+=>  146:         do_oper_node(big_root, node->left,  name_table);
+    147:         do_oper_node(big_root, node->right, name_table);
+    148:         return 0;
+
+# 6 0x0042AD35 in C:\Users\иван\Google Диск\C\language\language_do.exe: do_oper_node() at C:/Users/иван/Google Диск/C/language/language_do.cpp (147):
+
+    145:     {
+    146:         do_oper_node(big_root, node->left,  name_table);
+=>  147:         do_oper_node(big_root, node->right, name_table);
+    148:         return 0;
+    149:     }
+
+# 7 0x0042AFFB in C:\Users\иван\Google Диск\C\language\language_do.exe: do_func() at C:/Users/иван/Google Диск/C/language/language_do.cpp (222):
+
+    220: 
+    221: 
+=>  222:     do_oper_node(big_root, node->right, name_table);
+    223: 
+    224: 
+
+# 8 0x0042B227 in C:\Users\иван\Google Диск\C\language\language_do.exe: main() at C:/Users/иван/Google Диск/C/language/language_do.cpp (269):
+
+    267: 
+    268:     //do_oper_node(big_root, big_root[0]->right, char** name_table)
+=>  269:     do_func(big_root, big_root[0], nullptr);
+    270: 
+    271: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 105, Date: 2018-06-12 00:00:00 +0300]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\ФАЙЛЫ\загрузки\TX\TXLib.h
+Compiled:	Dec 10 2018 20:25:43, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Dec 10 2018 20:25:50
+
+Run file:	C:\Users\иван\Google Диск\C\language\language_do.exe
+Directory:	C:\Users\иван\Google Диск\C\language
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: C:\Users\иван\Google Диск\C\language\language_do.exe,
+
+ВНЕЗАПНО: Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x747A9350 в функции strcmp(). Попытка прочесть данные по адресу NULL. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+#1: TXLib [Ver: 00173a, Rev: 105, Date: 2018-06-12 00:00:00 +0300], Instance: 0x00505600 (32-bit), Flags: Cmdre0, Thread: 0x330C (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x747A9350 in C:\WINDOWS\System32\msvcrt.dll: strcmp()
+
+# 1 0x0042AD72 in C:\Users\иван\Google Диск\C\language\language_do.exe: do_oper_node() at C:/Users/иван/Google Диск/C/language/language_do.cpp (156):
+
+    154:     {
+    155:         case OPER_VALUE_create:
+=>  156:             adress = take_adress(node, name_table);
+    157:             memory[BP - adress] = 0;
+    158:             break;
+
+# 2 0x0042AD19 in C:\Users\иван\Google Диск\C\language\language_do.exe: do_oper_node() at C:/Users/иван/Google Диск/C/language/language_do.cpp (146):
+
+    144:     if (node->type == OPERATOR)
+    145:     {
+=>  146:         do_oper_node(big_root, node->left,  name_table);
+    147:         do_oper_node(big_root, node->right, name_table);
+    148:         return 0;
+
+# 3 0x0042AD35 in C:\Users\иван\Google Диск\C\language\language_do.exe: do_oper_node() at C:/Users/иван/Google Диск/C/language/language_do.cpp (147):
+
+    145:     {
+    146:         do_oper_node(big_root, node->left,  name_table);
+=>  147:         do_oper_node(big_root, node->right, name_table);
+    148:         return 0;
+    149:     }
+
+# 4 0x0042AD35 in C:\Users\иван\Google Диск\C\language\language_do.exe: do_oper_node() at C:/Users/иван/Google Диск/C/language/language_do.cpp (147):
+
+    145:     {
+    146:         do_oper_node(big_root, node->left,  name_table);
+=>  147:         do_oper_node(big_root, node->right, name_table);
+    148:         return 0;
+    149:     }
+
+# 5 0x0042AD35 in C:\Users\иван\Google Диск\C\language\language_do.exe: do_oper_node() at C:/Users/иван/Google Диск/C/language/language_do.cpp (147):
+
+    145:     {
+    146:         do_oper_node(big_root, node->left,  name_table);
+=>  147:         do_oper_node(big_root, node->right, name_table);
+    148:         return 0;
+    149:     }
+
+# 6 0x0042AD35 in C:\Users\иван\Google Диск\C\language\language_do.exe: do_oper_node() at C:/Users/иван/Google Диск/C/language/language_do.cpp (147):
+
+    145:     {
+    146:         do_oper_node(big_root, node->left,  name_table);
+=>  147:         do_oper_node(big_root, node->right, name_table);
+    148:         return 0;
+    149:     }
+
+# 7 0x0042AFFC in C:\Users\иван\Google Диск\C\language\language_do.exe: do_func() at C:/Users/иван/Google Диск/C/language/language_do.cpp (222):
+
+    220: 
+    221: 
+=>  222:     do_oper_node(big_root, node->right, name_table);
+    223: 
+    224: 
+
+# 8 0x0042B228 in C:\Users\иван\Google Диск\C\language\language_do.exe: main() at C:/Users/иван/Google Диск/C/language/language_do.cpp (269):
+
+    267: 
+    268:     //do_oper_node(big_root, big_root[0]->right, char** name_table)
+=>  269:     do_func(big_root, big_root[0], nullptr);
+    270: 
+    271: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 105, Date: 2018-06-12 00:00:00 +0300]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\ФАЙЛЫ\загрузки\TX\TXLib.h
+Compiled:	Dec 10 2018 20:26:38, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Dec 10 2018 20:26:45
+
+Run file:	C:\Users\иван\Google Диск\C\language\language_do.exe
+Directory:	C:\Users\иван\Google Диск\C\language
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\иван\Google Диск\C\language\language_do.exe,
+
+ВНЕЗАПНО: signal (11, 0x00): SIGSEGV: Доступ по неверному указателю. Ставьте ассерты! 
+
+Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x747A9350 в функции strcmp(). Попытка прочесть данные по адресу NULL. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#2: TXLib [Ver: 00173a, Rev: 105, Date: 2018-06-12 00:00:00 +0300], Instance: 0x00505600 (32-bit), Flags: Cmdre0, Thread: 0x330C (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x747A9350 in C:\WINDOWS\System32\msvcrt.dll: strcmp()
+
+# 1 0x0042AD72 in C:\Users\иван\Google Диск\C\language\language_do.exe: do_oper_node() at C:/Users/иван/Google Диск/C/language/language_do.cpp (156):
+
+    154:     {
+    155:         case OPER_VALUE_create:
+=>  156:             adress = take_adress(node, name_table);
+    157:             memory[BP - adress] = 0;
+    158:             break;
+
+# 2 0x0042AD19 in C:\Users\иван\Google Диск\C\language\language_do.exe: do_oper_node() at C:/Users/иван/Google Диск/C/language/language_do.cpp (146):
+
+    144:     if (node->type == OPERATOR)
+    145:     {
+=>  146:         do_oper_node(big_root, node->left,  name_table);
+    147:         do_oper_node(big_root, node->right, name_table);
+    148:         return 0;
+
+# 3 0x0042AD35 in C:\Users\иван\Google Диск\C\language\language_do.exe: do_oper_node() at C:/Users/иван/Google Диск/C/language/language_do.cpp (147):
+
+    145:     {
+    146:         do_oper_node(big_root, node->left,  name_table);
+=>  147:         do_oper_node(big_root, node->right, name_table);
+    148:         return 0;
+    149:     }
+
+# 4 0x0042AD35 in C:\Users\иван\Google Диск\C\language\language_do.exe: do_oper_node() at C:/Users/иван/Google Диск/C/language/language_do.cpp (147):
+
+    145:     {
+    146:         do_oper_node(big_root, node->left,  name_table);
+=>  147:         do_oper_node(big_root, node->right, name_table);
+    148:         return 0;
+    149:     }
+
+# 5 0x0042AD35 in C:\Users\иван\Google Диск\C\language\language_do.exe: do_oper_node() at C:/Users/иван/Google Диск/C/language/language_do.cpp (147):
+
+    145:     {
+    146:         do_oper_node(big_root, node->left,  name_table);
+=>  147:         do_oper_node(big_root, node->right, name_table);
+    148:         return 0;
+    149:     }
+
+# 6 0x0042AD35 in C:\Users\иван\Google Диск\C\language\language_do.exe: do_oper_node() at C:/Users/иван/Google Диск/C/language/language_do.cpp (147):
+
+    145:     {
+    146:         do_oper_node(big_root, node->left,  name_table);
+=>  147:         do_oper_node(big_root, node->right, name_table);
+    148:         return 0;
+    149:     }
+
+# 7 0x0042AFFC in C:\Users\иван\Google Диск\C\language\language_do.exe: do_func() at C:/Users/иван/Google Диск/C/language/language_do.cpp (222):
+
+    220: 
+    221: 
+=>  222:     do_oper_node(big_root, node->right, name_table);
+    223: 
+    224: 
+
+# 8 0x0042B228 in C:\Users\иван\Google Диск\C\language\language_do.exe: main() at C:/Users/иван/Google Диск/C/language/language_do.cpp (269):
+
+    267: 
+    268:     //do_oper_node(big_root, big_root[0]->right, char** name_table)
+=>  269:     do_func(big_root, big_root[0], nullptr);
+    270: 
+    271: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 105, Date: 2018-06-12 00:00:00 +0300]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\ФАЙЛЫ\загрузки\TX\TXLib.h
+Compiled:	Dec 10 2018 20:26:38, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Dec 10 2018 20:26:46
+
+Run file:	C:\Users\иван\Google Диск\C\language\language_do.exe
+Directory:	C:\Users\иван\Google Диск\C\language
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: C:\Users\иван\Google Диск\C\language\language_do.exe,
+
+ВНЕЗАПНО: Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x747A9350 в функции strcmp(). Попытка прочесть данные по адресу NULL. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+#1: TXLib [Ver: 00173a, Rev: 105, Date: 2018-06-12 00:00:00 +0300], Instance: 0x00505600 (32-bit), Flags: Cmdre0, Thread: 0x2B60 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x747A9350 in C:\WINDOWS\System32\msvcrt.dll: strcmp()
+
+# 1 0x0042AD72 in C:\Users\иван\Google Диск\C\language\language_do.exe: do_oper_node() at C:/Users/иван/Google Диск/C/language/language_do.cpp (156):
+
+    154:     {
+    155:         case OPER_VALUE_create:
+=>  156:             adress = take_adress(node, name_table);
+    157:             memory[BP - adress] = 0;
+    158:             break;
+
+# 2 0x0042AD19 in C:\Users\иван\Google Диск\C\language\language_do.exe: do_oper_node() at C:/Users/иван/Google Диск/C/language/language_do.cpp (146):
+
+    144:     if (node->type == OPERATOR)
+    145:     {
+=>  146:         do_oper_node(big_root, node->left,  name_table);
+    147:         do_oper_node(big_root, node->right, name_table);
+    148:         return 0;
+
+# 3 0x0042AD35 in C:\Users\иван\Google Диск\C\language\language_do.exe: do_oper_node() at C:/Users/иван/Google Диск/C/language/language_do.cpp (147):
+
+    145:     {
+    146:         do_oper_node(big_root, node->left,  name_table);
+=>  147:         do_oper_node(big_root, node->right, name_table);
+    148:         return 0;
+    149:     }
+
+# 4 0x0042AD35 in C:\Users\иван\Google Диск\C\language\language_do.exe: do_oper_node() at C:/Users/иван/Google Диск/C/language/language_do.cpp (147):
+
+    145:     {
+    146:         do_oper_node(big_root, node->left,  name_table);
+=>  147:         do_oper_node(big_root, node->right, name_table);
+    148:         return 0;
+    149:     }
+
+# 5 0x0042AD35 in C:\Users\иван\Google Диск\C\language\language_do.exe: do_oper_node() at C:/Users/иван/Google Диск/C/language/language_do.cpp (147):
+
+    145:     {
+    146:         do_oper_node(big_root, node->left,  name_table);
+=>  147:         do_oper_node(big_root, node->right, name_table);
+    148:         return 0;
+    149:     }
+
+# 6 0x0042AD35 in C:\Users\иван\Google Диск\C\language\language_do.exe: do_oper_node() at C:/Users/иван/Google Диск/C/language/language_do.cpp (147):
+
+    145:     {
+    146:         do_oper_node(big_root, node->left,  name_table);
+=>  147:         do_oper_node(big_root, node->right, name_table);
+    148:         return 0;
+    149:     }
+
+# 7 0x0042B002 in C:\Users\иван\Google Диск\C\language\language_do.exe: do_func() at C:/Users/иван/Google Диск/C/language/language_do.cpp (227):
+
+    225: 
+    226: 
+=>  227:     do_oper_node(big_root, node->right, name_table);
+    228: 
+    229: 
+
+# 8 0x0042B22E in C:\Users\иван\Google Диск\C\language\language_do.exe: main() at C:/Users/иван/Google Диск/C/language/language_do.cpp (274):
+
+    272: 
+    273:     //do_oper_node(big_root, big_root[0]->right, char** name_table)
+=>  274:     do_func(big_root, big_root[0], nullptr);
+    275: 
+    276: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 105, Date: 2018-06-12 00:00:00 +0300]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\ФАЙЛЫ\загрузки\TX\TXLib.h
+Compiled:	Dec 10 2018 20:39:07, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Dec 10 2018 20:39:14
+
+Run file:	C:\Users\иван\Google Диск\C\language\language_do.exe
+Directory:	C:\Users\иван\Google Диск\C\language
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\иван\Google Диск\C\language\language_do.exe,
+
+ВНЕЗАПНО: signal (11, 0x00): SIGSEGV: Доступ по неверному указателю. Ставьте ассерты! 
+
+Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x747A9350 в функции strcmp(). Попытка прочесть данные по адресу NULL. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#2: TXLib [Ver: 00173a, Rev: 105, Date: 2018-06-12 00:00:00 +0300], Instance: 0x00505600 (32-bit), Flags: Cmdre0, Thread: 0x2B60 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x747A9350 in C:\WINDOWS\System32\msvcrt.dll: strcmp()
+
+# 1 0x0042AD72 in C:\Users\иван\Google Диск\C\language\language_do.exe: do_oper_node() at C:/Users/иван/Google Диск/C/language/language_do.cpp (156):
+
+    154:     {
+    155:         case OPER_VALUE_create:
+=>  156:             adress = take_adress(node, name_table);
+    157:             memory[BP - adress] = 0;
+    158:             break;
+
+# 2 0x0042AD19 in C:\Users\иван\Google Диск\C\language\language_do.exe: do_oper_node() at C:/Users/иван/Google Диск/C/language/language_do.cpp (146):
+
+    144:     if (node->type == OPERATOR)
+    145:     {
+=>  146:         do_oper_node(big_root, node->left,  name_table);
+    147:         do_oper_node(big_root, node->right, name_table);
+    148:         return 0;
+
+# 3 0x0042AD35 in C:\Users\иван\Google Диск\C\language\language_do.exe: do_oper_node() at C:/Users/иван/Google Диск/C/language/language_do.cpp (147):
+
+    145:     {
+    146:         do_oper_node(big_root, node->left,  name_table);
+=>  147:         do_oper_node(big_root, node->right, name_table);
+    148:         return 0;
+    149:     }
+
+# 4 0x0042AD35 in C:\Users\иван\Google Диск\C\language\language_do.exe: do_oper_node() at C:/Users/иван/Google Диск/C/language/language_do.cpp (147):
+
+    145:     {
+    146:         do_oper_node(big_root, node->left,  name_table);
+=>  147:         do_oper_node(big_root, node->right, name_table);
+    148:         return 0;
+    149:     }
+
+# 5 0x0042AD35 in C:\Users\иван\Google Диск\C\language\language_do.exe: do_oper_node() at C:/Users/иван/Google Диск/C/language/language_do.cpp (147):
+
+    145:     {
+    146:         do_oper_node(big_root, node->left,  name_table);
+=>  147:         do_oper_node(big_root, node->right, name_table);
+    148:         return 0;
+    149:     }
+
+# 6 0x0042AD35 in C:\Users\иван\Google Диск\C\language\language_do.exe: do_oper_node() at C:/Users/иван/Google Диск/C/language/language_do.cpp (147):
+
+    145:     {
+    146:         do_oper_node(big_root, node->left,  name_table);
+=>  147:         do_oper_node(big_root, node->right, name_table);
+    148:         return 0;
+    149:     }
+
+# 7 0x0042B002 in C:\Users\иван\Google Диск\C\language\language_do.exe: do_func() at C:/Users/иван/Google Диск/C/language/language_do.cpp (227):
+
+    225: 
+    226: 
+=>  227:     do_oper_node(big_root, node->right, name_table);
+    228: 
+    229: 
+
+# 8 0x0042B22E in C:\Users\иван\Google Диск\C\language\language_do.exe: main() at C:/Users/иван/Google Диск/C/language/language_do.cpp (274):
+
+    272: 
+    273:     //do_oper_node(big_root, big_root[0]->right, char** name_table)
+=>  274:     do_func(big_root, big_root[0], nullptr);
+    275: 
+    276: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 105, Date: 2018-06-12 00:00:00 +0300]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\ФАЙЛЫ\загрузки\TX\TXLib.h
+Compiled:	Dec 10 2018 20:39:07, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Dec 10 2018 20:39:14
+
+Run file:	C:\Users\иван\Google Диск\C\language\language_do.exe
+Directory:	C:\Users\иван\Google Диск\C\language
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: C:\Users\иван\Google Диск\C\language\language_do.exe,
+
+ВНЕЗАПНО: Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x747A9350 в функции strcmp(). Попытка прочесть данные по адресу NULL. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+#1: TXLib [Ver: 00173a, Rev: 105, Date: 2018-06-12 00:00:00 +0300], Instance: 0x00505600 (32-bit), Flags: Cmdre0, Thread: 0x2978 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x747A9350 in C:\WINDOWS\System32\msvcrt.dll: strcmp()
+
+# 1 0x0042AD98 in C:\Users\иван\Google Диск\C\language\language_do.exe: do_oper_node() at C:/Users/иван/Google Диск/C/language/language_do.cpp (158):
+
+    156:     {
+    157:         case OPER_VALUE_create:
+=>  158:             adress = take_adress(node, name_table);
+    159:             memory[BP - adress] = 0;
+    160:             break;
+
+# 2 0x0042AD3F in C:\Users\иван\Google Диск\C\language\language_do.exe: do_oper_node() at C:/Users/иван/Google Диск/C/language/language_do.cpp (148):
+
+    146:     if (node->type == OPERATOR)
+    147:     {
+=>  148:         do_oper_node(big_root, node->left,  name_table);
+    149:         do_oper_node(big_root, node->right, name_table);
+    150:         return 0;
+
+# 3 0x0042AD5B in C:\Users\иван\Google Диск\C\language\language_do.exe: do_oper_node() at C:/Users/иван/Google Диск/C/language/language_do.cpp (149):
+
+    147:     {
+    148:         do_oper_node(big_root, node->left,  name_table);
+=>  149:         do_oper_node(big_root, node->right, name_table);
+    150:         return 0;
+    151:     }
+
+# 4 0x0042AD5B in C:\Users\иван\Google Диск\C\language\language_do.exe: do_oper_node() at C:/Users/иван/Google Диск/C/language/language_do.cpp (149):
+
+    147:     {
+    148:         do_oper_node(big_root, node->left,  name_table);
+=>  149:         do_oper_node(big_root, node->right, name_table);
+    150:         return 0;
+    151:     }
+
+# 5 0x0042AD5B in C:\Users\иван\Google Диск\C\language\language_do.exe: do_oper_node() at C:/Users/иван/Google Диск/C/language/language_do.cpp (149):
+
+    147:     {
+    148:         do_oper_node(big_root, node->left,  name_table);
+=>  149:         do_oper_node(big_root, node->right, name_table);
+    150:         return 0;
+    151:     }
+
+# 6 0x0042AD5B in C:\Users\иван\Google Диск\C\language\language_do.exe: do_oper_node() at C:/Users/иван/Google Диск/C/language/language_do.cpp (149):
+
+    147:     {
+    148:         do_oper_node(big_root, node->left,  name_table);
+=>  149:         do_oper_node(big_root, node->right, name_table);
+    150:         return 0;
+    151:     }
+
+# 7 0x0042B028 in C:\Users\иван\Google Диск\C\language\language_do.exe: do_func() at C:/Users/иван/Google Диск/C/language/language_do.cpp (229):
+
+    227: 
+    228: 
+=>  229:     do_oper_node(big_root, node->right, name_table);
+    230: 
+    231: 
+
+# 8 0x0042B254 in C:\Users\иван\Google Диск\C\language\language_do.exe: main() at C:/Users/иван/Google Диск/C/language/language_do.cpp (276):
+
+    274: 
+    275:     //do_oper_node(big_root, big_root[0]->right, char** name_table)
+=>  276:     do_func(big_root, big_root[0], nullptr);
+    277: 
+    278: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 105, Date: 2018-06-12 00:00:00 +0300]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\ФАЙЛЫ\загрузки\TX\TXLib.h
+Compiled:	Dec 10 2018 20:42:24, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Dec 10 2018 20:42:32
+
+Run file:	C:\Users\иван\Google Диск\C\language\language_do.exe
+Directory:	C:\Users\иван\Google Диск\C\language
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\иван\Google Диск\C\language\language_do.exe,
+
+ВНЕЗАПНО: signal (11, 0x00): SIGSEGV: Доступ по неверному указателю. Ставьте ассерты! 
+
+Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x747A9350 в функции strcmp(). Попытка прочесть данные по адресу NULL. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#2: TXLib [Ver: 00173a, Rev: 105, Date: 2018-06-12 00:00:00 +0300], Instance: 0x00505600 (32-bit), Flags: Cmdre0, Thread: 0x2978 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x747A9350 in C:\WINDOWS\System32\msvcrt.dll: strcmp()
+
+# 1 0x0042AD98 in C:\Users\иван\Google Диск\C\language\language_do.exe: do_oper_node() at C:/Users/иван/Google Диск/C/language/language_do.cpp (158):
+
+    156:     {
+    157:         case OPER_VALUE_create:
+=>  158:             adress = take_adress(node, name_table);
+    159:             memory[BP - adress] = 0;
+    160:             break;
+
+# 2 0x0042AD3F in C:\Users\иван\Google Диск\C\language\language_do.exe: do_oper_node() at C:/Users/иван/Google Диск/C/language/language_do.cpp (148):
+
+    146:     if (node->type == OPERATOR)
+    147:     {
+=>  148:         do_oper_node(big_root, node->left,  name_table);
+    149:         do_oper_node(big_root, node->right, name_table);
+    150:         return 0;
+
+# 3 0x0042AD5B in C:\Users\иван\Google Диск\C\language\language_do.exe: do_oper_node() at C:/Users/иван/Google Диск/C/language/language_do.cpp (149):
+
+    147:     {
+    148:         do_oper_node(big_root, node->left,  name_table);
+=>  149:         do_oper_node(big_root, node->right, name_table);
+    150:         return 0;
+    151:     }
+
+# 4 0x0042AD5B in C:\Users\иван\Google Диск\C\language\language_do.exe: do_oper_node() at C:/Users/иван/Google Диск/C/language/language_do.cpp (149):
+
+    147:     {
+    148:         do_oper_node(big_root, node->left,  name_table);
+=>  149:         do_oper_node(big_root, node->right, name_table);
+    150:         return 0;
+    151:     }
+
+# 5 0x0042AD5B in C:\Users\иван\Google Диск\C\language\language_do.exe: do_oper_node() at C:/Users/иван/Google Диск/C/language/language_do.cpp (149):
+
+    147:     {
+    148:         do_oper_node(big_root, node->left,  name_table);
+=>  149:         do_oper_node(big_root, node->right, name_table);
+    150:         return 0;
+    151:     }
+
+# 6 0x0042AD5B in C:\Users\иван\Google Диск\C\language\language_do.exe: do_oper_node() at C:/Users/иван/Google Диск/C/language/language_do.cpp (149):
+
+    147:     {
+    148:         do_oper_node(big_root, node->left,  name_table);
+=>  149:         do_oper_node(big_root, node->right, name_table);
+    150:         return 0;
+    151:     }
+
+# 7 0x0042B028 in C:\Users\иван\Google Диск\C\language\language_do.exe: do_func() at C:/Users/иван/Google Диск/C/language/language_do.cpp (229):
+
+    227: 
+    228: 
+=>  229:     do_oper_node(big_root, node->right, name_table);
+    230: 
+    231: 
+
+# 8 0x0042B254 in C:\Users\иван\Google Диск\C\language\language_do.exe: main() at C:/Users/иван/Google Диск/C/language/language_do.cpp (276):
+
+    274: 
+    275:     //do_oper_node(big_root, big_root[0]->right, char** name_table)
+=>  276:     do_func(big_root, big_root[0], nullptr);
+    277: 
+    278: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 105, Date: 2018-06-12 00:00:00 +0300]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\ФАЙЛЫ\загрузки\TX\TXLib.h
+Compiled:	Dec 10 2018 20:42:24, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Dec 10 2018 20:42:32
+
+Run file:	C:\Users\иван\Google Диск\C\language\language_do.exe
+Directory:	C:\Users\иван\Google Диск\C\language
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: C:\Users\иван\Google Диск\C\language\language_do.exe,
+
+ВНЕЗАПНО: Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x747A9350 в функции strcmp(). Попытка прочесть данные по адресу NULL. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+#1: TXLib [Ver: 00173a, Rev: 105, Date: 2018-06-12 00:00:00 +0300], Instance: 0x00505600 (32-bit), Flags: Cmdre0, Thread: 0x2604 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x747A9350 in C:\WINDOWS\System32\msvcrt.dll: strcmp()
+
+# 1 0x0042AD8A in C:\Users\иван\Google Диск\C\language\language_do.exe: do_oper_node() at C:/Users/иван/Google Диск/C/language/language_do.cpp (159):
+
+    157:     {
+    158:         case OPER_VALUE_create:
+=>  159:             adress = take_adress(node, name_table);
+    160:             memory[BP - adress] = 0;
+    161:             break;
+
+# 2 0x0042AD31 in C:\Users\иван\Google Диск\C\language\language_do.exe: do_oper_node() at C:/Users/иван/Google Диск/C/language/language_do.cpp (149):
+
+    147:     if (node->type == OPERATOR)
+    148:     {
+=>  149:         do_oper_node(big_root, node->left,  name_table);
+    150:         do_oper_node(big_root, node->right, name_table);
+    151:         return 0;
+
+# 3 0x0042AD4D in C:\Users\иван\Google Диск\C\language\language_do.exe: do_oper_node() at C:/Users/иван/Google Диск/C/language/language_do.cpp (150):
+
+    148:     {
+    149:         do_oper_node(big_root, node->left,  name_table);
+=>  150:         do_oper_node(big_root, node->right, name_table);
+    151:         return 0;
+    152:     }
+
+# 4 0x0042AD4D in C:\Users\иван\Google Диск\C\language\language_do.exe: do_oper_node() at C:/Users/иван/Google Диск/C/language/language_do.cpp (150):
+
+    148:     {
+    149:         do_oper_node(big_root, node->left,  name_table);
+=>  150:         do_oper_node(big_root, node->right, name_table);
+    151:         return 0;
+    152:     }
+
+# 5 0x0042AD4D in C:\Users\иван\Google Диск\C\language\language_do.exe: do_oper_node() at C:/Users/иван/Google Диск/C/language/language_do.cpp (150):
+
+    148:     {
+    149:         do_oper_node(big_root, node->left,  name_table);
+=>  150:         do_oper_node(big_root, node->right, name_table);
+    151:         return 0;
+    152:     }
+
+# 6 0x0042AD4D in C:\Users\иван\Google Диск\C\language\language_do.exe: do_oper_node() at C:/Users/иван/Google Диск/C/language/language_do.cpp (150):
+
+    148:     {
+    149:         do_oper_node(big_root, node->left,  name_table);
+=>  150:         do_oper_node(big_root, node->right, name_table);
+    151:         return 0;
+    152:     }
+
+# 7 0x0042B01A in C:\Users\иван\Google Диск\C\language\language_do.exe: do_func() at C:/Users/иван/Google Диск/C/language/language_do.cpp (230):
+
+    228: 
+    229: 
+=>  230:     do_oper_node(big_root, node->right, name_table);
+    231: 
+    232: 
+
+# 8 0x0042B246 in C:\Users\иван\Google Диск\C\language\language_do.exe: main() at C:/Users/иван/Google Диск/C/language/language_do.cpp (277):
+
+    275: 
+    276:     //do_oper_node(big_root, big_root[0]->right, char** name_table)
+=>  277:     do_func(big_root, big_root[0], nullptr);
+    278: 
+    279: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 105, Date: 2018-06-12 00:00:00 +0300]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\ФАЙЛЫ\загрузки\TX\TXLib.h
+Compiled:	Dec 10 2018 20:45:07, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Dec 10 2018 20:45:14
+
+Run file:	C:\Users\иван\Google Диск\C\language\language_do.exe
+Directory:	C:\Users\иван\Google Диск\C\language
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\иван\Google Диск\C\language\language_do.exe,
+
+ВНЕЗАПНО: signal (11, 0x00): SIGSEGV: Доступ по неверному указателю. Ставьте ассерты! 
+
+Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x747A9350 в функции strcmp(). Попытка прочесть данные по адресу NULL. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#2: TXLib [Ver: 00173a, Rev: 105, Date: 2018-06-12 00:00:00 +0300], Instance: 0x00505600 (32-bit), Flags: Cmdre0, Thread: 0x2604 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x747A9350 in C:\WINDOWS\System32\msvcrt.dll: strcmp()
+
+# 1 0x0042AD8A in C:\Users\иван\Google Диск\C\language\language_do.exe: do_oper_node() at C:/Users/иван/Google Диск/C/language/language_do.cpp (159):
+
+    157:     {
+    158:         case OPER_VALUE_create:
+=>  159:             adress = take_adress(node, name_table);
+    160:             memory[BP - adress] = 0;
+    161:             break;
+
+# 2 0x0042AD31 in C:\Users\иван\Google Диск\C\language\language_do.exe: do_oper_node() at C:/Users/иван/Google Диск/C/language/language_do.cpp (149):
+
+    147:     if (node->type == OPERATOR)
+    148:     {
+=>  149:         do_oper_node(big_root, node->left,  name_table);
+    150:         do_oper_node(big_root, node->right, name_table);
+    151:         return 0;
+
+# 3 0x0042AD4D in C:\Users\иван\Google Диск\C\language\language_do.exe: do_oper_node() at C:/Users/иван/Google Диск/C/language/language_do.cpp (150):
+
+    148:     {
+    149:         do_oper_node(big_root, node->left,  name_table);
+=>  150:         do_oper_node(big_root, node->right, name_table);
+    151:         return 0;
+    152:     }
+
+# 4 0x0042AD4D in C:\Users\иван\Google Диск\C\language\language_do.exe: do_oper_node() at C:/Users/иван/Google Диск/C/language/language_do.cpp (150):
+
+    148:     {
+    149:         do_oper_node(big_root, node->left,  name_table);
+=>  150:         do_oper_node(big_root, node->right, name_table);
+    151:         return 0;
+    152:     }
+
+# 5 0x0042AD4D in C:\Users\иван\Google Диск\C\language\language_do.exe: do_oper_node() at C:/Users/иван/Google Диск/C/language/language_do.cpp (150):
+
+    148:     {
+    149:         do_oper_node(big_root, node->left,  name_table);
+=>  150:         do_oper_node(big_root, node->right, name_table);
+    151:         return 0;
+    152:     }
+
+# 6 0x0042AD4D in C:\Users\иван\Google Диск\C\language\language_do.exe: do_oper_node() at C:/Users/иван/Google Диск/C/language/language_do.cpp (150):
+
+    148:     {
+    149:         do_oper_node(big_root, node->left,  name_table);
+=>  150:         do_oper_node(big_root, node->right, name_table);
+    151:         return 0;
+    152:     }
+
+# 7 0x0042B01A in C:\Users\иван\Google Диск\C\language\language_do.exe: do_func() at C:/Users/иван/Google Диск/C/language/language_do.cpp (230):
+
+    228: 
+    229: 
+=>  230:     do_oper_node(big_root, node->right, name_table);
+    231: 
+    232: 
+
+# 8 0x0042B246 in C:\Users\иван\Google Диск\C\language\language_do.exe: main() at C:/Users/иван/Google Диск/C/language/language_do.cpp (277):
+
+    275: 
+    276:     //do_oper_node(big_root, big_root[0]->right, char** name_table)
+=>  277:     do_func(big_root, big_root[0], nullptr);
+    278: 
+    279: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 105, Date: 2018-06-12 00:00:00 +0300]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\ФАЙЛЫ\загрузки\TX\TXLib.h
+Compiled:	Dec 10 2018 20:45:07, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Dec 10 2018 20:45:14
+
+Run file:	C:\Users\иван\Google Диск\C\language\language_do.exe
+Directory:	C:\Users\иван\Google Диск\C\language
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: C:\Users\иван\Google Диск\C\language\language_do.exe,
+
+ВНЕЗАПНО: Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x747A9350 в функции strcmp(). Попытка прочесть данные по адресу NULL. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+#1: TXLib [Ver: 00173a, Rev: 105, Date: 2018-06-12 00:00:00 +0300], Instance: 0x00505600 (32-bit), Flags: Cmdre0, Thread: 0x16E0 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x747A9350 in C:\WINDOWS\System32\msvcrt.dll: strcmp()
+
+# 1 0x0042ADA9 in C:\Users\иван\Google Диск\C\language\language_do.exe: do_oper_node() at C:/Users/иван/Google Диск/C/language/language_do.cpp (159):
+
+    157:     {
+    158:         case OPER_VALUE_create:
+=>  159:             adress = take_adress(node, name_table);
+    160:             memory[BP - adress] = 0;
+    161:             break;
+
+# 2 0x0042AD50 in C:\Users\иван\Google Диск\C\language\language_do.exe: do_oper_node() at C:/Users/иван/Google Диск/C/language/language_do.cpp (149):
+
+    147:     if (node->type == OPERATOR)
+    148:     {
+=>  149:         do_oper_node(big_root, node->left,  name_table);
+    150:         do_oper_node(big_root, node->right, name_table);
+    151:         return 0;
+
+# 3 0x0042AD6C in C:\Users\иван\Google Диск\C\language\language_do.exe: do_oper_node() at C:/Users/иван/Google Диск/C/language/language_do.cpp (150):
+
+    148:     {
+    149:         do_oper_node(big_root, node->left,  name_table);
+=>  150:         do_oper_node(big_root, node->right, name_table);
+    151:         return 0;
+    152:     }
+
+# 4 0x0042AD6C in C:\Users\иван\Google Диск\C\language\language_do.exe: do_oper_node() at C:/Users/иван/Google Диск/C/language/language_do.cpp (150):
+
+    148:     {
+    149:         do_oper_node(big_root, node->left,  name_table);
+=>  150:         do_oper_node(big_root, node->right, name_table);
+    151:         return 0;
+    152:     }
+
+# 5 0x0042AD6C in C:\Users\иван\Google Диск\C\language\language_do.exe: do_oper_node() at C:/Users/иван/Google Диск/C/language/language_do.cpp (150):
+
+    148:     {
+    149:         do_oper_node(big_root, node->left,  name_table);
+=>  150:         do_oper_node(big_root, node->right, name_table);
+    151:         return 0;
+    152:     }
+
+# 6 0x0042AD6C in C:\Users\иван\Google Диск\C\language\language_do.exe: do_oper_node() at C:/Users/иван/Google Диск/C/language/language_do.cpp (150):
+
+    148:     {
+    149:         do_oper_node(big_root, node->left,  name_table);
+=>  150:         do_oper_node(big_root, node->right, name_table);
+    151:         return 0;
+    152:     }
+
+# 7 0x0042B039 in C:\Users\иван\Google Диск\C\language\language_do.exe: do_func() at C:/Users/иван/Google Диск/C/language/language_do.cpp (230):
+
+    228: 
+    229: 
+=>  230:     do_oper_node(big_root, node->right, name_table);
+    231: 
+    232: 
+
+# 8 0x0042B265 in C:\Users\иван\Google Диск\C\language\language_do.exe: main() at C:/Users/иван/Google Диск/C/language/language_do.cpp (277):
+
+    275: 
+    276:     //do_oper_node(big_root, big_root[0]->right, char** name_table)
+=>  277:     do_func(big_root, big_root[0], nullptr);
+    278: 
+    279: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 105, Date: 2018-06-12 00:00:00 +0300]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\ФАЙЛЫ\загрузки\TX\TXLib.h
+Compiled:	Dec 10 2018 20:46:31, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Dec 10 2018 20:46:38
+
+Run file:	C:\Users\иван\Google Диск\C\language\language_do.exe
+Directory:	C:\Users\иван\Google Диск\C\language
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\иван\Google Диск\C\language\language_do.exe,
+
+ВНЕЗАПНО: signal (11, 0x00): SIGSEGV: Доступ по неверному указателю. Ставьте ассерты! 
+
+Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x747A9350 в функции strcmp(). Попытка прочесть данные по адресу NULL. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#2: TXLib [Ver: 00173a, Rev: 105, Date: 2018-06-12 00:00:00 +0300], Instance: 0x00505600 (32-bit), Flags: Cmdre0, Thread: 0x16E0 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x747A9350 in C:\WINDOWS\System32\msvcrt.dll: strcmp()
+
+# 1 0x0042ADA9 in C:\Users\иван\Google Диск\C\language\language_do.exe: do_oper_node() at C:/Users/иван/Google Диск/C/language/language_do.cpp (159):
+
+    157:     {
+    158:         case OPER_VALUE_create:
+=>  159:             adress = take_adress(node, name_table);
+    160:             memory[BP - adress] = 0;
+    161:             break;
+
+# 2 0x0042AD50 in C:\Users\иван\Google Диск\C\language\language_do.exe: do_oper_node() at C:/Users/иван/Google Диск/C/language/language_do.cpp (149):
+
+    147:     if (node->type == OPERATOR)
+    148:     {
+=>  149:         do_oper_node(big_root, node->left,  name_table);
+    150:         do_oper_node(big_root, node->right, name_table);
+    151:         return 0;
+
+# 3 0x0042AD6C in C:\Users\иван\Google Диск\C\language\language_do.exe: do_oper_node() at C:/Users/иван/Google Диск/C/language/language_do.cpp (150):
+
+    148:     {
+    149:         do_oper_node(big_root, node->left,  name_table);
+=>  150:         do_oper_node(big_root, node->right, name_table);
+    151:         return 0;
+    152:     }
+
+# 4 0x0042AD6C in C:\Users\иван\Google Диск\C\language\language_do.exe: do_oper_node() at C:/Users/иван/Google Диск/C/language/language_do.cpp (150):
+
+    148:     {
+    149:         do_oper_node(big_root, node->left,  name_table);
+=>  150:         do_oper_node(big_root, node->right, name_table);
+    151:         return 0;
+    152:     }
+
+# 5 0x0042AD6C in C:\Users\иван\Google Диск\C\language\language_do.exe: do_oper_node() at C:/Users/иван/Google Диск/C/language/language_do.cpp (150):
+
+    148:     {
+    149:         do_oper_node(big_root, node->left,  name_table);
+=>  150:         do_oper_node(big_root, node->right, name_table);
+    151:         return 0;
+    152:     }
+
+# 6 0x0042AD6C in C:\Users\иван\Google Диск\C\language\language_do.exe: do_oper_node() at C:/Users/иван/Google Диск/C/language/language_do.cpp (150):
+
+    148:     {
+    149:         do_oper_node(big_root, node->left,  name_table);
+=>  150:         do_oper_node(big_root, node->right, name_table);
+    151:         return 0;
+    152:     }
+
+# 7 0x0042B039 in C:\Users\иван\Google Диск\C\language\language_do.exe: do_func() at C:/Users/иван/Google Диск/C/language/language_do.cpp (230):
+
+    228: 
+    229: 
+=>  230:     do_oper_node(big_root, node->right, name_table);
+    231: 
+    232: 
+
+# 8 0x0042B265 in C:\Users\иван\Google Диск\C\language\language_do.exe: main() at C:/Users/иван/Google Диск/C/language/language_do.cpp (277):
+
+    275: 
+    276:     //do_oper_node(big_root, big_root[0]->right, char** name_table)
+=>  277:     do_func(big_root, big_root[0], nullptr);
+    278: 
+    279: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 105, Date: 2018-06-12 00:00:00 +0300]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\ФАЙЛЫ\загрузки\TX\TXLib.h
+Compiled:	Dec 10 2018 20:46:31, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Dec 10 2018 20:46:38
+
+Run file:	C:\Users\иван\Google Диск\C\language\language_do.exe
+Directory:	C:\Users\иван\Google Диск\C\language
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: C:\Users\иван\Google Диск\C\language\language_do.exe,
+
+ВНЕЗАПНО: Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x747A9350 в функции strcmp(). Попытка прочесть данные по адресу NULL. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+#1: TXLib [Ver: 00173a, Rev: 105, Date: 2018-06-12 00:00:00 +0300], Instance: 0x00505600 (32-bit), Flags: Cmdre0, Thread: 0x2B1C (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x747A9350 in C:\WINDOWS\System32\msvcrt.dll: strcmp()
+
+# 1 0x0042ADA9 in C:\Users\иван\Google Диск\C\language\language_do.exe: do_oper_node() at C:/Users/иван/Google Диск/C/language/language_do.cpp (159):
+
+    157:     {
+    158:         case OPER_VALUE_create:
+=>  159:             adress = take_adress(node, name_table);
+    160:             memory[BP - adress] = 0;
+    161:             break;
+
+# 2 0x0042AD50 in C:\Users\иван\Google Диск\C\language\language_do.exe: do_oper_node() at C:/Users/иван/Google Диск/C/language/language_do.cpp (149):
+
+    147:     if (node->type == OPERATOR)
+    148:     {
+=>  149:         do_oper_node(big_root, node->left,  name_table);
+    150:         do_oper_node(big_root, node->right, name_table);
+    151:         return 0;
+
+# 3 0x0042AD6C in C:\Users\иван\Google Диск\C\language\language_do.exe: do_oper_node() at C:/Users/иван/Google Диск/C/language/language_do.cpp (150):
+
+    148:     {
+    149:         do_oper_node(big_root, node->left,  name_table);
+=>  150:         do_oper_node(big_root, node->right, name_table);
+    151:         return 0;
+    152:     }
+
+# 4 0x0042AD6C in C:\Users\иван\Google Диск\C\language\language_do.exe: do_oper_node() at C:/Users/иван/Google Диск/C/language/language_do.cpp (150):
+
+    148:     {
+    149:         do_oper_node(big_root, node->left,  name_table);
+=>  150:         do_oper_node(big_root, node->right, name_table);
+    151:         return 0;
+    152:     }
+
+# 5 0x0042AD6C in C:\Users\иван\Google Диск\C\language\language_do.exe: do_oper_node() at C:/Users/иван/Google Диск/C/language/language_do.cpp (150):
+
+    148:     {
+    149:         do_oper_node(big_root, node->left,  name_table);
+=>  150:         do_oper_node(big_root, node->right, name_table);
+    151:         return 0;
+    152:     }
+
+# 6 0x0042AD6C in C:\Users\иван\Google Диск\C\language\language_do.exe: do_oper_node() at C:/Users/иван/Google Диск/C/language/language_do.cpp (150):
+
+    148:     {
+    149:         do_oper_node(big_root, node->left,  name_table);
+=>  150:         do_oper_node(big_root, node->right, name_table);
+    151:         return 0;
+    152:     }
+
+# 7 0x0042B039 in C:\Users\иван\Google Диск\C\language\language_do.exe: do_func() at C:/Users/иван/Google Диск/C/language/language_do.cpp (230):
+
+    228: 
+    229: 
+=>  230:     do_oper_node(big_root, node->right, name_table);
+    231: 
+    232: 
+
+# 8 0x0042B265 in C:\Users\иван\Google Диск\C\language\language_do.exe: main() at C:/Users/иван/Google Диск/C/language/language_do.cpp (277):
+
+    275: 
+    276:     //do_oper_node(big_root, big_root[0]->right, char** name_table)
+=>  277:     do_func(big_root, big_root[0], nullptr);
+    278: 
+    279: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 105, Date: 2018-06-12 00:00:00 +0300]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\ФАЙЛЫ\загрузки\TX\TXLib.h
+Compiled:	Dec 10 2018 20:48:44, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Dec 10 2018 20:48:51
+
+Run file:	C:\Users\иван\Google Диск\C\language\language_do.exe
+Directory:	C:\Users\иван\Google Диск\C\language
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\иван\Google Диск\C\language\language_do.exe,
+
+ВНЕЗАПНО: signal (11, 0x00): SIGSEGV: Доступ по неверному указателю. Ставьте ассерты! 
+
+Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x747A9350 в функции strcmp(). Попытка прочесть данные по адресу NULL. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#2: TXLib [Ver: 00173a, Rev: 105, Date: 2018-06-12 00:00:00 +0300], Instance: 0x00505600 (32-bit), Flags: Cmdre0, Thread: 0x2B1C (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x747A9350 in C:\WINDOWS\System32\msvcrt.dll: strcmp()
+
+# 1 0x0042ADA9 in C:\Users\иван\Google Диск\C\language\language_do.exe: do_oper_node() at C:/Users/иван/Google Диск/C/language/language_do.cpp (159):
+
+    157:     {
+    158:         case OPER_VALUE_create:
+=>  159:             adress = take_adress(node, name_table);
+    160:             memory[BP - adress] = 0;
+    161:             break;
+
+# 2 0x0042AD50 in C:\Users\иван\Google Диск\C\language\language_do.exe: do_oper_node() at C:/Users/иван/Google Диск/C/language/language_do.cpp (149):
+
+    147:     if (node->type == OPERATOR)
+    148:     {
+=>  149:         do_oper_node(big_root, node->left,  name_table);
+    150:         do_oper_node(big_root, node->right, name_table);
+    151:         return 0;
+
+# 3 0x0042AD6C in C:\Users\иван\Google Диск\C\language\language_do.exe: do_oper_node() at C:/Users/иван/Google Диск/C/language/language_do.cpp (150):
+
+    148:     {
+    149:         do_oper_node(big_root, node->left,  name_table);
+=>  150:         do_oper_node(big_root, node->right, name_table);
+    151:         return 0;
+    152:     }
+
+# 4 0x0042AD6C in C:\Users\иван\Google Диск\C\language\language_do.exe: do_oper_node() at C:/Users/иван/Google Диск/C/language/language_do.cpp (150):
+
+    148:     {
+    149:         do_oper_node(big_root, node->left,  name_table);
+=>  150:         do_oper_node(big_root, node->right, name_table);
+    151:         return 0;
+    152:     }
+
+# 5 0x0042AD6C in C:\Users\иван\Google Диск\C\language\language_do.exe: do_oper_node() at C:/Users/иван/Google Диск/C/language/language_do.cpp (150):
+
+    148:     {
+    149:         do_oper_node(big_root, node->left,  name_table);
+=>  150:         do_oper_node(big_root, node->right, name_table);
+    151:         return 0;
+    152:     }
+
+# 6 0x0042AD6C in C:\Users\иван\Google Диск\C\language\language_do.exe: do_oper_node() at C:/Users/иван/Google Диск/C/language/language_do.cpp (150):
+
+    148:     {
+    149:         do_oper_node(big_root, node->left,  name_table);
+=>  150:         do_oper_node(big_root, node->right, name_table);
+    151:         return 0;
+    152:     }
+
+# 7 0x0042B039 in C:\Users\иван\Google Диск\C\language\language_do.exe: do_func() at C:/Users/иван/Google Диск/C/language/language_do.cpp (230):
+
+    228: 
+    229: 
+=>  230:     do_oper_node(big_root, node->right, name_table);
+    231: 
+    232: 
+
+# 8 0x0042B265 in C:\Users\иван\Google Диск\C\language\language_do.exe: main() at C:/Users/иван/Google Диск/C/language/language_do.cpp (277):
+
+    275: 
+    276:     //do_oper_node(big_root, big_root[0]->right, char** name_table)
+=>  277:     do_func(big_root, big_root[0], nullptr);
+    278: 
+    279: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 105, Date: 2018-06-12 00:00:00 +0300]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\ФАЙЛЫ\загрузки\TX\TXLib.h
+Compiled:	Dec 10 2018 20:48:44, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Dec 10 2018 20:48:51
+
+Run file:	C:\Users\иван\Google Диск\C\language\language_do.exe
+Directory:	C:\Users\иван\Google Диск\C\language
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: C:\Users\иван\Google Диск\C\language\language_do.exe,
+
+ВНЕЗАПНО: Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x747A9350 в функции strcmp(). Попытка прочесть данные по адресу NULL. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+#1: TXLib [Ver: 00173a, Rev: 105, Date: 2018-06-12 00:00:00 +0300], Instance: 0x00505600 (32-bit), Flags: Cmdre0, Thread: 0x21A0 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x747A9350 in C:\WINDOWS\System32\msvcrt.dll: strcmp()
+
+# 1 0x0042ADA9 in C:\Users\иван\Google Диск\C\language\language_do.exe: do_oper_node() at C:/Users/иван/Google Диск/C/language/language_do.cpp (159):
+
+    157:     {
+    158:         case OPER_VALUE_create:
+=>  159:             adress = take_adress(node, name_table);
+    160:             memory[BP - adress] = 0;
+    161:             break;
+
+# 2 0x0042AD50 in C:\Users\иван\Google Диск\C\language\language_do.exe: do_oper_node() at C:/Users/иван/Google Диск/C/language/language_do.cpp (149):
+
+    147:     if (node->type == OPERATOR)
+    148:     {
+=>  149:         do_oper_node(big_root, node->left,  name_table);
+    150:         do_oper_node(big_root, node->right, name_table);
+    151:         return 0;
+
+# 3 0x0042AD6C in C:\Users\иван\Google Диск\C\language\language_do.exe: do_oper_node() at C:/Users/иван/Google Диск/C/language/language_do.cpp (150):
+
+    148:     {
+    149:         do_oper_node(big_root, node->left,  name_table);
+=>  150:         do_oper_node(big_root, node->right, name_table);
+    151:         return 0;
+    152:     }
+
+# 4 0x0042AD6C in C:\Users\иван\Google Диск\C\language\language_do.exe: do_oper_node() at C:/Users/иван/Google Диск/C/language/language_do.cpp (150):
+
+    148:     {
+    149:         do_oper_node(big_root, node->left,  name_table);
+=>  150:         do_oper_node(big_root, node->right, name_table);
+    151:         return 0;
+    152:     }
+
+# 5 0x0042AD6C in C:\Users\иван\Google Диск\C\language\language_do.exe: do_oper_node() at C:/Users/иван/Google Диск/C/language/language_do.cpp (150):
+
+    148:     {
+    149:         do_oper_node(big_root, node->left,  name_table);
+=>  150:         do_oper_node(big_root, node->right, name_table);
+    151:         return 0;
+    152:     }
+
+# 6 0x0042AD6C in C:\Users\иван\Google Диск\C\language\language_do.exe: do_oper_node() at C:/Users/иван/Google Диск/C/language/language_do.cpp (150):
+
+    148:     {
+    149:         do_oper_node(big_root, node->left,  name_table);
+=>  150:         do_oper_node(big_root, node->right, name_table);
+    151:         return 0;
+    152:     }
+
+# 7 0x0042B039 in C:\Users\иван\Google Диск\C\language\language_do.exe: do_func() at C:/Users/иван/Google Диск/C/language/language_do.cpp (230):
+
+    228: 
+    229: 
+=>  230:     do_oper_node(big_root, node->right, name_table);
+    231: 
+    232: 
+
+# 8 0x0042B265 in C:\Users\иван\Google Диск\C\language\language_do.exe: main() at C:/Users/иван/Google Диск/C/language/language_do.cpp (277):
+
+    275: 
+    276:     //do_oper_node(big_root, big_root[0]->right, char** name_table)
+=>  277:     do_func(big_root, big_root[0], nullptr);
+    278: 
+    279: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 105, Date: 2018-06-12 00:00:00 +0300]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\ФАЙЛЫ\загрузки\TX\TXLib.h
+Compiled:	Dec 10 2018 20:48:44, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Dec 10 2018 20:49:02
+
+Run file:	C:\Users\иван\Google Диск\C\language\language_do.exe
+Directory:	C:\Users\иван\Google Диск\C\language
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\иван\Google Диск\C\language\language_do.exe,
+
+ВНЕЗАПНО: signal (11, 0x00): SIGSEGV: Доступ по неверному указателю. Ставьте ассерты! 
+
+Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x747A9350 в функции strcmp(). Попытка прочесть данные по адресу NULL. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#2: TXLib [Ver: 00173a, Rev: 105, Date: 2018-06-12 00:00:00 +0300], Instance: 0x00505600 (32-bit), Flags: Cmdre0, Thread: 0x21A0 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x747A9350 in C:\WINDOWS\System32\msvcrt.dll: strcmp()
+
+# 1 0x0042ADA9 in C:\Users\иван\Google Диск\C\language\language_do.exe: do_oper_node() at C:/Users/иван/Google Диск/C/language/language_do.cpp (159):
+
+    157:     {
+    158:         case OPER_VALUE_create:
+=>  159:             adress = take_adress(node, name_table);
+    160:             memory[BP - adress] = 0;
+    161:             break;
+
+# 2 0x0042AD50 in C:\Users\иван\Google Диск\C\language\language_do.exe: do_oper_node() at C:/Users/иван/Google Диск/C/language/language_do.cpp (149):
+
+    147:     if (node->type == OPERATOR)
+    148:     {
+=>  149:         do_oper_node(big_root, node->left,  name_table);
+    150:         do_oper_node(big_root, node->right, name_table);
+    151:         return 0;
+
+# 3 0x0042AD6C in C:\Users\иван\Google Диск\C\language\language_do.exe: do_oper_node() at C:/Users/иван/Google Диск/C/language/language_do.cpp (150):
+
+    148:     {
+    149:         do_oper_node(big_root, node->left,  name_table);
+=>  150:         do_oper_node(big_root, node->right, name_table);
+    151:         return 0;
+    152:     }
+
+# 4 0x0042AD6C in C:\Users\иван\Google Диск\C\language\language_do.exe: do_oper_node() at C:/Users/иван/Google Диск/C/language/language_do.cpp (150):
+
+    148:     {
+    149:         do_oper_node(big_root, node->left,  name_table);
+=>  150:         do_oper_node(big_root, node->right, name_table);
+    151:         return 0;
+    152:     }
+
+# 5 0x0042AD6C in C:\Users\иван\Google Диск\C\language\language_do.exe: do_oper_node() at C:/Users/иван/Google Диск/C/language/language_do.cpp (150):
+
+    148:     {
+    149:         do_oper_node(big_root, node->left,  name_table);
+=>  150:         do_oper_node(big_root, node->right, name_table);
+    151:         return 0;
+    152:     }
+
+# 6 0x0042AD6C in C:\Users\иван\Google Диск\C\language\language_do.exe: do_oper_node() at C:/Users/иван/Google Диск/C/language/language_do.cpp (150):
+
+    148:     {
+    149:         do_oper_node(big_root, node->left,  name_table);
+=>  150:         do_oper_node(big_root, node->right, name_table);
+    151:         return 0;
+    152:     }
+
+# 7 0x0042B039 in C:\Users\иван\Google Диск\C\language\language_do.exe: do_func() at C:/Users/иван/Google Диск/C/language/language_do.cpp (230):
+
+    228: 
+    229: 
+=>  230:     do_oper_node(big_root, node->right, name_table);
+    231: 
+    232: 
+
+# 8 0x0042B265 in C:\Users\иван\Google Диск\C\language\language_do.exe: main() at C:/Users/иван/Google Диск/C/language/language_do.cpp (277):
+
+    275: 
+    276:     //do_oper_node(big_root, big_root[0]->right, char** name_table)
+=>  277:     do_func(big_root, big_root[0], nullptr);
+    278: 
+    279: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 105, Date: 2018-06-12 00:00:00 +0300]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\ФАЙЛЫ\загрузки\TX\TXLib.h
+Compiled:	Dec 10 2018 20:48:44, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Dec 10 2018 20:49:02
+
+Run file:	C:\Users\иван\Google Диск\C\language\language_do.exe
+Directory:	C:\Users\иван\Google Диск\C\language
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: C:\Users\иван\Google Диск\C\language\language_do.exe,
+
+ВНЕЗАПНО: Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x747A9350 в функции strcmp(). Попытка прочесть данные по адресу NULL. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+#1: TXLib [Ver: 00173a, Rev: 105, Date: 2018-06-12 00:00:00 +0300], Instance: 0x00505600 (32-bit), Flags: Cmdre0, Thread: 0x1CD0 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x747A9350 in C:\WINDOWS\System32\msvcrt.dll: strcmp()
+
+# 1 0x0042ADA9 in C:\Users\иван\Google Диск\C\language\language_do.exe: do_oper_node() at C:/Users/иван/Google Диск/C/language/language_do.cpp (159):
+
+    157:     {
+    158:         case OPER_VALUE_create:
+=>  159:             adress = take_adress(node, name_table);
+    160:             memory[BP - adress] = 0;
+    161:             break;
+
+# 2 0x0042AD50 in C:\Users\иван\Google Диск\C\language\language_do.exe: do_oper_node() at C:/Users/иван/Google Диск/C/language/language_do.cpp (149):
+
+    147:     if (node->type == OPERATOR)
+    148:     {
+=>  149:         do_oper_node(big_root, node->left,  name_table);
+    150:         do_oper_node(big_root, node->right, name_table);
+    151:         return 0;
+
+# 3 0x0042AD6C in C:\Users\иван\Google Диск\C\language\language_do.exe: do_oper_node() at C:/Users/иван/Google Диск/C/language/language_do.cpp (150):
+
+    148:     {
+    149:         do_oper_node(big_root, node->left,  name_table);
+=>  150:         do_oper_node(big_root, node->right, name_table);
+    151:         return 0;
+    152:     }
+
+# 4 0x0042AD6C in C:\Users\иван\Google Диск\C\language\language_do.exe: do_oper_node() at C:/Users/иван/Google Диск/C/language/language_do.cpp (150):
+
+    148:     {
+    149:         do_oper_node(big_root, node->left,  name_table);
+=>  150:         do_oper_node(big_root, node->right, name_table);
+    151:         return 0;
+    152:     }
+
+# 5 0x0042AD6C in C:\Users\иван\Google Диск\C\language\language_do.exe: do_oper_node() at C:/Users/иван/Google Диск/C/language/language_do.cpp (150):
+
+    148:     {
+    149:         do_oper_node(big_root, node->left,  name_table);
+=>  150:         do_oper_node(big_root, node->right, name_table);
+    151:         return 0;
+    152:     }
+
+# 6 0x0042AD6C in C:\Users\иван\Google Диск\C\language\language_do.exe: do_oper_node() at C:/Users/иван/Google Диск/C/language/language_do.cpp (150):
+
+    148:     {
+    149:         do_oper_node(big_root, node->left,  name_table);
+=>  150:         do_oper_node(big_root, node->right, name_table);
+    151:         return 0;
+    152:     }
+
+# 7 0x0042B039 in C:\Users\иван\Google Диск\C\language\language_do.exe: do_func() at C:/Users/иван/Google Диск/C/language/language_do.cpp (230):
+
+    228: 
+    229: 
+=>  230:     do_oper_node(big_root, node->right, name_table);
+    231: 
+    232: 
+
+# 8 0x0042B265 in C:\Users\иван\Google Диск\C\language\language_do.exe: main() at C:/Users/иван/Google Диск/C/language/language_do.cpp (277):
+
+    275: 
+    276:     //do_oper_node(big_root, big_root[0]->right, char** name_table)
+=>  277:     do_func(big_root, big_root[0], nullptr);
+    278: 
+    279: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 105, Date: 2018-06-12 00:00:00 +0300]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\ФАЙЛЫ\загрузки\TX\TXLib.h
+Compiled:	Dec 10 2018 20:51:52, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Dec 10 2018 20:51:59
+
+Run file:	C:\Users\иван\Google Диск\C\language\language_do.exe
+Directory:	C:\Users\иван\Google Диск\C\language
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\иван\Google Диск\C\language\language_do.exe,
+
+ВНЕЗАПНО: signal (11, 0x00): SIGSEGV: Доступ по неверному указателю. Ставьте ассерты! 
+
+Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x747A9350 в функции strcmp(). Попытка прочесть данные по адресу NULL. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#2: TXLib [Ver: 00173a, Rev: 105, Date: 2018-06-12 00:00:00 +0300], Instance: 0x00505600 (32-bit), Flags: Cmdre0, Thread: 0x1CD0 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x747A9350 in C:\WINDOWS\System32\msvcrt.dll: strcmp()
+
+# 1 0x0042ADA9 in C:\Users\иван\Google Диск\C\language\language_do.exe: do_oper_node() at C:/Users/иван/Google Диск/C/language/language_do.cpp (159):
+
+    157:     {
+    158:         case OPER_VALUE_create:
+=>  159:             adress = take_adress(node, name_table);
+    160:             memory[BP - adress] = 0;
+    161:             break;
+
+# 2 0x0042AD50 in C:\Users\иван\Google Диск\C\language\language_do.exe: do_oper_node() at C:/Users/иван/Google Диск/C/language/language_do.cpp (149):
+
+    147:     if (node->type == OPERATOR)
+    148:     {
+=>  149:         do_oper_node(big_root, node->left,  name_table);
+    150:         do_oper_node(big_root, node->right, name_table);
+    151:         return 0;
+
+# 3 0x0042AD6C in C:\Users\иван\Google Диск\C\language\language_do.exe: do_oper_node() at C:/Users/иван/Google Диск/C/language/language_do.cpp (150):
+
+    148:     {
+    149:         do_oper_node(big_root, node->left,  name_table);
+=>  150:         do_oper_node(big_root, node->right, name_table);
+    151:         return 0;
+    152:     }
+
+# 4 0x0042AD6C in C:\Users\иван\Google Диск\C\language\language_do.exe: do_oper_node() at C:/Users/иван/Google Диск/C/language/language_do.cpp (150):
+
+    148:     {
+    149:         do_oper_node(big_root, node->left,  name_table);
+=>  150:         do_oper_node(big_root, node->right, name_table);
+    151:         return 0;
+    152:     }
+
+# 5 0x0042AD6C in C:\Users\иван\Google Диск\C\language\language_do.exe: do_oper_node() at C:/Users/иван/Google Диск/C/language/language_do.cpp (150):
+
+    148:     {
+    149:         do_oper_node(big_root, node->left,  name_table);
+=>  150:         do_oper_node(big_root, node->right, name_table);
+    151:         return 0;
+    152:     }
+
+# 6 0x0042AD6C in C:\Users\иван\Google Диск\C\language\language_do.exe: do_oper_node() at C:/Users/иван/Google Диск/C/language/language_do.cpp (150):
+
+    148:     {
+    149:         do_oper_node(big_root, node->left,  name_table);
+=>  150:         do_oper_node(big_root, node->right, name_table);
+    151:         return 0;
+    152:     }
+
+# 7 0x0042B039 in C:\Users\иван\Google Диск\C\language\language_do.exe: do_func() at C:/Users/иван/Google Диск/C/language/language_do.cpp (230):
+
+    228: 
+    229: 
+=>  230:     do_oper_node(big_root, node->right, name_table);
+    231: 
+    232: 
+
+# 8 0x0042B265 in C:\Users\иван\Google Диск\C\language\language_do.exe: main() at C:/Users/иван/Google Диск/C/language/language_do.cpp (277):
+
+    275: 
+    276:     //do_oper_node(big_root, big_root[0]->right, char** name_table)
+=>  277:     do_func(big_root, big_root[0], nullptr);
+    278: 
+    279: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 105, Date: 2018-06-12 00:00:00 +0300]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\ФАЙЛЫ\загрузки\TX\TXLib.h
+Compiled:	Dec 10 2018 20:51:52, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Dec 10 2018 20:51:58
+
+Run file:	C:\Users\иван\Google Диск\C\language\language_do.exe
+Directory:	C:\Users\иван\Google Диск\C\language
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: C:\Users\иван\Google Диск\C\language\language_do.exe,
+
+ВНЕЗАПНО: Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x747A9394 в функции strcmp(). Попытка прочесть данные по адресу 0x00000003. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+#1: TXLib [Ver: 00173a, Rev: 105, Date: 2018-06-12 00:00:00 +0300], Instance: 0x00505600 (32-bit), Flags: Cmdre0, Thread: 0x256C (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x747A9394 in C:\WINDOWS\System32\msvcrt.dll: strcmp()
+
+# 1 0x0042AD9F in C:\Users\иван\Google Диск\C\language\language_do.exe: do_oper_node() at C:/Users/иван/Google Диск/C/language/language_do.cpp (162):
+
+    160:     {
+    161:         case OPER_VALUE_create:
+=>  162:             adress = take_adress(node, name_table);
+    163:             memory[BP - adress] = 0;
+    164:             break;
+
+# 2 0x0042AD46 in C:\Users\иван\Google Диск\C\language\language_do.exe: do_oper_node() at C:/Users/иван/Google Диск/C/language/language_do.cpp (152):
+
+    150:     if (node->type == OPERATOR)
+    151:     {
+=>  152:         do_oper_node(big_root, node->left,  name_table);
+    153:         do_oper_node(big_root, node->right, name_table);
+    154:         return 0;
+
+# 3 0x0042B02F in C:\Users\иван\Google Диск\C\language\language_do.exe: do_func() at C:/Users/иван/Google Диск/C/language/language_do.cpp (233):
+
+    231: 
+    232: 
+=>  233:     do_oper_node(big_root, node->right, name_table);
+    234: 
+    235: 
+
+# 4 0x0042B25B in C:\Users\иван\Google Диск\C\language\language_do.exe: main() at C:/Users/иван/Google Диск/C/language/language_do.cpp (280):
+
+    278: 
+    279:     //do_oper_node(big_root, big_root[0]->right, char** name_table)
+=>  280:     do_func(big_root, big_root[0], nullptr);
+    281: 
+    282: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 105, Date: 2018-06-12 00:00:00 +0300]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\ФАЙЛЫ\загрузки\TX\TXLib.h
+Compiled:	Dec 10 2018 20:54:33, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Dec 10 2018 20:54:41
+
+Run file:	C:\Users\иван\Google Диск\C\language\language_do.exe
+Directory:	C:\Users\иван\Google Диск\C\language
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\иван\Google Диск\C\language\language_do.exe,
+
+ВНЕЗАПНО: signal (11, 0x00): SIGSEGV: Доступ по неверному указателю. Ставьте ассерты! 
+
+Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x747A9394 в функции strcmp(). Попытка прочесть данные по адресу 0x00000003. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#2: TXLib [Ver: 00173a, Rev: 105, Date: 2018-06-12 00:00:00 +0300], Instance: 0x00505600 (32-bit), Flags: Cmdre0, Thread: 0x256C (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x747A9394 in C:\WINDOWS\System32\msvcrt.dll: strcmp()
+
+# 1 0x0042AD9F in C:\Users\иван\Google Диск\C\language\language_do.exe: do_oper_node() at C:/Users/иван/Google Диск/C/language/language_do.cpp (162):
+
+    160:     {
+    161:         case OPER_VALUE_create:
+=>  162:             adress = take_adress(node, name_table);
+    163:             memory[BP - adress] = 0;
+    164:             break;
+
+# 2 0x0042AD46 in C:\Users\иван\Google Диск\C\language\language_do.exe: do_oper_node() at C:/Users/иван/Google Диск/C/language/language_do.cpp (152):
+
+    150:     if (node->type == OPERATOR)
+    151:     {
+=>  152:         do_oper_node(big_root, node->left,  name_table);
+    153:         do_oper_node(big_root, node->right, name_table);
+    154:         return 0;
+
+# 3 0x0042B02F in C:\Users\иван\Google Диск\C\language\language_do.exe: do_func() at C:/Users/иван/Google Диск/C/language/language_do.cpp (233):
+
+    231: 
+    232: 
+=>  233:     do_oper_node(big_root, node->right, name_table);
+    234: 
+    235: 
+
+# 4 0x0042B25B in C:\Users\иван\Google Диск\C\language\language_do.exe: main() at C:/Users/иван/Google Диск/C/language/language_do.cpp (280):
+
+    278: 
+    279:     //do_oper_node(big_root, big_root[0]->right, char** name_table)
+=>  280:     do_func(big_root, big_root[0], nullptr);
+    281: 
+    282: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 105, Date: 2018-06-12 00:00:00 +0300]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\ФАЙЛЫ\загрузки\TX\TXLib.h
+Compiled:	Dec 10 2018 20:54:33, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Dec 10 2018 20:54:41
+
+Run file:	C:\Users\иван\Google Диск\C\language\language_do.exe
+Directory:	C:\Users\иван\Google Диск\C\language
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: C:\Users\иван\Google Диск\C\language\language_do.exe,
+
+ВНЕЗАПНО: Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x747A9350 в функции strcmp(). Попытка прочесть данные по адресу NULL. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+#1: TXLib [Ver: 00173a, Rev: 105, Date: 2018-06-12 00:00:00 +0300], Instance: 0x00505600 (32-bit), Flags: Cmdre0, Thread: 0x2EE4 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x747A9350 in C:\WINDOWS\System32\msvcrt.dll: strcmp()
+
+# 1 0x0042AD72 in C:\Users\иван\Google Диск\C\language\language_do.exe: do_oper_node() at C:/Users/иван/Google Диск/C/language/language_do.cpp (162):
+
+    160:     {
+    161:         case OPER_VALUE_create:
+=>  162:             adress = take_adress(node, name_table);
+    163:             memory[BP - adress] = 0;
+    164:             break;
+
+# 2 0x0042AD19 in C:\Users\иван\Google Диск\C\language\language_do.exe: do_oper_node() at C:/Users/иван/Google Диск/C/language/language_do.cpp (152):
+
+    150:     if (node->type == OPERATOR)
+    151:     {
+=>  152:         do_oper_node(big_root, node->left,  name_table);
+    153:         do_oper_node(big_root, node->right, name_table);
+    154:         return 0;
+
+# 3 0x0042AD35 in C:\Users\иван\Google Диск\C\language\language_do.exe: do_oper_node() at C:/Users/иван/Google Диск/C/language/language_do.cpp (153):
+
+    151:     {
+    152:         do_oper_node(big_root, node->left,  name_table);
+=>  153:         do_oper_node(big_root, node->right, name_table);
+    154:         return 0;
+    155:     }
+
+# 4 0x0042AD35 in C:\Users\иван\Google Диск\C\language\language_do.exe: do_oper_node() at C:/Users/иван/Google Диск/C/language/language_do.cpp (153):
+
+    151:     {
+    152:         do_oper_node(big_root, node->left,  name_table);
+=>  153:         do_oper_node(big_root, node->right, name_table);
+    154:         return 0;
+    155:     }
+
+# 5 0x0042AD35 in C:\Users\иван\Google Диск\C\language\language_do.exe: do_oper_node() at C:/Users/иван/Google Диск/C/language/language_do.cpp (153):
+
+    151:     {
+    152:         do_oper_node(big_root, node->left,  name_table);
+=>  153:         do_oper_node(big_root, node->right, name_table);
+    154:         return 0;
+    155:     }
+
+# 6 0x0042AD35 in C:\Users\иван\Google Диск\C\language\language_do.exe: do_oper_node() at C:/Users/иван/Google Диск/C/language/language_do.cpp (153):
+
+    151:     {
+    152:         do_oper_node(big_root, node->left,  name_table);
+=>  153:         do_oper_node(big_root, node->right, name_table);
+    154:         return 0;
+    155:     }
+
+# 7 0x0042B015 in C:\Users\иван\Google Диск\C\language\language_do.exe: do_func() at C:/Users/иван/Google Диск/C/language/language_do.cpp (234):
+
+    232: 
+    233: 
+=>  234:     do_oper_node(big_root, node->right, name_table);
+    235: 
+    236: 
+
+# 8 0x0042B241 in C:\Users\иван\Google Диск\C\language\language_do.exe: main() at C:/Users/иван/Google Диск/C/language/language_do.cpp (281):
+
+    279: 
+    280:     //do_oper_node(big_root, big_root[0]->right, char** name_table)
+=>  281:     do_func(big_root, big_root[0], nullptr);
+    282: 
+    283: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 105, Date: 2018-06-12 00:00:00 +0300]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\ФАЙЛЫ\загрузки\TX\TXLib.h
+Compiled:	Dec 10 2018 20:58:20, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Dec 10 2018 20:58:27
+
+Run file:	C:\Users\иван\Google Диск\C\language\language_do.exe
+Directory:	C:\Users\иван\Google Диск\C\language
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\иван\Google Диск\C\language\language_do.exe,
+
+ВНЕЗАПНО: signal (11, 0x00): SIGSEGV: Доступ по неверному указателю. Ставьте ассерты! 
+
+Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x747A9350 в функции strcmp(). Попытка прочесть данные по адресу NULL. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#2: TXLib [Ver: 00173a, Rev: 105, Date: 2018-06-12 00:00:00 +0300], Instance: 0x00505600 (32-bit), Flags: Cmdre0, Thread: 0x2EE4 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x747A9350 in C:\WINDOWS\System32\msvcrt.dll: strcmp()
+
+# 1 0x0042AD72 in C:\Users\иван\Google Диск\C\language\language_do.exe: do_oper_node() at C:/Users/иван/Google Диск/C/language/language_do.cpp (162):
+
+    160:     {
+    161:         case OPER_VALUE_create:
+=>  162:             adress = take_adress(node, name_table);
+    163:             memory[BP - adress] = 0;
+    164:             break;
+
+# 2 0x0042AD19 in C:\Users\иван\Google Диск\C\language\language_do.exe: do_oper_node() at C:/Users/иван/Google Диск/C/language/language_do.cpp (152):
+
+    150:     if (node->type == OPERATOR)
+    151:     {
+=>  152:         do_oper_node(big_root, node->left,  name_table);
+    153:         do_oper_node(big_root, node->right, name_table);
+    154:         return 0;
+
+# 3 0x0042AD35 in C:\Users\иван\Google Диск\C\language\language_do.exe: do_oper_node() at C:/Users/иван/Google Диск/C/language/language_do.cpp (153):
+
+    151:     {
+    152:         do_oper_node(big_root, node->left,  name_table);
+=>  153:         do_oper_node(big_root, node->right, name_table);
+    154:         return 0;
+    155:     }
+
+# 4 0x0042AD35 in C:\Users\иван\Google Диск\C\language\language_do.exe: do_oper_node() at C:/Users/иван/Google Диск/C/language/language_do.cpp (153):
+
+    151:     {
+    152:         do_oper_node(big_root, node->left,  name_table);
+=>  153:         do_oper_node(big_root, node->right, name_table);
+    154:         return 0;
+    155:     }
+
+# 5 0x0042AD35 in C:\Users\иван\Google Диск\C\language\language_do.exe: do_oper_node() at C:/Users/иван/Google Диск/C/language/language_do.cpp (153):
+
+    151:     {
+    152:         do_oper_node(big_root, node->left,  name_table);
+=>  153:         do_oper_node(big_root, node->right, name_table);
+    154:         return 0;
+    155:     }
+
+# 6 0x0042AD35 in C:\Users\иван\Google Диск\C\language\language_do.exe: do_oper_node() at C:/Users/иван/Google Диск/C/language/language_do.cpp (153):
+
+    151:     {
+    152:         do_oper_node(big_root, node->left,  name_table);
+=>  153:         do_oper_node(big_root, node->right, name_table);
+    154:         return 0;
+    155:     }
+
+# 7 0x0042B015 in C:\Users\иван\Google Диск\C\language\language_do.exe: do_func() at C:/Users/иван/Google Диск/C/language/language_do.cpp (234):
+
+    232: 
+    233: 
+=>  234:     do_oper_node(big_root, node->right, name_table);
+    235: 
+    236: 
+
+# 8 0x0042B241 in C:\Users\иван\Google Диск\C\language\language_do.exe: main() at C:/Users/иван/Google Диск/C/language/language_do.cpp (281):
+
+    279: 
+    280:     //do_oper_node(big_root, big_root[0]->right, char** name_table)
+=>  281:     do_func(big_root, big_root[0], nullptr);
+    282: 
+    283: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 105, Date: 2018-06-12 00:00:00 +0300]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\ФАЙЛЫ\загрузки\TX\TXLib.h
+Compiled:	Dec 10 2018 20:58:20, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Dec 10 2018 20:58:27
+
+Run file:	C:\Users\иван\Google Диск\C\language\language_do.exe
+Directory:	C:\Users\иван\Google Диск\C\language
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: C:\Users\иван\Google Диск\C\language\language_do.exe,
+
+ВНЕЗАПНО: Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x747A9350 в функции strcmp(). Попытка прочесть данные по адресу NULL. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+#1: TXLib [Ver: 00173a, Rev: 105, Date: 2018-06-12 00:00:00 +0300], Instance: 0x00505600 (32-bit), Flags: Cmdre0, Thread: 0x2F20 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x747A9350 in C:\WINDOWS\System32\msvcrt.dll: strcmp()
+
+# 1 0x0042AD57 in C:\Users\иван\Google Диск\C\language\language_do.exe: do_oper_node() at C:/Users/иван/Google Диск/C/language/language_do.cpp (161):
+
+    159:     {
+    160:         case OPER_VALUE_create:
+=>  161:             adress = take_adress(node, name_table);
+    162:             memory[BP - adress] = 0;
+    163:             break;
+
+# 2 0x0042ACFE in C:\Users\иван\Google Диск\C\language\language_do.exe: do_oper_node() at C:/Users/иван/Google Диск/C/language/language_do.cpp (151):
+
+    149:     if (node->type == OPERATOR)
+    150:     {
+=>  151:         do_oper_node(big_root, node->left,  name_table);
+    152:         do_oper_node(big_root, node->right, name_table);
+    153:         return 0;
+
+# 3 0x0042AD1A in C:\Users\иван\Google Диск\C\language\language_do.exe: do_oper_node() at C:/Users/иван/Google Диск/C/language/language_do.cpp (152):
+
+    150:     {
+    151:         do_oper_node(big_root, node->left,  name_table);
+=>  152:         do_oper_node(big_root, node->right, name_table);
+    153:         return 0;
+    154:     }
+
+# 4 0x0042AD1A in C:\Users\иван\Google Диск\C\language\language_do.exe: do_oper_node() at C:/Users/иван/Google Диск/C/language/language_do.cpp (152):
+
+    150:     {
+    151:         do_oper_node(big_root, node->left,  name_table);
+=>  152:         do_oper_node(big_root, node->right, name_table);
+    153:         return 0;
+    154:     }
+
+# 5 0x0042AD1A in C:\Users\иван\Google Диск\C\language\language_do.exe: do_oper_node() at C:/Users/иван/Google Диск/C/language/language_do.cpp (152):
+
+    150:     {
+    151:         do_oper_node(big_root, node->left,  name_table);
+=>  152:         do_oper_node(big_root, node->right, name_table);
+    153:         return 0;
+    154:     }
+
+# 6 0x0042AD1A in C:\Users\иван\Google Диск\C\language\language_do.exe: do_oper_node() at C:/Users/иван/Google Диск/C/language/language_do.cpp (152):
+
+    150:     {
+    151:         do_oper_node(big_root, node->left,  name_table);
+=>  152:         do_oper_node(big_root, node->right, name_table);
+    153:         return 0;
+    154:     }
+
+# 7 0x0042B023 in C:\Users\иван\Google Диск\C\language\language_do.exe: do_func() at C:/Users/иван/Google Диск/C/language/language_do.cpp (236):
+
+    234: 
+    235: 
+=>  236:     do_oper_node(big_root, node->right, name_table);
+    237: 
+    238: 
+
+# 8 0x0042B24F in C:\Users\иван\Google Диск\C\language\language_do.exe: main() at C:/Users/иван/Google Диск/C/language/language_do.cpp (283):
+
+    281: 
+    282:     //do_oper_node(big_root, big_root[0]->right, char** name_table)
+=>  283:     do_func(big_root, big_root[0], nullptr);
+    284: 
+    285: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 105, Date: 2018-06-12 00:00:00 +0300]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\ФАЙЛЫ\загрузки\TX\TXLib.h
+Compiled:	Dec 10 2018 21:18:07, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Dec 10 2018 21:18:15
+
+Run file:	C:\Users\иван\Google Диск\C\language\language_do.exe
+Directory:	C:\Users\иван\Google Диск\C\language
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\иван\Google Диск\C\language\language_do.exe,
+
+ВНЕЗАПНО: signal (11, 0x00): SIGSEGV: Доступ по неверному указателю. Ставьте ассерты! 
+
+Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x747A9350 в функции strcmp(). Попытка прочесть данные по адресу NULL. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#2: TXLib [Ver: 00173a, Rev: 105, Date: 2018-06-12 00:00:00 +0300], Instance: 0x00505600 (32-bit), Flags: Cmdre0, Thread: 0x2F20 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x747A9350 in C:\WINDOWS\System32\msvcrt.dll: strcmp()
+
+# 1 0x0042AD57 in C:\Users\иван\Google Диск\C\language\language_do.exe: do_oper_node() at C:/Users/иван/Google Диск/C/language/language_do.cpp (161):
+
+    159:     {
+    160:         case OPER_VALUE_create:
+=>  161:             adress = take_adress(node, name_table);
+    162:             memory[BP - adress] = 0;
+    163:             break;
+
+# 2 0x0042ACFE in C:\Users\иван\Google Диск\C\language\language_do.exe: do_oper_node() at C:/Users/иван/Google Диск/C/language/language_do.cpp (151):
+
+    149:     if (node->type == OPERATOR)
+    150:     {
+=>  151:         do_oper_node(big_root, node->left,  name_table);
+    152:         do_oper_node(big_root, node->right, name_table);
+    153:         return 0;
+
+# 3 0x0042AD1A in C:\Users\иван\Google Диск\C\language\language_do.exe: do_oper_node() at C:/Users/иван/Google Диск/C/language/language_do.cpp (152):
+
+    150:     {
+    151:         do_oper_node(big_root, node->left,  name_table);
+=>  152:         do_oper_node(big_root, node->right, name_table);
+    153:         return 0;
+    154:     }
+
+# 4 0x0042AD1A in C:\Users\иван\Google Диск\C\language\language_do.exe: do_oper_node() at C:/Users/иван/Google Диск/C/language/language_do.cpp (152):
+
+    150:     {
+    151:         do_oper_node(big_root, node->left,  name_table);
+=>  152:         do_oper_node(big_root, node->right, name_table);
+    153:         return 0;
+    154:     }
+
+# 5 0x0042AD1A in C:\Users\иван\Google Диск\C\language\language_do.exe: do_oper_node() at C:/Users/иван/Google Диск/C/language/language_do.cpp (152):
+
+    150:     {
+    151:         do_oper_node(big_root, node->left,  name_table);
+=>  152:         do_oper_node(big_root, node->right, name_table);
+    153:         return 0;
+    154:     }
+
+# 6 0x0042AD1A in C:\Users\иван\Google Диск\C\language\language_do.exe: do_oper_node() at C:/Users/иван/Google Диск/C/language/language_do.cpp (152):
+
+    150:     {
+    151:         do_oper_node(big_root, node->left,  name_table);
+=>  152:         do_oper_node(big_root, node->right, name_table);
+    153:         return 0;
+    154:     }
+
+# 7 0x0042B023 in C:\Users\иван\Google Диск\C\language\language_do.exe: do_func() at C:/Users/иван/Google Диск/C/language/language_do.cpp (236):
+
+    234: 
+    235: 
+=>  236:     do_oper_node(big_root, node->right, name_table);
+    237: 
+    238: 
+
+# 8 0x0042B24F in C:\Users\иван\Google Диск\C\language\language_do.exe: main() at C:/Users/иван/Google Диск/C/language/language_do.cpp (283):
+
+    281: 
+    282:     //do_oper_node(big_root, big_root[0]->right, char** name_table)
+=>  283:     do_func(big_root, big_root[0], nullptr);
+    284: 
+    285: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 105, Date: 2018-06-12 00:00:00 +0300]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\ФАЙЛЫ\загрузки\TX\TXLib.h
+Compiled:	Dec 10 2018 21:18:07, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Dec 10 2018 21:18:14
+
+Run file:	C:\Users\иван\Google Диск\C\language\language_do.exe
+Directory:	C:\Users\иван\Google Диск\C\language
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: C:\Users\иван\Google Диск\C\language\language_do.exe,
+
+ВНЕЗАПНО: Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x747A9350 в функции strcmp(). Попытка прочесть данные по адресу NULL. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+#1: TXLib [Ver: 00173a, Rev: 105, Date: 2018-06-12 00:00:00 +0300], Instance: 0x00505600 (32-bit), Flags: Cmdre0, Thread: 0x14B4 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x747A9350 in C:\WINDOWS\System32\msvcrt.dll: strcmp()
+
+# 1 0x0042AD7A in C:\Users\иван\Google Диск\C\language\language_do.exe: do_oper_node() at C:/Users/иван/Google Диск/C/language/language_do.cpp (163):
+
+    161:     {
+    162:         case OPER_VALUE_create:
+=>  163:             adress = take_adress(node, name_table);
+    164:             memory[BP - adress] = 0;
+    165:             break;
+
+# 2 0x0042AD21 in C:\Users\иван\Google Диск\C\language\language_do.exe: do_oper_node() at C:/Users/иван/Google Диск/C/language/language_do.cpp (153):
+
+    151:     if (node->type == OPERATOR)
+    152:     {
+=>  153:         do_oper_node(big_root, node->left,  name_table);
+    154:         do_oper_node(big_root, node->right, name_table);
+    155:         return 0;
+
+# 3 0x0042AD3D in C:\Users\иван\Google Диск\C\language\language_do.exe: do_oper_node() at C:/Users/иван/Google Диск/C/language/language_do.cpp (154):
+
+    152:     {
+    153:         do_oper_node(big_root, node->left,  name_table);
+=>  154:         do_oper_node(big_root, node->right, name_table);
+    155:         return 0;
+    156:     }
+
+# 4 0x0042AD3D in C:\Users\иван\Google Диск\C\language\language_do.exe: do_oper_node() at C:/Users/иван/Google Диск/C/language/language_do.cpp (154):
+
+    152:     {
+    153:         do_oper_node(big_root, node->left,  name_table);
+=>  154:         do_oper_node(big_root, node->right, name_table);
+    155:         return 0;
+    156:     }
+
+# 5 0x0042AD3D in C:\Users\иван\Google Диск\C\language\language_do.exe: do_oper_node() at C:/Users/иван/Google Диск/C/language/language_do.cpp (154):
+
+    152:     {
+    153:         do_oper_node(big_root, node->left,  name_table);
+=>  154:         do_oper_node(big_root, node->right, name_table);
+    155:         return 0;
+    156:     }
+
+# 6 0x0042AD3D in C:\Users\иван\Google Диск\C\language\language_do.exe: do_oper_node() at C:/Users/иван/Google Диск/C/language/language_do.cpp (154):
+
+    152:     {
+    153:         do_oper_node(big_root, node->left,  name_table);
+=>  154:         do_oper_node(big_root, node->right, name_table);
+    155:         return 0;
+    156:     }
+
+# 7 0x0042B023 in C:\Users\иван\Google Диск\C\language\language_do.exe: do_func() at C:/Users/иван/Google Диск/C/language/language_do.cpp (239):
+
+    237: 
+    238: 
+=>  239:     do_oper_node(big_root, node->right, name_table);
+    240: 
+    241: 
+
+# 8 0x0042B24F in C:\Users\иван\Google Диск\C\language\language_do.exe: main() at C:/Users/иван/Google Диск/C/language/language_do.cpp (286):
+
+    284: 
+    285:     //do_oper_node(big_root, big_root[0]->right, char** name_table)
+=>  286:     do_func(big_root, big_root[0], nullptr);
+    287: 
+    288: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 105, Date: 2018-06-12 00:00:00 +0300]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\ФАЙЛЫ\загрузки\TX\TXLib.h
+Compiled:	Dec 10 2018 21:20:59, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Dec 10 2018 21:21:06
+
+Run file:	C:\Users\иван\Google Диск\C\language\language_do.exe
+Directory:	C:\Users\иван\Google Диск\C\language
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\иван\Google Диск\C\language\language_do.exe,
+
+ВНЕЗАПНО: signal (11, 0x00): SIGSEGV: Доступ по неверному указателю. Ставьте ассерты! 
+
+Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x747A9350 в функции strcmp(). Попытка прочесть данные по адресу NULL. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#2: TXLib [Ver: 00173a, Rev: 105, Date: 2018-06-12 00:00:00 +0300], Instance: 0x00505600 (32-bit), Flags: Cmdre0, Thread: 0x14B4 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x747A9350 in C:\WINDOWS\System32\msvcrt.dll: strcmp()
+
+# 1 0x0042AD7A in C:\Users\иван\Google Диск\C\language\language_do.exe: do_oper_node() at C:/Users/иван/Google Диск/C/language/language_do.cpp (163):
+
+    161:     {
+    162:         case OPER_VALUE_create:
+=>  163:             adress = take_adress(node, name_table);
+    164:             memory[BP - adress] = 0;
+    165:             break;
+
+# 2 0x0042AD21 in C:\Users\иван\Google Диск\C\language\language_do.exe: do_oper_node() at C:/Users/иван/Google Диск/C/language/language_do.cpp (153):
+
+    151:     if (node->type == OPERATOR)
+    152:     {
+=>  153:         do_oper_node(big_root, node->left,  name_table);
+    154:         do_oper_node(big_root, node->right, name_table);
+    155:         return 0;
+
+# 3 0x0042AD3D in C:\Users\иван\Google Диск\C\language\language_do.exe: do_oper_node() at C:/Users/иван/Google Диск/C/language/language_do.cpp (154):
+
+    152:     {
+    153:         do_oper_node(big_root, node->left,  name_table);
+=>  154:         do_oper_node(big_root, node->right, name_table);
+    155:         return 0;
+    156:     }
+
+# 4 0x0042AD3D in C:\Users\иван\Google Диск\C\language\language_do.exe: do_oper_node() at C:/Users/иван/Google Диск/C/language/language_do.cpp (154):
+
+    152:     {
+    153:         do_oper_node(big_root, node->left,  name_table);
+=>  154:         do_oper_node(big_root, node->right, name_table);
+    155:         return 0;
+    156:     }
+
+# 5 0x0042AD3D in C:\Users\иван\Google Диск\C\language\language_do.exe: do_oper_node() at C:/Users/иван/Google Диск/C/language/language_do.cpp (154):
+
+    152:     {
+    153:         do_oper_node(big_root, node->left,  name_table);
+=>  154:         do_oper_node(big_root, node->right, name_table);
+    155:         return 0;
+    156:     }
+
+# 6 0x0042AD3D in C:\Users\иван\Google Диск\C\language\language_do.exe: do_oper_node() at C:/Users/иван/Google Диск/C/language/language_do.cpp (154):
+
+    152:     {
+    153:         do_oper_node(big_root, node->left,  name_table);
+=>  154:         do_oper_node(big_root, node->right, name_table);
+    155:         return 0;
+    156:     }
+
+# 7 0x0042B023 in C:\Users\иван\Google Диск\C\language\language_do.exe: do_func() at C:/Users/иван/Google Диск/C/language/language_do.cpp (239):
+
+    237: 
+    238: 
+=>  239:     do_oper_node(big_root, node->right, name_table);
+    240: 
+    241: 
+
+# 8 0x0042B24F in C:\Users\иван\Google Диск\C\language\language_do.exe: main() at C:/Users/иван/Google Диск/C/language/language_do.cpp (286):
+
+    284: 
+    285:     //do_oper_node(big_root, big_root[0]->right, char** name_table)
+=>  286:     do_func(big_root, big_root[0], nullptr);
+    287: 
+    288: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 105, Date: 2018-06-12 00:00:00 +0300]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\ФАЙЛЫ\загрузки\TX\TXLib.h
+Compiled:	Dec 10 2018 21:20:59, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Dec 10 2018 21:21:07
+
+Run file:	C:\Users\иван\Google Диск\C\language\language_do.exe
+Directory:	C:\Users\иван\Google Диск\C\language
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: C:\Users\иван\Google Диск\C\language\language_do.exe,
+
+ВНЕЗАПНО: Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x0042B12E в функции start_func() в файле C:/Users/иван/Google Диск/C/language/language_do.cpp на строке 266. Попытка прочесть данные по адресу 0x00000008. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+#1: TXLib [Ver: 00173a, Rev: 105, Date: 2018-06-12 00:00:00 +0300], Instance: 0x00505600 (32-bit), Flags: Cmdre0, Thread: 0x2820 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x0042B12E in C:\Users\иван\Google Диск\C\language\language_do.exe: start_func() at C:/Users/иван/Google Диск/C/language/language_do.cpp (266):
+
+    264:     int i = 1;
+    265: 
+=>  266:     while ( !strcmp( (char*)(int)((big_root[i])->info + 0.1), (char*)(int)(node->info + 0.1) ) )
+    267:         i++;
+    268: 
+
+# 1 0x0042AB1C in C:\Users\иван\Google Диск\C\language\language_do.exe: calculate() at C:/Users/иван/Google Диск/C/language/language_do.cpp (100):
+
+     98:     else if (node->type == FUNC_DO)
+     99:     {
+=>  100:         start_func(big_root, node, name_table);
+    101:         return RAX;
+    102:     }
+
+# 2 0x0042AE2A in C:\Users\иван\Google Диск\C\language\language_do.exe: do_oper_node() at C:/Users/иван/Google Диск/C/language/language_do.cpp (179):
+
+    177:         case OPER_A:
+    178:             adress = take_adress(node->left, name_table);
+=>  179:             memory[BP - adress] = calculate(big_root, node->right, name_table);
+    180:             break;
+    181: 
+
+# 3 0x0042AD07 in C:\Users\иван\Google Диск\C\language\language_do.exe: do_oper_node() at C:/Users/иван/Google Диск/C/language/language_do.cpp (153):
+
+    151:     if (node->type == OPERATOR)
+    152:     {
+=>  153:         do_oper_node(big_root, node->left,  name_table);
+    154:         do_oper_node(big_root, node->right, name_table);
+    155:         return 0;
+
+# 4 0x0042AD23 in C:\Users\иван\Google Диск\C\language\language_do.exe: do_oper_node() at C:/Users/иван/Google Диск/C/language/language_do.cpp (154):
+
+    152:     {
+    153:         do_oper_node(big_root, node->left,  name_table);
+=>  154:         do_oper_node(big_root, node->right, name_table);
+    155:         return 0;
+    156:     }
+
+# 5 0x0042AD23 in C:\Users\иван\Google Диск\C\language\language_do.exe: do_oper_node() at C:/Users/иван/Google Диск/C/language/language_do.cpp (154):
+
+    152:     {
+    153:         do_oper_node(big_root, node->left,  name_table);
+=>  154:         do_oper_node(big_root, node->right, name_table);
+    155:         return 0;
+    156:     }
+
+# 6 0x0042AD23 in C:\Users\иван\Google Диск\C\language\language_do.exe: do_oper_node() at C:/Users/иван/Google Диск/C/language/language_do.cpp (154):
+
+    152:     {
+    153:         do_oper_node(big_root, node->left,  name_table);
+=>  154:         do_oper_node(big_root, node->right, name_table);
+    155:         return 0;
+    156:     }
+
+# 7 0x0042AD23 in C:\Users\иван\Google Диск\C\language\language_do.exe: do_oper_node() at C:/Users/иван/Google Диск/C/language/language_do.cpp (154):
+
+    152:     {
+    153:         do_oper_node(big_root, node->left,  name_table);
+=>  154:         do_oper_node(big_root, node->right, name_table);
+    155:         return 0;
+    156:     }
+
+# 8 0x0042AD23 in C:\Users\иван\Google Диск\C\language\language_do.exe: do_oper_node() at C:/Users/иван/Google Диск/C/language/language_do.cpp (154):
+
+    152:     {
+    153:         do_oper_node(big_root, node->left,  name_table);
+=>  154:         do_oper_node(big_root, node->right, name_table);
+    155:         return 0;
+    156:     }
+
+# 9 0x0042B009 in C:\Users\иван\Google Диск\C\language\language_do.exe: do_func() at C:/Users/иван/Google Диск/C/language/language_do.cpp (239):
+
+    237: 
+    238: 
+=>  239:     do_oper_node(big_root, node->right, name_table);
+    240: 
+    241: 
+
+#10 0x0042B235 in C:\Users\иван\Google Диск\C\language\language_do.exe: main() at C:/Users/иван/Google Диск/C/language/language_do.cpp (286):
+
+    284: 
+    285:     //do_oper_node(big_root, big_root[0]->right, char** name_table)
+=>  286:     do_func(big_root, big_root[0], nullptr);
+    287: 
+    288: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 105, Date: 2018-06-12 00:00:00 +0300]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\ФАЙЛЫ\загрузки\TX\TXLib.h
+Compiled:	Dec 10 2018 22:02:30, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Dec 10 2018 22:02:37
+
+Run file:	C:\Users\иван\Google Диск\C\language\language_do.exe
+Directory:	C:\Users\иван\Google Диск\C\language
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\иван\Google Диск\C\language\language_do.exe,
+
+ВНЕЗАПНО: signal (11, 0x00): SIGSEGV: Доступ по неверному указателю. Ставьте ассерты! 
+
+Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x0042B12E в функции start_func() в файле C:/Users/иван/Google Диск/C/language/language_do.cpp на строке 266. Попытка прочесть данные по адресу 0x00000008. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#2: TXLib [Ver: 00173a, Rev: 105, Date: 2018-06-12 00:00:00 +0300], Instance: 0x00505600 (32-bit), Flags: Cmdre0, Thread: 0x2820 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x0042B12E in C:\Users\иван\Google Диск\C\language\language_do.exe: start_func() at C:/Users/иван/Google Диск/C/language/language_do.cpp (266):
+
+    264:     int i = 1;
+    265: 
+=>  266:     while ( !strcmp( (char*)(int)((big_root[i])->info + 0.1), (char*)(int)(node->info + 0.1) ) )
+    267:         i++;
+    268: 
+
+# 1 0x0042AB1C in C:\Users\иван\Google Диск\C\language\language_do.exe: calculate() at C:/Users/иван/Google Диск/C/language/language_do.cpp (100):
+
+     98:     else if (node->type == FUNC_DO)
+     99:     {
+=>  100:         start_func(big_root, node, name_table);
+    101:         return RAX;
+    102:     }
+
+# 2 0x0042AE2A in C:\Users\иван\Google Диск\C\language\language_do.exe: do_oper_node() at C:/Users/иван/Google Диск/C/language/language_do.cpp (179):
+
+    177:         case OPER_A:
+    178:             adress = take_adress(node->left, name_table);
+=>  179:             memory[BP - adress] = calculate(big_root, node->right, name_table);
+    180:             break;
+    181: 
+
+# 3 0x0042AD07 in C:\Users\иван\Google Диск\C\language\language_do.exe: do_oper_node() at C:/Users/иван/Google Диск/C/language/language_do.cpp (153):
+
+    151:     if (node->type == OPERATOR)
+    152:     {
+=>  153:         do_oper_node(big_root, node->left,  name_table);
+    154:         do_oper_node(big_root, node->right, name_table);
+    155:         return 0;
+
+# 4 0x0042AD23 in C:\Users\иван\Google Диск\C\language\language_do.exe: do_oper_node() at C:/Users/иван/Google Диск/C/language/language_do.cpp (154):
+
+    152:     {
+    153:         do_oper_node(big_root, node->left,  name_table);
+=>  154:         do_oper_node(big_root, node->right, name_table);
+    155:         return 0;
+    156:     }
+
+# 5 0x0042AD23 in C:\Users\иван\Google Диск\C\language\language_do.exe: do_oper_node() at C:/Users/иван/Google Диск/C/language/language_do.cpp (154):
+
+    152:     {
+    153:         do_oper_node(big_root, node->left,  name_table);
+=>  154:         do_oper_node(big_root, node->right, name_table);
+    155:         return 0;
+    156:     }
+
+# 6 0x0042AD23 in C:\Users\иван\Google Диск\C\language\language_do.exe: do_oper_node() at C:/Users/иван/Google Диск/C/language/language_do.cpp (154):
+
+    152:     {
+    153:         do_oper_node(big_root, node->left,  name_table);
+=>  154:         do_oper_node(big_root, node->right, name_table);
+    155:         return 0;
+    156:     }
+
+# 7 0x0042AD23 in C:\Users\иван\Google Диск\C\language\language_do.exe: do_oper_node() at C:/Users/иван/Google Диск/C/language/language_do.cpp (154):
+
+    152:     {
+    153:         do_oper_node(big_root, node->left,  name_table);
+=>  154:         do_oper_node(big_root, node->right, name_table);
+    155:         return 0;
+    156:     }
+
+# 8 0x0042AD23 in C:\Users\иван\Google Диск\C\language\language_do.exe: do_oper_node() at C:/Users/иван/Google Диск/C/language/language_do.cpp (154):
+
+    152:     {
+    153:         do_oper_node(big_root, node->left,  name_table);
+=>  154:         do_oper_node(big_root, node->right, name_table);
+    155:         return 0;
+    156:     }
+
+# 9 0x0042B009 in C:\Users\иван\Google Диск\C\language\language_do.exe: do_func() at C:/Users/иван/Google Диск/C/language/language_do.cpp (239):
+
+    237: 
+    238: 
+=>  239:     do_oper_node(big_root, node->right, name_table);
+    240: 
+    241: 
+
+#10 0x0042B235 in C:\Users\иван\Google Диск\C\language\language_do.exe: main() at C:/Users/иван/Google Диск/C/language/language_do.cpp (286):
+
+    284: 
+    285:     //do_oper_node(big_root, big_root[0]->right, char** name_table)
+=>  286:     do_func(big_root, big_root[0], nullptr);
+    287: 
+    288: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 105, Date: 2018-06-12 00:00:00 +0300]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\ФАЙЛЫ\загрузки\TX\TXLib.h
+Compiled:	Dec 10 2018 22:02:30, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Dec 10 2018 22:02:37
+
+Run file:	C:\Users\иван\Google Диск\C\language\language_do.exe
+Directory:	C:\Users\иван\Google Диск\C\language
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: C:\Users\иван\Google Диск\C\language\language_do.exe,
+
+ВНЕЗАПНО: Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x0042B1E6 в функции start_func() в файле C:/Users/иван/Google Диск/C/language/language_do.cpp на строке 266. Попытка прочесть данные по адресу 0x00000008. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+#1: TXLib [Ver: 00173a, Rev: 105, Date: 2018-06-12 00:00:00 +0300], Instance: 0x00505600 (32-bit), Flags: Cmdre0, Thread: 0x2FD0 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x0042B1E6 in C:\Users\иван\Google Диск\C\language\language_do.exe: start_func() at C:/Users/иван/Google Диск/C/language/language_do.cpp (266):
+
+    264:     int i = 1;
+    265: 
+=>  266:     while ( !strcmp( (char*)(int)((big_root[i])->info + 0.1), (char*)(int)(node->info + 0.1) ) )
+    267:     {
+    268:         printf("%d %d\n", (int)((big_root[i])->info + 0.1), (int)(node->info + 0.1));
+
+# 1 0x0042AB1C in C:\Users\иван\Google Диск\C\language\language_do.exe: calculate() at C:/Users/иван/Google Диск/C/language/language_do.cpp (100):
+
+     98:     else if (node->type == FUNC_DO)
+     99:     {
+=>  100:         start_func(big_root, node, name_table);
+    101:         return RAX;
+    102:     }
+
+# 2 0x0042AE2A in C:\Users\иван\Google Диск\C\language\language_do.exe: do_oper_node() at C:/Users/иван/Google Диск/C/language/language_do.cpp (179):
+
+    177:         case OPER_A:
+    178:             adress = take_adress(node->left, name_table);
+=>  179:             memory[BP - adress] = calculate(big_root, node->right, name_table);
+    180:             break;
+    181: 
+
+# 3 0x0042AD07 in C:\Users\иван\Google Диск\C\language\language_do.exe: do_oper_node() at C:/Users/иван/Google Диск/C/language/language_do.cpp (153):
+
+    151:     if (node->type == OPERATOR)
+    152:     {
+=>  153:         do_oper_node(big_root, node->left,  name_table);
+    154:         do_oper_node(big_root, node->right, name_table);
+    155:         return 0;
+
+# 4 0x0042AD23 in C:\Users\иван\Google Диск\C\language\language_do.exe: do_oper_node() at C:/Users/иван/Google Диск/C/language/language_do.cpp (154):
+
+    152:     {
+    153:         do_oper_node(big_root, node->left,  name_table);
+=>  154:         do_oper_node(big_root, node->right, name_table);
+    155:         return 0;
+    156:     }
+
+# 5 0x0042AD23 in C:\Users\иван\Google Диск\C\language\language_do.exe: do_oper_node() at C:/Users/иван/Google Диск/C/language/language_do.cpp (154):
+
+    152:     {
+    153:         do_oper_node(big_root, node->left,  name_table);
+=>  154:         do_oper_node(big_root, node->right, name_table);
+    155:         return 0;
+    156:     }
+
+# 6 0x0042AD23 in C:\Users\иван\Google Диск\C\language\language_do.exe: do_oper_node() at C:/Users/иван/Google Диск/C/language/language_do.cpp (154):
+
+    152:     {
+    153:         do_oper_node(big_root, node->left,  name_table);
+=>  154:         do_oper_node(big_root, node->right, name_table);
+    155:         return 0;
+    156:     }
+
+# 7 0x0042AD23 in C:\Users\иван\Google Диск\C\language\language_do.exe: do_oper_node() at C:/Users/иван/Google Диск/C/language/language_do.cpp (154):
+
+    152:     {
+    153:         do_oper_node(big_root, node->left,  name_table);
+=>  154:         do_oper_node(big_root, node->right, name_table);
+    155:         return 0;
+    156:     }
+
+# 8 0x0042AD23 in C:\Users\иван\Google Диск\C\language\language_do.exe: do_oper_node() at C:/Users/иван/Google Диск/C/language/language_do.cpp (154):
+
+    152:     {
+    153:         do_oper_node(big_root, node->left,  name_table);
+=>  154:         do_oper_node(big_root, node->right, name_table);
+    155:         return 0;
+    156:     }
+
+# 9 0x0042AFF6 in C:\Users\иван\Google Диск\C\language\language_do.exe: do_func() at C:/Users/иван/Google Диск/C/language/language_do.cpp (239):
+
+    237: 
+    238: 
+=>  239:     do_oper_node(big_root, node->right, name_table);
+    240: 
+    241: 
+
+#10 0x0042B2F1 in C:\Users\иван\Google Диск\C\language\language_do.exe: main() at C:/Users/иван/Google Диск/C/language/language_do.cpp (289):
+
+    287: 
+    288:     //do_oper_node(big_root, big_root[0]->right, char** name_table)
+=>  289:     do_func(big_root, big_root[0], nullptr);
+    290: 
+    291: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 105, Date: 2018-06-12 00:00:00 +0300]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\ФАЙЛЫ\загрузки\TX\TXLib.h
+Compiled:	Dec 10 2018 22:06:23, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Dec 10 2018 22:06:30
+
+Run file:	C:\Users\иван\Google Диск\C\language\language_do.exe
+Directory:	C:\Users\иван\Google Диск\C\language
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\иван\Google Диск\C\language\language_do.exe,
+
+ВНЕЗАПНО: signal (11, 0x00): SIGSEGV: Доступ по неверному указателю. Ставьте ассерты! 
+
+Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x0042B1E6 в функции start_func() в файле C:/Users/иван/Google Диск/C/language/language_do.cpp на строке 266. Попытка прочесть данные по адресу 0x00000008. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#2: TXLib [Ver: 00173a, Rev: 105, Date: 2018-06-12 00:00:00 +0300], Instance: 0x00505600 (32-bit), Flags: Cmdre0, Thread: 0x2FD0 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x0042B1E6 in C:\Users\иван\Google Диск\C\language\language_do.exe: start_func() at C:/Users/иван/Google Диск/C/language/language_do.cpp (266):
+
+    264:     int i = 1;
+    265: 
+=>  266:     while ( !strcmp( (char*)(int)((big_root[i])->info + 0.1), (char*)(int)(node->info + 0.1) ) )
+    267:     {
+    268:         printf("%d %d\n", (int)((big_root[i])->info + 0.1), (int)(node->info + 0.1));
+
+# 1 0x0042AB1C in C:\Users\иван\Google Диск\C\language\language_do.exe: calculate() at C:/Users/иван/Google Диск/C/language/language_do.cpp (100):
+
+     98:     else if (node->type == FUNC_DO)
+     99:     {
+=>  100:         start_func(big_root, node, name_table);
+    101:         return RAX;
+    102:     }
+
+# 2 0x0042AE2A in C:\Users\иван\Google Диск\C\language\language_do.exe: do_oper_node() at C:/Users/иван/Google Диск/C/language/language_do.cpp (179):
+
+    177:         case OPER_A:
+    178:             adress = take_adress(node->left, name_table);
+=>  179:             memory[BP - adress] = calculate(big_root, node->right, name_table);
+    180:             break;
+    181: 
+
+# 3 0x0042AD07 in C:\Users\иван\Google Диск\C\language\language_do.exe: do_oper_node() at C:/Users/иван/Google Диск/C/language/language_do.cpp (153):
+
+    151:     if (node->type == OPERATOR)
+    152:     {
+=>  153:         do_oper_node(big_root, node->left,  name_table);
+    154:         do_oper_node(big_root, node->right, name_table);
+    155:         return 0;
+
+# 4 0x0042AD23 in C:\Users\иван\Google Диск\C\language\language_do.exe: do_oper_node() at C:/Users/иван/Google Диск/C/language/language_do.cpp (154):
+
+    152:     {
+    153:         do_oper_node(big_root, node->left,  name_table);
+=>  154:         do_oper_node(big_root, node->right, name_table);
+    155:         return 0;
+    156:     }
+
+# 5 0x0042AD23 in C:\Users\иван\Google Диск\C\language\language_do.exe: do_oper_node() at C:/Users/иван/Google Диск/C/language/language_do.cpp (154):
+
+    152:     {
+    153:         do_oper_node(big_root, node->left,  name_table);
+=>  154:         do_oper_node(big_root, node->right, name_table);
+    155:         return 0;
+    156:     }
+
+# 6 0x0042AD23 in C:\Users\иван\Google Диск\C\language\language_do.exe: do_oper_node() at C:/Users/иван/Google Диск/C/language/language_do.cpp (154):
+
+    152:     {
+    153:         do_oper_node(big_root, node->left,  name_table);
+=>  154:         do_oper_node(big_root, node->right, name_table);
+    155:         return 0;
+    156:     }
+
+# 7 0x0042AD23 in C:\Users\иван\Google Диск\C\language\language_do.exe: do_oper_node() at C:/Users/иван/Google Диск/C/language/language_do.cpp (154):
+
+    152:     {
+    153:         do_oper_node(big_root, node->left,  name_table);
+=>  154:         do_oper_node(big_root, node->right, name_table);
+    155:         return 0;
+    156:     }
+
+# 8 0x0042AD23 in C:\Users\иван\Google Диск\C\language\language_do.exe: do_oper_node() at C:/Users/иван/Google Диск/C/language/language_do.cpp (154):
+
+    152:     {
+    153:         do_oper_node(big_root, node->left,  name_table);
+=>  154:         do_oper_node(big_root, node->right, name_table);
+    155:         return 0;
+    156:     }
+
+# 9 0x0042AFF6 in C:\Users\иван\Google Диск\C\language\language_do.exe: do_func() at C:/Users/иван/Google Диск/C/language/language_do.cpp (239):
+
+    237: 
+    238: 
+=>  239:     do_oper_node(big_root, node->right, name_table);
+    240: 
+    241: 
+
+#10 0x0042B2F1 in C:\Users\иван\Google Диск\C\language\language_do.exe: main() at C:/Users/иван/Google Диск/C/language/language_do.cpp (289):
+
+    287: 
+    288:     //do_oper_node(big_root, big_root[0]->right, char** name_table)
+=>  289:     do_func(big_root, big_root[0], nullptr);
+    290: 
+    291: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 105, Date: 2018-06-12 00:00:00 +0300]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\ФАЙЛЫ\загрузки\TX\TXLib.h
+Compiled:	Dec 10 2018 22:06:23, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Dec 10 2018 22:06:30
+
+Run file:	C:\Users\иван\Google Диск\C\language\language_do.exe
+Directory:	C:\Users\иван\Google Диск\C\language
+
+--------------------------------------------------

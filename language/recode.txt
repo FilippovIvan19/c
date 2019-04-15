@@ -1,0 +1,27 @@
+FUNC main z 
+{
+CREATE a;
+IN a;
+CREATE b;
+IN b;
+CREATE c;
+c = DO mul b a;
+OUT c;
+c =  @ c;
+OUT c;
+IF c # 6.00
+{
+c = b + a;
+};
+OUT c;
+RET 0.00;
+}
+
+
+FUNC mul w q 
+{
+q = q + w;
+RET q * w;
+}
+
+

@@ -1,0 +1,51 @@
+\hypertarget{root_8cpp}{
+\section{C:/Cpp/root/root.cpp File Reference}
+\label{root_8cpp}\index{C:/Cpp/root/root.cpp@{C:/Cpp/root/root.cpp}}
+}
+{\tt \#include $<$stdio.h$>$}\par
+{\tt \#include $<$math.h$>$}\par
+{\tt \#include $<$assert.h$>$}\par
+\subsection*{Defines}
+\begin{CompactItemize}
+\item 
+\hypertarget{root_8cpp_3e87c8f1fd5742574a79229b7f576df5}{
+\#define \textbf{NUM\_\-INF}~-1}
+\label{root_8cpp_3e87c8f1fd5742574a79229b7f576df5}
+
+\end{CompactItemize}
+\subsection*{Functions}
+\begin{CompactItemize}
+\item 
+int \hyperlink{root_8cpp_45fb69724becc65c6ac9f9023d512c9c}{SolveSquare} (float a, float b, float c, float $\ast$x1, float $\ast$x2)
+\item 
+\hypertarget{root_8cpp_e66f6b31b5ad750f1fe042a706a4e3d4}{
+int \textbf{main} ()}
+\label{root_8cpp_e66f6b31b5ad750f1fe042a706a4e3d4}
+
+\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{Desc}
+\item[Author:]Vanek \end{Desc}
+
+
+\subsection{Function Documentation}
+\hypertarget{root_8cpp_45fb69724becc65c6ac9f9023d512c9c}{
+\index{root.cpp@{root.cpp}!SolveSquare@{SolveSquare}}
+\index{SolveSquare@{SolveSquare}!root.cpp@{root.cpp}}
+\subsubsection[{SolveSquare}]{\setlength{\rightskip}{0pt plus 5cm}int SolveSquare (float {\em a}, \/  float {\em b}, \/  float {\em c}, \/  float $\ast$ {\em x1}, \/  float $\ast$ {\em x2})}}
+\label{root_8cpp_45fb69724becc65c6ac9f9023d512c9c}
+
+
+Solves a square equation ax$^\wedge$2 + bx + c = 0
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[\mbox{$\leftarrow$} {\em a}]a - coefficient a \item[\mbox{$\leftarrow$} {\em b}]b - coefficient b \item[\mbox{$\leftarrow$} {\em c}]c - coefficient c \item[\mbox{$\rightarrow$} {\em x1}]Pointer to the 1st root \item[\mbox{$\rightarrow$} {\em x2}]Pointer to the 2nd root\end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]Number of roots\end{Desc}
+\begin{Desc}
+\item[Note:]In case of infinite number of roots, return NUM\_\-INF \end{Desc}

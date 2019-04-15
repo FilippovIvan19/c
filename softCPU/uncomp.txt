@@ -1,0 +1,99 @@
+in
+in
+in
+pop rcx
+pop rbx
+pop rax
+push rax
+push 0
+je 143
+push rbx
+push rbx
+mul
+push 4
+push rax
+push rcx
+mul
+mul
+minus
+pop rdx
+push 0
+push rdx
+je 117
+push 0
+push rdx
+ja 181
+push rdx
+sqrt
+pop rdx
+push 2
+pop rgx
+push -1
+push rbx
+mul
+push rdx
+plus
+push rax
+div
+push 2
+div
+pop rex
+push -1
+push rbx
+mul
+push rdx
+minus
+push rax
+div
+push 2
+div
+pop rfx
+jmp 197
+push 1
+pop rgx
+push -1
+push rbx
+mul
+push rax
+div
+push 2
+div
+pop rex
+jmp 197
+push rbx
+push 0
+je 173
+push 1
+pop rgx
+push -1
+push rcx
+mul
+push rbx
+div
+pop rex
+jmp 197
+push rcx
+push 0
+je 189
+push 0
+pop rgx
+jmp 197
+push 3
+pop rgx
+jmp 197
+push rgx
+out
+push 0
+push rgx
+je 233
+push 3
+push rgx
+je 233
+push 1
+push rgx
+je 229
+push rfx
+out
+push rex
+out
+end

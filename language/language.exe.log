@@ -1,0 +1,3570 @@
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: C:\Users\иван\Google Диск\C\language\language.exe,
+
+ВНЕЗАПНО: Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x00427AF0 в функции print_node() в файле C:/Users/иван/Google Диск/C/language/language.cpp на строке 485. Попытка прочесть данные по адресу NULL. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+#1: TXLib [Ver: 00173a, Rev: 105, Date: 2018-06-12 00:00:00 +0300], Instance: 0x004FF2C0 (32-bit), Flags: Cmdre0, Thread: 0xAD8 (Main), GetLastError(): 183 (Невозможно создать файл, так как он уже существует). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00427AF0 in C:\Users\иван\Google Диск\C\language\language.exe: print_node() at C:/Users/иван/Google Диск/C/language/language.cpp (485):
+
+    483: 
+    484:         case OPERATOR:
+=>  485:             if (node->parent->type != OPERATOR)
+    486:                 fprintf(out_file, "\n{");
+    487:             fprintf(out_file, "\n");
+
+# 1 0x00427D31 in C:\Users\иван\Google Диск\C\language\language.exe: print_tree() at C:/Users/иван/Google Диск/C/language/language.cpp (536):
+
+    534:     print_tree((FILE*)out_file, node->left);
+    535: 
+=>  536:     print_node((FILE*)out_file, node);
+    537: 
+    538:     print_tree((FILE*)out_file, node->right);
+
+# 2 0x00427D46 in C:\Users\иван\Google Диск\C\language\language.exe: print_tree() at C:/Users/иван/Google Диск/C/language/language.cpp (538):
+
+    536:     print_node((FILE*)out_file, node);
+    537: 
+=>  538:     print_tree((FILE*)out_file, node->right);
+    539: 
+    540: 
+
+# 3 0x00427E1B in C:\Users\иван\Google Диск\C\language\language.exe: main() at C:/Users/иван/Google Диск/C/language/language.cpp (557):
+
+    555:     //scanf("%s", out_name);
+    556:     FILE* out_file = fopen(out_name, "w");
+=>  557:     print_tree(out_file, tree.root);
+    558:     print_tree(stdout, tree.root);
+    559:     fclose(out_file);
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 105, Date: 2018-06-12 00:00:00 +0300]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\ФАЙЛЫ\загрузки\TX\TXLib.h
+Compiled:	Dec  3 2018 21:58:16, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Dec 03 2018 21:58:22
+
+Run file:	C:\Users\иван\Google Диск\C\language\language.exe
+Directory:	C:\Users\иван\Google Диск\C\language
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\иван\Google Диск\C\language\language.exe,
+
+ВНЕЗАПНО: signal (11, 0x00): SIGSEGV: Доступ по неверному указателю. Ставьте ассерты! 
+
+Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x00427AF0 в функции print_node() в файле C:/Users/иван/Google Диск/C/language/language.cpp на строке 485. Попытка прочесть данные по адресу NULL. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#2: TXLib [Ver: 00173a, Rev: 105, Date: 2018-06-12 00:00:00 +0300], Instance: 0x004FF2C0 (32-bit), Flags: Cmdre0, Thread: 0xAD8 (Main), GetLastError(): 183 (Невозможно создать файл, так как он уже существует). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00427AF0 in C:\Users\иван\Google Диск\C\language\language.exe: print_node() at C:/Users/иван/Google Диск/C/language/language.cpp (485):
+
+    483: 
+    484:         case OPERATOR:
+=>  485:             if (node->parent->type != OPERATOR)
+    486:                 fprintf(out_file, "\n{");
+    487:             fprintf(out_file, "\n");
+
+# 1 0x00427D31 in C:\Users\иван\Google Диск\C\language\language.exe: print_tree() at C:/Users/иван/Google Диск/C/language/language.cpp (536):
+
+    534:     print_tree((FILE*)out_file, node->left);
+    535: 
+=>  536:     print_node((FILE*)out_file, node);
+    537: 
+    538:     print_tree((FILE*)out_file, node->right);
+
+# 2 0x00427D46 in C:\Users\иван\Google Диск\C\language\language.exe: print_tree() at C:/Users/иван/Google Диск/C/language/language.cpp (538):
+
+    536:     print_node((FILE*)out_file, node);
+    537: 
+=>  538:     print_tree((FILE*)out_file, node->right);
+    539: 
+    540: 
+
+# 3 0x00427E1B in C:\Users\иван\Google Диск\C\language\language.exe: main() at C:/Users/иван/Google Диск/C/language/language.cpp (557):
+
+    555:     //scanf("%s", out_name);
+    556:     FILE* out_file = fopen(out_name, "w");
+=>  557:     print_tree(out_file, tree.root);
+    558:     print_tree(stdout, tree.root);
+    559:     fclose(out_file);
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 105, Date: 2018-06-12 00:00:00 +0300]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\ФАЙЛЫ\загрузки\TX\TXLib.h
+Compiled:	Dec  3 2018 21:58:16, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Dec 03 2018 21:58:22
+
+Run file:	C:\Users\иван\Google Диск\C\language\language.exe
+Directory:	C:\Users\иван\Google Диск\C\language
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: C:\Users\иван\Google Диск\C\language\language.exe,
+
+ВНЕЗАПНО: Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x00426F72 в функции oper_node_create() в файле C:/Users/иван/Google Диск/C/language/language.cpp на строке 227. Попытка записать данные по адресу 0x00000018. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+#1: TXLib [Ver: 00173a, Rev: 105, Date: 2018-06-12 00:00:00 +0300], Instance: 0x004FF2C0 (32-bit), Flags: Cmdre0, Thread: 0x3264 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00426F72 in C:\Users\иван\Google Диск\C\language\language.exe: oper_node_create() at C:/Users/иван/Google Диск/C/language/language.cpp (227):
+
+    225: 
+    226:     node1->parent = node;
+=>  227:     node2->parent = node;
+    228: 
+    229:     //PasteNode(tree, node, node1, l_branch, DONT_ADD_ROOT);
+
+# 1 0x00427062 in C:\Users\иван\Google Диск\C\language\language.exe: GetE() at C:/Users/иван/Google Диск/C/language/language.cpp (257):
+
+    255:         if (op == '+')
+    256:         {
+=>  257:             oper_node_create(node, node1, node2, '+');
+    258:             node1 = node;
+    259:         }
+
+# 2 0x00427621 in C:\Users\иван\Google Диск\C\language\language.exe: GetA() at C:/Users/иван/Google Диск/C/language/language.cpp (393):
+
+    391:     s++;
+    392: 
+=>  393:     node->right = GetE();
+    394:     node->right->parent = node;
+    395: 
+
+# 3 0x004278E9 in C:\Users\иван\Google Диск\C\language\language.exe: GetOP() at C:/Users/иван/Google Диск/C/language/language.cpp (443):
+
+    441:         node = (Node*)calloc(1, sizeof(Node));
+    442:         NodeCtor(node, OPERATOR, 0);
+=>  443:         node->left = GetA();
+    444:     }
+    445: 
+
+# 4 0x0042775E in C:\Users\иван\Google Диск\C\language\language.exe: GetOP() at C:/Users/иван/Google Диск/C/language/language.cpp (419):
+
+    417:         while (*s != '}')
+    418:         {
+=>  419:             Node* node2 = GetOP();
+    420:             node1->right = node2;
+    421:             node1 = node2;
+
+# 5 0x00426F8A in C:\Users\иван\Google Диск\C\language\language.exe: GetG() at C:/Users/иван/Google Диск/C/language/language.cpp (237):
+
+    235: {
+    236:     s = str;
+=>  237:     Node* root = GetOP();
+    238:     assert(*s == '\0');
+    239: 
+
+# 6 0x00427A59 in C:\Users\иван\Google Диск\C\language\language.exe: read_code() at C:/Users/иван/Google Диск/C/language/language.cpp (472):
+
+    470:     fclose(in_file);
+    471: 
+=>  472:     return GetG(text);
+    473: }
+    474: 
+
+# 7 0x00427DE6 in C:\Users\иван\Google Диск\C\language\language.exe: main() at C:/Users/иван/Google Диск/C/language/language.cpp (575):
+
+    573: 
+    574:     Tree tree;
+=>  575:     TreeCtor(&tree, read_code(in_name));
+    576: 
+    577:     //printf("%d", tree_count(tree.root));
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 105, Date: 2018-06-12 00:00:00 +0300]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\ФАЙЛЫ\загрузки\TX\TXLib.h
+Compiled:	Dec  3 2018 23:09:00, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Dec 03 2018 23:09:06
+
+Run file:	C:\Users\иван\Google Диск\C\language\language.exe
+Directory:	C:\Users\иван\Google Диск\C\language
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\иван\Google Диск\C\language\language.exe,
+
+ВНЕЗАПНО: signal (11, 0x00): SIGSEGV: Доступ по неверному указателю. Ставьте ассерты! 
+
+Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x00426F72 в функции oper_node_create() в файле C:/Users/иван/Google Диск/C/language/language.cpp на строке 227. Попытка записать данные по адресу 0x00000018. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#2: TXLib [Ver: 00173a, Rev: 105, Date: 2018-06-12 00:00:00 +0300], Instance: 0x004FF2C0 (32-bit), Flags: Cmdre0, Thread: 0x3264 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00426F72 in C:\Users\иван\Google Диск\C\language\language.exe: oper_node_create() at C:/Users/иван/Google Диск/C/language/language.cpp (227):
+
+    225: 
+    226:     node1->parent = node;
+=>  227:     node2->parent = node;
+    228: 
+    229:     //PasteNode(tree, node, node1, l_branch, DONT_ADD_ROOT);
+
+# 1 0x00427062 in C:\Users\иван\Google Диск\C\language\language.exe: GetE() at C:/Users/иван/Google Диск/C/language/language.cpp (257):
+
+    255:         if (op == '+')
+    256:         {
+=>  257:             oper_node_create(node, node1, node2, '+');
+    258:             node1 = node;
+    259:         }
+
+# 2 0x00427621 in C:\Users\иван\Google Диск\C\language\language.exe: GetA() at C:/Users/иван/Google Диск/C/language/language.cpp (393):
+
+    391:     s++;
+    392: 
+=>  393:     node->right = GetE();
+    394:     node->right->parent = node;
+    395: 
+
+# 3 0x004278E9 in C:\Users\иван\Google Диск\C\language\language.exe: GetOP() at C:/Users/иван/Google Диск/C/language/language.cpp (443):
+
+    441:         node = (Node*)calloc(1, sizeof(Node));
+    442:         NodeCtor(node, OPERATOR, 0);
+=>  443:         node->left = GetA();
+    444:     }
+    445: 
+
+# 4 0x0042775E in C:\Users\иван\Google Диск\C\language\language.exe: GetOP() at C:/Users/иван/Google Диск/C/language/language.cpp (419):
+
+    417:         while (*s != '}')
+    418:         {
+=>  419:             Node* node2 = GetOP();
+    420:             node1->right = node2;
+    421:             node1 = node2;
+
+# 5 0x00426F8A in C:\Users\иван\Google Диск\C\language\language.exe: GetG() at C:/Users/иван/Google Диск/C/language/language.cpp (237):
+
+    235: {
+    236:     s = str;
+=>  237:     Node* root = GetOP();
+    238:     assert(*s == '\0');
+    239: 
+
+# 6 0x00427A59 in C:\Users\иван\Google Диск\C\language\language.exe: read_code() at C:/Users/иван/Google Диск/C/language/language.cpp (472):
+
+    470:     fclose(in_file);
+    471: 
+=>  472:     return GetG(text);
+    473: }
+    474: 
+
+# 7 0x00427DE6 in C:\Users\иван\Google Диск\C\language\language.exe: main() at C:/Users/иван/Google Диск/C/language/language.cpp (575):
+
+    573: 
+    574:     Tree tree;
+=>  575:     TreeCtor(&tree, read_code(in_name));
+    576: 
+    577:     //printf("%d", tree_count(tree.root));
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 105, Date: 2018-06-12 00:00:00 +0300]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\ФАЙЛЫ\загрузки\TX\TXLib.h
+Compiled:	Dec  3 2018 23:09:00, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Dec 03 2018 23:09:07
+
+Run file:	C:\Users\иван\Google Диск\C\language\language.exe
+Directory:	C:\Users\иван\Google Диск\C\language
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: C:\Users\иван\Google Диск\C\language\language.exe,
+
+ВНЕЗАПНО: Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x00426F72 в функции oper_node_create() в файле C:/Users/иван/Google Диск/C/language/language.cpp на строке 227. Попытка записать данные по адресу 0x00000018. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+#1: TXLib [Ver: 00173a, Rev: 105, Date: 2018-06-12 00:00:00 +0300], Instance: 0x004FF2C0 (32-bit), Flags: Cmdre0, Thread: 0x2EEC (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00426F72 in C:\Users\иван\Google Диск\C\language\language.exe: oper_node_create() at C:/Users/иван/Google Диск/C/language/language.cpp (227):
+
+    225: 
+    226:     node1->parent = node;
+=>  227:     node2->parent = node;
+    228: 
+    229:     //PasteNode(tree, node, node1, l_branch, DONT_ADD_ROOT);
+
+# 1 0x00427062 in C:\Users\иван\Google Диск\C\language\language.exe: GetE() at C:/Users/иван/Google Диск/C/language/language.cpp (257):
+
+    255:         if (op == '+')
+    256:         {
+=>  257:             oper_node_create(node, node1, node2, '+');
+    258:             node1 = node;
+    259:         }
+
+# 2 0x00427621 in C:\Users\иван\Google Диск\C\language\language.exe: GetA() at C:/Users/иван/Google Диск/C/language/language.cpp (393):
+
+    391:     s++;
+    392: 
+=>  393:     node->right = GetE();
+    394:     node->right->parent = node;
+    395: 
+
+# 3 0x0042790A in C:\Users\иван\Google Диск\C\language\language.exe: GetOP() at C:/Users/иван/Google Диск/C/language/language.cpp (446):
+
+    444:         node = (Node*)calloc(1, sizeof(Node));
+    445:         NodeCtor(node, OPERATOR, 0);
+=>  446:         node->left = GetA();
+    447:         node->left->parent = node;
+    448:     }
+
+# 4 0x0042775E in C:\Users\иван\Google Диск\C\language\language.exe: GetOP() at C:/Users/иван/Google Диск/C/language/language.cpp (419):
+
+    417:         while (*s != '}')
+    418:         {
+=>  419:             Node* node2 = GetOP();
+    420:             node1->right = node2;
+    421:             node2->parent = node1;
+
+# 5 0x00426F8A in C:\Users\иван\Google Диск\C\language\language.exe: GetG() at C:/Users/иван/Google Диск/C/language/language.cpp (237):
+
+    235: {
+    236:     s = str;
+=>  237:     Node* root = GetOP();
+    238:     assert(*s == '\0');
+    239: 
+
+# 6 0x00427A86 in C:\Users\иван\Google Диск\C\language\language.exe: read_code() at C:/Users/иван/Google Диск/C/language/language.cpp (476):
+
+    474:     fclose(in_file);
+    475: 
+=>  476:     return GetG(text);
+    477: }
+    478: 
+
+# 7 0x00427E13 in C:\Users\иван\Google Диск\C\language\language.exe: main() at C:/Users/иван/Google Диск/C/language/language.cpp (579):
+
+    577: 
+    578:     Tree tree;
+=>  579:     TreeCtor(&tree, read_code(in_name));
+    580: 
+    581:     //printf("%d", tree_count(tree.root));
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 105, Date: 2018-06-12 00:00:00 +0300]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\ФАЙЛЫ\загрузки\TX\TXLib.h
+Compiled:	Dec  3 2018 23:10:53, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Dec 03 2018 23:11:00
+
+Run file:	C:\Users\иван\Google Диск\C\language\language.exe
+Directory:	C:\Users\иван\Google Диск\C\language
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\иван\Google Диск\C\language\language.exe,
+
+ВНЕЗАПНО: signal (11, 0x00): SIGSEGV: Доступ по неверному указателю. Ставьте ассерты! 
+
+Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x00426F72 в функции oper_node_create() в файле C:/Users/иван/Google Диск/C/language/language.cpp на строке 227. Попытка записать данные по адресу 0x00000018. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#2: TXLib [Ver: 00173a, Rev: 105, Date: 2018-06-12 00:00:00 +0300], Instance: 0x004FF2C0 (32-bit), Flags: Cmdre0, Thread: 0x2EEC (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00426F72 in C:\Users\иван\Google Диск\C\language\language.exe: oper_node_create() at C:/Users/иван/Google Диск/C/language/language.cpp (227):
+
+    225: 
+    226:     node1->parent = node;
+=>  227:     node2->parent = node;
+    228: 
+    229:     //PasteNode(tree, node, node1, l_branch, DONT_ADD_ROOT);
+
+# 1 0x00427062 in C:\Users\иван\Google Диск\C\language\language.exe: GetE() at C:/Users/иван/Google Диск/C/language/language.cpp (257):
+
+    255:         if (op == '+')
+    256:         {
+=>  257:             oper_node_create(node, node1, node2, '+');
+    258:             node1 = node;
+    259:         }
+
+# 2 0x00427621 in C:\Users\иван\Google Диск\C\language\language.exe: GetA() at C:/Users/иван/Google Диск/C/language/language.cpp (393):
+
+    391:     s++;
+    392: 
+=>  393:     node->right = GetE();
+    394:     node->right->parent = node;
+    395: 
+
+# 3 0x0042790A in C:\Users\иван\Google Диск\C\language\language.exe: GetOP() at C:/Users/иван/Google Диск/C/language/language.cpp (446):
+
+    444:         node = (Node*)calloc(1, sizeof(Node));
+    445:         NodeCtor(node, OPERATOR, 0);
+=>  446:         node->left = GetA();
+    447:         node->left->parent = node;
+    448:     }
+
+# 4 0x0042775E in C:\Users\иван\Google Диск\C\language\language.exe: GetOP() at C:/Users/иван/Google Диск/C/language/language.cpp (419):
+
+    417:         while (*s != '}')
+    418:         {
+=>  419:             Node* node2 = GetOP();
+    420:             node1->right = node2;
+    421:             node2->parent = node1;
+
+# 5 0x00426F8A in C:\Users\иван\Google Диск\C\language\language.exe: GetG() at C:/Users/иван/Google Диск/C/language/language.cpp (237):
+
+    235: {
+    236:     s = str;
+=>  237:     Node* root = GetOP();
+    238:     assert(*s == '\0');
+    239: 
+
+# 6 0x00427A86 in C:\Users\иван\Google Диск\C\language\language.exe: read_code() at C:/Users/иван/Google Диск/C/language/language.cpp (476):
+
+    474:     fclose(in_file);
+    475: 
+=>  476:     return GetG(text);
+    477: }
+    478: 
+
+# 7 0x00427E13 in C:\Users\иван\Google Диск\C\language\language.exe: main() at C:/Users/иван/Google Диск/C/language/language.cpp (579):
+
+    577: 
+    578:     Tree tree;
+=>  579:     TreeCtor(&tree, read_code(in_name));
+    580: 
+    581:     //printf("%d", tree_count(tree.root));
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 105, Date: 2018-06-12 00:00:00 +0300]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\ФАЙЛЫ\загрузки\TX\TXLib.h
+Compiled:	Dec  3 2018 23:10:53, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Dec 03 2018 23:10:59
+
+Run file:	C:\Users\иван\Google Диск\C\language\language.exe
+Directory:	C:\Users\иван\Google Диск\C\language
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: C:\Users\иван\Google Диск\C\language\language.exe,
+
+ВНЕЗАПНО: Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x00426F72 в функции oper_node_create() в файле C:/Users/иван/Google Диск/C/language/language.cpp на строке 227. Попытка записать данные по адресу 0x00000018. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+#1: TXLib [Ver: 00173a, Rev: 105, Date: 2018-06-12 00:00:00 +0300], Instance: 0x004FF2C0 (32-bit), Flags: Cmdre0, Thread: 0x2338 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00426F72 in C:\Users\иван\Google Диск\C\language\language.exe: oper_node_create() at C:/Users/иван/Google Диск/C/language/language.cpp (227):
+
+    225: 
+    226:     node1->parent = node;
+=>  227:     node2->parent = node;
+    228: 
+    229:     //PasteNode(tree, node, node1, l_branch, DONT_ADD_ROOT);
+
+# 1 0x00427065 in C:\Users\иван\Google Диск\C\language\language.exe: GetE() at C:/Users/иван/Google Диск/C/language/language.cpp (259):
+
+    257:         if (op == '+')
+    258:         {
+=>  259:             oper_node_create(node, node1, node2, '+');
+    260:             node1 = node;
+    261:         }
+
+# 2 0x00427624 in C:\Users\иван\Google Диск\C\language\language.exe: GetA() at C:/Users/иван/Google Диск/C/language/language.cpp (395):
+
+    393:     s++;
+    394: 
+=>  395:     node->right = GetE();
+    396:     node->right->parent = node;
+    397: 
+
+# 3 0x0042790D in C:\Users\иван\Google Диск\C\language\language.exe: GetOP() at C:/Users/иван/Google Диск/C/language/language.cpp (448):
+
+    446:         node = (Node*)calloc(1, sizeof(Node));
+    447:         NodeCtor(node, OPERATOR, 0);
+=>  448:         node->left = GetA();
+    449:         node->left->parent = node;
+    450:     }
+
+# 4 0x00427761 in C:\Users\иван\Google Диск\C\language\language.exe: GetOP() at C:/Users/иван/Google Диск/C/language/language.cpp (421):
+
+    419:         while (*s != '}')
+    420:         {
+=>  421:             Node* node2 = GetOP();
+    422:             node1->right = node2;
+    423:             node2->parent = node1;
+
+# 5 0x00426F8D in C:\Users\иван\Google Диск\C\language\language.exe: GetG() at C:/Users/иван/Google Диск/C/language/language.cpp (239):
+
+    237: {
+    238:     s = str;
+=>  239:     Node* root = GetOP();
+    240:     assert(*s == '\0');
+    241: 
+
+# 6 0x00427A89 in C:\Users\иван\Google Диск\C\language\language.exe: read_code() at C:/Users/иван/Google Диск/C/language/language.cpp (478):
+
+    476:     fclose(in_file);
+    477: 
+=>  478:     return GetG(text);
+    479: }
+    480: 
+
+# 7 0x00427E16 in C:\Users\иван\Google Диск\C\language\language.exe: main() at C:/Users/иван/Google Диск/C/language/language.cpp (581):
+
+    579: 
+    580:     Tree tree;
+=>  581:     TreeCtor(&tree, read_code(in_name));
+    582: 
+    583:     //printf("%d", tree_count(tree.root));
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 105, Date: 2018-06-12 00:00:00 +0300]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\ФАЙЛЫ\загрузки\TX\TXLib.h
+Compiled:	Dec  3 2018 23:19:08, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Dec 03 2018 23:19:14
+
+Run file:	C:\Users\иван\Google Диск\C\language\language.exe
+Directory:	C:\Users\иван\Google Диск\C\language
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\иван\Google Диск\C\language\language.exe,
+
+ВНЕЗАПНО: signal (11, 0x00): SIGSEGV: Доступ по неверному указателю. Ставьте ассерты! 
+
+Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x00426F72 в функции oper_node_create() в файле C:/Users/иван/Google Диск/C/language/language.cpp на строке 227. Попытка записать данные по адресу 0x00000018. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#2: TXLib [Ver: 00173a, Rev: 105, Date: 2018-06-12 00:00:00 +0300], Instance: 0x004FF2C0 (32-bit), Flags: Cmdre0, Thread: 0x2338 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00426F72 in C:\Users\иван\Google Диск\C\language\language.exe: oper_node_create() at C:/Users/иван/Google Диск/C/language/language.cpp (227):
+
+    225: 
+    226:     node1->parent = node;
+=>  227:     node2->parent = node;
+    228: 
+    229:     //PasteNode(tree, node, node1, l_branch, DONT_ADD_ROOT);
+
+# 1 0x00427065 in C:\Users\иван\Google Диск\C\language\language.exe: GetE() at C:/Users/иван/Google Диск/C/language/language.cpp (259):
+
+    257:         if (op == '+')
+    258:         {
+=>  259:             oper_node_create(node, node1, node2, '+');
+    260:             node1 = node;
+    261:         }
+
+# 2 0x00427624 in C:\Users\иван\Google Диск\C\language\language.exe: GetA() at C:/Users/иван/Google Диск/C/language/language.cpp (395):
+
+    393:     s++;
+    394: 
+=>  395:     node->right = GetE();
+    396:     node->right->parent = node;
+    397: 
+
+# 3 0x0042790D in C:\Users\иван\Google Диск\C\language\language.exe: GetOP() at C:/Users/иван/Google Диск/C/language/language.cpp (448):
+
+    446:         node = (Node*)calloc(1, sizeof(Node));
+    447:         NodeCtor(node, OPERATOR, 0);
+=>  448:         node->left = GetA();
+    449:         node->left->parent = node;
+    450:     }
+
+# 4 0x00427761 in C:\Users\иван\Google Диск\C\language\language.exe: GetOP() at C:/Users/иван/Google Диск/C/language/language.cpp (421):
+
+    419:         while (*s != '}')
+    420:         {
+=>  421:             Node* node2 = GetOP();
+    422:             node1->right = node2;
+    423:             node2->parent = node1;
+
+# 5 0x00426F8D in C:\Users\иван\Google Диск\C\language\language.exe: GetG() at C:/Users/иван/Google Диск/C/language/language.cpp (239):
+
+    237: {
+    238:     s = str;
+=>  239:     Node* root = GetOP();
+    240:     assert(*s == '\0');
+    241: 
+
+# 6 0x00427A89 in C:\Users\иван\Google Диск\C\language\language.exe: read_code() at C:/Users/иван/Google Диск/C/language/language.cpp (478):
+
+    476:     fclose(in_file);
+    477: 
+=>  478:     return GetG(text);
+    479: }
+    480: 
+
+# 7 0x00427E16 in C:\Users\иван\Google Диск\C\language\language.exe: main() at C:/Users/иван/Google Диск/C/language/language.cpp (581):
+
+    579: 
+    580:     Tree tree;
+=>  581:     TreeCtor(&tree, read_code(in_name));
+    582: 
+    583:     //printf("%d", tree_count(tree.root));
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 105, Date: 2018-06-12 00:00:00 +0300]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\ФАЙЛЫ\загрузки\TX\TXLib.h
+Compiled:	Dec  3 2018 23:19:08, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Dec 03 2018 23:19:14
+
+Run file:	C:\Users\иван\Google Диск\C\language\language.exe
+Directory:	C:\Users\иван\Google Диск\C\language
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\иван\Google Диск\C\language\language.exe, файл: C:\Users\иван\Google Диск\C\language\language.cpp, строка: 454, функция: Node* GetOP(),
+
+Сообщение: ВНЕЗАПНО: Логическая ошибка: Неверно, что "*s == ';'".
+
+#1: TXLib [Ver: 00173a, Rev: 105, Date: 2018-06-12 00:00:00 +0300], Instance: 0x004FF2C0 (32-bit), Flags: Cmdre0, Thread: 0x218C (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00427990 in C:\Users\иван\Google Диск\C\language\language.exe: GetOP() at C:/Users/иван/Google Диск/C/language/language.cpp (454):
+
+    452:     if (!(*s == ';'))
+    453:         printf("%s", command);
+=>  454:     assert(*s == ';');
+    455:     s++;
+    456: 
+
+# 1 0x00427760 in C:\Users\иван\Google Диск\C\language\language.exe: GetOP() at C:/Users/иван/Google Диск/C/language/language.cpp (417):
+
+    415:         assert(*s != '}');
+    416: 
+=>  417:         node = GetOP();
+    418:         Node* node1 = node;
+    419:         while (*s != '}')
+
+# 2 0x00426F8D in C:\Users\иван\Google Диск\C\language\language.exe: GetG() at C:/Users/иван/Google Диск/C/language/language.cpp (239):
+
+    237: {
+    238:     s = str;
+=>  239:     Node* root = GetOP();
+    240:     assert(*s == '\0');
+    241: 
+
+# 3 0x00427A98 in C:\Users\иван\Google Диск\C\language\language.exe: read_code() at C:/Users/иван/Google Диск/C/language/language.cpp (478):
+
+    476:     fclose(in_file);
+    477: 
+=>  478:     return GetG(text);
+    479: }
+    480: 
+
+# 4 0x00427E5A in C:\Users\иван\Google Диск\C\language\language.exe: main() at C:/Users/иван/Google Диск/C/language/language.cpp (571):
+
+    569: 
+    570:     Tree tree;
+=>  571:     TreeCtor(&tree, read_code(in_name));
+    572: 
+    573:     //printf("%d", tree_count(tree.root));
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 105, Date: 2018-06-12 00:00:00 +0300]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\ФАЙЛЫ\загрузки\TX\TXLib.h
+Compiled:	Dec  3 2018 23:37:19, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Dec 03 2018 23:38:25
+
+Run file:	C:\Users\иван\Google Диск\C\language\language.exe
+Directory:	C:\Users\иван\Google Диск\C\language
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\иван\Google Диск\C\language\language.exe, файл: C:\Users\иван\Google Диск\C\language\language.cpp, строка: 454, функция: Node* GetOP(),
+
+Сообщение: ВНЕЗАПНО: Логическая ошибка: Неверно, что "*s == ';'".
+
+#1: TXLib [Ver: 00173a, Rev: 105, Date: 2018-06-12 00:00:00 +0300], Instance: 0x004FF2C0 (32-bit), Flags: Cmdre0, Thread: 0xB28 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00427990 in C:\Users\иван\Google Диск\C\language\language.exe: GetOP() at C:/Users/иван/Google Диск/C/language/language.cpp (454):
+
+    452:     if (!(*s == ';'))
+    453:         printf("%s", command);
+=>  454:     assert(*s == ';');
+    455:     s++;
+    456: 
+
+# 1 0x00427760 in C:\Users\иван\Google Диск\C\language\language.exe: GetOP() at C:/Users/иван/Google Диск/C/language/language.cpp (417):
+
+    415:         assert(*s != '}');
+    416: 
+=>  417:         node = GetOP();
+    418:         Node* node1 = node;
+    419:         while (*s != '}')
+
+# 2 0x00426F8D in C:\Users\иван\Google Диск\C\language\language.exe: GetG() at C:/Users/иван/Google Диск/C/language/language.cpp (239):
+
+    237: {
+    238:     s = str;
+=>  239:     Node* root = GetOP();
+    240:     assert(*s == '\0');
+    241: 
+
+# 3 0x00427A98 in C:\Users\иван\Google Диск\C\language\language.exe: read_code() at C:/Users/иван/Google Диск/C/language/language.cpp (478):
+
+    476:     fclose(in_file);
+    477: 
+=>  478:     return GetG(text);
+    479: }
+    480: 
+
+# 4 0x00427E5A in C:\Users\иван\Google Диск\C\language\language.exe: main() at C:/Users/иван/Google Диск/C/language/language.cpp (571):
+
+    569: 
+    570:     Tree tree;
+=>  571:     TreeCtor(&tree, read_code(in_name));
+    572: 
+    573:     //printf("%d", tree_count(tree.root));
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 105, Date: 2018-06-12 00:00:00 +0300]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\ФАЙЛЫ\загрузки\TX\TXLib.h
+Compiled:	Dec  3 2018 23:37:19, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Dec 03 2018 23:38:45
+
+Run file:	C:\Users\иван\Google Диск\C\language\language.exe
+Directory:	C:\Users\иван\Google Диск\C\language
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\иван\Google Диск\C\language\language.exe, файл: C:\Users\иван\Google Диск\C\language\language.cpp, строка: 452, функция: Node* GetOP(),
+
+Сообщение: ВНЕЗАПНО: Логическая ошибка: Неверно, что "*s == ';'".
+
+#1: TXLib [Ver: 00173a, Rev: 105, Date: 2018-06-12 00:00:00 +0300], Instance: 0x004FF2C0 (32-bit), Flags: Cmdre0, Thread: 0x1730 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x0042796E in C:\Users\иван\Google Диск\C\language\language.exe: GetOP() at C:/Users/иван/Google Диск/C/language/language.cpp (452):
+
+    450:     }
+    451: 
+=>  452:     assert(*s == ';');
+    453:     s++;
+    454: 
+
+# 1 0x00427760 in C:\Users\иван\Google Диск\C\language\language.exe: GetOP() at C:/Users/иван/Google Диск/C/language/language.cpp (417):
+
+    415:         assert(*s != '}');
+    416: 
+=>  417:         node = GetOP();
+    418:         Node* node1 = node;
+    419:         while (*s != '}')
+
+# 2 0x00426F8D in C:\Users\иван\Google Диск\C\language\language.exe: GetG() at C:/Users/иван/Google Диск/C/language/language.cpp (239):
+
+    237: {
+    238:     s = str;
+=>  239:     Node* root = GetOP();
+    240:     assert(*s == '\0');
+    241: 
+
+# 3 0x00427A76 in C:\Users\иван\Google Диск\C\language\language.exe: read_code() at C:/Users/иван/Google Диск/C/language/language.cpp (476):
+
+    474:     fclose(in_file);
+    475: 
+=>  476:     return GetG(text);
+    477: }
+    478: 
+
+# 4 0x00427E38 in C:\Users\иван\Google Диск\C\language\language.exe: main() at C:/Users/иван/Google Диск/C/language/language.cpp (569):
+
+    567: 
+    568:     Tree tree;
+=>  569:     TreeCtor(&tree, read_code(in_name));
+    570: 
+    571:     //printf("%d", tree_count(tree.root));
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 105, Date: 2018-06-12 00:00:00 +0300]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\ФАЙЛЫ\загрузки\TX\TXLib.h
+Compiled:	Dec  3 2018 23:46:26, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Dec 03 2018 23:46:32
+
+Run file:	C:\Users\иван\Google Диск\C\language\language.exe
+Directory:	C:\Users\иван\Google Диск\C\language
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\иван\Google Диск\C\language\language.exe, файл: C:\Users\иван\Google Диск\C\language\language.cpp, строка: 132, функция: int NodeCtor(Node*, int, double),
+
+Сообщение: ВНЕЗАПНО: Логическая ошибка: Неверно, что "type == CONST_ || type == VALUE || type == OPERATION || type == OPERATOR || type == OPER_IF || type == OPER_A || type == OPER_VALUE_create".
+
+#1: TXLib [Ver: 00173a, Rev: 105, Date: 2018-06-12 00:00:00 +0300], Instance: 0x005002C0 (32-bit), Flags: Cmdre0, Thread: 0x2870 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00426AD1 in C:\Users\иван\Google Диск\C\language\language.exe: NodeCtor() at C:/Users/иван/Google Диск/C/language/language.cpp (126):
+
+    124: {
+    125:     assert(node != nullptr);
+=>  126:     assert(type == CONST_
+    127:         || type == VALUE
+    128:         || type == OPERATION
+
+# 1 0x004275A5 in C:\Users\иван\Google Диск\C\language\language.exe: GetSrawn() at C:/Users/иван/Google Диск/C/language/language.cpp (384):
+
+    382: {
+    383:     Node* node = (Node*)calloc(1, sizeof(Node));
+=>  384:     NodeCtor(node, OPER_SRAWN, 0);
+    385: 
+    386:     node->left = GetE();
+
+# 2 0x004277EE in C:\Users\иван\Google Диск\C\language\language.exe: GetIF() at C:/Users/иван/Google Диск/C/language/language.cpp (439):
+
+    437:     NodeCtor(node, OPER_IF, 0);
+    438: 
+=>  439:     node->left = GetSrawn();
+    440:     node->left->parent = node;
+    441: 
+
+# 3 0x00427BCE in C:\Users\иван\Google Диск\C\language\language.exe: GetOP() at C:/Users/иван/Google Диск/C/language/language.cpp (512):
+
+    510:         node = (Node*)calloc(1, sizeof(Node));
+    511:         NodeCtor(node, OPERATOR, 0);
+=>  512:         node->left = GetIF();
+    513:         node->left->parent = node;
+    514:     }
+
+# 4 0x00427AD7 in C:\Users\иван\Google Диск\C\language\language.exe: GetOP() at C:/Users/иван/Google Диск/C/language/language.cpp (499):
+
+    497:         while (*s != '}')
+    498:         {
+=>  499:             Node* node2 = GetOP();
+    500:             node1->right = node2;
+    501:             node2->parent = node1;
+
+# 5 0x00427042 in C:\Users\иван\Google Диск\C\language\language.exe: GetG() at C:/Users/иван/Google Диск/C/language/language.cpp (253):
+
+    251: {
+    252:     s = str;
+=>  253:     Node* root = GetOP();
+    254:     assert(*s == '\0');
+    255: 
+
+# 6 0x00427DD7 in C:\Users\иван\Google Диск\C\language\language.exe: read_code() at C:/Users/иван/Google Диск/C/language/language.cpp (554):
+
+    552:     fclose(in_file);
+    553: 
+=>  554:     return GetG(text);
+    555: }
+    556: 
+
+# 7 0x00428239 in C:\Users\иван\Google Диск\C\language\language.exe: main() at C:/Users/иван/Google Диск/C/language/language.cpp (652):
+
+    650: 
+    651:     Tree tree;
+=>  652:     TreeCtor(&tree, read_code(in_name));
+    653: 
+    654:     //printf("%d", tree_count(tree.root));
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 105, Date: 2018-06-12 00:00:00 +0300]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\ФАЙЛЫ\загрузки\TX\TXLib.h
+Compiled:	Dec  7 2018 03:11:36, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Dec 07 2018 03:11:41
+
+Run file:	C:\Users\иван\Google Диск\C\language\language.exe
+Directory:	C:\Users\иван\Google Диск\C\language
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\иван\Google Диск\C\language\language.exe, файл: C:\Users\иван\Google Диск\C\language\language.cpp, строка: 532, функция: Node* GetOP(),
+
+Сообщение: ВНЕЗАПНО: Логическая ошибка: Неверно, что "*s == ';'".
+
+#1: TXLib [Ver: 00173a, Rev: 105, Date: 2018-06-12 00:00:00 +0300], Instance: 0x005002C0 (32-bit), Flags: Cmdre0, Thread: 0x22D0 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00427CED in C:\Users\иван\Google Диск\C\language\language.exe: GetOP() at C:/Users/иван/Google Диск/C/language/language.cpp (532):
+
+    530:     }
+    531: 
+=>  532:     assert(*s == ';');
+    533:     s++;
+    534: 
+
+# 1 0x00427AF5 in C:\Users\иван\Google Диск\C\language\language.exe: GetOP() at C:/Users/иван/Google Диск/C/language/language.cpp (501):
+
+    499:         while (*s != '}')
+    500:         {
+=>  501:             Node* node2 = GetOP();
+    502:             node1->right = node2;
+    503:             node2->parent = node1;
+
+# 2 0x00427060 in C:\Users\иван\Google Диск\C\language\language.exe: GetG() at C:/Users/иван/Google Диск/C/language/language.cpp (255):
+
+    253: {
+    254:     s = str;
+=>  255:     Node* root = GetOP();
+    256:     assert(*s == '\0');
+    257: 
+
+# 3 0x00427DF5 in C:\Users\иван\Google Диск\C\language\language.exe: read_code() at C:/Users/иван/Google Диск/C/language/language.cpp (556):
+
+    554:     fclose(in_file);
+    555: 
+=>  556:     return GetG(text);
+    557: }
+    558: 
+
+# 4 0x00428257 in C:\Users\иван\Google Диск\C\language\language.exe: main() at C:/Users/иван/Google Диск/C/language/language.cpp (654):
+
+    652: 
+    653:     Tree tree;
+=>  654:     TreeCtor(&tree, read_code(in_name));
+    655: 
+    656:     //printf("%d", tree_count(tree.root));
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 105, Date: 2018-06-12 00:00:00 +0300]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\ФАЙЛЫ\загрузки\TX\TXLib.h
+Compiled:	Dec  7 2018 03:13:28, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Dec 07 2018 03:13:35
+
+Run file:	C:\Users\иван\Google Диск\C\language\language.exe
+Directory:	C:\Users\иван\Google Диск\C\language
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\иван\Google Диск\C\language\language.exe, файл: C:\Users\иван\Google Диск\C\language\language.cpp, строка: 534, функция: Node* GetOP(),
+
+Сообщение: ВНЕЗАПНО: Логическая ошибка: Неверно, что "*s == ';'".
+
+#1: TXLib [Ver: 00173a, Rev: 105, Date: 2018-06-12 00:00:00 +0300], Instance: 0x005002C0 (32-bit), Flags: Cmdre0, Thread: 0x264C (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00427D0E in C:\Users\иван\Google Диск\C\language\language.exe: GetOP() at C:/Users/иван/Google Диск/C/language/language.cpp (534):
+
+    532:     if (*s != ';')
+    533:         printf("%s\n\n", s);
+=>  534:     assert(*s == ';');
+    535:     s++;
+    536: 
+
+# 1 0x00427AF5 in C:\Users\иван\Google Диск\C\language\language.exe: GetOP() at C:/Users/иван/Google Диск/C/language/language.cpp (501):
+
+    499:         while (*s != '}')
+    500:         {
+=>  501:             Node* node2 = GetOP();
+    502:             node1->right = node2;
+    503:             node2->parent = node1;
+
+# 2 0x00427060 in C:\Users\иван\Google Диск\C\language\language.exe: GetG() at C:/Users/иван/Google Диск/C/language/language.cpp (255):
+
+    253: {
+    254:     s = str;
+=>  255:     Node* root = GetOP();
+    256:     assert(*s == '\0');
+    257: 
+
+# 3 0x00427E16 in C:\Users\иван\Google Диск\C\language\language.exe: read_code() at C:/Users/иван/Google Диск/C/language/language.cpp (558):
+
+    556:     fclose(in_file);
+    557: 
+=>  558:     return GetG(text);
+    559: }
+    560: 
+
+# 4 0x00428278 in C:\Users\иван\Google Диск\C\language\language.exe: main() at C:/Users/иван/Google Диск/C/language/language.cpp (656):
+
+    654: 
+    655:     Tree tree;
+=>  656:     TreeCtor(&tree, read_code(in_name));
+    657: 
+    658:     //printf("%d", tree_count(tree.root));
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 105, Date: 2018-06-12 00:00:00 +0300]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\ФАЙЛЫ\загрузки\TX\TXLib.h
+Compiled:	Dec  7 2018 03:21:18, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Dec 07 2018 03:21:24
+
+Run file:	C:\Users\иван\Google Диск\C\language\language.exe
+Directory:	C:\Users\иван\Google Диск\C\language
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\иван\Google Диск\C\language\language.exe, файл: C:\Users\иван\Google Диск\C\language\language.cpp, строка: 611, функция: int print_node(FILE*, const Node*),
+
+Сообщение: ВНЕЗАПНО: Логическая ошибка: Неверно, что "0".
+
+#1: TXLib [Ver: 00173a, Rev: 105, Date: 2018-06-12 00:00:00 +0300], Instance: 0x005002C0 (32-bit), Flags: Cmdre0, Thread: 0x1F2C (Main), GetLastError(): 183 (Невозможно создать файл, так как он уже существует). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x004280B0 in C:\Users\иван\Google Диск\C\language\language.exe: print_node() at C:/Users/иван/Google Диск/C/language/language.cpp (611):
+
+    609:             break;
+    610: 
+=>  611:         default: assert(0);
+    612: 
+    613:     }
+
+# 1 0x004281DA in C:\Users\иван\Google Диск\C\language\language.exe: print_tree() at C:/Users/иван/Google Диск/C/language/language.cpp (639):
+
+    637:     print_tree(out_file, node->left);
+    638: 
+=>  639:     print_node(out_file, node);
+    640: 
+    641:     print_tree(out_file, node->right);
+
+# 2 0x004281C8 in C:\Users\иван\Google Диск\C\language\language.exe: print_tree() at C:/Users/иван/Google Диск/C/language/language.cpp (637):
+
+    635:         }
+    636: 
+=>  637:     print_tree(out_file, node->left);
+    638: 
+    639:     print_node(out_file, node);
+
+# 3 0x004281C8 in C:\Users\иван\Google Диск\C\language\language.exe: print_tree() at C:/Users/иван/Google Диск/C/language/language.cpp (637):
+
+    635:         }
+    636: 
+=>  637:     print_tree(out_file, node->left);
+    638: 
+    639:     print_node(out_file, node);
+
+# 4 0x004281EF in C:\Users\иван\Google Диск\C\language\language.exe: print_tree() at C:/Users/иван/Google Диск/C/language/language.cpp (641):
+
+    639:     print_node(out_file, node);
+    640: 
+=>  641:     print_tree(out_file, node->right);
+    642: 
+    643:     if (node->type == OPERATOR && node->right == nullptr)
+
+# 5 0x004281EF in C:\Users\иван\Google Диск\C\language\language.exe: print_tree() at C:/Users/иван/Google Диск/C/language/language.cpp (641):
+
+    639:     print_node(out_file, node);
+    640: 
+=>  641:     print_tree(out_file, node->right);
+    642: 
+    643:     if (node->type == OPERATOR && node->right == nullptr)
+
+# 6 0x004281EF in C:\Users\иван\Google Диск\C\language\language.exe: print_tree() at C:/Users/иван/Google Диск/C/language/language.cpp (641):
+
+    639:     print_node(out_file, node);
+    640: 
+=>  641:     print_tree(out_file, node->right);
+    642: 
+    643:     if (node->type == OPERATOR && node->right == nullptr)
+
+# 7 0x004281EF in C:\Users\иван\Google Диск\C\language\language.exe: print_tree() at C:/Users/иван/Google Диск/C/language/language.cpp (641):
+
+    639:     print_node(out_file, node);
+    640: 
+=>  641:     print_tree(out_file, node->right);
+    642: 
+    643:     if (node->type == OPERATOR && node->right == nullptr)
+
+# 8 0x004282FB in C:\Users\иван\Google Диск\C\language\language.exe: main() at C:/Users/иван/Google Диск/C/language/language.cpp (663):
+
+    661:     //scanf("%s", out_name);
+    662:     FILE* out_file = fopen(out_name, "w");
+=>  663:     print_tree(out_file, tree.root);
+    664:     print_tree(stdout, tree.root);
+    665:     fclose(out_file);
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 105, Date: 2018-06-12 00:00:00 +0300]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\ФАЙЛЫ\загрузки\TX\TXLib.h
+Compiled:	Dec  7 2018 03:22:24, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Dec 07 2018 03:22:29
+
+Run file:	C:\Users\иван\Google Диск\C\language\language.exe
+Directory:	C:\Users\иван\Google Диск\C\language
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\иван\Google Диск\C\language\language.exe, файл: C:\Users\иван\Google Диск\C\language\language.cpp, строка: 534, функция: Node* GetOP(),
+
+Сообщение: ВНЕЗАПНО: Логическая ошибка: Неверно, что "*s == ';'".
+
+#1: TXLib [Ver: 00173a, Rev: 105, Date: 2018-06-12 00:00:00 +0300], Instance: 0x005002C0 (32-bit), Flags: Cmdre0, Thread: 0x170 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00427D0E in C:\Users\иван\Google Диск\C\language\language.exe: GetOP() at C:/Users/иван/Google Диск/C/language/language.cpp (534):
+
+    532:     if (*s != ';')
+    533:         printf("%s\n\n", s);
+=>  534:     assert(*s == ';');
+    535:     s++;
+    536: 
+
+# 1 0x00427AF5 in C:\Users\иван\Google Диск\C\language\language.exe: GetOP() at C:/Users/иван/Google Диск/C/language/language.cpp (501):
+
+    499:         while (*s != '}')
+    500:         {
+=>  501:             Node* node2 = GetOP();
+    502:             node1->right = node2;
+    503:             node2->parent = node1;
+
+# 2 0x00427060 in C:\Users\иван\Google Диск\C\language\language.exe: GetG() at C:/Users/иван/Google Диск/C/language/language.cpp (255):
+
+    253: {
+    254:     s = str;
+=>  255:     Node* root = GetOP();
+    256:     assert(*s == '\0');
+    257: 
+
+# 3 0x00427E16 in C:\Users\иван\Google Диск\C\language\language.exe: read_code() at C:/Users/иван/Google Диск/C/language/language.cpp (558):
+
+    556:     fclose(in_file);
+    557: 
+=>  558:     return GetG(text);
+    559: }
+    560: 
+
+# 4 0x004283F3 in C:\Users\иван\Google Диск\C\language\language.exe: main() at C:/Users/иван/Google Диск/C/language/language.cpp (690):
+
+    688: 
+    689:     Tree tree;
+=>  690:     TreeCtor(&tree, read_code(in_name));
+    691: 
+    692:     //printf("%d", tree_count(tree.root));
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 105, Date: 2018-06-12 00:00:00 +0300]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\ФАЙЛЫ\загрузки\TX\TXLib.h
+Compiled:	Dec  7 2018 03:34:04, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Dec 07 2018 03:34:44
+
+Run file:	C:\Users\иван\Google Диск\C\language\language.exe
+Directory:	C:\Users\иван\Google Диск\C\language
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\иван\Google Диск\C\language\language.exe, файл: C:\Users\иван\Google Диск\C\language\language.cpp, строка: 534, функция: Node* GetOP(),
+
+Сообщение: ВНЕЗАПНО: Логическая ошибка: Неверно, что "*s == ';'".
+
+#1: TXLib [Ver: 00173a, Rev: 105, Date: 2018-06-12 00:00:00 +0300], Instance: 0x005002C0 (32-bit), Flags: Cmdre0, Thread: 0x32A0 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00427D0E in C:\Users\иван\Google Диск\C\language\language.exe: GetOP() at C:/Users/иван/Google Диск/C/language/language.cpp (534):
+
+    532:     if (*s != ';')
+    533:         printf("%s\n\n", s);
+=>  534:     assert(*s == ';');
+    535:     s++;
+    536: 
+
+# 1 0x00427060 in C:\Users\иван\Google Диск\C\language\language.exe: GetG() at C:/Users/иван/Google Диск/C/language/language.cpp (255):
+
+    253: {
+    254:     s = str;
+=>  255:     Node* root = GetOP();
+    256:     assert(*s == '\0');
+    257: 
+
+# 2 0x00427E16 in C:\Users\иван\Google Диск\C\language\language.exe: read_code() at C:/Users/иван/Google Диск/C/language/language.cpp (558):
+
+    556:     fclose(in_file);
+    557: 
+=>  558:     return GetG(text);
+    559: }
+    560: 
+
+# 3 0x004283E3 in C:\Users\иван\Google Диск\C\language\language.exe: main() at C:/Users/иван/Google Диск/C/language/language.cpp (690):
+
+    688: 
+    689:     Tree tree;
+=>  690:     TreeCtor(&tree, read_code(in_name));
+    691: 
+    692:     //printf("%d", tree_count(tree.root));
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 105, Date: 2018-06-12 00:00:00 +0300]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\ФАЙЛЫ\загрузки\TX\TXLib.h
+Compiled:	Dec  7 2018 04:15:58, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Dec 07 2018 04:20:09
+
+Run file:	C:\Users\иван\Google Диск\C\language\language.exe
+Directory:	C:\Users\иван\Google Диск\C\language
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\иван\Google Диск\C\language\language.exe, файл: C:\Users\иван\Google Диск\C\language\language.cpp, строка: 536, функция: Node* GetOP(),
+
+Сообщение: ВНЕЗАПНО: Логическая ошибка: Неверно, что "0".
+
+#1: TXLib [Ver: 00173a, Rev: 105, Date: 2018-06-12 00:00:00 +0300], Instance: 0x005002C0 (32-bit), Flags: Cmdre0, Thread: 0x1334 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00427D08 in C:\Users\иван\Google Диск\C\language\language.exe: GetOP() at C:/Users/иван/Google Диск/C/language/language.cpp (536):
+
+    534:     else
+    535:         if (*s - 1 != ';')
+=>  536:             assert(0);
+    537: 
+    538:     while (*s == ' ' || *s == '\n' || *s == '\t')
+
+# 1 0x00427AF5 in C:\Users\иван\Google Диск\C\language\language.exe: GetOP() at C:/Users/иван/Google Диск/C/language/language.cpp (501):
+
+    499:         while (*s != '}')
+    500:         {
+=>  501:             Node* node2 = GetOP();
+    502:             node1->right = node2;
+    503:             node2->parent = node1;
+
+# 2 0x00427060 in C:\Users\иван\Google Диск\C\language\language.exe: GetG() at C:/Users/иван/Google Диск/C/language/language.cpp (255):
+
+    253: {
+    254:     s = str;
+=>  255:     Node* root = GetOP();
+    256:     assert(*s == '\0');
+    257: 
+
+# 3 0x00427DE9 in C:\Users\иван\Google Диск\C\language\language.exe: read_code() at C:/Users/иван/Google Диск/C/language/language.cpp (559):
+
+    557:     fclose(in_file);
+    558: 
+=>  559:     return GetG(text);
+    560: }
+    561: 
+
+# 4 0x004283C6 in C:\Users\иван\Google Диск\C\language\language.exe: main() at C:/Users/иван/Google Диск/C/language/language.cpp (690):
+
+    688: 
+    689:     Tree tree;
+=>  690:     TreeCtor(&tree, read_code(in_name));
+    691: 
+    692:     //printf("%d", tree_count(tree.root));
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 105, Date: 2018-06-12 00:00:00 +0300]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\ФАЙЛЫ\загрузки\TX\TXLib.h
+Compiled:	Dec  7 2018 04:43:09, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Dec 07 2018 04:43:39
+
+Run file:	C:\Users\иван\Google Диск\C\language\language.exe
+Directory:	C:\Users\иван\Google Диск\C\language
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\иван\Google Диск\C\language\language.exe, файл: C:\Users\иван\Google Диск\C\language\language.cpp, строка: 536, функция: Node* GetOP(),
+
+Сообщение: ВНЕЗАПНО: Логическая ошибка: Неверно, что "0".
+
+#1: TXLib [Ver: 00173a, Rev: 105, Date: 2018-06-12 00:00:00 +0300], Instance: 0x005002C0 (32-bit), Flags: Cmdre0, Thread: 0x2C10 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00427D0B in C:\Users\иван\Google Диск\C\language\language.exe: GetOP() at C:/Users/иван/Google Диск/C/language/language.cpp (536):
+
+    534:     else
+    535:         if (*(s - 1) != ';')
+=>  536:             assert(0);
+    537: 
+    538:     while (*s == ' ' || *s == '\n' || *s == '\t')
+
+# 1 0x00427AF5 in C:\Users\иван\Google Диск\C\language\language.exe: GetOP() at C:/Users/иван/Google Диск/C/language/language.cpp (501):
+
+    499:         while (*s != '}')
+    500:         {
+=>  501:             Node* node2 = GetOP();
+    502:             node1->right = node2;
+    503:             node2->parent = node1;
+
+# 2 0x00427060 in C:\Users\иван\Google Диск\C\language\language.exe: GetG() at C:/Users/иван/Google Диск/C/language/language.cpp (255):
+
+    253: {
+    254:     s = str;
+=>  255:     Node* root = GetOP();
+    256:     assert(*s == '\0');
+    257: 
+
+# 3 0x00427DEC in C:\Users\иван\Google Диск\C\language\language.exe: read_code() at C:/Users/иван/Google Диск/C/language/language.cpp (559):
+
+    557:     fclose(in_file);
+    558: 
+=>  559:     return GetG(text);
+    560: }
+    561: 
+
+# 4 0x004283C9 in C:\Users\иван\Google Диск\C\language\language.exe: main() at C:/Users/иван/Google Диск/C/language/language.cpp (690):
+
+    688: 
+    689:     Tree tree;
+=>  690:     TreeCtor(&tree, read_code(in_name));
+    691: 
+    692:     //printf("%d", tree_count(tree.root));
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 105, Date: 2018-06-12 00:00:00 +0300]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\ФАЙЛЫ\загрузки\TX\TXLib.h
+Compiled:	Dec  7 2018 04:44:06, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Dec 07 2018 04:44:12
+
+Run file:	C:\Users\иван\Google Диск\C\language\language.exe
+Directory:	C:\Users\иван\Google Диск\C\language
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\иван\Google Диск\C\language\language.exe, файл: C:\Users\иван\Google Диск\C\language\language.cpp, строка: 537, функция: Node* GetOP(),
+
+Сообщение: ВНЕЗАПНО: Логическая ошибка: Неверно, что "0".
+
+#1: TXLib [Ver: 00173a, Rev: 105, Date: 2018-06-12 00:00:00 +0300], Instance: 0x005002C0 (32-bit), Flags: Cmdre0, Thread: 0x3064 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00427D20 in C:\Users\иван\Google Диск\C\language\language.exe: GetOP() at C:/Users/иван/Google Диск/C/language/language.cpp (537):
+
+    535:     else
+    536:         if (*(s - 1) != ';')
+=>  537:             assert(0);
+    538: 
+    539:     while (*s == ' ' || *s == '\n' || *s == '\t')
+
+# 1 0x00427AF5 in C:\Users\иван\Google Диск\C\language\language.exe: GetOP() at C:/Users/иван/Google Диск/C/language/language.cpp (501):
+
+    499:         while (*s != '}')
+    500:         {
+=>  501:             Node* node2 = GetOP();
+    502:             node1->right = node2;
+    503:             node2->parent = node1;
+
+# 2 0x00427060 in C:\Users\иван\Google Диск\C\language\language.exe: GetG() at C:/Users/иван/Google Диск/C/language/language.cpp (255):
+
+    253: {
+    254:     s = str;
+=>  255:     Node* root = GetOP();
+    256:     assert(*s == '\0');
+    257: 
+
+# 3 0x00427E01 in C:\Users\иван\Google Диск\C\language\language.exe: read_code() at C:/Users/иван/Google Диск/C/language/language.cpp (560):
+
+    558:     fclose(in_file);
+    559: 
+=>  560:     return GetG(text);
+    561: }
+    562: 
+
+# 4 0x004283DE in C:\Users\иван\Google Диск\C\language\language.exe: main() at C:/Users/иван/Google Диск/C/language/language.cpp (691):
+
+    689: 
+    690:     Tree tree;
+=>  691:     TreeCtor(&tree, read_code(in_name));
+    692: 
+    693:     //printf("%d", tree_count(tree.root));
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 105, Date: 2018-06-12 00:00:00 +0300]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\ФАЙЛЫ\загрузки\TX\TXLib.h
+Compiled:	Dec  7 2018 04:48:14, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Dec 07 2018 04:48:20
+
+Run file:	C:\Users\иван\Google Диск\C\language\language.exe
+Directory:	C:\Users\иван\Google Диск\C\language
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\иван\Google Диск\C\language\language.exe, файл: C:\Users\иван\Google Диск\C\language\language.cpp, строка: 537, функция: Node* GetOP(),
+
+Сообщение: ВНЕЗАПНО: Логическая ошибка: Неверно, что "0".
+
+#1: TXLib [Ver: 00173a, Rev: 105, Date: 2018-06-12 00:00:00 +0300], Instance: 0x005002C0 (32-bit), Flags: Cmdre0, Thread: 0x2AE8 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00427D29 in C:\Users\иван\Google Диск\C\language\language.exe: GetOP() at C:/Users/иван/Google Диск/C/language/language.cpp (537):
+
+    535:     else
+    536:         if (*(s - 1) != ';')
+=>  537:             assert(0);
+    538: 
+    539:     while (*s == ' ' || *s == '\n' || *s == '\t')
+
+# 1 0x00427AF5 in C:\Users\иван\Google Диск\C\language\language.exe: GetOP() at C:/Users/иван/Google Диск/C/language/language.cpp (501):
+
+    499:         while (*s != '}')
+    500:         {
+=>  501:             Node* node2 = GetOP();
+    502:             node1->right = node2;
+    503:             node2->parent = node1;
+
+# 2 0x00427060 in C:\Users\иван\Google Диск\C\language\language.exe: GetG() at C:/Users/иван/Google Диск/C/language/language.cpp (255):
+
+    253: {
+    254:     s = str;
+=>  255:     Node* root = GetOP();
+    256:     assert(*s == '\0');
+    257: 
+
+# 3 0x00427E0A in C:\Users\иван\Google Диск\C\language\language.exe: read_code() at C:/Users/иван/Google Диск/C/language/language.cpp (560):
+
+    558:     fclose(in_file);
+    559: 
+=>  560:     return GetG(text);
+    561: }
+    562: 
+
+# 4 0x004283E7 in C:\Users\иван\Google Диск\C\language\language.exe: main() at C:/Users/иван/Google Диск/C/language/language.cpp (691):
+
+    689: 
+    690:     Tree tree;
+=>  691:     TreeCtor(&tree, read_code(in_name));
+    692: 
+    693:     //printf("%d", tree_count(tree.root));
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 105, Date: 2018-06-12 00:00:00 +0300]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\ФАЙЛЫ\загрузки\TX\TXLib.h
+Compiled:	Dec  7 2018 04:51:39, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Dec 07 2018 04:51:45
+
+Run file:	C:\Users\иван\Google Диск\C\language\language.exe
+Directory:	C:\Users\иван\Google Диск\C\language
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\иван\Google Диск\C\language\language.exe, файл: C:\Users\иван\Google Диск\C\language\language.cpp, строка: 539, функция: Node* GetOP(),
+
+Сообщение: ВНЕЗАПНО: Логическая ошибка: Неверно, что "0".
+
+#1: TXLib [Ver: 00173a, Rev: 105, Date: 2018-06-12 00:00:00 +0300], Instance: 0x005002C0 (32-bit), Flags: Cmdre0, Thread: 0x21E0 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00427D29 in C:\Users\иван\Google Диск\C\language\language.exe: GetOP() at C:/Users/иван/Google Диск/C/language/language.cpp (539):
+
+    537:         printf("%c\n\n", *(s - 1));
+    538:         if (*(s - 1) != ';')
+=>  539:             assert(0);
+    540:     }
+    541: 
+
+# 1 0x00427AF5 in C:\Users\иван\Google Диск\C\language\language.exe: GetOP() at C:/Users/иван/Google Диск/C/language/language.cpp (501):
+
+    499:         while (*s != '}')
+    500:         {
+=>  501:             Node* node2 = GetOP();
+    502:             node1->right = node2;
+    503:             node2->parent = node1;
+
+# 2 0x00427060 in C:\Users\иван\Google Диск\C\language\language.exe: GetG() at C:/Users/иван/Google Диск/C/language/language.cpp (255):
+
+    253: {
+    254:     s = str;
+=>  255:     Node* root = GetOP();
+    256:     assert(*s == '\0');
+    257: 
+
+# 3 0x00427E0A in C:\Users\иван\Google Диск\C\language\language.exe: read_code() at C:/Users/иван/Google Диск/C/language/language.cpp (563):
+
+    561:     fclose(in_file);
+    562: 
+=>  563:     return GetG(text);
+    564: }
+    565: 
+
+# 4 0x004283E7 in C:\Users\иван\Google Диск\C\language\language.exe: main() at C:/Users/иван/Google Диск/C/language/language.cpp (694):
+
+    692: 
+    693:     Tree tree;
+=>  694:     TreeCtor(&tree, read_code(in_name));
+    695: 
+    696:     //printf("%d", tree_count(tree.root));
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 105, Date: 2018-06-12 00:00:00 +0300]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\ФАЙЛЫ\загрузки\TX\TXLib.h
+Compiled:	Dec  7 2018 04:56:14, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Dec 07 2018 04:56:20
+
+Run file:	C:\Users\иван\Google Диск\C\language\language.exe
+Directory:	C:\Users\иван\Google Диск\C\language
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\иван\Google Диск\C\language\language.exe, файл: C:\Users\иван\Google Диск\C\language\language.cpp, строка: 540, функция: Node* GetOP(),
+
+Сообщение: ВНЕЗАПНО: Логическая ошибка: Неверно, что "0".
+
+#1: TXLib [Ver: 00173a, Rev: 105, Date: 2018-06-12 00:00:00 +0300], Instance: 0x005002C0 (32-bit), Flags: Cmdre0, Thread: 0x3054 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00427D47 in C:\Users\иван\Google Диск\C\language\language.exe: GetOP() at C:/Users/иван/Google Диск/C/language/language.cpp (540):
+
+    538:         printf("%c\n\n", *(s - 1));
+    539:         if (*(s - 1) != ';')
+=>  540:             assert(0);
+    541:     }
+    542: 
+
+# 1 0x00427AF5 in C:\Users\иван\Google Диск\C\language\language.exe: GetOP() at C:/Users/иван/Google Диск/C/language/language.cpp (501):
+
+    499:         while (*s != '}')
+    500:         {
+=>  501:             Node* node2 = GetOP();
+    502:             node1->right = node2;
+    503:             node2->parent = node1;
+
+# 2 0x00427060 in C:\Users\иван\Google Диск\C\language\language.exe: GetG() at C:/Users/иван/Google Диск/C/language/language.cpp (255):
+
+    253: {
+    254:     s = str;
+=>  255:     Node* root = GetOP();
+    256:     assert(*s == '\0');
+    257: 
+
+# 3 0x00427E28 in C:\Users\иван\Google Диск\C\language\language.exe: read_code() at C:/Users/иван/Google Диск/C/language/language.cpp (564):
+
+    562:     fclose(in_file);
+    563: 
+=>  564:     return GetG(text);
+    565: }
+    566: 
+
+# 4 0x00428405 in C:\Users\иван\Google Диск\C\language\language.exe: main() at C:/Users/иван/Google Диск/C/language/language.cpp (695):
+
+    693: 
+    694:     Tree tree;
+=>  695:     TreeCtor(&tree, read_code(in_name));
+    696: 
+    697:     //printf("%d", tree_count(tree.root));
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 105, Date: 2018-06-12 00:00:00 +0300]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\ФАЙЛЫ\загрузки\TX\TXLib.h
+Compiled:	Dec  7 2018 04:57:04, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Dec 07 2018 04:57:10
+
+Run file:	C:\Users\иван\Google Диск\C\language\language.exe
+Directory:	C:\Users\иван\Google Диск\C\language
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\иван\Google Диск\C\language\language.exe, файл: C:\Users\иван\Google Диск\C\language\language.cpp, строка: 719, функция: int print_node(FILE*, const Node*),
+
+Сообщение: ВНЕЗАПНО: Логическая ошибка: Неверно, что "0".
+
+#1: TXLib [Ver: 00173a, Rev: 105, Date: 2018-06-12 00:00:00 +0300], Instance: 0x00500600 (32-bit), Flags: Cmdre0, Thread: 0x2B4C (Main), GetLastError(): 183 (Невозможно создать файл, так как он уже существует). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00428484 in C:\Users\иван\Google Диск\C\language\language.exe: print_node() at C:/Users/иван/Google Диск/C/language/language.cpp (719):
+
+    717:             break;
+    718: 
+=>  719:         default: printf("%d", node->type);assert(0);
+    720: 
+    721:     }
+
+# 1 0x004285DE in C:\Users\иван\Google Диск\C\language\language.exe: print_tree() at C:/Users/иван/Google Диск/C/language/language.cpp (760):
+
+    758: 
+    759:         print_tree(out_file, node->left);
+=>  760:         print_node(out_file, node);
+    761:     ///}
+    762: 
+
+# 2 0x00428702 in C:\Users\иван\Google Диск\C\language\language.exe: main() at C:/Users/иван/Google Диск/C/language/language.cpp (788):
+
+    786:     for (int i = 0; tree.root + i != nullptr && i < 10; i++)
+    787:     {
+=>  788:         print_tree(out_file, tree.root + i);
+    789:         print_tree(stdout, tree.root + i);
+    790:     }
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 105, Date: 2018-06-12 00:00:00 +0300]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\ФАЙЛЫ\загрузки\TX\TXLib.h
+Compiled:	Dec  9 2018 02:06:28, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Dec 09 2018 02:06:33
+
+Run file:	C:\Users\иван\Google Диск\C\language\language.exe
+Directory:	C:\Users\иван\Google Диск\C\language
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: C:\Users\иван\Google Диск\C\language\language.exe,
+
+ВНЕЗАПНО: Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x004283FB в функции print_node() в файле C:/Users/иван/Google Диск/C/language/language.cpp на строке 719. Попытка прочесть данные по адресу NULL. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+#1: TXLib [Ver: 00173a, Rev: 105, Date: 2018-06-12 00:00:00 +0300], Instance: 0x00500600 (32-bit), Flags: Cmdre0, Thread: 0x34E8 (Main), GetLastError(): 183 (Невозможно создать файл, так как он уже существует). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x004283FB in C:\Users\иван\Google Диск\C\language\language.exe: print_node() at C:/Users/иван/Google Диск/C/language/language.cpp (719):
+
+    717:             break;
+    718: 
+=>  719:         default: printf("%d", node->parent->type);assert(0);
+    720: 
+    721:     }
+
+# 1 0x004285D9 in C:\Users\иван\Google Диск\C\language\language.exe: print_tree() at C:/Users/иван/Google Диск/C/language/language.cpp (762):
+
+    760: 
+    761:     print_tree(out_file, node->left);
+=>  762:     print_node(out_file, node);
+    763:     ///}
+    764: 
+
+# 2 0x004286FD in C:\Users\иван\Google Диск\C\language\language.exe: main() at C:/Users/иван/Google Диск/C/language/language.cpp (790):
+
+    788:     for (int i = 0; tree.root + i != nullptr && i < 10; i++)
+    789:     {
+=>  790:         print_tree(out_file, tree.root + i);
+    791:         print_tree(stdout, tree.root + i);
+    792:     }
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 105, Date: 2018-06-12 00:00:00 +0300]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\ФАЙЛЫ\загрузки\TX\TXLib.h
+Compiled:	Dec  9 2018 02:49:37, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Dec 09 2018 02:49:42
+
+Run file:	C:\Users\иван\Google Диск\C\language\language.exe
+Directory:	C:\Users\иван\Google Диск\C\language
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\иван\Google Диск\C\language\language.exe,
+
+ВНЕЗАПНО: signal (11, 0x00): SIGSEGV: Доступ по неверному указателю. Ставьте ассерты! 
+
+Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x004283FB в функции print_node() в файле C:/Users/иван/Google Диск/C/language/language.cpp на строке 719. Попытка прочесть данные по адресу NULL. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#2: TXLib [Ver: 00173a, Rev: 105, Date: 2018-06-12 00:00:00 +0300], Instance: 0x00500600 (32-bit), Flags: Cmdre0, Thread: 0x34E8 (Main), GetLastError(): 183 (Невозможно создать файл, так как он уже существует). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x004283FB in C:\Users\иван\Google Диск\C\language\language.exe: print_node() at C:/Users/иван/Google Диск/C/language/language.cpp (719):
+
+    717:             break;
+    718: 
+=>  719:         default: printf("%d", node->parent->type);assert(0);
+    720: 
+    721:     }
+
+# 1 0x004285D9 in C:\Users\иван\Google Диск\C\language\language.exe: print_tree() at C:/Users/иван/Google Диск/C/language/language.cpp (762):
+
+    760: 
+    761:     print_tree(out_file, node->left);
+=>  762:     print_node(out_file, node);
+    763:     ///}
+    764: 
+
+# 2 0x004286FD in C:\Users\иван\Google Диск\C\language\language.exe: main() at C:/Users/иван/Google Диск/C/language/language.cpp (790):
+
+    788:     for (int i = 0; tree.root + i != nullptr && i < 10; i++)
+    789:     {
+=>  790:         print_tree(out_file, tree.root + i);
+    791:         print_tree(stdout, tree.root + i);
+    792:     }
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 105, Date: 2018-06-12 00:00:00 +0300]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\ФАЙЛЫ\загрузки\TX\TXLib.h
+Compiled:	Dec  9 2018 02:49:37, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Dec 09 2018 02:49:43
+
+Run file:	C:\Users\иван\Google Диск\C\language\language.exe
+Directory:	C:\Users\иван\Google Диск\C\language
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: C:\Users\иван\Google Диск\C\language\language.exe,
+
+ВНЕЗАПНО: Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x00427292 в функции GetT() в файле C:/Users/иван/Google Диск/C/language/language.cpp на строке 324. Попытка прочесть данные по адресу 0x787EDC16. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+#1: TXLib [Ver: 00173a, Rev: 105, Date: 2018-06-12 00:00:00 +0300], Instance: 0x005002C0 (32-bit), Flags: Cmdre0, Thread: 0x3528 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00427292 in C:\Users\иван\Google Диск\C\language\language.exe: GetT() at C:/Users/иван/Google Диск/C/language/language.cpp (324):
+
+    322:     Node* node = nullptr;
+    323: 
+=>  324:     while (*s == '*' || *s == '/')
+    325:     {
+    326:         int op = *s;
+
+# 1 0x00427147 in C:\Users\иван\Google Диск\C\language\language.exe: GetE() at C:/Users/иван/Google Диск/C/language/language.cpp (294):
+
+    292: Node* GetE()
+    293: {
+=>  294:     Node* node1 = GetT();
+    295:     Node* node = nullptr;
+    296: 
+
+# 2 0x00428622 in C:\Users\иван\Google Диск\C\language\language.exe: GetRET() at C:/Users/иван/Google Диск/C/language/language.cpp (748):
+
+    746:     NodeCtor(node, OPER_RET, 0);
+    747: 
+=>  748:     node->right = GetE();
+    749:     node->right->parent = node;
+    750: 
+
+# 3 0x004280B6 in C:\Users\иван\Google Диск\C\language\language.exe: GetOP() at C:/Users/иван/Google Диск/C/language/language.cpp (620):
+
+    618:         node = (Node*)calloc(1, sizeof(Node));
+    619:         NodeCtor(node, OPERATOR, 0);
+=>  620:         node->left = GetRET();
+    621:         node->left->parent = node;
+    622:     }
+
+# 4 0x004283C1 in C:\Users\иван\Google Диск\C\language\language.exe: GetFunc_create() at C:/Users/иван/Google Диск/C/language/language.cpp (690):
+
+    688:     skipspaces();
+    689: 
+=>  690:     node->right = GetOP();
+    691:     node->right->parent = node;
+    692: 
+
+# 5 0x00427121 in C:\Users\иван\Google Диск\C\language\language.exe: GetG() at C:/Users/иван/Google Диск/C/language/language.cpp (283):
+
+    281: 
+    282:     for (int i = 1; *s != '\0'; i++)
+=>  283:         root[i] = GetFunc_create();
+    284: 
+    285: 
+
+# 6 0x004286BA in C:\Users\иван\Google Диск\C\language\language.exe: read_code() at C:/Users/иван/Google Диск/C/language/language.cpp (768):
+
+    766:     fclose(in_file);
+    767: 
+=>  768:     Node** rez = GetG(text);
+    769:     free(text);
+    770: 
+
+# 7 0x00428EE2 in C:\Users\иван\Google Диск\C\language\language.exe: main() at C:/Users/иван/Google Диск/C/language/language.cpp (941):
+
+    939:     char out_name[MaxStr] = "recode.txt";
+    940: 
+=>  941:     Node** big_root = read_code(in_name);
+    942: 
+    943:     FILE* out_file = fopen(out_name, "w");
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 105, Date: 2018-06-12 00:00:00 +0300]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\ФАЙЛЫ\загрузки\TX\TXLib.h
+Compiled:	Dec  9 2018 15:38:27, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Dec 09 2018 15:38:34
+
+Run file:	C:\Users\иван\Google Диск\C\language\language.exe
+Directory:	C:\Users\иван\Google Диск\C\language
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\иван\Google Диск\C\language\language.exe,
+
+ВНЕЗАПНО: signal (11, 0x00): SIGSEGV: Доступ по неверному указателю. Ставьте ассерты! 
+
+Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x00427292 в функции GetT() в файле C:/Users/иван/Google Диск/C/language/language.cpp на строке 324. Попытка прочесть данные по адресу 0x787EDC16. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#2: TXLib [Ver: 00173a, Rev: 105, Date: 2018-06-12 00:00:00 +0300], Instance: 0x005002C0 (32-bit), Flags: Cmdre0, Thread: 0x3528 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00427292 in C:\Users\иван\Google Диск\C\language\language.exe: GetT() at C:/Users/иван/Google Диск/C/language/language.cpp (324):
+
+    322:     Node* node = nullptr;
+    323: 
+=>  324:     while (*s == '*' || *s == '/')
+    325:     {
+    326:         int op = *s;
+
+# 1 0x00427147 in C:\Users\иван\Google Диск\C\language\language.exe: GetE() at C:/Users/иван/Google Диск/C/language/language.cpp (294):
+
+    292: Node* GetE()
+    293: {
+=>  294:     Node* node1 = GetT();
+    295:     Node* node = nullptr;
+    296: 
+
+# 2 0x00428622 in C:\Users\иван\Google Диск\C\language\language.exe: GetRET() at C:/Users/иван/Google Диск/C/language/language.cpp (748):
+
+    746:     NodeCtor(node, OPER_RET, 0);
+    747: 
+=>  748:     node->right = GetE();
+    749:     node->right->parent = node;
+    750: 
+
+# 3 0x004280B6 in C:\Users\иван\Google Диск\C\language\language.exe: GetOP() at C:/Users/иван/Google Диск/C/language/language.cpp (620):
+
+    618:         node = (Node*)calloc(1, sizeof(Node));
+    619:         NodeCtor(node, OPERATOR, 0);
+=>  620:         node->left = GetRET();
+    621:         node->left->parent = node;
+    622:     }
+
+# 4 0x004283C1 in C:\Users\иван\Google Диск\C\language\language.exe: GetFunc_create() at C:/Users/иван/Google Диск/C/language/language.cpp (690):
+
+    688:     skipspaces();
+    689: 
+=>  690:     node->right = GetOP();
+    691:     node->right->parent = node;
+    692: 
+
+# 5 0x00427121 in C:\Users\иван\Google Диск\C\language\language.exe: GetG() at C:/Users/иван/Google Диск/C/language/language.cpp (283):
+
+    281: 
+    282:     for (int i = 1; *s != '\0'; i++)
+=>  283:         root[i] = GetFunc_create();
+    284: 
+    285: 
+
+# 6 0x004286BA in C:\Users\иван\Google Диск\C\language\language.exe: read_code() at C:/Users/иван/Google Диск/C/language/language.cpp (768):
+
+    766:     fclose(in_file);
+    767: 
+=>  768:     Node** rez = GetG(text);
+    769:     free(text);
+    770: 
+
+# 7 0x00428EE2 in C:\Users\иван\Google Диск\C\language\language.exe: main() at C:/Users/иван/Google Диск/C/language/language.cpp (941):
+
+    939:     char out_name[MaxStr] = "recode.txt";
+    940: 
+=>  941:     Node** big_root = read_code(in_name);
+    942: 
+    943:     FILE* out_file = fopen(out_name, "w");
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 105, Date: 2018-06-12 00:00:00 +0300]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\ФАЙЛЫ\загрузки\TX\TXLib.h
+Compiled:	Dec  9 2018 15:38:27, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Dec 09 2018 15:38:34
+
+Run file:	C:\Users\иван\Google Диск\C\language\language.exe
+Directory:	C:\Users\иван\Google Диск\C\language
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: C:\Users\иван\Google Диск\C\language\language.exe,
+
+ВНЕЗАПНО: Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x75CE9A12 в функции puts(). Попытка прочесть данные по адресу 0x784FDC16. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+#1: TXLib [Ver: 00173a, Rev: 105, Date: 2018-06-12 00:00:00 +0300], Instance: 0x005002C0 (32-bit), Flags: Cmdre0, Thread: 0x1C08 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x75CE9A12 in C:\WINDOWS\System32\msvcrt.dll: puts()
+
+# 1 0x00427219 in C:\Users\иван\Google Диск\C\language\language.exe: GetT() at C:/Users/иван/Google Диск/C/language/language.cpp (324):
+
+    322:     Node* node = nullptr;
+    323: 
+=>  324:     printf("%s\n", s);
+    325:     while (*s == '*' || *s == '/')
+    326:     {
+
+# 2 0x00427147 in C:\Users\иван\Google Диск\C\language\language.exe: GetE() at C:/Users/иван/Google Диск/C/language/language.cpp (294):
+
+    292: Node* GetE()
+    293: {
+=>  294:     Node* node1 = GetT();
+    295:     Node* node = nullptr;
+    296: 
+
+# 3 0x0042862F in C:\Users\иван\Google Диск\C\language\language.exe: GetRET() at C:/Users/иван/Google Диск/C/language/language.cpp (749):
+
+    747:     NodeCtor(node, OPER_RET, 0);
+    748: 
+=>  749:     node->right = GetE();
+    750:     node->right->parent = node;
+    751: 
+
+# 4 0x004280C3 in C:\Users\иван\Google Диск\C\language\language.exe: GetOP() at C:/Users/иван/Google Диск/C/language/language.cpp (621):
+
+    619:         node = (Node*)calloc(1, sizeof(Node));
+    620:         NodeCtor(node, OPERATOR, 0);
+=>  621:         node->left = GetRET();
+    622:         node->left->parent = node;
+    623:     }
+
+# 5 0x004283CE in C:\Users\иван\Google Диск\C\language\language.exe: GetFunc_create() at C:/Users/иван/Google Диск/C/language/language.cpp (691):
+
+    689:     skipspaces();
+    690: 
+=>  691:     node->right = GetOP();
+    692:     node->right->parent = node;
+    693: 
+
+# 6 0x00427121 in C:\Users\иван\Google Диск\C\language\language.exe: GetG() at C:/Users/иван/Google Диск/C/language/language.cpp (283):
+
+    281: 
+    282:     for (int i = 1; *s != '\0'; i++)
+=>  283:         root[i] = GetFunc_create();
+    284: 
+    285: 
+
+# 7 0x004286C7 in C:\Users\иван\Google Диск\C\language\language.exe: read_code() at C:/Users/иван/Google Диск/C/language/language.cpp (769):
+
+    767:     fclose(in_file);
+    768: 
+=>  769:     Node** rez = GetG(text);
+    770:     free(text);
+    771: 
+
+# 8 0x00428EEF in C:\Users\иван\Google Диск\C\language\language.exe: main() at C:/Users/иван/Google Диск/C/language/language.cpp (942):
+
+    940:     char out_name[MaxStr] = "recode.txt";
+    941: 
+=>  942:     Node** big_root = read_code(in_name);
+    943: 
+    944:     FILE* out_file = fopen(out_name, "w");
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 105, Date: 2018-06-12 00:00:00 +0300]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\ФАЙЛЫ\загрузки\TX\TXLib.h
+Compiled:	Dec  9 2018 15:42:13, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Dec 09 2018 15:42:21
+
+Run file:	C:\Users\иван\Google Диск\C\language\language.exe
+Directory:	C:\Users\иван\Google Диск\C\language
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\иван\Google Диск\C\language\language.exe,
+
+ВНЕЗАПНО: signal (11, 0x00): SIGSEGV: Доступ по неверному указателю. Ставьте ассерты! 
+
+Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x75CE9A12 в функции puts(). Попытка прочесть данные по адресу 0x784FDC16. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#2: TXLib [Ver: 00173a, Rev: 105, Date: 2018-06-12 00:00:00 +0300], Instance: 0x005002C0 (32-bit), Flags: Cmdre0, Thread: 0x1C08 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x75CE9A12 in C:\WINDOWS\System32\msvcrt.dll: puts()
+
+# 1 0x00427219 in C:\Users\иван\Google Диск\C\language\language.exe: GetT() at C:/Users/иван/Google Диск/C/language/language.cpp (324):
+
+    322:     Node* node = nullptr;
+    323: 
+=>  324:     printf("%s\n", s);
+    325:     while (*s == '*' || *s == '/')
+    326:     {
+
+# 2 0x00427147 in C:\Users\иван\Google Диск\C\language\language.exe: GetE() at C:/Users/иван/Google Диск/C/language/language.cpp (294):
+
+    292: Node* GetE()
+    293: {
+=>  294:     Node* node1 = GetT();
+    295:     Node* node = nullptr;
+    296: 
+
+# 3 0x0042862F in C:\Users\иван\Google Диск\C\language\language.exe: GetRET() at C:/Users/иван/Google Диск/C/language/language.cpp (749):
+
+    747:     NodeCtor(node, OPER_RET, 0);
+    748: 
+=>  749:     node->right = GetE();
+    750:     node->right->parent = node;
+    751: 
+
+# 4 0x004280C3 in C:\Users\иван\Google Диск\C\language\language.exe: GetOP() at C:/Users/иван/Google Диск/C/language/language.cpp (621):
+
+    619:         node = (Node*)calloc(1, sizeof(Node));
+    620:         NodeCtor(node, OPERATOR, 0);
+=>  621:         node->left = GetRET();
+    622:         node->left->parent = node;
+    623:     }
+
+# 5 0x004283CE in C:\Users\иван\Google Диск\C\language\language.exe: GetFunc_create() at C:/Users/иван/Google Диск/C/language/language.cpp (691):
+
+    689:     skipspaces();
+    690: 
+=>  691:     node->right = GetOP();
+    692:     node->right->parent = node;
+    693: 
+
+# 6 0x00427121 in C:\Users\иван\Google Диск\C\language\language.exe: GetG() at C:/Users/иван/Google Диск/C/language/language.cpp (283):
+
+    281: 
+    282:     for (int i = 1; *s != '\0'; i++)
+=>  283:         root[i] = GetFunc_create();
+    284: 
+    285: 
+
+# 7 0x004286C7 in C:\Users\иван\Google Диск\C\language\language.exe: read_code() at C:/Users/иван/Google Диск/C/language/language.cpp (769):
+
+    767:     fclose(in_file);
+    768: 
+=>  769:     Node** rez = GetG(text);
+    770:     free(text);
+    771: 
+
+# 8 0x00428EEF in C:\Users\иван\Google Диск\C\language\language.exe: main() at C:/Users/иван/Google Диск/C/language/language.cpp (942):
+
+    940:     char out_name[MaxStr] = "recode.txt";
+    941: 
+=>  942:     Node** big_root = read_code(in_name);
+    943: 
+    944:     FILE* out_file = fopen(out_name, "w");
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 105, Date: 2018-06-12 00:00:00 +0300]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\ФАЙЛЫ\загрузки\TX\TXLib.h
+Compiled:	Dec  9 2018 15:42:13, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Dec 09 2018 15:42:20
+
+Run file:	C:\Users\иван\Google Диск\C\language\language.exe
+Directory:	C:\Users\иван\Google Диск\C\language
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: C:\Users\иван\Google Диск\C\language\language.exe,
+
+ВНЕЗАПНО: Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x75CEB0D2 в функции ungetwc(). Попытка прочесть данные по адресу 0x78CADC16. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+#1: TXLib [Ver: 00173a, Rev: 105, Date: 2018-06-12 00:00:00 +0300], Instance: 0x005002C0 (32-bit), Flags: Cmdre0, Thread: 0x2834 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x75CEB0D2 in C:\WINDOWS\System32\msvcrt.dll: ungetwc()
+# 1 0x75CE48DB in C:\WINDOWS\System32\msvcrt.dll: printf()
+
+# 2 0x00427221 in C:\Users\иван\Google Диск\C\language\language.exe: GetT() at C:/Users/иван/Google Диск/C/language/language.cpp (324):
+
+    322:     Node* node = nullptr;
+    323: 
+=>  324:     printf("qwert%sqwert\n", s);
+    325:     while (*s == '*' || *s == '/')
+    326:     {
+
+# 3 0x00427147 in C:\Users\иван\Google Диск\C\language\language.exe: GetE() at C:/Users/иван/Google Диск/C/language/language.cpp (294):
+
+    292: Node* GetE()
+    293: {
+=>  294:     Node* node1 = GetT();
+    295:     Node* node = nullptr;
+    296: 
+
+# 4 0x00428637 in C:\Users\иван\Google Диск\C\language\language.exe: GetRET() at C:/Users/иван/Google Диск/C/language/language.cpp (749):
+
+    747:     NodeCtor(node, OPER_RET, 0);
+    748: 
+=>  749:     node->right = GetE();
+    750:     node->right->parent = node;
+    751: 
+
+# 5 0x004280CB in C:\Users\иван\Google Диск\C\language\language.exe: GetOP() at C:/Users/иван/Google Диск/C/language/language.cpp (621):
+
+    619:         node = (Node*)calloc(1, sizeof(Node));
+    620:         NodeCtor(node, OPERATOR, 0);
+=>  621:         node->left = GetRET();
+    622:         node->left->parent = node;
+    623:     }
+
+# 6 0x004283D6 in C:\Users\иван\Google Диск\C\language\language.exe: GetFunc_create() at C:/Users/иван/Google Диск/C/language/language.cpp (691):
+
+    689:     skipspaces();
+    690: 
+=>  691:     node->right = GetOP();
+    692:     node->right->parent = node;
+    693: 
+
+# 7 0x00427121 in C:\Users\иван\Google Диск\C\language\language.exe: GetG() at C:/Users/иван/Google Диск/C/language/language.cpp (283):
+
+    281: 
+    282:     for (int i = 1; *s != '\0'; i++)
+=>  283:         root[i] = GetFunc_create();
+    284: 
+    285: 
+
+# 8 0x004286CF in C:\Users\иван\Google Диск\C\language\language.exe: read_code() at C:/Users/иван/Google Диск/C/language/language.cpp (769):
+
+    767:     fclose(in_file);
+    768: 
+=>  769:     Node** rez = GetG(text);
+    770:     free(text);
+    771: 
+
+# 9 0x00428EF7 in C:\Users\иван\Google Диск\C\language\language.exe: main() at C:/Users/иван/Google Диск/C/language/language.cpp (942):
+
+    940:     char out_name[MaxStr] = "recode.txt";
+    941: 
+=>  942:     Node** big_root = read_code(in_name);
+    943: 
+    944:     FILE* out_file = fopen(out_name, "w");
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 105, Date: 2018-06-12 00:00:00 +0300]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\ФАЙЛЫ\загрузки\TX\TXLib.h
+Compiled:	Dec  9 2018 15:43:59, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Dec 09 2018 15:44:06
+
+Run file:	C:\Users\иван\Google Диск\C\language\language.exe
+Directory:	C:\Users\иван\Google Диск\C\language
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\иван\Google Диск\C\language\language.exe,
+
+ВНЕЗАПНО: signal (11, 0x00): SIGSEGV: Доступ по неверному указателю. Ставьте ассерты! 
+
+Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x75CEB0D2 в функции ungetwc(). Попытка прочесть данные по адресу 0x78CADC16. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#2: TXLib [Ver: 00173a, Rev: 105, Date: 2018-06-12 00:00:00 +0300], Instance: 0x005002C0 (32-bit), Flags: Cmdre0, Thread: 0x2834 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x75CEB0D2 in C:\WINDOWS\System32\msvcrt.dll: ungetwc()
+# 1 0x75CE48DB in C:\WINDOWS\System32\msvcrt.dll: printf()
+
+# 2 0x00427221 in C:\Users\иван\Google Диск\C\language\language.exe: GetT() at C:/Users/иван/Google Диск/C/language/language.cpp (324):
+
+    322:     Node* node = nullptr;
+    323: 
+=>  324:     printf("qwert%sqwert\n", s);
+    325:     while (*s == '*' || *s == '/')
+    326:     {
+
+# 3 0x00427147 in C:\Users\иван\Google Диск\C\language\language.exe: GetE() at C:/Users/иван/Google Диск/C/language/language.cpp (294):
+
+    292: Node* GetE()
+    293: {
+=>  294:     Node* node1 = GetT();
+    295:     Node* node = nullptr;
+    296: 
+
+# 4 0x00428637 in C:\Users\иван\Google Диск\C\language\language.exe: GetRET() at C:/Users/иван/Google Диск/C/language/language.cpp (749):
+
+    747:     NodeCtor(node, OPER_RET, 0);
+    748: 
+=>  749:     node->right = GetE();
+    750:     node->right->parent = node;
+    751: 
+
+# 5 0x004280CB in C:\Users\иван\Google Диск\C\language\language.exe: GetOP() at C:/Users/иван/Google Диск/C/language/language.cpp (621):
+
+    619:         node = (Node*)calloc(1, sizeof(Node));
+    620:         NodeCtor(node, OPERATOR, 0);
+=>  621:         node->left = GetRET();
+    622:         node->left->parent = node;
+    623:     }
+
+# 6 0x004283D6 in C:\Users\иван\Google Диск\C\language\language.exe: GetFunc_create() at C:/Users/иван/Google Диск/C/language/language.cpp (691):
+
+    689:     skipspaces();
+    690: 
+=>  691:     node->right = GetOP();
+    692:     node->right->parent = node;
+    693: 
+
+# 7 0x00427121 in C:\Users\иван\Google Диск\C\language\language.exe: GetG() at C:/Users/иван/Google Диск/C/language/language.cpp (283):
+
+    281: 
+    282:     for (int i = 1; *s != '\0'; i++)
+=>  283:         root[i] = GetFunc_create();
+    284: 
+    285: 
+
+# 8 0x004286CF in C:\Users\иван\Google Диск\C\language\language.exe: read_code() at C:/Users/иван/Google Диск/C/language/language.cpp (769):
+
+    767:     fclose(in_file);
+    768: 
+=>  769:     Node** rez = GetG(text);
+    770:     free(text);
+    771: 
+
+# 9 0x00428EF7 in C:\Users\иван\Google Диск\C\language\language.exe: main() at C:/Users/иван/Google Диск/C/language/language.cpp (942):
+
+    940:     char out_name[MaxStr] = "recode.txt";
+    941: 
+=>  942:     Node** big_root = read_code(in_name);
+    943: 
+    944:     FILE* out_file = fopen(out_name, "w");
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 105, Date: 2018-06-12 00:00:00 +0300]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\ФАЙЛЫ\загрузки\TX\TXLib.h
+Compiled:	Dec  9 2018 15:43:59, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Dec 09 2018 15:44:07
+
+Run file:	C:\Users\иван\Google Диск\C\language\language.exe
+Directory:	C:\Users\иван\Google Диск\C\language
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: C:\Users\иван\Google Диск\C\language\language.exe,
+
+ВНЕЗАПНО: Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x75CEB0D2 в функции ungetwc(). Попытка прочесть данные по адресу 0x78D0DC16. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+#1: TXLib [Ver: 00173a, Rev: 105, Date: 2018-06-12 00:00:00 +0300], Instance: 0x005002C0 (32-bit), Flags: Cmdre0, Thread: 0x2020 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x75CEB0D2 in C:\WINDOWS\System32\msvcrt.dll: ungetwc()
+# 1 0x75CE48DB in C:\WINDOWS\System32\msvcrt.dll: printf()
+
+# 2 0x00427221 in C:\Users\иван\Google Диск\C\language\language.exe: GetT() at C:/Users/иван/Google Диск/C/language/language.cpp (324):
+
+    322:     Node* node = nullptr;
+    323: 
+=>  324:     printf("qwert%sqwert\n", s);
+    325:     while (*s == '*' || *s == '/')
+    326:     {
+
+# 3 0x00427147 in C:\Users\иван\Google Диск\C\language\language.exe: GetE() at C:/Users/иван/Google Диск/C/language/language.cpp (294):
+
+    292: Node* GetE()
+    293: {
+=>  294:     Node* node1 = GetT();
+    295:     Node* node = nullptr;
+    296: 
+
+# 4 0x00428637 in C:\Users\иван\Google Диск\C\language\language.exe: GetRET() at C:/Users/иван/Google Диск/C/language/language.cpp (749):
+
+    747:     NodeCtor(node, OPER_RET, 0);
+    748: 
+=>  749:     node->right = GetE();
+    750:     node->right->parent = node;
+    751: 
+
+# 5 0x004280CB in C:\Users\иван\Google Диск\C\language\language.exe: GetOP() at C:/Users/иван/Google Диск/C/language/language.cpp (621):
+
+    619:         node = (Node*)calloc(1, sizeof(Node));
+    620:         NodeCtor(node, OPERATOR, 0);
+=>  621:         node->left = GetRET();
+    622:         node->left->parent = node;
+    623:     }
+
+# 6 0x004283D6 in C:\Users\иван\Google Диск\C\language\language.exe: GetFunc_create() at C:/Users/иван/Google Диск/C/language/language.cpp (691):
+
+    689:     skipspaces();
+    690: 
+=>  691:     node->right = GetOP();
+    692:     node->right->parent = node;
+    693: 
+
+# 7 0x00427121 in C:\Users\иван\Google Диск\C\language\language.exe: GetG() at C:/Users/иван/Google Диск/C/language/language.cpp (283):
+
+    281: 
+    282:     for (int i = 1; *s != '\0'; i++)
+=>  283:         root[i] = GetFunc_create();
+    284: 
+    285: 
+
+# 8 0x004286CF in C:\Users\иван\Google Диск\C\language\language.exe: read_code() at C:/Users/иван/Google Диск/C/language/language.cpp (769):
+
+    767:     fclose(in_file);
+    768: 
+=>  769:     Node** rez = GetG(text);
+    770:     free(text);
+    771: 
+
+# 9 0x00428EF7 in C:\Users\иван\Google Диск\C\language\language.exe: main() at C:/Users/иван/Google Диск/C/language/language.cpp (942):
+
+    940:     char out_name[MaxStr] = "recode.txt";
+    941: 
+=>  942:     Node** big_root = read_code(in_name);
+    943: 
+    944:     FILE* out_file = fopen(out_name, "w");
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 105, Date: 2018-06-12 00:00:00 +0300]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\ФАЙЛЫ\загрузки\TX\TXLib.h
+Compiled:	Dec  9 2018 15:47:26, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Dec 09 2018 15:47:32
+
+Run file:	C:\Users\иван\Google Диск\C\language\language.exe
+Directory:	C:\Users\иван\Google Диск\C\language
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\иван\Google Диск\C\language\language.exe,
+
+ВНЕЗАПНО: signal (11, 0x00): SIGSEGV: Доступ по неверному указателю. Ставьте ассерты! 
+
+Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x75CEB0D2 в функции ungetwc(). Попытка прочесть данные по адресу 0x78D0DC16. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#2: TXLib [Ver: 00173a, Rev: 105, Date: 2018-06-12 00:00:00 +0300], Instance: 0x005002C0 (32-bit), Flags: Cmdre0, Thread: 0x2020 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x75CEB0D2 in C:\WINDOWS\System32\msvcrt.dll: ungetwc()
+# 1 0x75CE48DB in C:\WINDOWS\System32\msvcrt.dll: printf()
+
+# 2 0x00427221 in C:\Users\иван\Google Диск\C\language\language.exe: GetT() at C:/Users/иван/Google Диск/C/language/language.cpp (324):
+
+    322:     Node* node = nullptr;
+    323: 
+=>  324:     printf("qwert%sqwert\n", s);
+    325:     while (*s == '*' || *s == '/')
+    326:     {
+
+# 3 0x00427147 in C:\Users\иван\Google Диск\C\language\language.exe: GetE() at C:/Users/иван/Google Диск/C/language/language.cpp (294):
+
+    292: Node* GetE()
+    293: {
+=>  294:     Node* node1 = GetT();
+    295:     Node* node = nullptr;
+    296: 
+
+# 4 0x00428637 in C:\Users\иван\Google Диск\C\language\language.exe: GetRET() at C:/Users/иван/Google Диск/C/language/language.cpp (749):
+
+    747:     NodeCtor(node, OPER_RET, 0);
+    748: 
+=>  749:     node->right = GetE();
+    750:     node->right->parent = node;
+    751: 
+
+# 5 0x004280CB in C:\Users\иван\Google Диск\C\language\language.exe: GetOP() at C:/Users/иван/Google Диск/C/language/language.cpp (621):
+
+    619:         node = (Node*)calloc(1, sizeof(Node));
+    620:         NodeCtor(node, OPERATOR, 0);
+=>  621:         node->left = GetRET();
+    622:         node->left->parent = node;
+    623:     }
+
+# 6 0x004283D6 in C:\Users\иван\Google Диск\C\language\language.exe: GetFunc_create() at C:/Users/иван/Google Диск/C/language/language.cpp (691):
+
+    689:     skipspaces();
+    690: 
+=>  691:     node->right = GetOP();
+    692:     node->right->parent = node;
+    693: 
+
+# 7 0x00427121 in C:\Users\иван\Google Диск\C\language\language.exe: GetG() at C:/Users/иван/Google Диск/C/language/language.cpp (283):
+
+    281: 
+    282:     for (int i = 1; *s != '\0'; i++)
+=>  283:         root[i] = GetFunc_create();
+    284: 
+    285: 
+
+# 8 0x004286CF in C:\Users\иван\Google Диск\C\language\language.exe: read_code() at C:/Users/иван/Google Диск/C/language/language.cpp (769):
+
+    767:     fclose(in_file);
+    768: 
+=>  769:     Node** rez = GetG(text);
+    770:     free(text);
+    771: 
+
+# 9 0x00428EF7 in C:\Users\иван\Google Диск\C\language\language.exe: main() at C:/Users/иван/Google Диск/C/language/language.cpp (942):
+
+    940:     char out_name[MaxStr] = "recode.txt";
+    941: 
+=>  942:     Node** big_root = read_code(in_name);
+    943: 
+    944:     FILE* out_file = fopen(out_name, "w");
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 105, Date: 2018-06-12 00:00:00 +0300]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\ФАЙЛЫ\загрузки\TX\TXLib.h
+Compiled:	Dec  9 2018 15:47:26, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Dec 09 2018 15:47:33
+
+Run file:	C:\Users\иван\Google Диск\C\language\language.exe
+Directory:	C:\Users\иван\Google Диск\C\language
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\иван\Google Диск\C\language\language.exe, файл: C:\Users\иван\Google Диск\C\language\language.cpp, строка: 881, функция: int print_node(FILE*, const Node*),
+
+Сообщение: ВНЕЗАПНО: Логическая ошибка: Неверно, что "0".
+
+#1: TXLib [Ver: 00173a, Rev: 105, Date: 2018-06-12 00:00:00 +0300], Instance: 0x005012C0 (32-bit), Flags: Cmdre0, Thread: 0x1F0C (Main), GetLastError(): 183 (Невозможно создать файл, так как он уже существует). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00428C77 in C:\Users\иван\Google Диск\C\language\language.exe: print_node() at C:/Users/иван/Google Диск/C/language/language.cpp (881):
+
+    879:             break;
+    880: 
+=>  881:         default: assert(0);
+    882: 
+    883:     }
+
+# 1 0x00428EA8 in C:\Users\иван\Google Диск\C\language\language.exe: print_tree() at C:/Users/иван/Google Диск/C/language/language.cpp (923):
+
+    921: 
+    922:     print_tree(out_file, node->left);
+=>  923:     print_node(out_file, node);
+    924:     print_tree(out_file, node->right);
+    925: 
+
+# 2 0x00428E96 in C:\Users\иван\Google Диск\C\language\language.exe: print_tree() at C:/Users/иван/Google Диск/C/language/language.cpp (922):
+
+    920:     }
+    921: 
+=>  922:     print_tree(out_file, node->left);
+    923:     print_node(out_file, node);
+    924:     print_tree(out_file, node->right);
+
+# 3 0x00428EBD in C:\Users\иван\Google Диск\C\language\language.exe: print_tree() at C:/Users/иван/Google Диск/C/language/language.cpp (924):
+
+    922:     print_tree(out_file, node->left);
+    923:     print_node(out_file, node);
+=>  924:     print_tree(out_file, node->right);
+    925: 
+    926:     if (node->type == OPERATOR && node->right == nullptr)
+
+# 4 0x00428F1A in C:\Users\иван\Google Диск\C\language\language.exe: print_code() at C:/Users/иван/Google Диск/C/language/language.cpp (938):
+
+    936:     for (int i = 0; big_root[i] != nullptr && i < Max_func_count; i++)
+    937:     {
+=>  938:         print_tree(out_file, big_root[i]);
+    939:         fprintf(out_file, "\n\n\n");
+    940:     }
+
+# 5 0x00429019 in C:\Users\иван\Google Диск\C\language\language.exe: main() at C:/Users/иван/Google Диск/C/language/language.cpp (955):
+
+    953:     FILE* out_file = fopen(out_name, "w");
+    954: 
+=>  955:     print_code(out_file, big_root);
+    956:     print_code(stdout, big_root);
+    957: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 105, Date: 2018-06-12 00:00:00 +0300]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\ФАЙЛЫ\загрузки\TX\TXLib.h
+Compiled:	Dec  9 2018 15:50:45, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Dec 09 2018 15:50:52
+
+Run file:	C:\Users\иван\Google Диск\C\language\language.exe
+Directory:	C:\Users\иван\Google Диск\C\language
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: C:\Users\иван\Google Диск\C\language\language.exe,
+
+ВНЕЗАПНО: Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x00427382 в функции GetS() в файле C:/Users/иван/Google Диск/C/language/language.cpp на строке 373. Попытка записать данные по адресу 0x0000000F. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+#1: TXLib [Ver: 00173a, Rev: 105, Date: 2018-06-12 00:00:00 +0300], Instance: 0x005022C0 (32-bit), Flags: Cmdre0, Thread: 0x3B0C (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00427382 in C:\Users\иван\Google Диск\C\language\language.exe: GetS() at C:/Users/иван/Google Диск/C/language/language.cpp (373):
+
+    371:     if (node2 != nullptr)
+    372:     {
+=>  373:         node2->parent->left = node;
+    374:         node->parent = node2->parent;
+    375:         return node1;
+
+# 1 0x00427202 in C:\Users\иван\Google Диск\C\language\language.exe: GetT() at C:/Users/иван/Google Диск/C/language/language.cpp (320):
+
+    318: Node* GetT()
+    319: {
+=>  320:     Node* node1 = GetS();
+    321:     Node* node = nullptr;
+    322: 
+
+# 2 0x00427147 in C:\Users\иван\Google Диск\C\language\language.exe: GetE() at C:/Users/иван/Google Диск/C/language/language.cpp (293):
+
+    291: Node* GetE()
+    292: {
+=>  293:     Node* node1 = GetT();
+    294:     Node* node = nullptr;
+    295: 
+
+# 3 0x00427AE5 in C:\Users\иван\Google Диск\C\language\language.exe: GetA() at C:/Users/иван/Google Диск/C/language/language.cpp (531):
+
+    529:     s++;
+    530: 
+=>  531:     node->right = GetE();
+    532:     node->right->parent = node;
+    533: 
+
+# 4 0x004281E8 in C:\Users\иван\Google Диск\C\language\language.exe: GetOP() at C:/Users/иван/Google Диск/C/language/language.cpp (648):
+
+    646:         node = (Node*)calloc(1, sizeof(Node));
+    647:         NodeCtor(node, OPERATOR, 0);
+=>  648:         node->left = GetA();
+    649:         node->left->parent = node;
+    650:     }
+
+# 5 0x00427F10 in C:\Users\иван\Google Диск\C\language\language.exe: GetOP() at C:/Users/иван/Google Диск/C/language/language.cpp (601):
+
+    599:         while (*s != '}')
+    600:         {
+=>  601:             Node* node2 = GetOP();
+    602:             node1->right = node2;
+    603:             node2->parent = node1;
+
+# 6 0x004284AA in C:\Users\иван\Google Диск\C\language\language.exe: GetFunc_create() at C:/Users/иван/Google Диск/C/language/language.cpp (711):
+
+    709:     skipspaces();
+    710: 
+=>  711:     node->right = GetOP();
+    712:     node->right->parent = node;
+    713: 
+
+# 7 0x004270FE in C:\Users\иван\Google Диск\C\language\language.exe: GetG() at C:/Users/иван/Google Диск/C/language/language.cpp (279):
+
+    277:     s = str;
+    278:     Node** root = (Node**)calloc(Max_func_count, sizeof(Node*));
+=>  279:     root[0] = GetFunc_create();
+    280: 
+    281:     for (int i = 1; *s != '\0'; i++)
+
+# 8 0x00428889 in C:\Users\иван\Google Диск\C\language\language.exe: read_code() at C:/Users/иван/Google Диск/C/language/language.cpp (798):
+
+    796:     fclose(in_file);
+    797: 
+=>  798:     Node** rez = GetG(text);
+    799:     free(text);
+    800: 
+
+# 9 0x004290DF in C:\Users\иван\Google Диск\C\language\language.exe: main() at C:/Users/иван/Google Диск/C/language/language.cpp (983):
+
+    981:     char out_name[MaxStr] = "recode.txt";
+    982: 
+=>  983:     Node** big_root = read_code(in_name);
+    984: 
+    985:     FILE* out_file = fopen(out_name, "w");
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 105, Date: 2018-06-12 00:00:00 +0300]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\ФАЙЛЫ\загрузки\TX\TXLib.h
+Compiled:	Dec 11 2018 01:05:30, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Dec 11 2018 01:05:43
+
+Run file:	C:\Users\иван\Google Диск\C\language\language.exe
+Directory:	C:\Users\иван\Google Диск\C\language
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\иван\Google Диск\C\language\language.exe,
+
+ВНЕЗАПНО: signal (11, 0x00): SIGSEGV: Доступ по неверному указателю. Ставьте ассерты! 
+
+Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x00427382 в функции GetS() в файле C:/Users/иван/Google Диск/C/language/language.cpp на строке 373. Попытка записать данные по адресу 0x0000000F. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#2: TXLib [Ver: 00173a, Rev: 105, Date: 2018-06-12 00:00:00 +0300], Instance: 0x005022C0 (32-bit), Flags: Cmdre0, Thread: 0x3B0C (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00427382 in C:\Users\иван\Google Диск\C\language\language.exe: GetS() at C:/Users/иван/Google Диск/C/language/language.cpp (373):
+
+    371:     if (node2 != nullptr)
+    372:     {
+=>  373:         node2->parent->left = node;
+    374:         node->parent = node2->parent;
+    375:         return node1;
+
+# 1 0x00427202 in C:\Users\иван\Google Диск\C\language\language.exe: GetT() at C:/Users/иван/Google Диск/C/language/language.cpp (320):
+
+    318: Node* GetT()
+    319: {
+=>  320:     Node* node1 = GetS();
+    321:     Node* node = nullptr;
+    322: 
+
+# 2 0x00427147 in C:\Users\иван\Google Диск\C\language\language.exe: GetE() at C:/Users/иван/Google Диск/C/language/language.cpp (293):
+
+    291: Node* GetE()
+    292: {
+=>  293:     Node* node1 = GetT();
+    294:     Node* node = nullptr;
+    295: 
+
+# 3 0x00427AE5 in C:\Users\иван\Google Диск\C\language\language.exe: GetA() at C:/Users/иван/Google Диск/C/language/language.cpp (531):
+
+    529:     s++;
+    530: 
+=>  531:     node->right = GetE();
+    532:     node->right->parent = node;
+    533: 
+
+# 4 0x004281E8 in C:\Users\иван\Google Диск\C\language\language.exe: GetOP() at C:/Users/иван/Google Диск/C/language/language.cpp (648):
+
+    646:         node = (Node*)calloc(1, sizeof(Node));
+    647:         NodeCtor(node, OPERATOR, 0);
+=>  648:         node->left = GetA();
+    649:         node->left->parent = node;
+    650:     }
+
+# 5 0x00427F10 in C:\Users\иван\Google Диск\C\language\language.exe: GetOP() at C:/Users/иван/Google Диск/C/language/language.cpp (601):
+
+    599:         while (*s != '}')
+    600:         {
+=>  601:             Node* node2 = GetOP();
+    602:             node1->right = node2;
+    603:             node2->parent = node1;
+
+# 6 0x004284AA in C:\Users\иван\Google Диск\C\language\language.exe: GetFunc_create() at C:/Users/иван/Google Диск/C/language/language.cpp (711):
+
+    709:     skipspaces();
+    710: 
+=>  711:     node->right = GetOP();
+    712:     node->right->parent = node;
+    713: 
+
+# 7 0x004270FE in C:\Users\иван\Google Диск\C\language\language.exe: GetG() at C:/Users/иван/Google Диск/C/language/language.cpp (279):
+
+    277:     s = str;
+    278:     Node** root = (Node**)calloc(Max_func_count, sizeof(Node*));
+=>  279:     root[0] = GetFunc_create();
+    280: 
+    281:     for (int i = 1; *s != '\0'; i++)
+
+# 8 0x00428889 in C:\Users\иван\Google Диск\C\language\language.exe: read_code() at C:/Users/иван/Google Диск/C/language/language.cpp (798):
+
+    796:     fclose(in_file);
+    797: 
+=>  798:     Node** rez = GetG(text);
+    799:     free(text);
+    800: 
+
+# 9 0x004290DF in C:\Users\иван\Google Диск\C\language\language.exe: main() at C:/Users/иван/Google Диск/C/language/language.cpp (983):
+
+    981:     char out_name[MaxStr] = "recode.txt";
+    982: 
+=>  983:     Node** big_root = read_code(in_name);
+    984: 
+    985:     FILE* out_file = fopen(out_name, "w");
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 105, Date: 2018-06-12 00:00:00 +0300]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\ФАЙЛЫ\загрузки\TX\TXLib.h
+Compiled:	Dec 11 2018 01:05:30, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Dec 11 2018 01:05:42
+
+Run file:	C:\Users\иван\Google Диск\C\language\language.exe
+Directory:	C:\Users\иван\Google Диск\C\language
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: C:\Users\иван\Google Диск\C\language\language.exe,
+
+ВНЕЗАПНО: Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x0042738C в функции GetS() в файле C:/Users/иван/Google Диск/C/language/language.cpp на строке 374. Попытка записать данные по адресу 0x0000000F. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+#1: TXLib [Ver: 00173a, Rev: 105, Date: 2018-06-12 00:00:00 +0300], Instance: 0x005022C0 (32-bit), Flags: Cmdre0, Thread: 0x3C4 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x0042738C in C:\Users\иван\Google Диск\C\language\language.exe: GetS() at C:/Users/иван/Google Диск/C/language/language.cpp (374):
+
+    372:     if (node2 != nullptr && node2 != N_poison)
+    373:     {
+=>  374:         node2->parent->left = node;
+    375:         node->parent = node2->parent;
+    376:         return node1;
+
+# 1 0x00427202 in C:\Users\иван\Google Диск\C\language\language.exe: GetT() at C:/Users/иван/Google Диск/C/language/language.cpp (320):
+
+    318: Node* GetT()
+    319: {
+=>  320:     Node* node1 = GetS();
+    321:     Node* node = nullptr;
+    322: 
+
+# 2 0x00427147 in C:\Users\иван\Google Диск\C\language\language.exe: GetE() at C:/Users/иван/Google Диск/C/language/language.cpp (293):
+
+    291: Node* GetE()
+    292: {
+=>  293:     Node* node1 = GetT();
+    294:     Node* node = nullptr;
+    295: 
+
+# 3 0x00427AEF in C:\Users\иван\Google Диск\C\language\language.exe: GetA() at C:/Users/иван/Google Диск/C/language/language.cpp (532):
+
+    530:     s++;
+    531: 
+=>  532:     node->right = GetE();
+    533:     node->right->parent = node;
+    534: 
+
+# 4 0x004281F2 in C:\Users\иван\Google Диск\C\language\language.exe: GetOP() at C:/Users/иван/Google Диск/C/language/language.cpp (649):
+
+    647:         node = (Node*)calloc(1, sizeof(Node));
+    648:         NodeCtor(node, OPERATOR, 0);
+=>  649:         node->left = GetA();
+    650:         node->left->parent = node;
+    651:     }
+
+# 5 0x00427F1A in C:\Users\иван\Google Диск\C\language\language.exe: GetOP() at C:/Users/иван/Google Диск/C/language/language.cpp (602):
+
+    600:         while (*s != '}')
+    601:         {
+=>  602:             Node* node2 = GetOP();
+    603:             node1->right = node2;
+    604:             node2->parent = node1;
+
+# 6 0x004284B4 in C:\Users\иван\Google Диск\C\language\language.exe: GetFunc_create() at C:/Users/иван/Google Диск/C/language/language.cpp (712):
+
+    710:     skipspaces();
+    711: 
+=>  712:     node->right = GetOP();
+    713:     node->right->parent = node;
+    714: 
+
+# 7 0x004270FE in C:\Users\иван\Google Диск\C\language\language.exe: GetG() at C:/Users/иван/Google Диск/C/language/language.cpp (279):
+
+    277:     s = str;
+    278:     Node** root = (Node**)calloc(Max_func_count, sizeof(Node*));
+=>  279:     root[0] = GetFunc_create();
+    280: 
+    281:     for (int i = 1; *s != '\0'; i++)
+
+# 8 0x00428893 in C:\Users\иван\Google Диск\C\language\language.exe: read_code() at C:/Users/иван/Google Диск/C/language/language.cpp (799):
+
+    797:     fclose(in_file);
+    798: 
+=>  799:     Node** rez = GetG(text);
+    800:     free(text);
+    801: 
+
+# 9 0x004290E9 in C:\Users\иван\Google Диск\C\language\language.exe: main() at C:/Users/иван/Google Диск/C/language/language.cpp (984):
+
+    982:     char out_name[MaxStr] = "recode.txt";
+    983: 
+=>  984:     Node** big_root = read_code(in_name);
+    985: 
+    986:     FILE* out_file = fopen(out_name, "w");
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 105, Date: 2018-06-12 00:00:00 +0300]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\ФАЙЛЫ\загрузки\TX\TXLib.h
+Compiled:	Dec 11 2018 01:08:51, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Dec 11 2018 01:09:05
+
+Run file:	C:\Users\иван\Google Диск\C\language\language.exe
+Directory:	C:\Users\иван\Google Диск\C\language
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\иван\Google Диск\C\language\language.exe,
+
+ВНЕЗАПНО: signal (11, 0x00): SIGSEGV: Доступ по неверному указателю. Ставьте ассерты! 
+
+Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x0042738C в функции GetS() в файле C:/Users/иван/Google Диск/C/language/language.cpp на строке 374. Попытка записать данные по адресу 0x0000000F. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#2: TXLib [Ver: 00173a, Rev: 105, Date: 2018-06-12 00:00:00 +0300], Instance: 0x005022C0 (32-bit), Flags: Cmdre0, Thread: 0x3C4 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x0042738C in C:\Users\иван\Google Диск\C\language\language.exe: GetS() at C:/Users/иван/Google Диск/C/language/language.cpp (374):
+
+    372:     if (node2 != nullptr && node2 != N_poison)
+    373:     {
+=>  374:         node2->parent->left = node;
+    375:         node->parent = node2->parent;
+    376:         return node1;
+
+# 1 0x00427202 in C:\Users\иван\Google Диск\C\language\language.exe: GetT() at C:/Users/иван/Google Диск/C/language/language.cpp (320):
+
+    318: Node* GetT()
+    319: {
+=>  320:     Node* node1 = GetS();
+    321:     Node* node = nullptr;
+    322: 
+
+# 2 0x00427147 in C:\Users\иван\Google Диск\C\language\language.exe: GetE() at C:/Users/иван/Google Диск/C/language/language.cpp (293):
+
+    291: Node* GetE()
+    292: {
+=>  293:     Node* node1 = GetT();
+    294:     Node* node = nullptr;
+    295: 
+
+# 3 0x00427AEF in C:\Users\иван\Google Диск\C\language\language.exe: GetA() at C:/Users/иван/Google Диск/C/language/language.cpp (532):
+
+    530:     s++;
+    531: 
+=>  532:     node->right = GetE();
+    533:     node->right->parent = node;
+    534: 
+
+# 4 0x004281F2 in C:\Users\иван\Google Диск\C\language\language.exe: GetOP() at C:/Users/иван/Google Диск/C/language/language.cpp (649):
+
+    647:         node = (Node*)calloc(1, sizeof(Node));
+    648:         NodeCtor(node, OPERATOR, 0);
+=>  649:         node->left = GetA();
+    650:         node->left->parent = node;
+    651:     }
+
+# 5 0x00427F1A in C:\Users\иван\Google Диск\C\language\language.exe: GetOP() at C:/Users/иван/Google Диск/C/language/language.cpp (602):
+
+    600:         while (*s != '}')
+    601:         {
+=>  602:             Node* node2 = GetOP();
+    603:             node1->right = node2;
+    604:             node2->parent = node1;
+
+# 6 0x004284B4 in C:\Users\иван\Google Диск\C\language\language.exe: GetFunc_create() at C:/Users/иван/Google Диск/C/language/language.cpp (712):
+
+    710:     skipspaces();
+    711: 
+=>  712:     node->right = GetOP();
+    713:     node->right->parent = node;
+    714: 
+
+# 7 0x004270FE in C:\Users\иван\Google Диск\C\language\language.exe: GetG() at C:/Users/иван/Google Диск/C/language/language.cpp (279):
+
+    277:     s = str;
+    278:     Node** root = (Node**)calloc(Max_func_count, sizeof(Node*));
+=>  279:     root[0] = GetFunc_create();
+    280: 
+    281:     for (int i = 1; *s != '\0'; i++)
+
+# 8 0x00428893 in C:\Users\иван\Google Диск\C\language\language.exe: read_code() at C:/Users/иван/Google Диск/C/language/language.cpp (799):
+
+    797:     fclose(in_file);
+    798: 
+=>  799:     Node** rez = GetG(text);
+    800:     free(text);
+    801: 
+
+# 9 0x004290E9 in C:\Users\иван\Google Диск\C\language\language.exe: main() at C:/Users/иван/Google Диск/C/language/language.cpp (984):
+
+    982:     char out_name[MaxStr] = "recode.txt";
+    983: 
+=>  984:     Node** big_root = read_code(in_name);
+    985: 
+    986:     FILE* out_file = fopen(out_name, "w");
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 105, Date: 2018-06-12 00:00:00 +0300]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\ФАЙЛЫ\загрузки\TX\TXLib.h
+Compiled:	Dec 11 2018 01:08:51, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Dec 11 2018 01:09:05
+
+Run file:	C:\Users\иван\Google Диск\C\language\language.exe
+Directory:	C:\Users\иван\Google Диск\C\language
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: C:\Users\иван\Google Диск\C\language\language.exe,
+
+ВНЕЗАПНО: Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x00427292 в функции GetT() в файле C:/Users/иван/Google Диск/C/language/language.cpp на строке 324. Попытка прочесть данные по адресу 0x00CFFC22. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+#1: TXLib [Ver: 00173a, Rev: 105, Date: 2018-06-12 00:00:00 +0300], Instance: 0x005022C0 (32-bit), Flags: Cmdre0, Thread: 0x2E98 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00427292 in C:\Users\иван\Google Диск\C\language\language.exe: GetT() at C:/Users/иван/Google Диск/C/language/language.cpp (324):
+
+    322: 
+    323:     //printf("qwert%sqwert\n", s);
+=>  324:     while (*s == '*' || *s == '/')
+    325:     {
+    326:         int op = *s;
+
+# 1 0x00427147 in C:\Users\иван\Google Диск\C\language\language.exe: GetE() at C:/Users/иван/Google Диск/C/language/language.cpp (293):
+
+    291: Node* GetE()
+    292: {
+=>  293:     Node* node1 = GetT();
+    294:     Node* node = nullptr;
+    295: 
+
+# 2 0x00427B04 in C:\Users\иван\Google Диск\C\language\language.exe: GetA() at C:/Users/иван/Google Диск/C/language/language.cpp (531):
+
+    529:     s++;
+    530: 
+=>  531:     node->right = GetE();
+    532:     node->right->parent = node;
+    533: 
+
+# 3 0x00428207 in C:\Users\иван\Google Диск\C\language\language.exe: GetOP() at C:/Users/иван/Google Диск/C/language/language.cpp (648):
+
+    646:         node = (Node*)calloc(1, sizeof(Node));
+    647:         NodeCtor(node, OPERATOR, 0);
+=>  648:         node->left = GetA();
+    649:         node->left->parent = node;
+    650:     }
+
+# 4 0x00427F2F in C:\Users\иван\Google Диск\C\language\language.exe: GetOP() at C:/Users/иван/Google Диск/C/language/language.cpp (601):
+
+    599:         while (*s != '}')
+    600:         {
+=>  601:             Node* node2 = GetOP();
+    602:             node1->right = node2;
+    603:             node2->parent = node1;
+
+# 5 0x004284C9 in C:\Users\иван\Google Диск\C\language\language.exe: GetFunc_create() at C:/Users/иван/Google Диск/C/language/language.cpp (711):
+
+    709:     skipspaces();
+    710: 
+=>  711:     node->right = GetOP();
+    712:     node->right->parent = node;
+    713: 
+
+# 6 0x004270FE in C:\Users\иван\Google Диск\C\language\language.exe: GetG() at C:/Users/иван/Google Диск/C/language/language.cpp (279):
+
+    277:     s = str;
+    278:     Node** root = (Node**)calloc(Max_func_count, sizeof(Node*));
+=>  279:     root[0] = GetFunc_create();
+    280: 
+    281:     for (int i = 1; *s != '\0'; i++)
+
+# 7 0x004288A8 in C:\Users\иван\Google Диск\C\language\language.exe: read_code() at C:/Users/иван/Google Диск/C/language/language.cpp (798):
+
+    796:     fclose(in_file);
+    797: 
+=>  798:     Node** rez = GetG(text);
+    799:     free(text);
+    800: 
+
+# 8 0x004290FE in C:\Users\иван\Google Диск\C\language\language.exe: main() at C:/Users/иван/Google Диск/C/language/language.cpp (983):
+
+    981:     char out_name[MaxStr] = "recode.txt";
+    982: 
+=>  983:     Node** big_root = read_code(in_name);
+    984: 
+    985:     FILE* out_file = fopen(out_name, "w");
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 105, Date: 2018-06-12 00:00:00 +0300]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\ФАЙЛЫ\загрузки\TX\TXLib.h
+Compiled:	Dec 11 2018 01:37:01, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Dec 11 2018 01:37:14
+
+Run file:	C:\Users\иван\Google Диск\C\language\language.exe
+Directory:	C:\Users\иван\Google Диск\C\language
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\иван\Google Диск\C\language\language.exe,
+
+ВНЕЗАПНО: signal (11, 0x00): SIGSEGV: Доступ по неверному указателю. Ставьте ассерты! 
+
+Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x00427292 в функции GetT() в файле C:/Users/иван/Google Диск/C/language/language.cpp на строке 324. Попытка прочесть данные по адресу 0x00CFFC22. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#2: TXLib [Ver: 00173a, Rev: 105, Date: 2018-06-12 00:00:00 +0300], Instance: 0x005022C0 (32-bit), Flags: Cmdre0, Thread: 0x2E98 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00427292 in C:\Users\иван\Google Диск\C\language\language.exe: GetT() at C:/Users/иван/Google Диск/C/language/language.cpp (324):
+
+    322: 
+    323:     //printf("qwert%sqwert\n", s);
+=>  324:     while (*s == '*' || *s == '/')
+    325:     {
+    326:         int op = *s;
+
+# 1 0x00427147 in C:\Users\иван\Google Диск\C\language\language.exe: GetE() at C:/Users/иван/Google Диск/C/language/language.cpp (293):
+
+    291: Node* GetE()
+    292: {
+=>  293:     Node* node1 = GetT();
+    294:     Node* node = nullptr;
+    295: 
+
+# 2 0x00427B04 in C:\Users\иван\Google Диск\C\language\language.exe: GetA() at C:/Users/иван/Google Диск/C/language/language.cpp (531):
+
+    529:     s++;
+    530: 
+=>  531:     node->right = GetE();
+    532:     node->right->parent = node;
+    533: 
+
+# 3 0x00428207 in C:\Users\иван\Google Диск\C\language\language.exe: GetOP() at C:/Users/иван/Google Диск/C/language/language.cpp (648):
+
+    646:         node = (Node*)calloc(1, sizeof(Node));
+    647:         NodeCtor(node, OPERATOR, 0);
+=>  648:         node->left = GetA();
+    649:         node->left->parent = node;
+    650:     }
+
+# 4 0x00427F2F in C:\Users\иван\Google Диск\C\language\language.exe: GetOP() at C:/Users/иван/Google Диск/C/language/language.cpp (601):
+
+    599:         while (*s != '}')
+    600:         {
+=>  601:             Node* node2 = GetOP();
+    602:             node1->right = node2;
+    603:             node2->parent = node1;
+
+# 5 0x004284C9 in C:\Users\иван\Google Диск\C\language\language.exe: GetFunc_create() at C:/Users/иван/Google Диск/C/language/language.cpp (711):
+
+    709:     skipspaces();
+    710: 
+=>  711:     node->right = GetOP();
+    712:     node->right->parent = node;
+    713: 
+
+# 6 0x004270FE in C:\Users\иван\Google Диск\C\language\language.exe: GetG() at C:/Users/иван/Google Диск/C/language/language.cpp (279):
+
+    277:     s = str;
+    278:     Node** root = (Node**)calloc(Max_func_count, sizeof(Node*));
+=>  279:     root[0] = GetFunc_create();
+    280: 
+    281:     for (int i = 1; *s != '\0'; i++)
+
+# 7 0x004288A8 in C:\Users\иван\Google Диск\C\language\language.exe: read_code() at C:/Users/иван/Google Диск/C/language/language.cpp (798):
+
+    796:     fclose(in_file);
+    797: 
+=>  798:     Node** rez = GetG(text);
+    799:     free(text);
+    800: 
+
+# 8 0x004290FE in C:\Users\иван\Google Диск\C\language\language.exe: main() at C:/Users/иван/Google Диск/C/language/language.cpp (983):
+
+    981:     char out_name[MaxStr] = "recode.txt";
+    982: 
+=>  983:     Node** big_root = read_code(in_name);
+    984: 
+    985:     FILE* out_file = fopen(out_name, "w");
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 105, Date: 2018-06-12 00:00:00 +0300]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\ФАЙЛЫ\загрузки\TX\TXLib.h
+Compiled:	Dec 11 2018 01:37:01, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Dec 11 2018 01:37:14
+
+Run file:	C:\Users\иван\Google Диск\C\language\language.exe
+Directory:	C:\Users\иван\Google Диск\C\language
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\иван\Google Диск\C\language\language.exe, файл: C:\Users\иван\Google Диск\C\language\language.cpp, строка: 663, функция: Node* GetOP(),
+
+Сообщение: ВНЕЗАПНО: Логическая ошибка: Неверно, что "0".
+
+#1: TXLib [Ver: 00173a, Rev: 105, Date: 2018-06-12 00:00:00 +0300], Instance: 0x005022C0 (32-bit), Flags: Cmdre0, Thread: 0x3B84 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x004282BB in C:\Users\иван\Google Диск\C\language\language.exe: GetOP() at C:/Users/иван/Google Диск/C/language/language.cpp (663):
+
+    661:             s_--;
+    662:         if (*s_ != ';' && *s_ != '}')
+=>  663:             assert(0);
+    664:     }
+    665: 
+
+# 1 0x00427F3C in C:\Users\иван\Google Диск\C\language\language.exe: GetOP() at C:/Users/иван/Google Диск/C/language/language.cpp (603):
+
+    601:         while (*s != '}')
+    602:         {
+=>  603:             Node* node2 = GetOP();
+    604:             node1->right = node2;
+    605:             node2->parent = node1;
+
+# 2 0x004284D6 in C:\Users\иван\Google Диск\C\language\language.exe: GetFunc_create() at C:/Users/иван/Google Диск/C/language/language.cpp (713):
+
+    711:     skipspaces();
+    712: 
+=>  713:     node->right = GetOP();
+    714:     node->right->parent = node;
+    715: 
+
+# 3 0x004270FE in C:\Users\иван\Google Диск\C\language\language.exe: GetG() at C:/Users/иван/Google Диск/C/language/language.cpp (279):
+
+    277:     s = str;
+    278:     Node** root = (Node**)calloc(Max_func_count, sizeof(Node*));
+=>  279:     root[0] = GetFunc_create();
+    280: 
+    281:     for (int i = 1; *s != '\0'; i++)
+
+# 4 0x004288B5 in C:\Users\иван\Google Диск\C\language\language.exe: read_code() at C:/Users/иван/Google Диск/C/language/language.cpp (800):
+
+    798:     fclose(in_file);
+    799: 
+=>  800:     Node** rez = GetG(text);
+    801:     free(text);
+    802: 
+
+# 5 0x0042910B in C:\Users\иван\Google Диск\C\language\language.exe: main() at C:/Users/иван/Google Диск/C/language/language.cpp (985):
+
+    983:     char out_name[MaxStr] = "recode.txt";
+    984: 
+=>  985:     Node** big_root = read_code(in_name);
+    986: 
+    987:     FILE* out_file = fopen(out_name, "w");
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 105, Date: 2018-06-12 00:00:00 +0300]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\ФАЙЛЫ\загрузки\TX\TXLib.h
+Compiled:	Dec 11 2018 01:44:23, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Dec 11 2018 01:45:05
+
+Run file:	C:\Users\иван\Google Диск\C\language\language.exe
+Directory:	C:\Users\иван\Google Диск\C\language
+
+--------------------------------------------------

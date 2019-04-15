@@ -1,0 +1,1118 @@
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: C:\Users\иван\Google Диск\C\tree\tree.exe,
+
+ВНЕЗАПНО: Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x004269E1 в функции PasteNode() в файле C:/Users/иван/Google Диск/C/tree/tree.cpp на строке 70. Попытка прочесть данные по адресу 0x00000037. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+#1: TXLib [Ver: 00173a, Rev: 105, Date: 2018-06-12 00:00:00 +0300], Instance: 0x004FE2C0 (32-bit), Flags: Cmdre0, Thread: 0x25A0 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x004269E1 in C:\Users\иван\Google Диск\C\tree\tree.exe: PasteNode() at C:/Users/иван/Google Диск/C/tree/tree.cpp (70):
+
+     68:         {
+     69:             case 0:
+=>   70:                 if (node_par->left != NULL)
+     71:                 {
+     72:                     node->left = node_par->left->left;
+
+# 1 0x00426B2F in C:\Users\иван\Google Диск\C\tree\tree.exe: read_tree() at C:/Users/иван/Google Диск/C/tree/tree.cpp (123):
+
+    121:         }*/
+    122: 
+=>  123:     PasteNode(tree, root_p, node_par, branch);
+    124: 
+    125:     /*if (tree->count == 0)
+
+# 2 0x00426C3E in C:\Users\иван\Google Диск\C\tree\tree.exe: main() at C:/Users/иван/Google Диск/C/tree/tree.cpp (150):
+
+    148: 
+    149:     FILE* fd = fopen("1.txt", "r");
+=>  150:     read_tree(fd, &tr, tr.root, l_branch);
+    151: 
+    152: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 105, Date: 2018-06-12 00:00:00 +0300]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\ФАЙЛЫ\загрузки\TX\TXLib.h
+Compiled:	Nov 15 2018 16:30:59, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Nov 15 2018 16:31:06
+
+Run file:	C:\Users\иван\Google Диск\C\tree\tree.exe
+Directory:	C:\Users\иван\Google Диск\C\tree
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\иван\Google Диск\C\tree\tree.exe,
+
+ВНЕЗАПНО: signal (11, 0x00): SIGSEGV: Доступ по неверному указателю. Ставьте ассерты! 
+
+Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x004269E1 в функции PasteNode() в файле C:/Users/иван/Google Диск/C/tree/tree.cpp на строке 70. Попытка прочесть данные по адресу 0x00000037. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#2: TXLib [Ver: 00173a, Rev: 105, Date: 2018-06-12 00:00:00 +0300], Instance: 0x004FE2C0 (32-bit), Flags: Cmdre0, Thread: 0x25A0 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x004269E1 in C:\Users\иван\Google Диск\C\tree\tree.exe: PasteNode() at C:/Users/иван/Google Диск/C/tree/tree.cpp (70):
+
+     68:         {
+     69:             case 0:
+=>   70:                 if (node_par->left != NULL)
+     71:                 {
+     72:                     node->left = node_par->left->left;
+
+# 1 0x00426B2F in C:\Users\иван\Google Диск\C\tree\tree.exe: read_tree() at C:/Users/иван/Google Диск/C/tree/tree.cpp (123):
+
+    121:         }*/
+    122: 
+=>  123:     PasteNode(tree, root_p, node_par, branch);
+    124: 
+    125:     /*if (tree->count == 0)
+
+# 2 0x00426C3E in C:\Users\иван\Google Диск\C\tree\tree.exe: main() at C:/Users/иван/Google Диск/C/tree/tree.cpp (150):
+
+    148: 
+    149:     FILE* fd = fopen("1.txt", "r");
+=>  150:     read_tree(fd, &tr, tr.root, l_branch);
+    151: 
+    152: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 105, Date: 2018-06-12 00:00:00 +0300]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\ФАЙЛЫ\загрузки\TX\TXLib.h
+Compiled:	Nov 15 2018 16:30:59, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Nov 15 2018 16:31:06
+
+Run file:	C:\Users\иван\Google Диск\C\tree\tree.exe
+Directory:	C:\Users\иван\Google Диск\C\tree
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: C:\Users\иван\Google Диск\C\tree\tree.exe,
+
+ВНЕЗАПНО: Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x004269E1 в функции PasteNode() в файле C:/Users/иван/Google Диск/C/tree/tree.cpp на строке 70. Попытка прочесть данные по адресу 0x00000037. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+#1: TXLib [Ver: 00173a, Rev: 105, Date: 2018-06-12 00:00:00 +0300], Instance: 0x004FE2C0 (32-bit), Flags: Cmdre0, Thread: 0x2EF8 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x004269E1 in C:\Users\иван\Google Диск\C\tree\tree.exe: PasteNode() at C:/Users/иван/Google Диск/C/tree/tree.cpp (70):
+
+     68:         {
+     69:             case 0:
+=>   70:                 if (node_par->left != NULL)
+     71:                 {
+     72:                     node->left = node_par->left->left;
+
+# 1 0x00426B2F in C:\Users\иван\Google Диск\C\tree\tree.exe: read_tree() at C:/Users/иван/Google Диск/C/tree/tree.cpp (123):
+
+    121:         }*/
+    122: 
+=>  123:     PasteNode(tree, root_p, node_par, branch);
+    124: 
+    125:     /*if (tree->count == 0)
+
+# 2 0x00426C3E in C:\Users\иван\Google Диск\C\tree\tree.exe: main() at C:/Users/иван/Google Диск/C/tree/tree.cpp (150):
+
+    148: 
+    149:     FILE* fd = fopen("1.txt", "r");
+=>  150:     read_tree(fd, &tr, tr.root, l_branch);
+    151: 
+    152: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 105, Date: 2018-06-12 00:00:00 +0300]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\ФАЙЛЫ\загрузки\TX\TXLib.h
+Compiled:	Nov 15 2018 16:32:36, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Nov 15 2018 16:32:43
+
+Run file:	C:\Users\иван\Google Диск\C\tree\tree.exe
+Directory:	C:\Users\иван\Google Диск\C\tree
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\иван\Google Диск\C\tree\tree.exe,
+
+ВНЕЗАПНО: signal (11, 0x00): SIGSEGV: Доступ по неверному указателю. Ставьте ассерты! 
+
+Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x004269E1 в функции PasteNode() в файле C:/Users/иван/Google Диск/C/tree/tree.cpp на строке 70. Попытка прочесть данные по адресу 0x00000037. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#2: TXLib [Ver: 00173a, Rev: 105, Date: 2018-06-12 00:00:00 +0300], Instance: 0x004FE2C0 (32-bit), Flags: Cmdre0, Thread: 0x2EF8 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x004269E1 in C:\Users\иван\Google Диск\C\tree\tree.exe: PasteNode() at C:/Users/иван/Google Диск/C/tree/tree.cpp (70):
+
+     68:         {
+     69:             case 0:
+=>   70:                 if (node_par->left != NULL)
+     71:                 {
+     72:                     node->left = node_par->left->left;
+
+# 1 0x00426B2F in C:\Users\иван\Google Диск\C\tree\tree.exe: read_tree() at C:/Users/иван/Google Диск/C/tree/tree.cpp (123):
+
+    121:         }*/
+    122: 
+=>  123:     PasteNode(tree, root_p, node_par, branch);
+    124: 
+    125:     /*if (tree->count == 0)
+
+# 2 0x00426C3E in C:\Users\иван\Google Диск\C\tree\tree.exe: main() at C:/Users/иван/Google Диск/C/tree/tree.cpp (150):
+
+    148: 
+    149:     FILE* fd = fopen("1.txt", "r");
+=>  150:     read_tree(fd, &tr, tr.root, l_branch);
+    151: 
+    152: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 105, Date: 2018-06-12 00:00:00 +0300]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\ФАЙЛЫ\загрузки\TX\TXLib.h
+Compiled:	Nov 15 2018 16:32:36, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Nov 15 2018 16:32:43
+
+Run file:	C:\Users\иван\Google Диск\C\tree\tree.exe
+Directory:	C:\Users\иван\Google Диск\C\tree
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\иван\Google Диск\C\tree\tree.exe,
+
+ВНЕЗАПНО: signal (22, 0x00): SIGABRT: Аварийное завершение программы, вызвана функция abort(). 
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#1: TXLib [Ver: 00173a, Rev: 105, Date: 2018-06-12 00:00:00 +0300], Instance: 0x004FE2C0 (32-bit), Flags: Cmdre0, Thread: 0x2A34 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x0040E7ED in C:\Users\иван\Google Диск\C\tree\tree.exe: _txOnSignal() at C:/ФАЙЛЫ/загрузки/TX/TXLib.h (8691)
+# 1 0x75EC6F61 in C:\WINDOWS\System32\msvcrt.dll: raise()
+# 2 0x75ECB40B in C:\WINDOWS\System32\msvcrt.dll: abort()
+# 3 0x75EC7D8C in C:\WINDOWS\System32\msvcrt.dll: assert()
+
+# 4 0x00426B0D in C:\Users\иван\Google Диск\C\tree\tree.exe: read_tree() at C:/Users/иван/Google Диск/C/tree/tree.cpp (156):
+
+    154:     while (*str_p == '\t' || *str_p == ' ')
+    155:         str_p++;
+=>  156:     assert(!strcmp(str_p, "{"));
+    157: 
+    158: 
+
+# 5 0x00426C02 in C:\Users\иван\Google Диск\C\tree\tree.exe: read_tree() at C:/Users/иван/Google Диск/C/tree/tree.cpp (175):
+
+    173: 
+    174:     if (!strcmp(str_p, "{"))
+=>  175:         read_tree(file, tree, node, l_branch);
+    176:     else
+    177:         if (node_par != nullptr)
+
+# 6 0x00426DCB in C:\Users\иван\Google Диск\C\tree\tree.exe: main() at C:/Users/иван/Google Диск/C/tree/tree.cpp (217):
+
+    215: 
+    216:     FILE* fd = fopen("1.txt", "r");
+=>  217:     read_tree(fd, &tr, tr.root, l_branch);
+    218:     printf("\n\n\n");
+    219:     print_tree(stdout, tr.root);
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 105, Date: 2018-06-12 00:00:00 +0300]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\ФАЙЛЫ\загрузки\TX\TXLib.h
+Compiled:	Nov 16 2018 04:31:58, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Nov 16 2018 04:32:06
+
+Run file:	C:\Users\иван\Google Диск\C\tree\tree.exe
+Directory:	C:\Users\иван\Google Диск\C\tree
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\иван\Google Диск\C\tree\tree.exe,
+
+ВНЕЗАПНО: signal (22, 0x00): SIGABRT: Аварийное завершение программы, вызвана функция abort(). 
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#1: TXLib [Ver: 00173a, Rev: 105, Date: 2018-06-12 00:00:00 +0300], Instance: 0x004FE2C0 (32-bit), Flags: Cmdre0, Thread: 0x1BC8 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x0040E7ED in C:\Users\иван\Google Диск\C\tree\tree.exe: _txOnSignal() at C:/ФАЙЛЫ/загрузки/TX/TXLib.h (8691)
+# 1 0x75EC6F61 in C:\WINDOWS\System32\msvcrt.dll: raise()
+# 2 0x75ECB40B in C:\WINDOWS\System32\msvcrt.dll: abort()
+# 3 0x75EC7D8C in C:\WINDOWS\System32\msvcrt.dll: assert()
+
+# 4 0x00426B0D in C:\Users\иван\Google Диск\C\tree\tree.exe: read_tree() at C:/Users/иван/Google Диск/C/tree/tree.cpp (156):
+
+    154:     while (*str_p == '\t' || *str_p == ' ')
+    155:         str_p++;
+=>  156:     assert(!strcmp(str_p, "{"));
+    157: 
+    158: 
+
+# 5 0x00426C0D in C:\Users\иван\Google Диск\C\tree\tree.exe: read_tree() at C:/Users/иван/Google Диск/C/tree/tree.cpp (176):
+
+    174: 
+    175:     if (!strcmp(str_p, "{"))
+=>  176:         read_tree(file, tree, node, l_branch);
+    177:     else
+    178:         if (node_par != nullptr)
+
+# 6 0x00426DD6 in C:\Users\иван\Google Диск\C\tree\tree.exe: main() at C:/Users/иван/Google Диск/C/tree/tree.cpp (218):
+
+    216: 
+    217:     FILE* fd = fopen("1.txt", "r");
+=>  218:     read_tree(fd, &tr, tr.root, l_branch);
+    219:     printf("\n\n\n");
+    220:     print_tree(stdout, tr.root);
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 105, Date: 2018-06-12 00:00:00 +0300]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\ФАЙЛЫ\загрузки\TX\TXLib.h
+Compiled:	Nov 16 2018 04:33:38, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Nov 16 2018 04:33:45
+
+Run file:	C:\Users\иван\Google Диск\C\tree\tree.exe
+Directory:	C:\Users\иван\Google Диск\C\tree
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\иван\Google Диск\C\tree\tree.exe,
+
+ВНЕЗАПНО: signal (22, 0x00): SIGABRT: Аварийное завершение программы, вызвана функция abort(). 
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#1: TXLib [Ver: 00173a, Rev: 105, Date: 2018-06-12 00:00:00 +0300], Instance: 0x004FE2C0 (32-bit), Flags: Cmdre0, Thread: 0x26E8 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x0040E7ED in C:\Users\иван\Google Диск\C\tree\tree.exe: _txOnSignal() at C:/ФАЙЛЫ/загрузки/TX/TXLib.h (8691)
+# 1 0x75EC6F61 in C:\WINDOWS\System32\msvcrt.dll: raise()
+# 2 0x75ECB40B in C:\WINDOWS\System32\msvcrt.dll: abort()
+# 3 0x75EC7D8C in C:\WINDOWS\System32\msvcrt.dll: assert()
+
+# 4 0x00426B0D in C:\Users\иван\Google Диск\C\tree\tree.exe: read_tree() at C:/Users/иван/Google Диск/C/tree/tree.cpp (156):
+
+    154:     while (*str_p == '\t' || *str_p == ' ')
+    155:         str_p++;
+=>  156:     assert(!strcmp(str_p, "{"));
+    157: 
+    158:     fscanf(file, "%s", str);
+
+# 5 0x00426DE3 in C:\Users\иван\Google Диск\C\tree\tree.exe: main() at C:/Users/иван/Google Диск/C/tree/tree.cpp (217):
+
+    215: 
+    216:     FILE* fd = fopen("1.txt", "r");
+=>  217:     read_tree(fd, &tr, tr.root, l_branch);
+    218:     printf("\n\n\n");
+    219:     print_tree(stdout, tr.root);
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 105, Date: 2018-06-12 00:00:00 +0300]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\ФАЙЛЫ\загрузки\TX\TXLib.h
+Compiled:	Nov 16 2018 11:56:17, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Nov 16 2018 11:56:23
+
+Run file:	C:\Users\иван\Google Диск\C\tree\tree.exe
+Directory:	C:\Users\иван\Google Диск\C\tree
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: C:\Users\иван\Google Диск\C\tree\tree.exe,
+
+ВНЕЗАПНО: Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x00426CB5 в функции StackPush() в файле C:/Users/иван/Google Диск/C/tree/stack.cpp на строке 290. Попытка записать данные по адресу 0x20000004. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+#1: TXLib [Ver: 00173a, Rev: 105, Date: 2018-06-12 00:00:00 +0300], Instance: 0x004FF2C0 (32-bit), Flags: Cmdre0, Thread: 0x3904 (Main), GetLastError(): 8 (Недостаточно ресурсов памяти для обработки этой команды). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00426CB5 in C:\Users\иван\Google Диск\C\tree\tree.exe: StackPush() at C:/Users/иван/Google Диск/C/tree/stack.cpp (290):
+
+    288: 
+    289:     st->size++;
+=>  290:     st->data[st->size - 1] = x;
+    291: 
+    292:     ST_ASSERT(st);
+
+# 1 0x0042796B in C:\Users\иван\Google Диск\C\tree\tree.exe: find_way_p() at C:/Users/иван/Google Диск/C/tree/tree.cpp (320):
+
+    318:     printf("find_way_p");
+    319:     while (node->parent != nullptr)
+=>  320:         StackPush(st, node->parent);
+    321: 
+    322:     printf("find_way_p");
+
+# 2 0x004279C5 in C:\Users\иван\Google Диск\C\tree\tree.exe: find_way_s() at C:/Users/иван/Google Диск/C/tree/tree.cpp (332):
+
+    330: 
+    331:     printf("find_way_s");
+=>  332:     return find_way_p(out_p);
+    333: }
+    334: 
+
+# 3 0x00427ADD in C:\Users\иван\Google Диск\C\tree\tree.exe: main() at C:/Users/иван/Google Диск/C/tree/tree.cpp (425):
+
+    423: 
+    424: 
+=>  425:     print_way(find_way_s(&tr, "препод"));
+    426: 
+    427: }
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 105, Date: 2018-06-12 00:00:00 +0300]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\ФАЙЛЫ\загрузки\TX\TXLib.h
+Compiled:	Nov 17 2018 03:31:45, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Nov 17 2018 03:31:52
+
+Run file:	C:\Users\иван\Google Диск\C\tree\tree.exe
+Directory:	C:\Users\иван\Google Диск\C\tree
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\иван\Google Диск\C\tree\tree.exe,
+
+ВНЕЗАПНО: signal (11, 0x00): SIGSEGV: Доступ по неверному указателю. Ставьте ассерты! 
+
+Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x00426CB5 в функции StackPush() в файле C:/Users/иван/Google Диск/C/tree/stack.cpp на строке 290. Попытка записать данные по адресу 0x20000004. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#2: TXLib [Ver: 00173a, Rev: 105, Date: 2018-06-12 00:00:00 +0300], Instance: 0x004FF2C0 (32-bit), Flags: Cmdre0, Thread: 0x3904 (Main), GetLastError(): 8 (Недостаточно ресурсов памяти для обработки этой команды). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00426CB5 in C:\Users\иван\Google Диск\C\tree\tree.exe: StackPush() at C:/Users/иван/Google Диск/C/tree/stack.cpp (290):
+
+    288: 
+    289:     st->size++;
+=>  290:     st->data[st->size - 1] = x;
+    291: 
+    292:     ST_ASSERT(st);
+
+# 1 0x0042796B in C:\Users\иван\Google Диск\C\tree\tree.exe: find_way_p() at C:/Users/иван/Google Диск/C/tree/tree.cpp (320):
+
+    318:     printf("find_way_p");
+    319:     while (node->parent != nullptr)
+=>  320:         StackPush(st, node->parent);
+    321: 
+    322:     printf("find_way_p");
+
+# 2 0x004279C5 in C:\Users\иван\Google Диск\C\tree\tree.exe: find_way_s() at C:/Users/иван/Google Диск/C/tree/tree.cpp (332):
+
+    330: 
+    331:     printf("find_way_s");
+=>  332:     return find_way_p(out_p);
+    333: }
+    334: 
+
+# 3 0x00427ADD in C:\Users\иван\Google Диск\C\tree\tree.exe: main() at C:/Users/иван/Google Диск/C/tree/tree.cpp (425):
+
+    423: 
+    424: 
+=>  425:     print_way(find_way_s(&tr, "препод"));
+    426: 
+    427: }
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 105, Date: 2018-06-12 00:00:00 +0300]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\ФАЙЛЫ\загрузки\TX\TXLib.h
+Compiled:	Nov 17 2018 03:31:45, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Nov 17 2018 03:31:51
+
+Run file:	C:\Users\иван\Google Диск\C\tree\tree.exe
+Directory:	C:\Users\иван\Google Диск\C\tree
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: C:\Users\иван\Google Диск\C\tree\tree.exe,
+
+ВНЕЗАПНО: Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x00426CB5 в функции StackPush() в файле C:/Users/иван/Google Диск/C/tree/stack.cpp на строке 290. Попытка записать данные по адресу 0x20000004. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+#1: TXLib [Ver: 00173a, Rev: 105, Date: 2018-06-12 00:00:00 +0300], Instance: 0x004FF2C0 (32-bit), Flags: Cmdre0, Thread: 0x374C (Main), GetLastError(): 8 (Недостаточно ресурсов памяти для обработки этой команды). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00426CB5 in C:\Users\иван\Google Диск\C\tree\tree.exe: StackPush() at C:/Users/иван/Google Диск/C/tree/stack.cpp (290):
+
+    288: 
+    289:     st->size++;
+=>  290:     st->data[st->size - 1] = x;
+    291: 
+    292:     ST_ASSERT(st);
+
+# 1 0x0042796B in C:\Users\иван\Google Диск\C\tree\tree.exe: find_way_p() at C:/Users/иван/Google Диск/C/tree/tree.cpp (320):
+
+    318:     printf("find_way_p");
+    319:     while (node->parent != nullptr)
+=>  320:         StackPush(st, node->parent);
+    321: 
+    322:     printf("find_way_p");
+
+# 2 0x004279C5 in C:\Users\иван\Google Диск\C\tree\tree.exe: find_way_s() at C:/Users/иван/Google Диск/C/tree/tree.cpp (332):
+
+    330: 
+    331:     printf("find_way_s");
+=>  332:     return find_way_p(out_p);
+    333: }
+    334: 
+
+# 3 0x00427ADD in C:\Users\иван\Google Диск\C\tree\tree.exe: main() at C:/Users/иван/Google Диск/C/tree/tree.cpp (425):
+
+    423: 
+    424: 
+=>  425:     print_way(find_way_s(&tr, "препод"));
+    426: 
+    427: }
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 105, Date: 2018-06-12 00:00:00 +0300]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\ФАЙЛЫ\загрузки\TX\TXLib.h
+Compiled:	Nov 17 2018 03:35:00, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Nov 17 2018 03:35:09
+
+Run file:	C:\Users\иван\Google Диск\C\tree\tree.exe
+Directory:	C:\Users\иван\Google Диск\C\tree
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\иван\Google Диск\C\tree\tree.exe,
+
+ВНЕЗАПНО: signal (11, 0x00): SIGSEGV: Доступ по неверному указателю. Ставьте ассерты! 
+
+Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x00426CB5 в функции StackPush() в файле C:/Users/иван/Google Диск/C/tree/stack.cpp на строке 290. Попытка записать данные по адресу 0x20000004. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#2: TXLib [Ver: 00173a, Rev: 105, Date: 2018-06-12 00:00:00 +0300], Instance: 0x004FF2C0 (32-bit), Flags: Cmdre0, Thread: 0x374C (Main), GetLastError(): 8 (Недостаточно ресурсов памяти для обработки этой команды). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00426CB5 in C:\Users\иван\Google Диск\C\tree\tree.exe: StackPush() at C:/Users/иван/Google Диск/C/tree/stack.cpp (290):
+
+    288: 
+    289:     st->size++;
+=>  290:     st->data[st->size - 1] = x;
+    291: 
+    292:     ST_ASSERT(st);
+
+# 1 0x0042796B in C:\Users\иван\Google Диск\C\tree\tree.exe: find_way_p() at C:/Users/иван/Google Диск/C/tree/tree.cpp (320):
+
+    318:     printf("find_way_p");
+    319:     while (node->parent != nullptr)
+=>  320:         StackPush(st, node->parent);
+    321: 
+    322:     printf("find_way_p");
+
+# 2 0x004279C5 in C:\Users\иван\Google Диск\C\tree\tree.exe: find_way_s() at C:/Users/иван/Google Диск/C/tree/tree.cpp (332):
+
+    330: 
+    331:     printf("find_way_s");
+=>  332:     return find_way_p(out_p);
+    333: }
+    334: 
+
+# 3 0x00427ADD in C:\Users\иван\Google Диск\C\tree\tree.exe: main() at C:/Users/иван/Google Диск/C/tree/tree.cpp (425):
+
+    423: 
+    424: 
+=>  425:     print_way(find_way_s(&tr, "препод"));
+    426: 
+    427: }
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 105, Date: 2018-06-12 00:00:00 +0300]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\ФАЙЛЫ\загрузки\TX\TXLib.h
+Compiled:	Nov 17 2018 03:35:00, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Nov 17 2018 03:35:09
+
+Run file:	C:\Users\иван\Google Диск\C\tree\tree.exe
+Directory:	C:\Users\иван\Google Диск\C\tree
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\иван\Google Диск\C\tree\tree.exe,
+
+ВНЕЗАПНО: signal (22, 0x00): SIGABRT: Аварийное завершение программы, вызвана функция abort(). 
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#1: TXLib [Ver: 00173a, Rev: 105, Date: 2018-06-12 00:00:00 +0300], Instance: 0x004FF2C0 (32-bit), Flags: Cmdre0, Thread: 0x3558 (Main), GetLastError(): 183 (Невозможно создать файл, так как он уже существует). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x0040E7ED in C:\Users\иван\Google Диск\C\tree\tree.exe: _txOnSignal() at C:/ФАЙЛЫ/загрузки/TX/TXLib.h (8691)
+# 1 0x75EC6F61 in C:\WINDOWS\System32\msvcrt.dll: raise()
+# 2 0x75ECB40B in C:\WINDOWS\System32\msvcrt.dll: abort()
+# 3 0x75EC7D8C in C:\WINDOWS\System32\msvcrt.dll: assert()
+
+# 4 0x0042796A in C:\Users\иван\Google Диск\C\tree\tree.exe: find_way_p() at C:/Users/иван/Google Диск/C/tree/tree.cpp (317):
+
+    315:     Stack* st = (Stack*)calloc(1, sizeof(Stack*));
+    316:     StackCtor(st, 8);
+=>  317:     assert(st == nullptr);
+    318: 
+    319:     printf("find_way_p");
+
+# 5 0x004279E7 in C:\Users\иван\Google Диск\C\tree\tree.exe: find_way_s() at C:/Users/иван/Google Диск/C/tree/tree.cpp (333):
+
+    331: 
+    332:     printf("find_way_s");
+=>  333:     return find_way_p(out_p);
+    334: }
+    335: 
+
+# 6 0x00427AFF in C:\Users\иван\Google Диск\C\tree\tree.exe: main() at C:/Users/иван/Google Диск/C/tree/tree.cpp (426):
+
+    424: 
+    425: 
+=>  426:     print_way(find_way_s(&tr, "препод"));
+    427: 
+    428: }
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 105, Date: 2018-06-12 00:00:00 +0300]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\ФАЙЛЫ\загрузки\TX\TXLib.h
+Compiled:	Nov 17 2018 03:36:19, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Nov 17 2018 03:36:25
+
+Run file:	C:\Users\иван\Google Диск\C\tree\tree.exe
+Directory:	C:\Users\иван\Google Диск\C\tree
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\иван\Google Диск\C\tree\tree.exe,
+
+ВНЕЗАПНО: signal (22, 0x00): SIGABRT: Аварийное завершение программы, вызвана функция abort(). 
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#1: TXLib [Ver: 00173a, Rev: 105, Date: 2018-06-12 00:00:00 +0300], Instance: 0x004FF2C0 (32-bit), Flags: Cmdre0, Thread: 0x16B8 (Main), GetLastError(): 183 (Невозможно создать файл, так как он уже существует). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x0040E7ED in C:\Users\иван\Google Диск\C\tree\tree.exe: _txOnSignal() at C:/ФАЙЛЫ/загрузки/TX/TXLib.h (8691)
+# 1 0x75EC6F61 in C:\WINDOWS\System32\msvcrt.dll: raise()
+# 2 0x75ECB40B in C:\WINDOWS\System32\msvcrt.dll: abort()
+# 3 0x75EC7D8C in C:\WINDOWS\System32\msvcrt.dll: assert()
+
+# 4 0x00427940 in C:\Users\иван\Google Диск\C\tree\tree.exe: find_way_p() at C:/Users/иван/Google Диск/C/tree/tree.cpp (315):
+
+    313: Stack* find_way_p(Node* node, Stack* st)
+    314: {
+=>  315:     assert(st == nullptr);
+    316: 
+    317:     printf("find_way_p");
+
+# 5 0x004279C4 in C:\Users\иван\Google Диск\C\tree\tree.exe: find_way_s() at C:/Users/иван/Google Диск/C/tree/tree.cpp (331):
+
+    329: 
+    330:     printf("find_way_s");
+=>  331:     return find_way_p(out_p, st);
+    332: }
+    333: 
+
+# 6 0x00427B10 in C:\Users\иван\Google Диск\C\tree\tree.exe: main() at C:/Users/иван/Google Диск/C/tree/tree.cpp (426):
+
+    424:     Stack st = {};
+    425:     StackCtor(&st, 8);
+=>  426:     print_way(find_way_s(&tr, "препод", &st));
+    427: 
+    428: }
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 105, Date: 2018-06-12 00:00:00 +0300]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\ФАЙЛЫ\загрузки\TX\TXLib.h
+Compiled:	Nov 17 2018 03:44:37, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Nov 17 2018 03:44:43
+
+Run file:	C:\Users\иван\Google Диск\C\tree\tree.exe
+Directory:	C:\Users\иван\Google Диск\C\tree
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\иван\Google Диск\C\tree\tree.exe,
+
+ВНЕЗАПНО: signal (22, 0x00): SIGABRT: Аварийное завершение программы, вызвана функция abort(). 
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#1: TXLib [Ver: 00173a, Rev: 105, Date: 2018-06-12 00:00:00 +0300], Instance: 0x004FF2C0 (32-bit), Flags: Cmdre0, Thread: 0x3900 (Main), GetLastError(): 183 (Невозможно создать файл, так как он уже существует). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x0040E7ED in C:\Users\иван\Google Диск\C\tree\tree.exe: _txOnSignal() at C:/ФАЙЛЫ/загрузки/TX/TXLib.h (8691)
+# 1 0x75EC6F61 in C:\WINDOWS\System32\msvcrt.dll: raise()
+# 2 0x75ECB40B in C:\WINDOWS\System32\msvcrt.dll: abort()
+# 3 0x75EC7D8C in C:\WINDOWS\System32\msvcrt.dll: assert()
+
+# 4 0x00427B10 in C:\Users\иван\Google Диск\C\tree\tree.exe: main() at C:/Users/иван/Google Диск/C/tree/tree.cpp (426):
+
+    424:     Stack st = {};
+    425:     StackCtor(&st, 8);
+=>  426:     assert(&st == nullptr);
+    427: 
+    428:     print_way(find_way_s(&tr, "препод", &st));
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 105, Date: 2018-06-12 00:00:00 +0300]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\ФАЙЛЫ\загрузки\TX\TXLib.h
+Compiled:	Nov 17 2018 03:46:15, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Nov 17 2018 03:46:21
+
+Run file:	C:\Users\иван\Google Диск\C\tree\tree.exe
+Directory:	C:\Users\иван\Google Диск\C\tree
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\иван\Google Диск\C\tree\tree.exe,
+
+ВНЕЗАПНО: signal (22, 0x00): SIGABRT: Аварийное завершение программы, вызвана функция abort(). 
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#1: TXLib [Ver: 00173a, Rev: 105, Date: 2018-06-12 00:00:00 +0300], Instance: 0x004FF2C0 (32-bit), Flags: Cmdre0, Thread: 0x3684 (Main), GetLastError(): 183 (Невозможно создать файл, так как он уже существует). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x0040E7ED in C:\Users\иван\Google Диск\C\tree\tree.exe: _txOnSignal() at C:/ФАЙЛЫ/загрузки/TX/TXLib.h (8691)
+# 1 0x75EC6F61 in C:\WINDOWS\System32\msvcrt.dll: raise()
+# 2 0x75ECB40B in C:\WINDOWS\System32\msvcrt.dll: abort()
+# 3 0x75EC7D8C in C:\WINDOWS\System32\msvcrt.dll: assert()
+
+# 4 0x00427B18 in C:\Users\иван\Google Диск\C\tree\tree.exe: main() at C:/Users/иван/Google Диск/C/tree/tree.cpp (426):
+
+    424:     Stack st = {};
+    425:     StackCtor(&st, 8);
+=>  426:     assert(st.data == nullptr);
+    427:     assert(&st == nullptr);
+    428: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 105, Date: 2018-06-12 00:00:00 +0300]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\ФАЙЛЫ\загрузки\TX\TXLib.h
+Compiled:	Nov 17 2018 03:49:08, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Nov 17 2018 03:49:14
+
+Run file:	C:\Users\иван\Google Диск\C\tree\tree.exe
+Directory:	C:\Users\иван\Google Диск\C\tree
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\иван\Google Диск\C\tree\tree.exe,
+
+ВНЕЗАПНО: signal (22, 0x00): SIGABRT: Аварийное завершение программы, вызвана функция abort(). 
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#1: TXLib [Ver: 00173a, Rev: 105, Date: 2018-06-12 00:00:00 +0300], Instance: 0x004FF2C0 (32-bit), Flags: Cmdre0, Thread: 0x3AE8 (Main), GetLastError(): 183 (Невозможно создать файл, так как он уже существует). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x0040E7ED in C:\Users\иван\Google Диск\C\tree\tree.exe: _txOnSignal() at C:/ФАЙЛЫ/загрузки/TX/TXLib.h (8691)
+# 1 0x75EC6F61 in C:\WINDOWS\System32\msvcrt.dll: raise()
+# 2 0x75ECB40B in C:\WINDOWS\System32\msvcrt.dll: abort()
+# 3 0x75EC7D8C in C:\WINDOWS\System32\msvcrt.dll: assert()
+
+# 4 0x00427940 in C:\Users\иван\Google Диск\C\tree\tree.exe: find_way_p() at C:/Users/иван/Google Диск/C/tree/tree.cpp (315):
+
+    313: Stack* find_way_p(Node* node, Stack* st)
+    314: {
+=>  315:     assert(st == nullptr);
+    316: 
+    317:     printf("find_way_p");
+
+# 5 0x004279C4 in C:\Users\иван\Google Диск\C\tree\tree.exe: find_way_s() at C:/Users/иван/Google Диск/C/tree/tree.cpp (331):
+
+    329: 
+    330:     printf("find_way_s");
+=>  331:     return find_way_p(out_p, st);
+    332: }
+    333: 
+
+# 6 0x00427B24 in C:\Users\иван\Google Диск\C\tree\tree.exe: main() at C:/Users/иван/Google Диск/C/tree/tree.cpp (432):
+
+    430:     assert(&st == nullptr);*/
+    431: 
+=>  432:     print_way(find_way_s(&tr, "препод", &st));
+    433: 
+    434: }
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 105, Date: 2018-06-12 00:00:00 +0300]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\ФАЙЛЫ\загрузки\TX\TXLib.h
+Compiled:	Nov 17 2018 03:49:55, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Nov 17 2018 03:50:03
+
+Run file:	C:\Users\иван\Google Диск\C\tree\tree.exe
+Directory:	C:\Users\иван\Google Диск\C\tree
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\иван\Google Диск\C\tree\tree.exe,
+
+ВНЕЗАПНО: signal (22, 0x00): SIGABRT: Аварийное завершение программы, вызвана функция abort(). 
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#1: TXLib [Ver: 00173a, Rev: 105, Date: 2018-06-12 00:00:00 +0300], Instance: 0x004FF2C0 (32-bit), Flags: Cmdre0, Thread: 0x34D0 (Main), GetLastError(): 183 (Невозможно создать файл, так как он уже существует). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x0040E7ED in C:\Users\иван\Google Диск\C\tree\tree.exe: _txOnSignal() at C:/ФАЙЛЫ/загрузки/TX/TXLib.h (8691)
+# 1 0x75EC6F61 in C:\WINDOWS\System32\msvcrt.dll: raise()
+# 2 0x75ECB40B in C:\WINDOWS\System32\msvcrt.dll: abort()
+# 3 0x75EC7D8C in C:\WINDOWS\System32\msvcrt.dll: assert()
+
+# 4 0x00427940 in C:\Users\иван\Google Диск\C\tree\tree.exe: find_way_p() at C:/Users/иван/Google Диск/C/tree/tree.cpp (315):
+
+    313: Stack* find_way_p(Node* node, Stack* st)
+    314: {
+=>  315:     assert(st == nullptr);
+    316: 
+    317:     printf("find_way_p");
+
+# 5 0x004279C4 in C:\Users\иван\Google Диск\C\tree\tree.exe: find_way_s() at C:/Users/иван/Google Диск/C/tree/tree.cpp (331):
+
+    329: 
+    330:     printf("find_way_s");
+=>  331:     return find_way_p(out_p, st);
+    332: }
+    333: 
+
+# 6 0x00427B24 in C:\Users\иван\Google Диск\C\tree\tree.exe: main() at C:/Users/иван/Google Диск/C/tree/tree.cpp (432):
+
+    430:     assert(&st == nullptr);*/
+    431: 
+=>  432:     print_way(find_way_s(&tr, "препод", &st));
+    433: 
+    434: }
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 105, Date: 2018-06-12 00:00:00 +0300]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\ФАЙЛЫ\загрузки\TX\TXLib.h
+Compiled:	Nov 17 2018 03:55:46, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Nov 17 2018 03:55:52
+
+Run file:	C:\Users\иван\Google Диск\C\tree\tree.exe
+Directory:	C:\Users\иван\Google Диск\C\tree
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: C:\Users\иван\Google Диск\C\tree\tree.exe,
+
+ВНЕЗАПНО: Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x00426CB5 в функции StackPush() в файле C:/Users/иван/Google Диск/C/tree/stack.cpp на строке 290. Попытка записать данные по адресу 0x20000004. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+#1: TXLib [Ver: 00173a, Rev: 105, Date: 2018-06-12 00:00:00 +0300], Instance: 0x004FF2C0 (32-bit), Flags: Cmdre0, Thread: 0x3B28 (Main), GetLastError(): 8 (Недостаточно ресурсов памяти для обработки этой команды). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00426CB5 in C:\Users\иван\Google Диск\C\tree\tree.exe: StackPush() at C:/Users/иван/Google Диск/C/tree/stack.cpp (290):
+
+    288: 
+    289:     st->size++;
+=>  290:     st->data[st->size - 1] = x;
+    291: 
+    292:     ST_ASSERT(st);
+
+# 1 0x00427963 in C:\Users\иван\Google Диск\C\tree\tree.exe: find_way_p() at C:/Users/иван/Google Диск/C/tree/tree.cpp (319):
+
+    317:     printf("find_way_p");
+    318:     while (node->parent != nullptr)
+=>  319:         StackPush(st, node->parent);
+    320: 
+    321:     printf("find_way_p");
+
+# 2 0x004279C4 in C:\Users\иван\Google Диск\C\tree\tree.exe: find_way_s() at C:/Users/иван/Google Диск/C/tree/tree.cpp (331):
+
+    329: 
+    330:     printf("find_way_s");
+=>  331:     return find_way_p(out_p, st);
+    332: }
+    333: 
+
+# 3 0x00427B48 in C:\Users\иван\Google Диск\C\tree\tree.exe: main() at C:/Users/иван/Google Диск/C/tree/tree.cpp (432):
+
+    430:     assert(&st != nullptr);
+    431: 
+=>  432:     print_way(find_way_s(&tr, "препод", &st));
+    433: 
+    434: }
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 105, Date: 2018-06-12 00:00:00 +0300]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\ФАЙЛЫ\загрузки\TX\TXLib.h
+Compiled:	Nov 17 2018 04:23:50, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Nov 17 2018 04:23:56
+
+Run file:	C:\Users\иван\Google Диск\C\tree\tree.exe
+Directory:	C:\Users\иван\Google Диск\C\tree
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\иван\Google Диск\C\tree\tree.exe,
+
+ВНЕЗАПНО: signal (11, 0x00): SIGSEGV: Доступ по неверному указателю. Ставьте ассерты! 
+
+Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x00426CB5 в функции StackPush() в файле C:/Users/иван/Google Диск/C/tree/stack.cpp на строке 290. Попытка записать данные по адресу 0x20000004. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#2: TXLib [Ver: 00173a, Rev: 105, Date: 2018-06-12 00:00:00 +0300], Instance: 0x004FF2C0 (32-bit), Flags: Cmdre0, Thread: 0x3B28 (Main), GetLastError(): 8 (Недостаточно ресурсов памяти для обработки этой команды). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00426CB5 in C:\Users\иван\Google Диск\C\tree\tree.exe: StackPush() at C:/Users/иван/Google Диск/C/tree/stack.cpp (290):
+
+    288: 
+    289:     st->size++;
+=>  290:     st->data[st->size - 1] = x;
+    291: 
+    292:     ST_ASSERT(st);
+
+# 1 0x00427963 in C:\Users\иван\Google Диск\C\tree\tree.exe: find_way_p() at C:/Users/иван/Google Диск/C/tree/tree.cpp (319):
+
+    317:     printf("find_way_p");
+    318:     while (node->parent != nullptr)
+=>  319:         StackPush(st, node->parent);
+    320: 
+    321:     printf("find_way_p");
+
+# 2 0x004279C4 in C:\Users\иван\Google Диск\C\tree\tree.exe: find_way_s() at C:/Users/иван/Google Диск/C/tree/tree.cpp (331):
+
+    329: 
+    330:     printf("find_way_s");
+=>  331:     return find_way_p(out_p, st);
+    332: }
+    333: 
+
+# 3 0x00427B48 in C:\Users\иван\Google Диск\C\tree\tree.exe: main() at C:/Users/иван/Google Диск/C/tree/tree.cpp (432):
+
+    430:     assert(&st != nullptr);
+    431: 
+=>  432:     print_way(find_way_s(&tr, "препод", &st));
+    433: 
+    434: }
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 105, Date: 2018-06-12 00:00:00 +0300]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\ФАЙЛЫ\загрузки\TX\TXLib.h
+Compiled:	Nov 17 2018 04:23:50, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Nov 17 2018 04:23:56
+
+Run file:	C:\Users\иван\Google Диск\C\tree\tree.exe
+Directory:	C:\Users\иван\Google Диск\C\tree
+
+--------------------------------------------------

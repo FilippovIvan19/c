@@ -1,0 +1,19 @@
+FUNC main z
+{
+    CREATE n;
+    IN n;
+    
+    CREATE fact;
+    fact = DO factorial n;
+    
+    printf("%d", fact(n));
+}
+
+
+FUNC factorial n
+{
+    IF n = 0
+        RET 1;
+    IF n # 0
+    RET fact(n - 1) * n;
+}

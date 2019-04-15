@@ -1,0 +1,422 @@
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: C:\Users\иван\Google Диск\C\list\list.exe,
+
+ВНЕЗАПНО: Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x00426BEA в функции ListDump() в файле C:/Users/иван/Google Диск/C/list/list.cpp на строке 123. Попытка прочесть данные по адресу NULL. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+#1: TXLib [Ver: 00173a, Rev: 105, Date: 2018-06-12 00:00:00 +0300], Instance: 0x004FE2C0 (32-bit), Flags: Cmdre0, Thread: 0x3618 (Main), GetLastError(): 183 (Невозможно создать файл, так как он уже существует). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00426BEA in C:\Users\иван\Google Диск\C\list\list.exe: ListDump() at C:/Users/иван/Google Диск/C/list/list.cpp (123):
+
+    121:     fprintf(out_f, "info:\n");
+    122:     for(int i = 0; i < List_size; i++)
+=>  123:         fprintf(out_f, "%lf ", *(ls->info[i]));
+    124:     fprintf(out_f, "\n");
+    125: 
+
+# 1 0x00426DBE in C:\Users\иван\Google Диск\C\list\list.exe: unittest() at C:/Users/иван/Google Диск/C/list/list.cpp (150):
+
+    148:     ListCtor(ls);
+    149:     ListAdd(ls, &arr[0]);
+=>  150:     ListDump(ls, "1.txt");
+    151:     printf("\n\n\n");
+    152: 
+
+# 2 0x00426EEC in C:\Users\иван\Google Диск\C\list\list.exe: main() at C:/Users/иван/Google Диск/C/list/list.cpp (176):
+
+    174:     fclose(in_f);
+    175: 
+=>  176:     unittest(&ls, arr);
+    177: 
+    178: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 105, Date: 2018-06-12 00:00:00 +0300]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\ФАЙЛЫ\загрузки\TX\TXLib.h
+Compiled:	Nov 11 2018 23:10:13, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Nov 11 2018 23:10:19
+
+Run file:	C:\Users\иван\Google Диск\C\list\list.exe
+Directory:	C:\Users\иван\Google Диск\C\list
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\иван\Google Диск\C\list\list.exe,
+
+ВНЕЗАПНО: signal (11, 0x00): SIGSEGV: Доступ по неверному указателю. Ставьте ассерты! 
+
+Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x00426BEA в функции ListDump() в файле C:/Users/иван/Google Диск/C/list/list.cpp на строке 123. Попытка прочесть данные по адресу NULL. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#2: TXLib [Ver: 00173a, Rev: 105, Date: 2018-06-12 00:00:00 +0300], Instance: 0x004FE2C0 (32-bit), Flags: Cmdre0, Thread: 0x3618 (Main), GetLastError(): 183 (Невозможно создать файл, так как он уже существует). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00426BEA in C:\Users\иван\Google Диск\C\list\list.exe: ListDump() at C:/Users/иван/Google Диск/C/list/list.cpp (123):
+
+    121:     fprintf(out_f, "info:\n");
+    122:     for(int i = 0; i < List_size; i++)
+=>  123:         fprintf(out_f, "%lf ", *(ls->info[i]));
+    124:     fprintf(out_f, "\n");
+    125: 
+
+# 1 0x00426DBE in C:\Users\иван\Google Диск\C\list\list.exe: unittest() at C:/Users/иван/Google Диск/C/list/list.cpp (150):
+
+    148:     ListCtor(ls);
+    149:     ListAdd(ls, &arr[0]);
+=>  150:     ListDump(ls, "1.txt");
+    151:     printf("\n\n\n");
+    152: 
+
+# 2 0x00426EEC in C:\Users\иван\Google Диск\C\list\list.exe: main() at C:/Users/иван/Google Диск/C/list/list.cpp (176):
+
+    174:     fclose(in_f);
+    175: 
+=>  176:     unittest(&ls, arr);
+    177: 
+    178: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 105, Date: 2018-06-12 00:00:00 +0300]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\ФАЙЛЫ\загрузки\TX\TXLib.h
+Compiled:	Nov 11 2018 23:10:13, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Nov 11 2018 23:10:20
+
+Run file:	C:\Users\иван\Google Диск\C\list\list.exe
+Directory:	C:\Users\иван\Google Диск\C\list
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: C:\Users\иван\Google Диск\C\list\list.exe,
+
+ВНЕЗАПНО: Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x00426BEA в функции ListDump() в файле C:/Users/иван/Google Диск/C/list/list.cpp на строке 123. Попытка прочесть данные по адресу NULL. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+#1: TXLib [Ver: 00173a, Rev: 105, Date: 2018-06-12 00:00:00 +0300], Instance: 0x004FE2C0 (32-bit), Flags: Cmdre0, Thread: 0x3220 (Main), GetLastError(): 183 (Невозможно создать файл, так как он уже существует). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00426BEA in C:\Users\иван\Google Диск\C\list\list.exe: ListDump() at C:/Users/иван/Google Диск/C/list/list.cpp (123):
+
+    121:     fprintf(out_f, "info:\n");
+    122:     for(int i = 0; i < List_size; i++)
+=>  123:         fprintf(out_f, "%lf ", *(ls->info[i]));
+    124:     fprintf(out_f, "\n");
+    125: 
+
+# 1 0x00426DBE in C:\Users\иван\Google Диск\C\list\list.exe: unittest() at C:/Users/иван/Google Диск/C/list/list.cpp (150):
+
+    148:     ListCtor(ls);
+    149:     ListAdd(ls, &arr[0]);
+=>  150:     ListDump(ls, "1.txt");
+    151:     printf("\n\n\n");
+    152: 
+
+# 2 0x00426EEC in C:\Users\иван\Google Диск\C\list\list.exe: main() at C:/Users/иван/Google Диск/C/list/list.cpp (176):
+
+    174:     fclose(in_f);
+    175: 
+=>  176:     unittest(&ls, arr);
+    177: 
+    178: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 105, Date: 2018-06-12 00:00:00 +0300]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\ФАЙЛЫ\загрузки\TX\TXLib.h
+Compiled:	Nov 11 2018 23:22:30, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Nov 11 2018 23:22:36
+
+Run file:	C:\Users\иван\Google Диск\C\list\list.exe
+Directory:	C:\Users\иван\Google Диск\C\list
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\иван\Google Диск\C\list\list.exe,
+
+ВНЕЗАПНО: signal (11, 0x00): SIGSEGV: Доступ по неверному указателю. Ставьте ассерты! 
+
+Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x00426BEA в функции ListDump() в файле C:/Users/иван/Google Диск/C/list/list.cpp на строке 123. Попытка прочесть данные по адресу NULL. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#2: TXLib [Ver: 00173a, Rev: 105, Date: 2018-06-12 00:00:00 +0300], Instance: 0x004FE2C0 (32-bit), Flags: Cmdre0, Thread: 0x3220 (Main), GetLastError(): 183 (Невозможно создать файл, так как он уже существует). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00426BEA in C:\Users\иван\Google Диск\C\list\list.exe: ListDump() at C:/Users/иван/Google Диск/C/list/list.cpp (123):
+
+    121:     fprintf(out_f, "info:\n");
+    122:     for(int i = 0; i < List_size; i++)
+=>  123:         fprintf(out_f, "%lf ", *(ls->info[i]));
+    124:     fprintf(out_f, "\n");
+    125: 
+
+# 1 0x00426DBE in C:\Users\иван\Google Диск\C\list\list.exe: unittest() at C:/Users/иван/Google Диск/C/list/list.cpp (150):
+
+    148:     ListCtor(ls);
+    149:     ListAdd(ls, &arr[0]);
+=>  150:     ListDump(ls, "1.txt");
+    151:     printf("\n\n\n");
+    152: 
+
+# 2 0x00426EEC in C:\Users\иван\Google Диск\C\list\list.exe: main() at C:/Users/иван/Google Диск/C/list/list.cpp (176):
+
+    174:     fclose(in_f);
+    175: 
+=>  176:     unittest(&ls, arr);
+    177: 
+    178: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 105, Date: 2018-06-12 00:00:00 +0300]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\ФАЙЛЫ\загрузки\TX\TXLib.h
+Compiled:	Nov 11 2018 23:22:30, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Nov 11 2018 23:22:36
+
+Run file:	C:\Users\иван\Google Диск\C\list\list.exe
+Directory:	C:\Users\иван\Google Диск\C\list
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: C:\Users\иван\Google Диск\C\list\list.exe,
+
+ВНЕЗАПНО: Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x00426BEA в функции ListDump() в файле C:/Users/иван/Google Диск/C/list/list.cpp на строке 123. Попытка прочесть данные по адресу NULL. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+#1: TXLib [Ver: 00173a, Rev: 105, Date: 2018-06-12 00:00:00 +0300], Instance: 0x004FE2C0 (32-bit), Flags: Cmdre0, Thread: 0x1E68 (Main), GetLastError(): 183 (Невозможно создать файл, так как он уже существует). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00426BEA in C:\Users\иван\Google Диск\C\list\list.exe: ListDump() at C:/Users/иван/Google Диск/C/list/list.cpp (123):
+
+    121:     fprintf(out_f, "info:\n");
+    122:     for(int i = 0; i < List_size; i++)
+=>  123:         fprintf(out_f, "%lf ", *ls->info[i] );
+    124:     fprintf(out_f, "\n");
+    125: 
+
+# 1 0x00426DBE in C:\Users\иван\Google Диск\C\list\list.exe: unittest() at C:/Users/иван/Google Диск/C/list/list.cpp (150):
+
+    148:     ListCtor(ls);
+    149:     ListAdd(ls, &arr[0]);
+=>  150:     ListDump(ls, "1.txt");
+    151:     printf("\n\n\n");
+    152: 
+
+# 2 0x00426EEC in C:\Users\иван\Google Диск\C\list\list.exe: main() at C:/Users/иван/Google Диск/C/list/list.cpp (176):
+
+    174:     fclose(in_f);
+    175: 
+=>  176:     unittest(&ls, arr);
+    177: 
+    178: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 105, Date: 2018-06-12 00:00:00 +0300]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\ФАЙЛЫ\загрузки\TX\TXLib.h
+Compiled:	Nov 11 2018 23:26:40, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Nov 11 2018 23:26:46
+
+Run file:	C:\Users\иван\Google Диск\C\list\list.exe
+Directory:	C:\Users\иван\Google Диск\C\list
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\иван\Google Диск\C\list\list.exe,
+
+ВНЕЗАПНО: signal (11, 0x00): SIGSEGV: Доступ по неверному указателю. Ставьте ассерты! 
+
+Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x00426BEA в функции ListDump() в файле C:/Users/иван/Google Диск/C/list/list.cpp на строке 123. Попытка прочесть данные по адресу NULL. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#2: TXLib [Ver: 00173a, Rev: 105, Date: 2018-06-12 00:00:00 +0300], Instance: 0x004FE2C0 (32-bit), Flags: Cmdre0, Thread: 0x1E68 (Main), GetLastError(): 183 (Невозможно создать файл, так как он уже существует). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00426BEA in C:\Users\иван\Google Диск\C\list\list.exe: ListDump() at C:/Users/иван/Google Диск/C/list/list.cpp (123):
+
+    121:     fprintf(out_f, "info:\n");
+    122:     for(int i = 0; i < List_size; i++)
+=>  123:         fprintf(out_f, "%lf ", *ls->info[i] );
+    124:     fprintf(out_f, "\n");
+    125: 
+
+# 1 0x00426DBE in C:\Users\иван\Google Диск\C\list\list.exe: unittest() at C:/Users/иван/Google Диск/C/list/list.cpp (150):
+
+    148:     ListCtor(ls);
+    149:     ListAdd(ls, &arr[0]);
+=>  150:     ListDump(ls, "1.txt");
+    151:     printf("\n\n\n");
+    152: 
+
+# 2 0x00426EEC in C:\Users\иван\Google Диск\C\list\list.exe: main() at C:/Users/иван/Google Диск/C/list/list.cpp (176):
+
+    174:     fclose(in_f);
+    175: 
+=>  176:     unittest(&ls, arr);
+    177: 
+    178: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 105, Date: 2018-06-12 00:00:00 +0300]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\ФАЙЛЫ\загрузки\TX\TXLib.h
+Compiled:	Nov 11 2018 23:26:40, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Nov 11 2018 23:26:46
+
+Run file:	C:\Users\иван\Google Диск\C\list\list.exe
+Directory:	C:\Users\иван\Google Диск\C\list
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\иван\Google Диск\C\list\list.exe, файл: C:\Users\иван\Google Диск\C\list\list.cpp, строка: 367, функция: int main(),
+
+Сообщение: ВНЕЗАПНО: Логическая ошибка: Неверно, что "0".
+
+#1: TXLib [Ver: 00173a, Rev: 105, Date: 2018-06-12 00:00:00 +0300], Instance: 0x004FF2C0 (32-bit), Flags: Cmdre0, Thread: 0x23D8 (Main), GetLastError(): 183 (Невозможно создать файл, так как он уже существует). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x004277AA in C:\Users\иван\Google Диск\C\list\list.exe: main() at C:/Users/иван/Google Диск/C/list/list.cpp (367):
+
+    365:     unittest(&ls, arr);
+    366: 
+=>  367:     assert(0);
+    368: 
+    369:     system("start 1.txt");
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 105, Date: 2018-06-12 00:00:00 +0300]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\ФАЙЛЫ\загрузки\TX\TXLib.h
+Compiled:	Nov 16 2018 00:10:00, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Nov 16 2018 00:10:07
+
+Run file:	C:\Users\иван\Google Диск\C\list\list.exe
+Directory:	C:\Users\иван\Google Диск\C\list
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\иван\Google Диск\C\list\list.exe,
+
+ВНЕЗАПНО: signal (22, 0x00): SIGABRT: Аварийное завершение программы, вызвана функция abort(). 
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#1: TXLib [Ver: 00173a, Rev: 105, Date: 2018-06-12 00:00:00 +0300], Instance: 0x004FF2C0 (32-bit), Flags: Cmdre0, Thread: 0x354C (Main), GetLastError(): 183 (Невозможно создать файл, так как он уже существует). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x0040E7ED in C:\Users\иван\Google Диск\C\list\list.exe: _txOnSignal() at C:/ФАЙЛЫ/загрузки/TX/TXLib.h (8691)
+# 1 0x76B16F61 in C:\WINDOWS\System32\msvcrt.dll: raise()
+# 2 0x76B1B40B in C:\WINDOWS\System32\msvcrt.dll: abort()
+
+# 3 0x004275E4 in C:\Users\иван\Google Диск\C\list\list.exe: main() at C:/Users/иван/Google Диск/C/list/list.cpp (367):
+
+    365:     unittest(&ls, arr);
+    366: 
+=>  367:     assert(0);
+    368: 
+    369:     system("start 1.txt");
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 105, Date: 2018-06-12 00:00:00 +0300]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\ФАЙЛЫ\загрузки\TX\TXLib.h
+Compiled:	Nov 16 2018 00:10:24, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Nov 16 2018 00:10:31
+
+Run file:	C:\Users\иван\Google Диск\C\list\list.exe
+Directory:	C:\Users\иван\Google Диск\C\list
+
+--------------------------------------------------

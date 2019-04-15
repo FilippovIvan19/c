@@ -1,0 +1,342 @@
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: C:\Users\иван\Google Диск\C\softCPU\compiler.exe,
+
+ВНЕЗАПНО: Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x004266C1 в функции comp_push() в файле C:/Users/иван/Google Диск/C/softCPU/compiler.cpp на строке 24. Попытка записать данные по адресу 0x004C077B. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+#1: TXLib [Ver: 00173a, Rev: 105, Date: 2018-06-12 00:00:00 +0300], Instance: 0x004F62C0 (32-bit), Flags: Cmdre0, Thread: 0x1438 (Main), GetLastError(): 183 (Невозможно создать файл, так как он уже существует). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x004266C1 in C:\Users\иван\Google Диск\C\softCPU\compiler.exe: comp_push() at C:/Users/иван/Google Диск/C/softCPU/compiler.cpp (24):
+
+     22:     if (sscanf(str, "%d", val) == 1)
+     23:     {
+=>   24:         strcat(str_out, " 1");
+     25:         itoa(val, val_s, 10);
+     26:         strcat(str_out, " ");
+
+# 1 0x00426967 in C:\Users\иван\Google Диск\C\softCPU\compiler.exe: compile() at C:/Users/иван/Google Диск/C/softCPU/compiler.cpp (110):
+
+    108: 
+    109:         if      (!strcmp(command, "push"))
+=>  110:             comp_push(str, str_out);
+    111: 
+    112:         else if (!strcmp(command, "in"))
+
+# 2 0x00426B8F in C:\Users\иван\Google Диск\C\softCPU\compiler.exe: main() at C:/Users/иван/Google Диск/C/softCPU/compiler.cpp (152):
+
+    150: 
+    151: 
+=>  152:     compile("1.txt", "2.txt");
+    153: 
+    154: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 105, Date: 2018-06-12 00:00:00 +0300]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\ФАЙЛЫ\загрузки\TX\TXLib.h
+Compiled:	Oct 21 2018 00:49:42, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Oct 21 2018 00:49:52
+
+Run file:	C:\Users\иван\Google Диск\C\softCPU\compiler.exe
+Directory:	C:\Users\иван\Google Диск\C\softCPU
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\иван\Google Диск\C\softCPU\compiler.exe,
+
+ВНЕЗАПНО: signal (11, 0x00): SIGSEGV: Доступ по неверному указателю. Ставьте ассерты! 
+
+Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x004266C1 в функции comp_push() в файле C:/Users/иван/Google Диск/C/softCPU/compiler.cpp на строке 24. Попытка записать данные по адресу 0x004C077B. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#2: TXLib [Ver: 00173a, Rev: 105, Date: 2018-06-12 00:00:00 +0300], Instance: 0x004F62C0 (32-bit), Flags: Cmdre0, Thread: 0x1438 (Main), GetLastError(): 183 (Невозможно создать файл, так как он уже существует). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x004266C1 in C:\Users\иван\Google Диск\C\softCPU\compiler.exe: comp_push() at C:/Users/иван/Google Диск/C/softCPU/compiler.cpp (24):
+
+     22:     if (sscanf(str, "%d", val) == 1)
+     23:     {
+=>   24:         strcat(str_out, " 1");
+     25:         itoa(val, val_s, 10);
+     26:         strcat(str_out, " ");
+
+# 1 0x00426967 in C:\Users\иван\Google Диск\C\softCPU\compiler.exe: compile() at C:/Users/иван/Google Диск/C/softCPU/compiler.cpp (110):
+
+    108: 
+    109:         if      (!strcmp(command, "push"))
+=>  110:             comp_push(str, str_out);
+    111: 
+    112:         else if (!strcmp(command, "in"))
+
+# 2 0x00426B8F in C:\Users\иван\Google Диск\C\softCPU\compiler.exe: main() at C:/Users/иван/Google Диск/C/softCPU/compiler.cpp (152):
+
+    150: 
+    151: 
+=>  152:     compile("1.txt", "2.txt");
+    153: 
+    154: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 105, Date: 2018-06-12 00:00:00 +0300]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\ФАЙЛЫ\загрузки\TX\TXLib.h
+Compiled:	Oct 21 2018 00:49:42, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Oct 21 2018 00:49:52
+
+Run file:	C:\Users\иван\Google Диск\C\softCPU\compiler.exe
+Directory:	C:\Users\иван\Google Диск\C\softCPU
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: C:\Users\иван\Google Диск\C\softCPU\compiler.exe,
+
+ВНЕЗАПНО: Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x00426704 в функции comp_push() в файле C:/Users/иван/Google Диск/C/softCPU/compiler.cpp на строке 24. Попытка записать данные по адресу 0x004C077B. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+#1: TXLib [Ver: 00173a, Rev: 105, Date: 2018-06-12 00:00:00 +0300], Instance: 0x004F62C0 (32-bit), Flags: Cmdre0, Thread: 0x1368 (Main), GetLastError(): 183 (Невозможно создать файл, так как он уже существует). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00426704 in C:\Users\иван\Google Диск\C\softCPU\compiler.exe: comp_push() at C:/Users/иван/Google Диск/C/softCPU/compiler.cpp (24):
+
+     22:     if (sscanf(str, "%d", val) == 1)
+     23:     {
+=>   24:         strcat(str_out, " 1");
+     25:         itoa(val, val_s, 10);
+     26:         strcat(str_out, " ");
+
+# 1 0x004269AA in C:\Users\иван\Google Диск\C\softCPU\compiler.exe: compile() at C:/Users/иван/Google Диск/C/softCPU/compiler.cpp (110):
+
+    108: 
+    109:         if      (!strcmp(command, "push"))
+=>  110:             comp_push(str, str_out);
+    111: 
+    112:         else if (!strcmp(command, "in"))
+
+# 2 0x00426BDC in C:\Users\иван\Google Диск\C\softCPU\compiler.exe: main() at C:/Users/иван/Google Диск/C/softCPU/compiler.cpp (152):
+
+    150: 
+    151: 
+=>  152:     compile("1.txt", "2.txt");
+    153: 
+    154: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 105, Date: 2018-06-12 00:00:00 +0300]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\ФАЙЛЫ\загрузки\TX\TXLib.h
+Compiled:	Oct 21 2018 00:55:51, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Oct 21 2018 00:56:00
+
+Run file:	C:\Users\иван\Google Диск\C\softCPU\compiler.exe
+Directory:	C:\Users\иван\Google Диск\C\softCPU
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\иван\Google Диск\C\softCPU\compiler.exe,
+
+ВНЕЗАПНО: signal (11, 0x00): SIGSEGV: Доступ по неверному указателю. Ставьте ассерты! 
+
+Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x00426704 в функции comp_push() в файле C:/Users/иван/Google Диск/C/softCPU/compiler.cpp на строке 24. Попытка записать данные по адресу 0x004C077B. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#2: TXLib [Ver: 00173a, Rev: 105, Date: 2018-06-12 00:00:00 +0300], Instance: 0x004F62C0 (32-bit), Flags: Cmdre0, Thread: 0x1368 (Main), GetLastError(): 183 (Невозможно создать файл, так как он уже существует). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00426704 in C:\Users\иван\Google Диск\C\softCPU\compiler.exe: comp_push() at C:/Users/иван/Google Диск/C/softCPU/compiler.cpp (24):
+
+     22:     if (sscanf(str, "%d", val) == 1)
+     23:     {
+=>   24:         strcat(str_out, " 1");
+     25:         itoa(val, val_s, 10);
+     26:         strcat(str_out, " ");
+
+# 1 0x004269AA in C:\Users\иван\Google Диск\C\softCPU\compiler.exe: compile() at C:/Users/иван/Google Диск/C/softCPU/compiler.cpp (110):
+
+    108: 
+    109:         if      (!strcmp(command, "push"))
+=>  110:             comp_push(str, str_out);
+    111: 
+    112:         else if (!strcmp(command, "in"))
+
+# 2 0x00426BDC in C:\Users\иван\Google Диск\C\softCPU\compiler.exe: main() at C:/Users/иван/Google Диск/C/softCPU/compiler.cpp (152):
+
+    150: 
+    151: 
+=>  152:     compile("1.txt", "2.txt");
+    153: 
+    154: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 105, Date: 2018-06-12 00:00:00 +0300]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\ФАЙЛЫ\загрузки\TX\TXLib.h
+Compiled:	Oct 21 2018 00:55:51, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Oct 21 2018 00:56:01
+
+Run file:	C:\Users\иван\Google Диск\C\softCPU\compiler.exe
+Directory:	C:\Users\иван\Google Диск\C\softCPU
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: C:\Users\иван\Google Диск\C\softCPU\compiler.exe,
+
+ВНЕЗАПНО: Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x004271D8 в функции comp_jmp_arr() в файле C:/Users/иван/Google Диск/C/softCPU/compiler.cpp на строке 341. Попытка записать данные по адресу 0x0079006C. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+#1: TXLib [Ver: 00173a, Rev: 105, Date: 2018-06-12 00:00:00 +0300], Instance: 0x004F62C0 (32-bit), Flags: Cmdre0, Thread: 0xE0 (Main), GetLastError(): 183 (Невозможно создать файл, так как он уже существует). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x004271D8 in C:\Users\иван\Google Диск\C\softCPU\compiler.exe: comp_jmp_arr() at C:/Users/иван/Google Диск/C/softCPU/compiler.cpp (341):
+
+    339:     int adress;
+    340:     sscanf(str_1, "%d", &adress);
+=>  341:     jmp_arr[adress] = *code_num;
+    342: 
+    343:     return str_out;
+
+# 1 0x00427312 in C:\Users\иван\Google Диск\C\softCPU\compiler.exe: compile() at C:/Users/иван/Google Диск/C/softCPU/compiler.cpp (373):
+
+    371: 
+    372:         if (command[0] == ':')
+=>  373:             comp_jmp_arr(str, str_out, jmp_arr, &code_num);
+    374: 
+    375:         DEF_JMP_CMD(jmp)//"else if" is here
+
+# 2 0x0042791B in C:\Users\иван\Google Диск\C\softCPU\compiler.exe: main() at C:/Users/иван/Google Диск/C/softCPU/compiler.cpp (416):
+
+    414:     int jmp_arr[10] = {-1, -1, -1};
+    415: 
+=>  416:     compile("2.txt", "comp.txt", jmp_arr);
+    417:     //$(jmp_arr[1]);
+    418:     compile("2.txt", "comp.txt", jmp_arr);
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 105, Date: 2018-06-12 00:00:00 +0300]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\ФАЙЛЫ\загрузки\TX\TXLib.h
+Compiled:	Oct 29 2018 12:51:33, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Oct 29 2018 12:51:41
+
+Run file:	C:\Users\иван\Google Диск\C\softCPU\compiler.exe
+Directory:	C:\Users\иван\Google Диск\C\softCPU
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\иван\Google Диск\C\softCPU\compiler.exe,
+
+ВНЕЗАПНО: signal (11, 0x00): SIGSEGV: Доступ по неверному указателю. Ставьте ассерты! 
+
+Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x004271D8 в функции comp_jmp_arr() в файле C:/Users/иван/Google Диск/C/softCPU/compiler.cpp на строке 341. Попытка записать данные по адресу 0x0079006C. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#2: TXLib [Ver: 00173a, Rev: 105, Date: 2018-06-12 00:00:00 +0300], Instance: 0x004F62C0 (32-bit), Flags: Cmdre0, Thread: 0xE0 (Main), GetLastError(): 183 (Невозможно создать файл, так как он уже существует). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x004271D8 in C:\Users\иван\Google Диск\C\softCPU\compiler.exe: comp_jmp_arr() at C:/Users/иван/Google Диск/C/softCPU/compiler.cpp (341):
+
+    339:     int adress;
+    340:     sscanf(str_1, "%d", &adress);
+=>  341:     jmp_arr[adress] = *code_num;
+    342: 
+    343:     return str_out;
+
+# 1 0x00427312 in C:\Users\иван\Google Диск\C\softCPU\compiler.exe: compile() at C:/Users/иван/Google Диск/C/softCPU/compiler.cpp (373):
+
+    371: 
+    372:         if (command[0] == ':')
+=>  373:             comp_jmp_arr(str, str_out, jmp_arr, &code_num);
+    374: 
+    375:         DEF_JMP_CMD(jmp)//"else if" is here
+
+# 2 0x0042791B in C:\Users\иван\Google Диск\C\softCPU\compiler.exe: main() at C:/Users/иван/Google Диск/C/softCPU/compiler.cpp (416):
+
+    414:     int jmp_arr[10] = {-1, -1, -1};
+    415: 
+=>  416:     compile("2.txt", "comp.txt", jmp_arr);
+    417:     //$(jmp_arr[1]);
+    418:     compile("2.txt", "comp.txt", jmp_arr);
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 105, Date: 2018-06-12 00:00:00 +0300]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\ФАЙЛЫ\загрузки\TX\TXLib.h
+Compiled:	Oct 29 2018 12:51:33, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Oct 29 2018 12:51:41
+
+Run file:	C:\Users\иван\Google Диск\C\softCPU\compiler.exe
+Directory:	C:\Users\иван\Google Диск\C\softCPU
+
+--------------------------------------------------

@@ -1,0 +1,1220 @@
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: C:\Users\иван\Google Диск\C\onegin\on_почти.exe,
+
+ВНЕЗАПНО: Нарушение доступа к памяти.
+
+#24: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x77186164 в функции RtlRunOnceBeginInitialize(). Попытка прочесть данные по адресу 0xFFFFFFF8. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+#1: TXLib [Ver: 00173a, Rev: 105, Date: 2018-06-12 00:00:00 +0300], Instance: 0x004FF2C0 (32-bit), Flags: Cmdre0, Thread: 0x1D30 (Main), GetLastError(): 3 (Системе не удается найти указанный путь), errno: 12 (Visual C++ CRT: Not enough memory to complete call to strerror.). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x77186164 in C:\WINDOWS\SYSTEM32\ntdll.dll: RtlRunOnceBeginInitialize()
+# 1 0x771852EB in C:\WINDOWS\SYSTEM32\ntdll.dll: RtlRunOnceBeginInitialize()
+# 2 0x77176347 in C:\WINDOWS\SYSTEM32\ntdll.dll: RtlAllocateHeap()
+# 3 0x771749C9 in C:\WINDOWS\SYSTEM32\ntdll.dll: RtlAllocateHeap()
+# 4 0x7717483E in C:\WINDOWS\SYSTEM32\ntdll.dll: RtlAllocateHeap()
+# 5 0x76FC72A0 in C:\WINDOWS\System32\msvcrt.dll: malloc()
+# 6 0x5F9E60D1 in C:\ФАЙЛЫ\загрузки\TX\Windows\dbghelp32.dll: MiniDumpReadDumpStream()
+# 7 0x5FA4A2CE in C:\ФАЙЛЫ\загрузки\TX\Windows\dbghelp32.dll: MiniDumpReadDumpStream()
+# 8 0x5FA42BD7 in C:\ФАЙЛЫ\загрузки\TX\Windows\dbghelp32.dll: MiniDumpReadDumpStream()
+# 9 0x5FA42F6F in C:\ФАЙЛЫ\загрузки\TX\Windows\dbghelp32.dll: MiniDumpReadDumpStream()
+#10 0x5FA4CD6F in C:\ФАЙЛЫ\загрузки\TX\Windows\dbghelp32.dll: MiniDumpReadDumpStream()
+#11 0x5F9EAF34 in C:\ФАЙЛЫ\загрузки\TX\Windows\dbghelp32.dll: MiniDumpReadDumpStream()
+#14 0x5F98D201 in C:\ФАЙЛЫ\загрузки\TX\Windows\dbghelp32.dll: RemoveInvalidModuleList()
+#15 0x5F98DE39 in C:\ФАЙЛЫ\загрузки\TX\Windows\dbghelp32.dll: RemoveInvalidModuleList()
+#16 0x5F9AC070 in C:\ФАЙЛЫ\загрузки\TX\Windows\dbghelp32.dll: ImagehlpApiVersionEx()
+#17 0x5F9AACDE in C:\ФАЙЛЫ\загрузки\TX\Windows\dbghelp32.dll: ImagehlpApiVersionEx()
+#18 0x5F9AA985 in C:\ФАЙЛЫ\загрузки\TX\Windows\dbghelp32.dll: ImagehlpApiVersionEx()
+#19 0x5F9A407F in C:\ФАЙЛЫ\загрузки\TX\Windows\dbghelp32.dll: SymFunctionTableAccess64AccessRoutines()
+#20 0x5F9A400A in C:\ФАЙЛЫ\загрузки\TX\Windows\dbghelp32.dll: SymFunctionTableAccess64()
+#21 0x5F99FAA9 in C:\ФАЙЛЫ\загрузки\TX\Windows\dbghelp32.dll: SymGetFileLineOffsets64()
+#22 0x5F9D118E in C:\ФАЙЛЫ\загрузки\TX\Windows\dbghelp32.dll: MiniDumpReadDumpStream()
+#23 0x5F9D2B88 in C:\ФАЙЛЫ\загрузки\TX\Windows\dbghelp32.dll: MiniDumpReadDumpStream()
+#24 0x5F9D17C8 in C:\ФАЙЛЫ\загрузки\TX\Windows\dbghelp32.dll: MiniDumpReadDumpStream()
+#25 0x5F9B8502 in C:\ФАЙЛЫ\загрузки\TX\Windows\dbghelp32.dll: DbgHelpCreateUserDumpW()
+#26 0x5F9B8AB3 in C:\ФАЙЛЫ\загрузки\TX\Windows\dbghelp32.dll: StackWalkEx()
+#27 0x5F9B8CE9 in C:\ФАЙЛЫ\загрузки\TX\Windows\dbghelp32.dll: StackWalk64()
+#28 0x00415860 in C:\Users\иван\Google Диск\C\onegin\on_почти.exe: _ZN12_GLOBAL__N_12TX12_txStackWalkEijPPvPmP8_CONTEXTS1_()
+#29 0x00414AC8 in C:\Users\иван\Google Диск\C\onegin\on_почти.exe: _ZN12_GLOBAL__N_12TX24_txCaptureStackBackTraceEibP8_CONTEXTPv()
+#30 0x0040F5B5 in C:\Users\иван\Google Диск\C\onegin\on_почти.exe: _ZN12_GLOBAL__N_12TX17_txOnExceptionSEHEP19_EXCEPTION_POINTERSPKc()
+#31 0x0040EF91 in C:\Users\иван\Google Диск\C\onegin\on_почти.exe: _ZN12_GLOBAL__N_12TX27_txVectoredExceptionHandlerEP19_EXCEPTION_POINTERS@4()
+#32 0x7718DE51 in C:\WINDOWS\SYSTEM32\ntdll.dll: EtwRegisterTraceGuidsW()
+#33 0x77192A5F in C:\WINDOWS\SYSTEM32\ntdll.dll: RtlUnwind()
+#34 0x7719C716 in C:\WINDOWS\SYSTEM32\ntdll.dll: KiUserExceptionDispatcher()
+#35 0x771852EB in C:\WINDOWS\SYSTEM32\ntdll.dll: RtlRunOnceBeginInitialize()
+#36 0x77176347 in C:\WINDOWS\SYSTEM32\ntdll.dll: RtlAllocateHeap()
+#37 0x771749C9 in C:\WINDOWS\SYSTEM32\ntdll.dll: RtlAllocateHeap()
+#38 0x7717483E in C:\WINDOWS\SYSTEM32\ntdll.dll: RtlAllocateHeap()
+#39 0x76FC72A0 in C:\WINDOWS\System32\msvcrt.dll: malloc()
+#40 0x5F9E60D1 in C:\ФАЙЛЫ\загрузки\TX\Windows\dbghelp32.dll: MiniDumpReadDumpStream()
+#41 0x5FA4A2CE in C:\ФАЙЛЫ\загрузки\TX\Windows\dbghelp32.dll: MiniDumpReadDumpStream()
+#42 0x5FA42BD7 in C:\ФАЙЛЫ\загрузки\TX\Windows\dbghelp32.dll: MiniDumpReadDumpStream()
+#43 0x5FA42F6F in C:\ФАЙЛЫ\загрузки\TX\Windows\dbghelp32.dll: MiniDumpReadDumpStream()
+#44 0x5FA4CD6F in C:\ФАЙЛЫ\загрузки\TX\Windows\dbghelp32.dll: MiniDumpReadDumpStream()
+#45 0x5F9EAF34 in C:\ФАЙЛЫ\загрузки\TX\Windows\dbghelp32.dll: MiniDumpReadDumpStream()
+#48 0x5F98D201 in C:\ФАЙЛЫ\загрузки\TX\Windows\dbghelp32.dll: RemoveInvalidModuleList()
+#49 0x5F98DE39 in C:\ФАЙЛЫ\загрузки\TX\Windows\dbghelp32.dll: RemoveInvalidModuleList()
+#50 0x5F9AC070 in C:\ФАЙЛЫ\загрузки\TX\Windows\dbghelp32.dll: ImagehlpApiVersionEx()
+#51 0x5F9AACDE in C:\ФАЙЛЫ\загрузки\TX\Windows\dbghelp32.dll: ImagehlpApiVersionEx()
+#52 0x5F9AA985 in C:\ФАЙЛЫ\загрузки\TX\Windows\dbghelp32.dll: ImagehlpApiVersionEx()
+#53 0x5F9A407F in C:\ФАЙЛЫ\загрузки\TX\Windows\dbghelp32.dll: SymFunctionTableAccess64AccessRoutines()
+#54 0x5F9A400A in C:\ФАЙЛЫ\загрузки\TX\Windows\dbghelp32.dll: SymFunctionTableAccess64()
+#55 0x5F99FAA9 in C:\ФАЙЛЫ\загрузки\TX\Windows\dbghelp32.dll: SymGetFileLineOffsets64()
+#56 0x5F9D118E in C:\ФАЙЛЫ\загрузки\TX\Windows\dbghelp32.dll: MiniDumpReadDumpStream()
+#57 0x5F9D2B88 in C:\ФАЙЛЫ\загрузки\TX\Windows\dbghelp32.dll: MiniDumpReadDumpStream()
+#58 0x5F9D17C8 in C:\ФАЙЛЫ\загрузки\TX\Windows\dbghelp32.dll: MiniDumpReadDumpStream()
+#59 0x5F9B8502 in C:\ФАЙЛЫ\загрузки\TX\Windows\dbghelp32.dll: DbgHelpCreateUserDumpW()
+#60 0x5F9B8AB3 in C:\ФАЙЛЫ\загрузки\TX\Windows\dbghelp32.dll: StackWalkEx()
+#61 0x5F9B8CE9 in C:\ФАЙЛЫ\загрузки\TX\Windows\dbghelp32.dll: StackWalk64()
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in int {anonymous}::TX::_txStackWalk(int, size_t, void**, long unsigned int*, CONTEXT*, HANDLE) at C:\ФАЙЛЫ\загрузки\TX\TXLib.h (9725):
+
+   9723: $   for (n = -framesToSkip; n < (int) szCapture; n++)
+   9724:         {
+=> 9725: $       DWORD64 prev = frame.AddrStack.Offset;
+   9726: 
+   9727:         // Я злой и страшный серый walk. Я в поросятах знаю talk.
+
+# 1 in const char* {anonymous}::TX::_txCaptureStackBackTrace(int, bool, CONTEXT*, HANDLE) at C:\ФАЙЛЫ\загрузки\TX\TXLib.h (9581):
+
+   9579: 
+   9580: $   static void* capture [maxFrames] = {};
+=> 9581: $   int frames = _txStackWalk (framesToSkip + !context, SIZEARR (capture), capture, NULL, context, thread);
+   9582: 
+   9583: $   memset (trace, 0, sizeof (trace));
+
+# 2 in long int {anonymous}::TX::_txOnExceptionSEH(EXCEPTION_POINTERS*, const char*) at C:\ФАЙЛЫ\загрузки\TX\TXLib.h (9096):
+
+   9094: $       unsigned err = GetLastError();
+   9095: 
+=> 9096: $       const char* stackTrace = _txCaptureStackBackTrace (0, true, exc->ContextRecord);
+   9097: 
+   9098: $       _txDumpExceptionSEH (_txDumpSE,  (ptrdiff_t) sizeof (_txDumpSE)  - 1, exc->ExceptionRecord, func);
+
+# 3 in int {anonymous}::TX::_txStackWalk(int, size_t, void**, long unsigned int*, CONTEXT*, HANDLE) at C:\ФАЙЛЫ\загрузки\TX\TXLib.h (9725):
+
+   9723: $   for (n = -framesToSkip; n < (int) szCapture; n++)
+   9724:         {
+=> 9725: $       DWORD64 prev = frame.AddrStack.Offset;
+   9726: 
+   9727:         // Я злой и страшный серый walk. Я в поросятах знаю talk.
+
+# 4 in const char* {anonymous}::TX::_txCaptureStackBackTrace(int, bool, CONTEXT*, HANDLE) at C:\ФАЙЛЫ\загрузки\TX\TXLib.h (9581):
+
+   9579: 
+   9580: $   static void* capture [maxFrames] = {};
+=> 9581: $   int frames = _txStackWalk (framesToSkip + !context, SIZEARR (capture), capture, NULL, context, thread);
+   9582: 
+   9583: $   memset (trace, 0, sizeof (trace));
+
+# 5 in long int {anonymous}::TX::_txOnExceptionSEH(EXCEPTION_POINTERS*, const char*) at C:\ФАЙЛЫ\загрузки\TX\TXLib.h (9096):
+
+   9094: $       unsigned err = GetLastError();
+   9095: 
+=> 9096: $       const char* stackTrace = _txCaptureStackBackTrace (0, true, exc->ContextRecord);
+   9097: 
+   9098: $       _txDumpExceptionSEH (_txDumpSE,  (ptrdiff_t) sizeof (_txDumpSE)  - 1, exc->ExceptionRecord, func);
+
+# 6 in bool {anonymous}::TX::_txSymGetFromAddr(void*, {anonymous}::TX::Win32::SYMBOL_INFO**, {anonymous}::TX::Win32::IMAGEHLP_LINE64**, const char**, const char**, int) at C:\ФАЙЛЫ\загрузки\TX\TXLib.h (9834):
+
+   9832: 
+   9833: $       SetLastError (0);
+=> 9834: $       (_TX_CALL (MinGW::SymFromAddr, (process, (uintptr_t) addr, &ofs, sym)) && RES_(y)) ||
+   9835:         (_TX_CALL (Win32::SymFromAddr, (process, (uintptr_t) addr, &ofs, sym)) && RES_(Y)) ||
+   9836:             DBG_("SymFromAddr (0x%p) failed", addr);
+
+# 7 in const char* {anonymous}::TX::_txCaptureStackBackTrace(int, bool, CONTEXT*, HANDLE) at C:\ФАЙЛЫ\загрузки\TX\TXLib.h (9598):
+
+   9596: $       bool                    inTX   = false;
+   9597: 
+=> 9598:         if (addr)                { $ inTX = _txSymGetFromAddr ((char*) addr - 1, &sym, &line, &module);          }
+   9599:         if (readSource && !inTX) { $        _txSymGetFromAddr ((void*) 1,        NULL, NULL,  NULL, &source, 2); }
+   9600: 
+
+# 8 in long int {anonymous}::TX::_txOnExceptionSEH(EXCEPTION_POINTERS*, const char*) at C:\ФАЙЛЫ\загрузки\TX\TXLib.h (9096):
+
+   9094: $       unsigned err = GetLastError();
+   9095: 
+=> 9096: $       const char* stackTrace = _txCaptureStackBackTrace (0, true, exc->ContextRecord);
+   9097: 
+   9098: $       _txDumpExceptionSEH (_txDumpSE,  (ptrdiff_t) sizeof (_txDumpSE)  - 1, exc->ExceptionRecord, func);
+
+# 9 in bool {anonymous}::TX::_txSymGetFromAddr(void*, {anonymous}::TX::Win32::SYMBOL_INFO**, {anonymous}::TX::Win32::IMAGEHLP_LINE64**, const char**, const char**, int) at C:\ФАЙЛЫ\загрузки\TX\TXLib.h (9853):
+
+   9851: 
+   9852: $       SetLastError (0);
+=> 9853: $       (_TX_CALL (MinGW::SymGetLineFromAddr64, (process, (uintptr_t) addr, &ofs, &line64)) && RES_(l)) ||
+   9854:         (_TX_CALL (Win32::SymGetLineFromAddr64, (process, (uintptr_t) addr, &ofs, &line64)) && RES_(L)) ||
+   9855:             DBG_("SymGetLineFromAddr64 (\"%s\") failed", (symbol? (*symbol)->Name : "(null)"));
+
+#10 in const char* {anonymous}::TX::_txCaptureStackBackTrace(int, bool, CONTEXT*, HANDLE) at C:\ФАЙЛЫ\загрузки\TX\TXLib.h (9598):
+
+   9596: $       bool                    inTX   = false;
+   9597: 
+=> 9598:         if (addr)                { $ inTX = _txSymGetFromAddr ((char*) addr - 1, &sym, &line, &module);          }
+   9599:         if (readSource && !inTX) { $        _txSymGetFromAddr ((void*) 1,        NULL, NULL,  NULL, &source, 2); }
+   9600: 
+
+#11 in long int {anonymous}::TX::_txOnExceptionSEH(EXCEPTION_POINTERS*, const char*) at C:\ФАЙЛЫ\загрузки\TX\TXLib.h (9096):
+
+   9094: $       unsigned err = GetLastError();
+   9095: 
+=> 9096: $       const char* stackTrace = _txCaptureStackBackTrace (0, true, exc->ContextRecord);
+   9097: 
+   9098: $       _txDumpExceptionSEH (_txDumpSE,  (ptrdiff_t) sizeof (_txDumpSE)  - 1, exc->ExceptionRecord, func);
+
+#12 in bool {anonymous}::TX::_txSymGetFromAddr(void*, {anonymous}::TX::Win32::SYMBOL_INFO**, {anonymous}::TX::Win32::IMAGEHLP_LINE64**, const char**, const char**, int) at C:\ФАЙЛЫ\загрузки\TX\TXLib.h (9853):
+
+   9851: 
+   9852: $       SetLastError (0);
+=> 9853: $       (_TX_CALL (MinGW::SymGetLineFromAddr64, (process, (uintptr_t) addr, &ofs, &line64)) && RES_(l)) ||
+   9854:         (_TX_CALL (Win32::SymGetLineFromAddr64, (process, (uintptr_t) addr, &ofs, &line64)) && RES_(L)) ||
+   9855:             DBG_("SymGetLineFromAddr64 (\"%s\") failed", (symbol? (*symbol)->Name : "(null)"));
+
+#13 in const char* {anonymous}::TX::_txCaptureStackBackTrace(int, bool, CONTEXT*, HANDLE) at C:\ФАЙЛЫ\загрузки\TX\TXLib.h (9598):
+
+   9596: $       bool                    inTX   = false;
+   9597: 
+=> 9598:         if (addr)                { $ inTX = _txSymGetFromAddr ((char*) addr - 1, &sym, &line, &module);          }
+   9599:         if (readSource && !inTX) { $        _txSymGetFromAddr ((void*) 1,        NULL, NULL,  NULL, &source, 2); }
+   9600: 
+
+#14 in long int {anonymous}::TX::_txOnExceptionSEH(EXCEPTION_POINTERS*, const char*) at C:\ФАЙЛЫ\загрузки\TX\TXLib.h (9096):
+
+   9094: $       unsigned err = GetLastError();
+   9095: 
+=> 9096: $       const char* stackTrace = _txCaptureStackBackTrace (0, true, exc->ContextRecord);
+   9097: 
+   9098: $       _txDumpExceptionSEH (_txDumpSE,  (ptrdiff_t) sizeof (_txDumpSE)  - 1, exc->ExceptionRecord, func);
+
+#15 in bool {anonymous}::TX::_txSymGetFromAddr(void*, {anonymous}::TX::Win32::SYMBOL_INFO**, {anonymous}::TX::Win32::IMAGEHLP_LINE64**, const char**, const char**, int) at C:\ФАЙЛЫ\загрузки\TX\TXLib.h (9853):
+
+   9851: 
+   9852: $       SetLastError (0);
+=> 9853: $       (_TX_CALL (MinGW::SymGetLineFromAddr64, (process, (uintptr_t) addr, &ofs, &line64)) && RES_(l)) ||
+   9854:         (_TX_CALL (Win32::SymGetLineFromAddr64, (process, (uintptr_t) addr, &ofs, &line64)) && RES_(L)) ||
+   9855:             DBG_("SymGetLineFromAddr64 (\"%s\") failed", (symbol? (*symbol)->Name : "(null)"));
+
+#16 in const char* {anonymous}::TX::_txCaptureStackBackTrace(int, bool, CONTEXT*, HANDLE) at C:\ФАЙЛЫ\загрузки\TX\TXLib.h (9598):
+
+   9596: $       bool                    inTX   = false;
+   9597: 
+=> 9598:         if (addr)                { $ inTX = _txSymGetFromAddr ((char*) addr - 1, &sym, &line, &module);          }
+   9599:         if (readSource && !inTX) { $        _txSymGetFromAddr ((void*) 1,        NULL, NULL,  NULL, &source, 2); }
+   9600: 
+
+#17 in long int {anonymous}::TX::_txOnExceptionSEH(EXCEPTION_POINTERS*, const char*) at C:\ФАЙЛЫ\загрузки\TX\TXLib.h (9096):
+
+   9094: $       unsigned err = GetLastError();
+   9095: 
+=> 9096: $       const char* stackTrace = _txCaptureStackBackTrace (0, true, exc->ContextRecord);
+   9097: 
+   9098: $       _txDumpExceptionSEH (_txDumpSE,  (ptrdiff_t) sizeof (_txDumpSE)  - 1, exc->ExceptionRecord, func);
+
+#18 in bool {anonymous}::TX::_txSymGetFromAddr(void*, {anonymous}::TX::Win32::SYMBOL_INFO**, {anonymous}::TX::Win32::IMAGEHLP_LINE64**, const char**, const char**, int) at C:\ФАЙЛЫ\загрузки\TX\TXLib.h (9853):
+
+   9851: 
+   9852: $       SetLastError (0);
+=> 9853: $       (_TX_CALL (MinGW::SymGetLineFromAddr64, (process, (uintptr_t) addr, &ofs, &line64)) && RES_(l)) ||
+   9854:         (_TX_CALL (Win32::SymGetLineFromAddr64, (process, (uintptr_t) addr, &ofs, &line64)) && RES_(L)) ||
+   9855:             DBG_("SymGetLineFromAddr64 (\"%s\") failed", (symbol? (*symbol)->Name : "(null)"));
+
+#19 in const char* {anonymous}::TX::_txCaptureStackBackTrace(int, bool, CONTEXT*, HANDLE) at C:\ФАЙЛЫ\загрузки\TX\TXLib.h (9598):
+
+   9596: $       bool                    inTX   = false;
+   9597: 
+=> 9598:         if (addr)                { $ inTX = _txSymGetFromAddr ((char*) addr - 1, &sym, &line, &module);          }
+   9599:         if (readSource && !inTX) { $        _txSymGetFromAddr ((void*) 1,        NULL, NULL,  NULL, &source, 2); }
+   9600: 
+
+#20 in long int {anonymous}::TX::_txOnExceptionSEH(EXCEPTION_POINTERS*, const char*) at C:\ФАЙЛЫ\загрузки\TX\TXLib.h (9096):
+
+   9094: $       unsigned err = GetLastError();
+   9095: 
+=> 9096: $       const char* stackTrace = _txCaptureStackBackTrace (0, true, exc->ContextRecord);
+   9097: 
+   9098: $       _txDumpExceptionSEH (_txDumpSE,  (ptrdiff_t) sizeof (_txDumpSE)  - 1, exc->ExceptionRecord, func);
+
+#21 in int {anonymous}::TX::_txStackWalk(int, size_t, void**, long unsigned int*, CONTEXT*, HANDLE) at C:\ФАЙЛЫ\загрузки\TX\TXLib.h (9725):
+
+   9723: $   for (n = -framesToSkip; n < (int) szCapture; n++)
+   9724:         {
+=> 9725: $       DWORD64 prev = frame.AddrStack.Offset;
+   9726: 
+   9727:         // Я злой и страшный серый walk. Я в поросятах знаю talk.
+
+#22 in const char* {anonymous}::TX::_txCaptureStackBackTrace(int, bool, CONTEXT*, HANDLE) at C:\ФАЙЛЫ\загрузки\TX\TXLib.h (9581):
+
+   9579: 
+   9580: $   static void* capture [maxFrames] = {};
+=> 9581: $   int frames = _txStackWalk (framesToSkip + !context, SIZEARR (capture), capture, NULL, context, thread);
+   9582: 
+   9583: $   memset (trace, 0, sizeof (trace));
+
+#23 in long int {anonymous}::TX::_txOnExceptionSEH(EXCEPTION_POINTERS*, const char*) at C:\ФАЙЛЫ\загрузки\TX\TXLib.h (9096):
+
+   9094: $       unsigned err = GetLastError();
+   9095: 
+=> 9096: $       const char* stackTrace = _txCaptureStackBackTrace (0, true, exc->ContextRecord);
+   9097: 
+   9098: $       _txDumpExceptionSEH (_txDumpSE,  (ptrdiff_t) sizeof (_txDumpSE)  - 1, exc->ExceptionRecord, func);
+
+#24 in int {anonymous}::TX::_txStackWalk(int, size_t, void**, long unsigned int*, CONTEXT*, HANDLE) at C:\ФАЙЛЫ\загрузки\TX\TXLib.h (9725):
+
+   9723: $   for (n = -framesToSkip; n < (int) szCapture; n++)
+   9724:         {
+=> 9725: $       DWORD64 prev = frame.AddrStack.Offset;
+   9726: 
+   9727:         // Я злой и страшный серый walk. Я в поросятах знаю talk.
+
+#25 in const char* {anonymous}::TX::_txCaptureStackBackTrace(int, bool, CONTEXT*, HANDLE) at C:\ФАЙЛЫ\загрузки\TX\TXLib.h (9581):
+
+   9579: 
+   9580: $   static void* capture [maxFrames] = {};
+=> 9581: $   int frames = _txStackWalk (framesToSkip + !context, SIZEARR (capture), capture, NULL, context, thread);
+   9582: 
+   9583: $   memset (trace, 0, sizeof (trace));
+
+#26 in long int {anonymous}::TX::_txOnExceptionSEH(EXCEPTION_POINTERS*, const char*) at C:\ФАЙЛЫ\загрузки\TX\TXLib.h (9096):
+
+   9094: $       unsigned err = GetLastError();
+   9095: 
+=> 9096: $       const char* stackTrace = _txCaptureStackBackTrace (0, true, exc->ContextRecord);
+   9097: 
+   9098: $       _txDumpExceptionSEH (_txDumpSE,  (ptrdiff_t) sizeof (_txDumpSE)  - 1, exc->ExceptionRecord, func);
+
+#27 in int {anonymous}::TX::_txStackWalk(int, size_t, void**, long unsigned int*, CONTEXT*, HANDLE) at C:\ФАЙЛЫ\загрузки\TX\TXLib.h (9725):
+
+   9723: $   for (n = -framesToSkip; n < (int) szCapture; n++)
+   9724:         {
+=> 9725: $       DWORD64 prev = frame.AddrStack.Offset;
+   9726: 
+   9727:         // Я злой и страшный серый walk. Я в поросятах знаю talk.
+
+#28 in const char* {anonymous}::TX::_txCaptureStackBackTrace(int, bool, CONTEXT*, HANDLE) at C:\ФАЙЛЫ\загрузки\TX\TXLib.h (9581):
+
+   9579: 
+   9580: $   static void* capture [maxFrames] = {};
+=> 9581: $   int frames = _txStackWalk (framesToSkip + !context, SIZEARR (capture), capture, NULL, context, thread);
+   9582: 
+   9583: $   memset (trace, 0, sizeof (trace));
+
+#29 in long int {anonymous}::TX::_txOnExceptionSEH(EXCEPTION_POINTERS*, const char*) at C:\ФАЙЛЫ\загрузки\TX\TXLib.h (9096):
+
+   9094: $       unsigned err = GetLastError();
+   9095: 
+=> 9096: $       const char* stackTrace = _txCaptureStackBackTrace (0, true, exc->ContextRecord);
+   9097: 
+   9098: $       _txDumpExceptionSEH (_txDumpSE,  (ptrdiff_t) sizeof (_txDumpSE)  - 1, exc->ExceptionRecord, func);
+
+#30 in int {anonymous}::TX::_txStackWalk(int, size_t, void**, long unsigned int*, CONTEXT*, HANDLE) at C:\ФАЙЛЫ\загрузки\TX\TXLib.h (9725):
+
+   9723: $   for (n = -framesToSkip; n < (int) szCapture; n++)
+   9724:         {
+=> 9725: $       DWORD64 prev = frame.AddrStack.Offset;
+   9726: 
+   9727:         // Я злой и страшный серый walk. Я в поросятах знаю talk.
+
+#31 in const char* {anonymous}::TX::_txCaptureStackBackTrace(int, bool, CONTEXT*, HANDLE) at C:\ФАЙЛЫ\загрузки\TX\TXLib.h (9581):
+
+   9579: 
+   9580: $   static void* capture [maxFrames] = {};
+=> 9581: $   int frames = _txStackWalk (framesToSkip + !context, SIZEARR (capture), capture, NULL, context, thread);
+   9582: 
+   9583: $   memset (trace, 0, sizeof (trace));
+
+#32 in long int {anonymous}::TX::_txOnExceptionSEH(EXCEPTION_POINTERS*, const char*) at C:\ФАЙЛЫ\загрузки\TX\TXLib.h (9096):
+
+   9094: $       unsigned err = GetLastError();
+   9095: 
+=> 9096: $       const char* stackTrace = _txCaptureStackBackTrace (0, true, exc->ContextRecord);
+   9097: 
+   9098: $       _txDumpExceptionSEH (_txDumpSE,  (ptrdiff_t) sizeof (_txDumpSE)  - 1, exc->ExceptionRecord, func);
+
+#33 in int {anonymous}::TX::_txStackWalk(int, size_t, void**, long unsigned int*, CONTEXT*, HANDLE) at C:\ФАЙЛЫ\загрузки\TX\TXLib.h (9725):
+
+   9723: $   for (n = -framesToSkip; n < (int) szCapture; n++)
+   9724:         {
+=> 9725: $       DWORD64 prev = frame.AddrStack.Offset;
+   9726: 
+   9727:         // Я злой и страшный серый walk. Я в поросятах знаю talk.
+
+#34 in const char* {anonymous}::TX::_txCaptureStackBackTrace(int, bool, CONTEXT*, HANDLE) at C:\ФАЙЛЫ\загрузки\TX\TXLib.h (9581):
+
+   9579: 
+   9580: $   static void* capture [maxFrames] = {};
+=> 9581: $   int frames = _txStackWalk (framesToSkip + !context, SIZEARR (capture), capture, NULL, context, thread);
+   9582: 
+   9583: $   memset (trace, 0, sizeof (trace));
+
+#35 in long int {anonymous}::TX::_txOnExceptionSEH(EXCEPTION_POINTERS*, const char*) at C:\ФАЙЛЫ\загрузки\TX\TXLib.h (9096):
+
+   9094: $       unsigned err = GetLastError();
+   9095: 
+=> 9096: $       const char* stackTrace = _txCaptureStackBackTrace (0, true, exc->ContextRecord);
+   9097: 
+   9098: $       _txDumpExceptionSEH (_txDumpSE,  (ptrdiff_t) sizeof (_txDumpSE)  - 1, exc->ExceptionRecord, func);
+
+#36 in int {anonymous}::TX::_txStackWalk(int, size_t, void**, long unsigned int*, CONTEXT*, HANDLE) at C:\ФАЙЛЫ\загрузки\TX\TXLib.h (9725):
+
+   9723: $   for (n = -framesToSkip; n < (int) szCapture; n++)
+   9724:         {
+=> 9725: $       DWORD64 prev = frame.AddrStack.Offset;
+   9726: 
+   9727:         // Я злой и страшный серый walk. Я в поросятах знаю talk.
+
+#37 in const char* {anonymous}::TX::_txCaptureStackBackTrace(int, bool, CONTEXT*, HANDLE) at C:\ФАЙЛЫ\загрузки\TX\TXLib.h (9581):
+
+   9579: 
+   9580: $   static void* capture [maxFrames] = {};
+=> 9581: $   int frames = _txStackWalk (framesToSkip + !context, SIZEARR (capture), capture, NULL, context, thread);
+   9582: 
+   9583: $   memset (trace, 0, sizeof (trace));
+
+#38 in long int {anonymous}::TX::_txOnExceptionSEH(EXCEPTION_POINTERS*, const char*) at C:\ФАЙЛЫ\загрузки\TX\TXLib.h (9096):
+
+   9094: $       unsigned err = GetLastError();
+   9095: 
+=> 9096: $       const char* stackTrace = _txCaptureStackBackTrace (0, true, exc->ContextRecord);
+   9097: 
+   9098: $       _txDumpExceptionSEH (_txDumpSE,  (ptrdiff_t) sizeof (_txDumpSE)  - 1, exc->ExceptionRecord, func);
+
+#39 in int {anonymous}::TX::_txStackWalk(int, size_t, void**, long unsigned int*, CONTEXT*, HANDLE) at C:\ФАЙЛЫ\загрузки\TX\TXLib.h (9725):
+
+   9723: $   for (n = -framesToSkip; n < (int) szCapture; n++)
+   9724:         {
+=> 9725: $       DWORD64 prev = frame.AddrStack.Offset;
+   9726: 
+   9727:         // Я злой и страшный серый walk. Я в поросятах знаю talk.
+
+#40 in const char* {anonymous}::TX::_txCaptureStackBackTrace(int, bool, CONTEXT*, HANDLE) at C:\ФАЙЛЫ\загрузки\TX\TXLib.h (9581):
+
+   9579: 
+   9580: $   static void* capture [maxFrames] = {};
+=> 9581: $   int frames = _txStackWalk (framesToSkip + !context, SIZEARR (capture), capture, NULL, context, thread);
+   9582: 
+   9583: $   memset (trace, 0, sizeof (trace));
+
+#41 in long int {anonymous}::TX::_txOnExceptionSEH(EXCEPTION_POINTERS*, const char*) at C:\ФАЙЛЫ\загрузки\TX\TXLib.h (9096):
+
+   9094: $       unsigned err = GetLastError();
+   9095: 
+=> 9096: $       const char* stackTrace = _txCaptureStackBackTrace (0, true, exc->ContextRecord);
+   9097: 
+   9098: $       _txDumpExceptionSEH (_txDumpSE,  (ptrdiff_t) sizeof (_txDumpSE)  - 1, exc->ExceptionRecord, func);
+
+#42 in int {anonymous}::TX::_txStackWalk(int, size_t, void**, long unsigned int*, CONTEXT*, HANDLE) at C:\ФАЙЛЫ\загрузки\TX\TXLib.h (9725):
+
+   9723: $   for (n = -framesToSkip; n < (int) szCapture; n++)
+   9724:         {
+=> 9725: $       DWORD64 prev = frame.AddrStack.Offset;
+   9726: 
+   9727:         // Я злой и страшный серый walk. Я в поросятах знаю talk.
+
+#43 in const char* {anonymous}::TX::_txCaptureStackBackTrace(int, bool, CONTEXT*, HANDLE) at C:\ФАЙЛЫ\загрузки\TX\TXLib.h (9581):
+
+   9579: 
+   9580: $   static void* capture [maxFrames] = {};
+=> 9581: $   int frames = _txStackWalk (framesToSkip + !context, SIZEARR (capture), capture, NULL, context, thread);
+   9582: 
+   9583: $   memset (trace, 0, sizeof (trace));
+
+#44 in long int {anonymous}::TX::_txOnExceptionSEH(EXCEPTION_POINTERS*, const char*) at C:\ФАЙЛЫ\загрузки\TX\TXLib.h (9096):
+
+   9094: $       unsigned err = GetLastError();
+   9095: 
+=> 9096: $       const char* stackTrace = _txCaptureStackBackTrace (0, true, exc->ContextRecord);
+   9097: 
+   9098: $       _txDumpExceptionSEH (_txDumpSE,  (ptrdiff_t) sizeof (_txDumpSE)  - 1, exc->ExceptionRecord, func);
+
+#45 in int {anonymous}::TX::_txStackWalk(int, size_t, void**, long unsigned int*, CONTEXT*, HANDLE) at C:\ФАЙЛЫ\загрузки\TX\TXLib.h (9725):
+
+   9723: $   for (n = -framesToSkip; n < (int) szCapture; n++)
+   9724:         {
+=> 9725: $       DWORD64 prev = frame.AddrStack.Offset;
+   9726: 
+   9727:         // Я злой и страшный серый walk. Я в поросятах знаю talk.
+
+#46 in const char* {anonymous}::TX::_txCaptureStackBackTrace(int, bool, CONTEXT*, HANDLE) at C:\ФАЙЛЫ\загрузки\TX\TXLib.h (9581):
+
+   9579: 
+   9580: $   static void* capture [maxFrames] = {};
+=> 9581: $   int frames = _txStackWalk (framesToSkip + !context, SIZEARR (capture), capture, NULL, context, thread);
+   9582: 
+   9583: $   memset (trace, 0, sizeof (trace));
+
+#47 in long int {anonymous}::TX::_txOnExceptionSEH(EXCEPTION_POINTERS*, const char*) at C:\ФАЙЛЫ\загрузки\TX\TXLib.h (9096):
+
+   9094: $       unsigned err = GetLastError();
+   9095: 
+=> 9096: $       const char* stackTrace = _txCaptureStackBackTrace (0, true, exc->ContextRecord);
+   9097: 
+   9098: $       _txDumpExceptionSEH (_txDumpSE,  (ptrdiff_t) sizeof (_txDumpSE)  - 1, exc->ExceptionRecord, func);
+
+#48 in int {anonymous}::TX::_txStackWalk(int, size_t, void**, long unsigned int*, CONTEXT*, HANDLE) at C:\ФАЙЛЫ\загрузки\TX\TXLib.h (9725):
+
+   9723: $   for (n = -framesToSkip; n < (int) szCapture; n++)
+   9724:         {
+=> 9725: $       DWORD64 prev = frame.AddrStack.Offset;
+   9726: 
+   9727:         // Я злой и страшный серый walk. Я в поросятах знаю talk.
+
+#49 in const char* {anonymous}::TX::_txCaptureStackBackTrace(int, bool, CONTEXT*, HANDLE) at C:\ФАЙЛЫ\загрузки\TX\TXLib.h (9581):
+
+   9579: 
+   9580: $   static void* capture [maxFrames] = {};
+=> 9581: $   int frames = _txStackWalk (framesToSkip + !context, SIZEARR (capture), capture, NULL, context, thread);
+   9582: 
+   9583: $   memset (trace, 0, sizeof (trace));
+
+#50 in long int {anonymous}::TX::_txOnExceptionSEH(EXCEPTION_POINTERS*, const char*) at C:\ФАЙЛЫ\загрузки\TX\TXLib.h (9096):
+
+   9094: $       unsigned err = GetLastError();
+   9095: 
+=> 9096: $       const char* stackTrace = _txCaptureStackBackTrace (0, true, exc->ContextRecord);
+   9097: 
+   9098: $       _txDumpExceptionSEH (_txDumpSE,  (ptrdiff_t) sizeof (_txDumpSE)  - 1, exc->ExceptionRecord, func);
+
+#51 in int {anonymous}::TX::_txStackWalk(int, size_t, void**, long unsigned int*, CONTEXT*, HANDLE) at C:\ФАЙЛЫ\загрузки\TX\TXLib.h (9725):
+
+   9723: $   for (n = -framesToSkip; n < (int) szCapture; n++)
+   9724:         {
+=> 9725: $       DWORD64 prev = frame.AddrStack.Offset;
+   9726: 
+   9727:         // Я злой и страшный серый walk. Я в поросятах знаю talk.
+
+#52 in const char* {anonymous}::TX::_txCaptureStackBackTrace(int, bool, CONTEXT*, HANDLE) at C:\ФАЙЛЫ\загрузки\TX\TXLib.h (9581):
+
+   9579: 
+   9580: $   static void* capture [maxFrames] = {};
+=> 9581: $   int frames = _txStackWalk (framesToSkip + !context, SIZEARR (capture), capture, NULL, context, thread);
+   9582: 
+   9583: $   memset (trace, 0, sizeof (trace));
+
+#53 in long int {anonymous}::TX::_txOnExceptionSEH(EXCEPTION_POINTERS*, const char*) at C:\ФАЙЛЫ\загрузки\TX\TXLib.h (9096):
+
+   9094: $       unsigned err = GetLastError();
+   9095: 
+=> 9096: $       const char* stackTrace = _txCaptureStackBackTrace (0, true, exc->ContextRecord);
+   9097: 
+   9098: $       _txDumpExceptionSEH (_txDumpSE,  (ptrdiff_t) sizeof (_txDumpSE)  - 1, exc->ExceptionRecord, func);
+
+#54 in int {anonymous}::TX::_txStackWalk(int, size_t, void**, long unsigned int*, CONTEXT*, HANDLE) at C:\ФАЙЛЫ\загрузки\TX\TXLib.h (9725):
+
+   9723: $   for (n = -framesToSkip; n < (int) szCapture; n++)
+   9724:         {
+=> 9725: $       DWORD64 prev = frame.AddrStack.Offset;
+   9726: 
+   9727:         // Я злой и страшный серый walk. Я в поросятах знаю talk.
+
+#55 in const char* {anonymous}::TX::_txCaptureStackBackTrace(int, bool, CONTEXT*, HANDLE) at C:\ФАЙЛЫ\загрузки\TX\TXLib.h (9581):
+
+   9579: 
+   9580: $   static void* capture [maxFrames] = {};
+=> 9581: $   int frames = _txStackWalk (framesToSkip + !context, SIZEARR (capture), capture, NULL, context, thread);
+   9582: 
+   9583: $   memset (trace, 0, sizeof (trace));
+
+#56 in long int {anonymous}::TX::_txOnExceptionSEH(EXCEPTION_POINTERS*, const char*) at C:\ФАЙЛЫ\загрузки\TX\TXLib.h (9096):
+
+   9094: $       unsigned err = GetLastError();
+   9095: 
+=> 9096: $       const char* stackTrace = _txCaptureStackBackTrace (0, true, exc->ContextRecord);
+   9097: 
+   9098: $       _txDumpExceptionSEH (_txDumpSE,  (ptrdiff_t) sizeof (_txDumpSE)  - 1, exc->ExceptionRecord, func);
+
+#57 in int {anonymous}::TX::_txStackWalk(int, size_t, void**, long unsigned int*, CONTEXT*, HANDLE) at C:\ФАЙЛЫ\загрузки\TX\TXLib.h (9725):
+
+   9723: $   for (n = -framesToSkip; n < (int) szCapture; n++)
+   9724:         {
+=> 9725: $       DWORD64 prev = frame.AddrStack.Offset;
+   9726: 
+   9727:         // Я злой и страшный серый walk. Я в поросятах знаю talk.
+
+#58 in const char* {anonymous}::TX::_txCaptureStackBackTrace(int, bool, CONTEXT*, HANDLE) at C:\ФАЙЛЫ\загрузки\TX\TXLib.h (9581):
+
+   9579: 
+   9580: $   static void* capture [maxFrames] = {};
+=> 9581: $   int frames = _txStackWalk (framesToSkip + !context, SIZEARR (capture), capture, NULL, context, thread);
+   9582: 
+   9583: $   memset (trace, 0, sizeof (trace));
+
+#59 in long int {anonymous}::TX::_txOnExceptionSEH(EXCEPTION_POINTERS*, const char*) at C:\ФАЙЛЫ\загрузки\TX\TXLib.h (9096):
+
+   9094: $       unsigned err = GetLastError();
+   9095: 
+=> 9096: $       const char* stackTrace = _txCaptureStackBackTrace (0, true, exc->ContextRecord);
+   9097: 
+   9098: $       _txDumpExceptionSEH (_txDumpSE,  (ptrdiff_t) sizeof (_txDumpSE)  - 1, exc->ExceptionRecord, func);
+
+#60 in int {anonymous}::TX::_txStackWalk(int, size_t, void**, long unsigned int*, CONTEXT*, HANDLE) at C:\ФАЙЛЫ\загрузки\TX\TXLib.h (9725):
+
+   9723: $   for (n = -framesToSkip; n < (int) szCapture; n++)
+   9724:         {
+=> 9725: $       DWORD64 prev = frame.AddrStack.Offset;
+   9726: 
+   9727:         // Я злой и страшный серый walk. Я в поросятах знаю talk.
+
+#61 in const char* {anonymous}::TX::_txCaptureStackBackTrace(int, bool, CONTEXT*, HANDLE) at C:\ФАЙЛЫ\загрузки\TX\TXLib.h (9581):
+
+   9579: 
+   9580: $   static void* capture [maxFrames] = {};
+=> 9581: $   int frames = _txStackWalk (framesToSkip + !context, SIZEARR (capture), capture, NULL, context, thread);
+   9582: 
+   9583: $   memset (trace, 0, sizeof (trace));
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 105, Date: 2018-06-12 00:00:00 +0300]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\ФАЙЛЫ\загрузки\TX\TXLib.h
+Compiled:	Oct  9 2018 17:59:57, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Oct 09 2018 18:00:05
+
+Run file:	C:\Users\иван\Google Диск\C\onegin\on_почти.exe
+Directory:	C:\Users\иван\Google Диск\C\onegin
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: C:\Users\иван\Google Диск\C\onegin\on_почти.exe,
+
+ВНЕЗАПНО: Исключение С++, вызванное оператором throw.
+
+#24: Исключение EXCEPTION_CPP_MSC (0xE06D7363) при выполнении кода по адресу 0x7409DDC2 в функции RaiseException(). Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+Ой, всё (EXCEPTION_NONCONTINUABLE).
+
+#2: TXLib [Ver: 00173a, Rev: 105, Date: 2018-06-12 00:00:00 +0300], Instance: 0x004FF2C0 (32-bit), Flags: Cmdre0, Thread: 0x1D30 (Main), GetLastError(): 8 (Недостаточно ресурсов памяти для обработки этой команды), errno: 12 (Visual C++ CRT: Not enough memory to complete call to strerror.). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x7409DDC2 in C:\WINDOWS\System32\KERNELBASE.dll: RtlRunOnceBeginInitialize()
+# 1 0x771852EB in C:\WINDOWS\SYSTEM32\ntdll.dll: RtlRunOnceBeginInitialize()
+# 2 0x77176347 in C:\WINDOWS\SYSTEM32\ntdll.dll: RtlAllocateHeap()
+# 3 0x771749C9 in C:\WINDOWS\SYSTEM32\ntdll.dll: RtlAllocateHeap()
+# 4 0x7717483E in C:\WINDOWS\SYSTEM32\ntdll.dll: RtlAllocateHeap()
+# 5 0x76FC72A0 in C:\WINDOWS\System32\msvcrt.dll: malloc()
+# 6 0x76FC701A in C:\WINDOWS\System32\msvcrt.dll: calloc()
+# 7 0x66261879 in C:\ФАЙЛЫ\загрузки\TX\Windows\MgwHelp32.dll: SymGetLineFromAddrW64()
+# 9 0x7407D149 in C:\WINDOWS\System32\KERNELBASE.dll: GetModuleHandleExW()
+#10 0x5FA4CD6F in C:\ФАЙЛЫ\загрузки\TX\Windows\dbghelp32.dll: MiniDumpReadDumpStream()
+#11 0x5F9EAF34 in C:\ФАЙЛЫ\загрузки\TX\Windows\dbghelp32.dll: MiniDumpReadDumpStream()
+#14 0x5F98D201 in C:\ФАЙЛЫ\загрузки\TX\Windows\dbghelp32.dll: RemoveInvalidModuleList()
+#15 0x5F98DE39 in C:\ФАЙЛЫ\загрузки\TX\Windows\dbghelp32.dll: RemoveInvalidModuleList()
+#16 0x5F9AC070 in C:\ФАЙЛЫ\загрузки\TX\Windows\dbghelp32.dll: ImagehlpApiVersionEx()
+#17 0x5F9AACDE in C:\ФАЙЛЫ\загрузки\TX\Windows\dbghelp32.dll: ImagehlpApiVersionEx()
+#18 0x5F9AA985 in C:\ФАЙЛЫ\загрузки\TX\Windows\dbghelp32.dll: ImagehlpApiVersionEx()
+#19 0x5F9A407F in C:\ФАЙЛЫ\загрузки\TX\Windows\dbghelp32.dll: SymFunctionTableAccess64AccessRoutines()
+#20 0x5F9A400A in C:\ФАЙЛЫ\загрузки\TX\Windows\dbghelp32.dll: SymFunctionTableAccess64()
+#21 0x5F99FAA9 in C:\ФАЙЛЫ\загрузки\TX\Windows\dbghelp32.dll: SymGetFileLineOffsets64()
+#22 0x5F9D118E in C:\ФАЙЛЫ\загрузки\TX\Windows\dbghelp32.dll: MiniDumpReadDumpStream()
+#23 0x5F9D2B88 in C:\ФАЙЛЫ\загрузки\TX\Windows\dbghelp32.dll: MiniDumpReadDumpStream()
+#24 0x5F9D17C8 in C:\ФАЙЛЫ\загрузки\TX\Windows\dbghelp32.dll: MiniDumpReadDumpStream()
+#25 0x5F9B8502 in C:\ФАЙЛЫ\загрузки\TX\Windows\dbghelp32.dll: DbgHelpCreateUserDumpW()
+#26 0x5F9B8AB3 in C:\ФАЙЛЫ\загрузки\TX\Windows\dbghelp32.dll: StackWalkEx()
+#27 0x5F9B8CE9 in C:\ФАЙЛЫ\загрузки\TX\Windows\dbghelp32.dll: StackWalk64()
+#28 0x00415860 in C:\Users\иван\Google Диск\C\onegin\on_почти.exe: _ZN12_GLOBAL__N_12TX12_txStackWalkEijPPvPmP8_CONTEXTS1_()
+#29 0x00414AC8 in C:\Users\иван\Google Диск\C\onegin\on_почти.exe: _ZN12_GLOBAL__N_12TX24_txCaptureStackBackTraceEibP8_CONTEXTPv()
+#30 0x0040F5B5 in C:\Users\иван\Google Диск\C\onegin\on_почти.exe: _ZN12_GLOBAL__N_12TX17_txOnExceptionSEHEP19_EXCEPTION_POINTERSPKc()
+#31 0x0040EF91 in C:\Users\иван\Google Диск\C\onegin\on_почти.exe: _ZN12_GLOBAL__N_12TX27_txVectoredExceptionHandlerEP19_EXCEPTION_POINTERS@4()
+#32 0x7718DE51 in C:\WINDOWS\SYSTEM32\ntdll.dll: EtwRegisterTraceGuidsW()
+#33 0x77192A5F in C:\WINDOWS\SYSTEM32\ntdll.dll: RtlUnwind()
+#34 0x7719C716 in C:\WINDOWS\SYSTEM32\ntdll.dll: KiUserExceptionDispatcher()
+#35 0x771852EB in C:\WINDOWS\SYSTEM32\ntdll.dll: RtlRunOnceBeginInitialize()
+#36 0x77176347 in C:\WINDOWS\SYSTEM32\ntdll.dll: RtlAllocateHeap()
+#37 0x771749C9 in C:\WINDOWS\SYSTEM32\ntdll.dll: RtlAllocateHeap()
+#38 0x7717483E in C:\WINDOWS\SYSTEM32\ntdll.dll: RtlAllocateHeap()
+#39 0x76FC72A0 in C:\WINDOWS\System32\msvcrt.dll: malloc()
+#40 0x76FC701A in C:\WINDOWS\System32\msvcrt.dll: calloc()
+#41 0x66261879 in C:\ФАЙЛЫ\загрузки\TX\Windows\MgwHelp32.dll: SymGetLineFromAddrW64()
+#43 0x7407D149 in C:\WINDOWS\System32\KERNELBASE.dll: GetModuleHandleExW()
+#44 0x5FA4CD6F in C:\ФАЙЛЫ\загрузки\TX\Windows\dbghelp32.dll: MiniDumpReadDumpStream()
+#45 0x5F9EAF34 in C:\ФАЙЛЫ\загрузки\TX\Windows\dbghelp32.dll: MiniDumpReadDumpStream()
+#48 0x5F98D201 in C:\ФАЙЛЫ\загрузки\TX\Windows\dbghelp32.dll: RemoveInvalidModuleList()
+#49 0x5F98DE39 in C:\ФАЙЛЫ\загрузки\TX\Windows\dbghelp32.dll: RemoveInvalidModuleList()
+#50 0x5F9AC070 in C:\ФАЙЛЫ\загрузки\TX\Windows\dbghelp32.dll: ImagehlpApiVersionEx()
+#51 0x5F9AACDE in C:\ФАЙЛЫ\загрузки\TX\Windows\dbghelp32.dll: ImagehlpApiVersionEx()
+#52 0x5F9AA985 in C:\ФАЙЛЫ\загрузки\TX\Windows\dbghelp32.dll: ImagehlpApiVersionEx()
+#53 0x5F9A407F in C:\ФАЙЛЫ\загрузки\TX\Windows\dbghelp32.dll: SymFunctionTableAccess64AccessRoutines()
+#54 0x5F9A400A in C:\ФАЙЛЫ\загрузки\TX\Windows\dbghelp32.dll: SymFunctionTableAccess64()
+#55 0x5F99FAA9 in C:\ФАЙЛЫ\загрузки\TX\Windows\dbghelp32.dll: SymGetFileLineOffsets64()
+#56 0x5F9D118E in C:\ФАЙЛЫ\загрузки\TX\Windows\dbghelp32.dll: MiniDumpReadDumpStream()
+#57 0x5F9D2B88 in C:\ФАЙЛЫ\загрузки\TX\Windows\dbghelp32.dll: MiniDumpReadDumpStream()
+#58 0x5F9D17C8 in C:\ФАЙЛЫ\загрузки\TX\Windows\dbghelp32.dll: MiniDumpReadDumpStream()
+#59 0x5F9B8502 in C:\ФАЙЛЫ\загрузки\TX\Windows\dbghelp32.dll: DbgHelpCreateUserDumpW()
+#60 0x5F9B8AB3 in C:\ФАЙЛЫ\загрузки\TX\Windows\dbghelp32.dll: StackWalkEx()
+#61 0x5F9B8CE9 in C:\ФАЙЛЫ\загрузки\TX\Windows\dbghelp32.dll: StackWalk64()
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in bool {anonymous}::TX::_txSymGetFromAddr(void*, {anonymous}::TX::Win32::SYMBOL_INFO**, {anonymous}::TX::Win32::IMAGEHLP_LINE64**, const char**, const char**, int) at C:\ФАЙЛЫ\загрузки\TX\TXLib.h (9853):
+
+   9851: 
+   9852: $       SetLastError (0);
+=> 9853: $       (_TX_CALL (MinGW::SymGetLineFromAddr64, (process, (uintptr_t) addr, &ofs, &line64)) && RES_(l)) ||
+   9854:         (_TX_CALL (Win32::SymGetLineFromAddr64, (process, (uintptr_t) addr, &ofs, &line64)) && RES_(L)) ||
+   9855:             DBG_("SymGetLineFromAddr64 (\"%s\") failed", (symbol? (*symbol)->Name : "(null)"));
+
+# 1 in const char* {anonymous}::TX::_txCaptureStackBackTrace(int, bool, CONTEXT*, HANDLE) at C:\ФАЙЛЫ\загрузки\TX\TXLib.h (9598):
+
+   9596: $       bool                    inTX   = false;
+   9597: 
+=> 9598:         if (addr)                { $ inTX = _txSymGetFromAddr ((char*) addr - 1, &sym, &line, &module);          }
+   9599:         if (readSource && !inTX) { $        _txSymGetFromAddr ((void*) 1,        NULL, NULL,  NULL, &source, 2); }
+   9600: 
+
+# 2 in long int {anonymous}::TX::_txOnExceptionSEH(EXCEPTION_POINTERS*, const char*) at C:\ФАЙЛЫ\загрузки\TX\TXLib.h (9096):
+
+   9094: $       unsigned err = GetLastError();
+   9095: 
+=> 9096: $       const char* stackTrace = _txCaptureStackBackTrace (0, true, exc->ContextRecord);
+   9097: 
+   9098: $       _txDumpExceptionSEH (_txDumpSE,  (ptrdiff_t) sizeof (_txDumpSE)  - 1, exc->ExceptionRecord, func);
+
+# 3 in bool {anonymous}::TX::_txSymGetFromAddr(void*, {anonymous}::TX::Win32::SYMBOL_INFO**, {anonymous}::TX::Win32::IMAGEHLP_LINE64**, const char**, const char**, int) at C:\ФАЙЛЫ\загрузки\TX\TXLib.h (9853):
+
+   9851: 
+   9852: $       SetLastError (0);
+=> 9853: $       (_TX_CALL (MinGW::SymGetLineFromAddr64, (process, (uintptr_t) addr, &ofs, &line64)) && RES_(l)) ||
+   9854:         (_TX_CALL (Win32::SymGetLineFromAddr64, (process, (uintptr_t) addr, &ofs, &line64)) && RES_(L)) ||
+   9855:             DBG_("SymGetLineFromAddr64 (\"%s\") failed", (symbol? (*symbol)->Name : "(null)"));
+
+# 4 in const char* {anonymous}::TX::_txCaptureStackBackTrace(int, bool, CONTEXT*, HANDLE) at C:\ФАЙЛЫ\загрузки\TX\TXLib.h (9598):
+
+   9596: $       bool                    inTX   = false;
+   9597: 
+=> 9598:         if (addr)                { $ inTX = _txSymGetFromAddr ((char*) addr - 1, &sym, &line, &module);          }
+   9599:         if (readSource && !inTX) { $        _txSymGetFromAddr ((void*) 1,        NULL, NULL,  NULL, &source, 2); }
+   9600: 
+
+# 5 in long int {anonymous}::TX::_txOnExceptionSEH(EXCEPTION_POINTERS*, const char*) at C:\ФАЙЛЫ\загрузки\TX\TXLib.h (9096):
+
+   9094: $       unsigned err = GetLastError();
+   9095: 
+=> 9096: $       const char* stackTrace = _txCaptureStackBackTrace (0, true, exc->ContextRecord);
+   9097: 
+   9098: $       _txDumpExceptionSEH (_txDumpSE,  (ptrdiff_t) sizeof (_txDumpSE)  - 1, exc->ExceptionRecord, func);
+
+# 6 in bool {anonymous}::TX::_txSymGetFromAddr(void*, {anonymous}::TX::Win32::SYMBOL_INFO**, {anonymous}::TX::Win32::IMAGEHLP_LINE64**, const char**, const char**, int) at C:\ФАЙЛЫ\загрузки\TX\TXLib.h (9853):
+
+   9851: 
+   9852: $       SetLastError (0);
+=> 9853: $       (_TX_CALL (MinGW::SymGetLineFromAddr64, (process, (uintptr_t) addr, &ofs, &line64)) && RES_(l)) ||
+   9854:         (_TX_CALL (Win32::SymGetLineFromAddr64, (process, (uintptr_t) addr, &ofs, &line64)) && RES_(L)) ||
+   9855:             DBG_("SymGetLineFromAddr64 (\"%s\") failed", (symbol? (*symbol)->Name : "(null)"));
+
+# 7 in const char* {anonymous}::TX::_txCaptureStackBackTrace(int, bool, CONTEXT*, HANDLE) at C:\ФАЙЛЫ\загрузки\TX\TXLib.h (9598):
+
+   9596: $       bool                    inTX   = false;
+   9597: 
+=> 9598:         if (addr)                { $ inTX = _txSymGetFromAddr ((char*) addr - 1, &sym, &line, &module);          }
+   9599:         if (readSource && !inTX) { $        _txSymGetFromAddr ((void*) 1,        NULL, NULL,  NULL, &source, 2); }
+   9600: 
+
+# 8 in long int {anonymous}::TX::_txOnExceptionSEH(EXCEPTION_POINTERS*, const char*) at C:\ФАЙЛЫ\загрузки\TX\TXLib.h (9096):
+
+   9094: $       unsigned err = GetLastError();
+   9095: 
+=> 9096: $       const char* stackTrace = _txCaptureStackBackTrace (0, true, exc->ContextRecord);
+   9097: 
+   9098: $       _txDumpExceptionSEH (_txDumpSE,  (ptrdiff_t) sizeof (_txDumpSE)  - 1, exc->ExceptionRecord, func);
+
+# 9 in int {anonymous}::TX::_txStackWalk(int, size_t, void**, long unsigned int*, CONTEXT*, HANDLE) at C:\ФАЙЛЫ\загрузки\TX\TXLib.h (9725):
+
+   9723: $   for (n = -framesToSkip; n < (int) szCapture; n++)
+   9724:         {
+=> 9725: $       DWORD64 prev = frame.AddrStack.Offset;
+   9726: 
+   9727:         // Я злой и страшный серый walk. Я в поросятах знаю talk.
+
+#10 in const char* {anonymous}::TX::_txCaptureStackBackTrace(int, bool, CONTEXT*, HANDLE) at C:\ФАЙЛЫ\загрузки\TX\TXLib.h (9581):
+
+   9579: 
+   9580: $   static void* capture [maxFrames] = {};
+=> 9581: $   int frames = _txStackWalk (framesToSkip + !context, SIZEARR (capture), capture, NULL, context, thread);
+   9582: 
+   9583: $   memset (trace, 0, sizeof (trace));
+
+#11 in long int {anonymous}::TX::_txOnExceptionSEH(EXCEPTION_POINTERS*, const char*) at C:\ФАЙЛЫ\загрузки\TX\TXLib.h (9096):
+
+   9094: $       unsigned err = GetLastError();
+   9095: 
+=> 9096: $       const char* stackTrace = _txCaptureStackBackTrace (0, true, exc->ContextRecord);
+   9097: 
+   9098: $       _txDumpExceptionSEH (_txDumpSE,  (ptrdiff_t) sizeof (_txDumpSE)  - 1, exc->ExceptionRecord, func);
+
+#12 in int {anonymous}::TX::_txStackWalk(int, size_t, void**, long unsigned int*, CONTEXT*, HANDLE) at C:\ФАЙЛЫ\загрузки\TX\TXLib.h (9725):
+
+   9723: $   for (n = -framesToSkip; n < (int) szCapture; n++)
+   9724:         {
+=> 9725: $       DWORD64 prev = frame.AddrStack.Offset;
+   9726: 
+   9727:         // Я злой и страшный серый walk. Я в поросятах знаю talk.
+
+#13 in const char* {anonymous}::TX::_txCaptureStackBackTrace(int, bool, CONTEXT*, HANDLE) at C:\ФАЙЛЫ\загрузки\TX\TXLib.h (9581):
+
+   9579: 
+   9580: $   static void* capture [maxFrames] = {};
+=> 9581: $   int frames = _txStackWalk (framesToSkip + !context, SIZEARR (capture), capture, NULL, context, thread);
+   9582: 
+   9583: $   memset (trace, 0, sizeof (trace));
+
+#14 in long int {anonymous}::TX::_txOnExceptionSEH(EXCEPTION_POINTERS*, const char*) at C:\ФАЙЛЫ\загрузки\TX\TXLib.h (9096):
+
+   9094: $       unsigned err = GetLastError();
+   9095: 
+=> 9096: $       const char* stackTrace = _txCaptureStackBackTrace (0, true, exc->ContextRecord);
+   9097: 
+   9098: $       _txDumpExceptionSEH (_txDumpSE,  (ptrdiff_t) sizeof (_txDumpSE)  - 1, exc->ExceptionRecord, func);
+
+#15 in int {anonymous}::TX::_txStackWalk(int, size_t, void**, long unsigned int*, CONTEXT*, HANDLE) at C:\ФАЙЛЫ\загрузки\TX\TXLib.h (9725):
+
+   9723: $   for (n = -framesToSkip; n < (int) szCapture; n++)
+   9724:         {
+=> 9725: $       DWORD64 prev = frame.AddrStack.Offset;
+   9726: 
+   9727:         // Я злой и страшный серый walk. Я в поросятах знаю talk.
+
+#16 in const char* {anonymous}::TX::_txCaptureStackBackTrace(int, bool, CONTEXT*, HANDLE) at C:\ФАЙЛЫ\загрузки\TX\TXLib.h (9581):
+
+   9579: 
+   9580: $   static void* capture [maxFrames] = {};
+=> 9581: $   int frames = _txStackWalk (framesToSkip + !context, SIZEARR (capture), capture, NULL, context, thread);
+   9582: 
+   9583: $   memset (trace, 0, sizeof (trace));
+
+#17 in long int {anonymous}::TX::_txOnExceptionSEH(EXCEPTION_POINTERS*, const char*) at C:\ФАЙЛЫ\загрузки\TX\TXLib.h (9096):
+
+   9094: $       unsigned err = GetLastError();
+   9095: 
+=> 9096: $       const char* stackTrace = _txCaptureStackBackTrace (0, true, exc->ContextRecord);
+   9097: 
+   9098: $       _txDumpExceptionSEH (_txDumpSE,  (ptrdiff_t) sizeof (_txDumpSE)  - 1, exc->ExceptionRecord, func);
+
+#18 in int {anonymous}::TX::_txStackWalk(int, size_t, void**, long unsigned int*, CONTEXT*, HANDLE) at C:\ФАЙЛЫ\загрузки\TX\TXLib.h (9725):
+
+   9723: $   for (n = -framesToSkip; n < (int) szCapture; n++)
+   9724:         {
+=> 9725: $       DWORD64 prev = frame.AddrStack.Offset;
+   9726: 
+   9727:         // Я злой и страшный серый walk. Я в поросятах знаю talk.
+
+#19 in const char* {anonymous}::TX::_txCaptureStackBackTrace(int, bool, CONTEXT*, HANDLE) at C:\ФАЙЛЫ\загрузки\TX\TXLib.h (9581):
+
+   9579: 
+   9580: $   static void* capture [maxFrames] = {};
+=> 9581: $   int frames = _txStackWalk (framesToSkip + !context, SIZEARR (capture), capture, NULL, context, thread);
+   9582: 
+   9583: $   memset (trace, 0, sizeof (trace));
+
+#20 in long int {anonymous}::TX::_txOnExceptionSEH(EXCEPTION_POINTERS*, const char*) at C:\ФАЙЛЫ\загрузки\TX\TXLib.h (9096):
+
+   9094: $       unsigned err = GetLastError();
+   9095: 
+=> 9096: $       const char* stackTrace = _txCaptureStackBackTrace (0, true, exc->ContextRecord);
+   9097: 
+   9098: $       _txDumpExceptionSEH (_txDumpSE,  (ptrdiff_t) sizeof (_txDumpSE)  - 1, exc->ExceptionRecord, func);
+
+#21 in int {anonymous}::TX::_txStackWalk(int, size_t, void**, long unsigned int*, CONTEXT*, HANDLE) at C:\ФАЙЛЫ\загрузки\TX\TXLib.h (9725):
+
+   9723: $   for (n = -framesToSkip; n < (int) szCapture; n++)
+   9724:         {
+=> 9725: $       DWORD64 prev = frame.AddrStack.Offset;
+   9726: 
+   9727:         // Я злой и страшный серый walk. Я в поросятах знаю talk.
+
+#22 in const char* {anonymous}::TX::_txCaptureStackBackTrace(int, bool, CONTEXT*, HANDLE) at C:\ФАЙЛЫ\загрузки\TX\TXLib.h (9581):
+
+   9579: 
+   9580: $   static void* capture [maxFrames] = {};
+=> 9581: $   int frames = _txStackWalk (framesToSkip + !context, SIZEARR (capture), capture, NULL, context, thread);
+   9582: 
+   9583: $   memset (trace, 0, sizeof (trace));
+
+#23 in long int {anonymous}::TX::_txOnExceptionSEH(EXCEPTION_POINTERS*, const char*) at C:\ФАЙЛЫ\загрузки\TX\TXLib.h (9096):
+
+   9094: $       unsigned err = GetLastError();
+   9095: 
+=> 9096: $       const char* stackTrace = _txCaptureStackBackTrace (0, true, exc->ContextRecord);
+   9097: 
+   9098: $       _txDumpExceptionSEH (_txDumpSE,  (ptrdiff_t) sizeof (_txDumpSE)  - 1, exc->ExceptionRecord, func);
+
+#24 in int {anonymous}::TX::_txStackWalk(int, size_t, void**, long unsigned int*, CONTEXT*, HANDLE) at C:\ФАЙЛЫ\загрузки\TX\TXLib.h (9725):
+
+   9723: $   for (n = -framesToSkip; n < (int) szCapture; n++)
+   9724:         {
+=> 9725: $       DWORD64 prev = frame.AddrStack.Offset;
+   9726: 
+   9727:         // Я злой и страшный серый walk. Я в поросятах знаю talk.
+
+#25 in const char* {anonymous}::TX::_txCaptureStackBackTrace(int, bool, CONTEXT*, HANDLE) at C:\ФАЙЛЫ\загрузки\TX\TXLib.h (9581):
+
+   9579: 
+   9580: $   static void* capture [maxFrames] = {};
+=> 9581: $   int frames = _txStackWalk (framesToSkip + !context, SIZEARR (capture), capture, NULL, context, thread);
+   9582: 
+   9583: $   memset (trace, 0, sizeof (trace));
+
+#26 in long int {anonymous}::TX::_txOnExceptionSEH(EXCEPTION_POINTERS*, const char*) at C:\ФАЙЛЫ\загрузки\TX\TXLib.h (9096):
+
+   9094: $       unsigned err = GetLastError();
+   9095: 
+=> 9096: $       const char* stackTrace = _txCaptureStackBackTrace (0, true, exc->ContextRecord);
+   9097: 
+   9098: $       _txDumpExceptionSEH (_txDumpSE,  (ptrdiff_t) sizeof (_txDumpSE)  - 1, exc->ExceptionRecord, func);
+
+#27 in int {anonymous}::TX::_txStackWalk(int, size_t, void**, long unsigned int*, CONTEXT*, HANDLE) at C:\ФАЙЛЫ\загрузки\TX\TXLib.h (9725):
+
+   9723: $   for (n = -framesToSkip; n < (int) szCapture; n++)
+   9724:         {
+=> 9725: $       DWORD64 prev = frame.AddrStack.Offset;
+   9726: 
+   9727:         // Я злой и страшный серый walk. Я в поросятах знаю talk.
+
+#28 in const char* {anonymous}::TX::_txCaptureStackBackTrace(int, bool, CONTEXT*, HANDLE) at C:\ФАЙЛЫ\загрузки\TX\TXLib.h (9581):
+
+   9579: 
+   9580: $   static void* capture [maxFrames] = {};
+=> 9581: $   int frames = _txStackWalk (framesToSkip + !context, SIZEARR (capture), capture, NULL, context, thread);
+   9582: 
+   9583: $   memset (trace, 0, sizeof (trace));
+
+#29 in long int {anonymous}::TX::_txOnExceptionSEH(EXCEPTION_POINTERS*, const char*) at C:\ФАЙЛЫ\загрузки\TX\TXLib.h (9096):
+
+   9094: $       unsigned err = GetLastError();
+   9095: 
+=> 9096: $       const char* stackTrace = _txCaptureStackBackTrace (0, true, exc->ContextRecord);
+   9097: 
+   9098: $       _txDumpExceptionSEH (_txDumpSE,  (ptrdiff_t) sizeof (_txDumpSE)  - 1, exc->ExceptionRecord, func);
+
+#30 in int {anonymous}::TX::_txStackWalk(int, size_t, void**, long unsigned int*, CONTEXT*, HANDLE) at C:\ФАЙЛЫ\загрузки\TX\TXLib.h (9725):
+
+   9723: $   for (n = -framesToSkip; n < (int) szCapture; n++)
+   9724:         {
+=> 9725: $       DWORD64 prev = frame.AddrStack.Offset;
+   9726: 
+   9727:         // Я злой и страшный серый walk. Я в поросятах знаю talk.
+
+#31 in const char* {anonymous}::TX::_txCaptureStackBackTrace(int, bool, CONTEXT*, HANDLE) at C:\ФАЙЛЫ\загрузки\TX\TXLib.h (9581):
+
+   9579: 
+   9580: $   static void* capture [maxFrames] = {};
+=> 9581: $   int frames = _txStackWalk (framesToSkip + !context, SIZEARR (capture), capture, NULL, context, thread);
+   9582: 
+   9583: $   memset (trace, 0, sizeof (trace));
+
+#32 in long int {anonymous}::TX::_txOnExceptionSEH(EXCEPTION_POINTERS*, const char*) at C:\ФАЙЛЫ\загрузки\TX\TXLib.h (9096):
+
+   9094: $       unsigned err = GetLastError();
+   9095: 
+=> 9096: $       const char* stackTrace = _txCaptureStackBackTrace (0, true, exc->ContextRecord);
+   9097: 
+   9098: $       _txDumpExceptionSEH (_txDumpSE,  (ptrdiff_t) sizeof (_txDumpSE)  - 1, exc->ExceptionRecord, func);
+
+#33 in int {anonymous}::TX::_txStackWalk(int, size_t, void**, long unsigned int*, CONTEXT*, HANDLE) at C:\ФАЙЛЫ\загрузки\TX\TXLib.h (9725):
+
+   9723: $   for (n = -framesToSkip; n < (int) szCapture; n++)
+   9724:         {
+=> 9725: $       DWORD64 prev = frame.AddrStack.Offset;
+   9726: 
+   9727:         // Я злой и страшный серый walk. Я в поросятах знаю talk.
+
+#34 in const char* {anonymous}::TX::_txCaptureStackBackTrace(int, bool, CONTEXT*, HANDLE) at C:\ФАЙЛЫ\загрузки\TX\TXLib.h (9581):
+
+   9579: 
+   9580: $   static void* capture [maxFrames] = {};
+=> 9581: $   int frames = _txStackWalk (framesToSkip + !context, SIZEARR (capture), capture, NULL, context, thread);
+   9582: 
+   9583: $   memset (trace, 0, sizeof (trace));
+
+#35 in long int {anonymous}::TX::_txOnExceptionSEH(EXCEPTION_POINTERS*, const char*) at C:\ФАЙЛЫ\загрузки\TX\TXLib.h (9096):
+
+   9094: $       unsigned err = GetLastError();
+   9095: 
+=> 9096: $       const char* stackTrace = _txCaptureStackBackTrace (0, true, exc->ContextRecord);
+   9097: 
+   9098: $       _txDumpExceptionSEH (_txDumpSE,  (ptrdiff_t) sizeof (_txDumpSE)  - 1, exc->ExceptionRecord, func);
+
+#36 in int {anonymous}::TX::_txStackWalk(int, size_t, void**, long unsigned int*, CONTEXT*, HANDLE) at C:\ФАЙЛЫ\загрузки\TX\TXLib.h (9725):
+
+   9723: $   for (n = -framesToSkip; n < (int) szCapture; n++)
+   9724:         {
+=> 9725: $       DWORD64 prev = frame.AddrStack.Offset;
+   9726: 
+   9727:         // Я злой и страшный серый walk. Я в поросятах знаю talk.
+
+#37 in const char* {anonymous}::TX::_txCaptureStackBackTrace(int, bool, CONTEXT*, HANDLE) at C:\ФАЙЛЫ\загрузки\TX\TXLib.h (9581):
+
+   9579: 
+   9580: $   static void* capture [maxFrames] = {};
+=> 9581: $   int frames = _txStackWalk (framesToSkip + !context, SIZEARR (capture), capture, NULL, context, thread);
+   9582: 
+   9583: $   memset (trace, 0, sizeof (trace));
+
+#38 in long int {anonymous}::TX::_txOnExceptionSEH(EXCEPTION_POINTERS*, const char*) at C:\ФАЙЛЫ\загрузки\TX\TXLib.h (9096):
+
+   9094: $       unsigned err = GetLastError();
+   9095: 
+=> 9096: $       const char* stackTrace = _txCaptureStackBackTrace (0, true, exc->ContextRecord);
+   9097: 
+   9098: $       _txDumpExceptionSEH (_txDumpSE,  (ptrdiff_t) sizeof (_txDumpSE)  - 1, exc->ExceptionRecord, func);
+
+#39 in int {anonymous}::TX::_txStackWalk(int, size_t, void**, long unsigned int*, CONTEXT*, HANDLE) at C:\ФАЙЛЫ\загрузки\TX\TXLib.h (9725):
+
+   9723: $   for (n = -framesToSkip; n < (int) szCapture; n++)
+   9724:         {
+=> 9725: $       DWORD64 prev = frame.AddrStack.Offset;
+   9726: 
+   9727:         // Я злой и страшный серый walk. Я в поросятах знаю talk.
+
+#40 in const char* {anonymous}::TX::_txCaptureStackBackTrace(int, bool, CONTEXT*, HANDLE) at C:\ФАЙЛЫ\загрузки\TX\TXLib.h (9581):
+
+   9579: 
+   9580: $   static void* capture [maxFrames] = {};
+=> 9581: $   int frames = _txStackWalk (framesToSkip + !context, SIZEARR (capture), capture, NULL, context, thread);
+   9582: 
+   9583: $   memset (trace, 0, sizeof (trace));
+
+#41 in long int {anonymous}::TX::_txOnExceptionSEH(EXCEPTION_POINTERS*, const char*) at C:\ФАЙЛЫ\загрузки\TX\TXLib.h (9096):
+
+   9094: $       unsigned err = GetLastError();
+   9095: 
+=> 9096: $       const char* stackTrace = _txCaptureStackBackTrace (0, true, exc->ContextRecord);
+   9097: 
+   9098: $       _txDumpExceptionSEH (_txDumpSE,  (ptrdiff_t) sizeof (_txDumpSE)  - 1, exc->ExceptionRecord, func);
+
+#42 in int {anonymous}::TX::_txStackWalk(int, size_t, void**, long unsigned int*, CONTEXT*, HANDLE) at C:\ФАЙЛЫ\загрузки\TX\TXLib.h (9725):
+
+   9723: $   for (n = -framesToSkip; n < (int) szCapture; n++)
+   9724:         {
+=> 9725: $       DWORD64 prev = frame.AddrStack.Offset;
+   9726: 
+   9727:         // Я злой и страшный серый walk. Я в поросятах знаю talk.
+
+#43 in const char* {anonymous}::TX::_txCaptureStackBackTrace(int, bool, CONTEXT*, HANDLE) at C:\ФАЙЛЫ\загрузки\TX\TXLib.h (9581):
+
+   9579: 
+   9580: $   static void* capture [maxFrames] = {};
+=> 9581: $   int frames = _txStackWalk (framesToSkip + !context, SIZEARR (capture), capture, NULL, context, thread);
+   9582: 
+   9583: $   memset (trace, 0, sizeof (trace));
+
+#44 in long int {anonymous}::TX::_txOnExceptionSEH(EXCEPTION_POINTERS*, const char*) at C:\ФАЙЛЫ\загрузки\TX\TXLib.h (9096):
+
+   9094: $       unsigned err = GetLastError();
+   9095: 
+=> 9096: $       const char* stackTrace = _txCaptureStackBackTrace (0, true, exc->ContextRecord);
+   9097: 
+   9098: $       _txDumpExceptionSEH (_txDumpSE,  (ptrdiff_t) sizeof (_txDumpSE)  - 1, exc->ExceptionRecord, func);
+
+#45 in int {anonymous}::TX::_txStackWalk(int, size_t, void**, long unsigned int*, CONTEXT*, HANDLE) at C:\ФАЙЛЫ\загрузки\TX\TXLib.h (9725):
+
+   9723: $   for (n = -framesToSkip; n < (int) szCapture; n++)
+   9724:         {
+=> 9725: $       DWORD64 prev = frame.AddrStack.Offset;
+   9726: 
+   9727:         // Я злой и страшный серый walk. Я в поросятах знаю talk.
+
+#46 in const char* {anonymous}::TX::_txCaptureStackBackTrace(int, bool, CONTEXT*, HANDLE) at C:\ФАЙЛЫ\загрузки\TX\TXLib.h (9581):
+
+   9579: 
+   9580: $   static void* capture [maxFrames] = {};
+=> 9581: $   int frames = _txStackWalk (framesToSkip + !context, SIZEARR (capture), capture, NULL, context, thread);
+   9582: 
+   9583: $   memset (trace, 0, sizeof (trace));
+
+#47 in long int {anonymous}::TX::_txOnExceptionSEH(EXCEPTION_POINTERS*, const char*) at C:\ФАЙЛЫ\загрузки\TX\TXLib.h (9096):
+
+   9094: $       unsigned err = GetLastError();
+   9095: 
+=> 9096: $       const char* stackTrace = _txCaptureStackBackTrace (0, true, exc->ContextRecord);
+   9097: 
+   9098: $       _txDumpExceptionSEH (_txDumpSE,  (ptrdiff_t) sizeof (_txDumpSE)  - 1, exc->ExceptionRecord, func);
+
+#48 in int {anonymous}::TX::_txStackWalk(int, size_t, void**, long unsigned int*, CONTEXT*, HANDLE) at C:\ФАЙЛЫ\загрузки\TX\TXLib.h (9725):
+
+   9723: $   for (n = -framesToSkip; n < (int) szCapture; n++)
+   9724:         {
+=> 9725: $       DWORD64 prev = frame.AddrStack.Offset;
+   9726: 
+   9727:         // Я злой и страшный серый walk. Я в поросятах знаю talk.
+
+#49 in const char* {anonymous}::TX::_txCaptureStackBackTrace(int, bool, CONTEXT*, HANDLE) at C:\ФАЙЛЫ\загрузки\TX\TXLib.h (9581):
+
+   9579: 
+   9580: $   static void* capture [maxFrames] = {};
+=> 9581: $   int frames = _txStackWalk (framesToSkip + !context, SIZEARR (capture), capture, NULL, context, thread);
+   9582: 
+   9583: $   memset (trace, 0, sizeof (trace));
+
+#50 in long int {anonymous}::TX::_txOnExceptionSEH(EXCEPTION_POINTERS*, const char*) at C:\ФАЙЛЫ\загрузки\TX\TXLib.h (9096):
+
+   9094: $       unsigned err = GetLastError();
+   9095: 
+=> 9096: $       const char* stackTrace = _txCaptureStackBackTrace (0, true, exc->ContextRecord);
+   9097: 
+   9098: $       _txDumpExceptionSEH (_txDumpSE,  (ptrdiff_t) sizeof (_txDumpSE)  - 1, exc->ExceptionRecord, func);
+
+#51 in int {anonymous}::TX::_txStackWalk(int, size_t, void**, long unsigned int*, CONTEXT*, HANDLE) at C:\ФАЙЛЫ\загрузки\TX\TXLib.h (9725):
+
+   9723: $   for (n = -framesToSkip; n < (int) szCapture; n++)
+   9724:         {
+=> 9725: $       DWORD64 prev = frame.AddrStack.Offset;
+   9726: 
+   9727:         // Я злой и страшный серый walk. Я в поросятах знаю talk.
+
+#52 in const char* {anonymous}::TX::_txCaptureStackBackTrace(int, bool, CONTEXT*, HANDLE) at C:\ФАЙЛЫ\загрузки\TX\TXLib.h (9581):
+
+   9579: 
+   9580: $   static void* capture [maxFrames] = {};
+=> 9581: $   int frames = _txStackWalk (framesToSkip + !context, SIZEARR (capture), capture, NULL, context, thread);
+   9582: 
+   9583: $   memset (trace, 0, sizeof (trace));
+
+#53 in long int {anonymous}::TX::_txOnExceptionSEH(EXCEPTION_POINTERS*, const char*) at C:\ФАЙЛЫ\загрузки\TX\TXLib.h (9096):
+
+   9094: $       unsigned err = GetLastError();
+   9095: 
+=> 9096: $       const char* stackTrace = _txCaptureStackBackTrace (0, true, exc->ContextRecord);
+   9097: 
+   9098: $       _txDumpExceptionSEH (_txDumpSE,  (ptrdiff_t) sizeof (_txDumpSE)  - 1, exc->ExceptionRecord, func);
+
+#54 in bool {anonymous}::TX::_txSymGetFromAddr(void*, {anonymous}::TX::Win32::SYMBOL_INFO**, {anonymous}::TX::Win32::IMAGEHLP_LINE64**, const char**, const char**, int) at C:\ФАЙЛЫ\загрузки\TX\TXLib.h (9853):
+
+   9851: 
+   9852: $       SetLastError (0);
+=> 9853: $       (_TX_CALL (MinGW::SymGetLineFromAddr64, (process, (uintptr_t) addr, &ofs, &line64)) && RES_(l)) ||
+   9854:         (_TX_CALL (Win32::SymGetLineFromAddr64, (process, (uintptr_t) addr, &ofs, &line64)) && RES_(L)) ||
+   9855:             DBG_("SymGetLineFromAddr64 (\"%s\") failed", (symbol? (*symbol)->Name : "(null)"));
+
+#55 in const char* {anonymous}::TX::_txCaptureStackBackTrace(int, bool, CONTEXT*, HANDLE) at C:\ФАЙЛЫ\загрузки\TX\TXLib.h (9598):
+
+   9596: $       bool                    inTX   = false;
+   9597: 
+=> 9598:         if (addr)                { $ inTX = _txSymGetFromAddr ((char*) addr - 1, &sym, &line, &module);          }
+   9599:         if (readSource && !inTX) { $        _txSymGetFromAddr ((void*) 1,        NULL, NULL,  NULL, &source, 2); }
+   9600: 
+
+#56 in long int {anonymous}::TX::_txOnExceptionSEH(EXCEPTION_POINTERS*, const char*) at C:\ФАЙЛЫ\загрузки\TX\TXLib.h (9096):
+
+   9094: $       unsigned err = GetLastError();
+   9095: 
+=> 9096: $       const char* stackTrace = _txCaptureStackBackTrace (0, true, exc->ContextRecord);
+   9097: 
+   9098: $       _txDumpExceptionSEH (_txDumpSE,  (ptrdiff_t) sizeof (_txDumpSE)  - 1, exc->ExceptionRecord, func);
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 105, Date: 2018-06-12 00:00:00 +0300]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\ФАЙЛЫ\загрузки\TX\TXLib.h
+Compiled:	Oct  9 2018 17:59:57, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Oct 09 2018 18:00:05
+
+Run file:	C:\Users\иван\Google Диск\C\onegin\on_почти.exe
+Directory:	C:\Users\иван\Google Диск\C\onegin
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: C:\Users\иван\Google Диск\C\onegin\on_почти.exe,
+
+ВНЕЗАПНО: Нарушение доступа к памяти.
+
+#24: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x770094C0 в функции strlen(). Попытка прочесть данные по адресу 0x02E97E00. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+#3: TXLib [Ver: 00173a, Rev: 105, Date: 2018-06-12 00:00:00 +0300], Instance: 0x004FF2C0 (32-bit), Flags: Cmdre0, Thread: 0x1D30 (Main), GetLastError(): 183 (Невозможно создать файл, так как он уже существует), errno: 12 (Visual C++ CRT: Not enough memory to complete call to strerror.). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x770094C0 in C:\Users\иван\Google Диск\C\onegin\on_почти.exe: RaiseException()
+# 1 0x76FBA272 in C:\WINDOWS\System32\msvcrt.dll: CxxThrowException()
+# 2 0x613A611A in C:\ФАЙЛЫ\загрузки\TX\Windows\DbgHelp.dll: MiniDumpReadDumpStream()
+# 3 0x613AA16C in C:\ФАЙЛЫ\загрузки\TX\Windows\DbgHelp.dll: MiniDumpReadDumpStream()
+# 4 0x613A9F45 in C:\ФАЙЛЫ\загрузки\TX\Windows\DbgHelp.dll: MiniDumpReadDumpStream()
+# 5 0x6134DDC1 in C:\ФАЙЛЫ\загрузки\TX\Windows\DbgHelp.dll: RemoveInvalidModuleList()
+# 6 0x6136C070 in C:\ФАЙЛЫ\загрузки\TX\Windows\DbgHelp.dll: ImagehlpApiVersionEx()
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 105, Date: 2018-06-12 00:00:00 +0300]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\ФАЙЛЫ\загрузки\TX\TXLib.h
+Compiled:	Oct  9 2018 17:59:57, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Oct 09 2018 18:00:05
+
+Run file:	C:\Users\иван\Google Диск\C\onegin\on_почти.exe
+Directory:	C:\Users\иван\Google Диск\C\onegin
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\иван\Google Диск\C\onegin\on_почти.exe,
+
+ВНЕЗАПНО: signal (11, 0x00): SIGSEGV: Доступ по неверному указателю. Ставьте ассерты! 
+
+Нарушение доступа к памяти.
+
+#24: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x770094C0 в функции strlen(). Попытка прочесть данные по адресу 0x02E97E00. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#4: TXLib [Ver: 00173a, Rev: 105, Date: 2018-06-12 00:00:00 +0300], Instance: 0x004FF2C0 (32-bit), Flags: Cmdre0, Thread: 0x1D30 (Main), GetLastError(): 183 (Невозможно создать файл, так как он уже существует), errno: 12 (Visual C++ CRT: Not enough memory to complete call to strerror.). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x770094C0 in C:\Users\иван\Google Диск\C\onegin\on_почти.exe: RaiseException()
+# 1 0x76FBA272 in C:\WINDOWS\System32\msvcrt.dll: CxxThrowException()
+# 2 0x613A611A in C:\ФАЙЛЫ\загрузки\TX\Windows\DbgHelp.dll: MiniDumpReadDumpStream()
+# 3 0x613AA16C in C:\ФАЙЛЫ\загрузки\TX\Windows\DbgHelp.dll: MiniDumpReadDumpStream()
+# 4 0x613A9F45 in C:\ФАЙЛЫ\загрузки\TX\Windows\DbgHelp.dll: MiniDumpReadDumpStream()
+# 5 0x6134DDC1 in C:\ФАЙЛЫ\загрузки\TX\Windows\DbgHelp.dll: RemoveInvalidModuleList()
+# 6 0x6136C070 in C:\ФАЙЛЫ\загрузки\TX\Windows\DbgHelp.dll: ImagehlpApiVersionEx()
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 105, Date: 2018-06-12 00:00:00 +0300]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\ФАЙЛЫ\загрузки\TX\TXLib.h
+Compiled:	Oct  9 2018 17:59:57, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Oct 09 2018 18:00:05
+
+Run file:	C:\Users\иван\Google Диск\C\onegin\on_почти.exe
+Directory:	C:\Users\иван\Google Диск\C\onegin
+
+--------------------------------------------------

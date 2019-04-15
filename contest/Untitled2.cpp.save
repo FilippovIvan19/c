@@ -1,0 +1,19 @@
+
+Decimal div10n (Decimal a, unsigned int n)
+{
+    Decimal b;
+    if (a.n - n >= 0)
+    {
+        b.n = a.n - n;
+
+        for (int i = n; i <= a.n; i++)
+            (b.a)[i - n] = (a.a)[i];
+    }
+    else
+        if (b.n == (unsigned int)-1)
+        (b.a)[0] = "0";
+    if (b.n == (unsigned int)-1)
+        b.n = 0;
+
+    return b;
+}
