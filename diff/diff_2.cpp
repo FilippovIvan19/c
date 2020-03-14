@@ -3,7 +3,8 @@
 //#include <sys\stat.h>
 #include <string.h>
 #include <stdlib.h>
-#include <TXlib.h>
+#include <math.h>
+// #include <TXlib.h>
 
 
 #include <iostream>
@@ -578,7 +579,7 @@ Node* simplify(Node* node)
 
             case OP_mul:
                      if ((node->left->type  == CONST_ && fabs(node->left->info)  < EPS)
-                     ||  (node->left->right == CONST_ && fabs(node->right->info) < EPS))
+                     ||  (node->right->type == CONST_ && fabs(node->right->info) < EPS))
                 {
                     sim_node = (Node*)calloc(1, sizeof(Node));
                     NodeCtor(sim_node, CONST_, 0);
@@ -619,10 +620,6 @@ Node* simplify(Node* node)
 
                 sim_node->left  = simplify(node->left);
                 sim_node->right = simplify(node->right);
-
-
-
-
         }
 
 
@@ -765,9 +762,5 @@ int main()
     print_tree(stdout, diff_root);
     printf("\n\n");
     print_tree(stdout, simp_root);
-
-
-
+    printf("\n\n");
 }
-
-
