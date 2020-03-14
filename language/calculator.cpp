@@ -94,22 +94,6 @@ int main()
 
     scanf("%s", str_in);
 
-    printf("%d", GetG(str_in));
+    printf("%d\n", GetG(str_in));
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

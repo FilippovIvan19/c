@@ -1,7 +1,5 @@
-
-
 #include <iostream>
-#define $(x) std::cout<<#x<<" = "<<(x)<<"\n";
+// #define $(x) std::cout<<#x<<" = "<<(x)<<"\n";
 
 
 #define Assert(x) \
@@ -13,29 +11,29 @@
     }
 
 
-#include "language.cpp"
 #include "stack.cpp"
+#include "language.cpp"
 //#include <TXlib.h>
 
 
 double memory[MaxArr] = {};
-int BP = 0;
+long BP = 0;
 double RAX = 0;
-const int Max_names_count = 10;
+const long Max_names_count = 10;
 
 
-int val_count(Node* node);
-int make_name_table(Node* node, char** name_table, int* cur_num);
-int take_adress(Node* node, char** name_table);
+long val_count(Node* node);
+long make_name_table(Node* node, char** name_table, long* cur_num);
+long take_adress(Node* node, char** name_table);
 double calculate(Node** big_root, Node* node, char** name_table);
 bool calc_bool(Node** big_root, Node* node, char** name_table);
-int do_oper_node(Node** big_root, Node* node, char** name_table);
-int do_func(Node** big_root, Node* node, Stack* st);
-int start_func(Node** big_root, Node* node, char** name_table);
+long do_oper_node(Node** big_root, Node* node, char** name_table);
+long do_func(Node** big_root, Node* node, Stack* st);
+long start_func(Node** big_root, Node* node, char** name_table);
 
 
 
-int val_count(Node* node)
+long val_count(Node* node)
 {
     if (node == nullptr)
         return 0;
@@ -46,14 +44,14 @@ int val_count(Node* node)
         return val_count(node->left) + val_count(node->right);
 }
 
-int make_name_table(Node* node, char** name_table, int* cur_num)
+long make_name_table(Node* node, char** name_table, long* cur_num)
 {
     if (node == nullptr)
         return 0;
 
     if (node->type == OPER_VALUE_create)
     {
-        name_table[*cur_num] = (char*)(int)(node->info + 0.1);
+        name_table[*cur_num] = (char*)(long)(node->info + 0.1);
         *cur_num += 1;
 
     }
@@ -64,10 +62,10 @@ int make_name_table(Node* node, char** name_table, int* cur_num)
     return 0;
 }
 
-int take_adress(Node* node, char** name_table)
+long take_adress(Node* node, char** name_table)
 {
-    int i = 1;
-    while ( strcmp( name_table[i], (char*)(int)(node->info + 0.1) ) )
+    long i = 1;
+    while ( strcmp( name_table[i], (char*)(long)(node->info + 0.1) ) )
         i++;
 
     return i;
@@ -79,7 +77,7 @@ double calculate(Node** big_root, Node* node, char** name_table)
         return 0;
 
     if (node->type == OPERATION)
-        switch ((int)node->info)
+        switch ((long)node->info)
         {
             case OP_plus:
                 return calculate(big_root, node->left,  name_table)
@@ -131,7 +129,7 @@ bool calc_bool(Node** big_root, Node* node, char** name_table)
     double left_calc  = calculate(big_root, node->left,  name_table);
     double right_calc = calculate(big_root, node->right, name_table);
 
-    switch ( (int)(node->info + 0.1) )
+    switch ( (long)(node->info + 0.1) )
     {
         case SRAWN_AbEq:
             return left_calc > right_calc || fabs(left_calc - right_calc) < EPS;
@@ -158,7 +156,7 @@ bool calc_bool(Node** big_root, Node* node, char** name_table)
     return 0;
 }
 
-int do_oper_node(Node** big_root, Node* node, char** name_table)
+long do_oper_node(Node** big_root, Node* node, char** name_table)
 {
     if (node == nullptr)
         return 0;
@@ -170,7 +168,7 @@ int do_oper_node(Node** big_root, Node* node, char** name_table)
         return 0;
     }
 
-    int adress = -1;
+    long adress = -1;
     double qwer = 0;
 
     switch (node->type)
@@ -211,14 +209,14 @@ int do_oper_node(Node** big_root, Node* node, char** name_table)
     return 0;
 }
 
-int do_func(Node** big_root, Node* node, Stack* st)
+long do_func(Node** big_root, Node* node, Stack* st)
 {
     char* name_table[Max_names_count] = {};
 
 
     Node* arg_node = node->left;
 
-    int i = 0;
+    long i = 0;
 
     if (st != nullptr)
         while (arg_node != nullptr)
@@ -228,9 +226,9 @@ int do_func(Node** big_root, Node* node, Stack* st)
             i++;
         }
 
-    int value_count = val_count(node);
+    long value_count = val_count(node);
 
-    int dBP = value_count + i;
+    long dBP = value_count + i;
 
     BP += dBP;
 
@@ -241,13 +239,13 @@ int do_func(Node** big_root, Node* node, Stack* st)
         arg_node = node->left;
         while (arg_node != nullptr)
         {
-            name_table[i] = (char*)(int)(arg_node->info + 0.1);
+            name_table[i] = (char*)(long)(arg_node->info + 0.1);
             arg_node = arg_node->left;
             i++;
         }
     }
 
-    int start_num = 1;
+    long start_num = 1;
     make_name_table(node, name_table, &start_num);
 
     do_oper_node(big_root, node->right, name_table);
@@ -258,7 +256,7 @@ int do_func(Node** big_root, Node* node, Stack* st)
     return 0;
 }
 
-int start_func(Node** big_root, Node* node, char** name_table)
+long start_func(Node** big_root, Node* node, char** name_table)
 {
     Stack st;
     StackCtor(&st, 4);
@@ -266,8 +264,8 @@ int start_func(Node** big_root, Node* node, char** name_table)
 
     while (arg_node != nullptr)
     {
-        char* name = (char*)(int)(arg_node->info + 0.1);
-        int i = 1;
+        char* name = (char*)(long)(arg_node->info + 0.1);
+        long i = 1;
 
         /*while ( strcmp(name_table[i], name) )
             i++;
@@ -282,9 +280,9 @@ int start_func(Node** big_root, Node* node, char** name_table)
         arg_node = arg_node->left;
     }
 
-    int i = 1;
+    long i = 1;
 
-    while ( strcmp( (char*)(int)((big_root[i])->info + 0.1), (char*)(int)(node->info + 0.1) ) )
+    while ( strcmp( (char*)(long)((big_root[i])->info + 0.1), (char*)(long)(node->info + 0.1) ) )
         i++;
 
 
@@ -294,9 +292,9 @@ int start_func(Node** big_root, Node* node, char** name_table)
     return 0;
 }
 
-int bigDtor(Node** big_root)
+long bigDtor(Node** big_root)
 {
-    int i = 0;
+    long i = 0;
     while (big_root[i] != nullptr)
     {
         NodeDtor(big_root[i]);
@@ -308,18 +306,19 @@ int bigDtor(Node** big_root)
 
 int main()
 {
-
-    char in_name[MaxStr] = "fact.cpp";
-    char out_name[MaxStr] = "recode.txt";
-
+    char in_name[MaxStr] = "code.txt";
     printf("enter in_name\n");
     scanf("%s", in_name);
 
     Node** big_root = read_code(in_name);
-
     do_func(big_root, big_root[0], nullptr);
 
-    bigDtor(big_root);
+    // char out_name[MaxStr] = "recode.txt";
+    // FILE* out_file = fopen(out_name, "w");
+    // print_code(out_file, big_root);
+    // fclose(out_file);
+    // print_code(stdout, big_root);
 
+    bigDtor(big_root);
     return 0;
 }

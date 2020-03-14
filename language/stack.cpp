@@ -1,6 +1,6 @@
 /// @file stack.cpp
 
-//#define MEOW ;
+#define MEOW ;
 #include <stdio.h>
 #include <assert.h>
 #include <stdlib.h>
@@ -27,7 +27,7 @@
         if(!(check))\
         {\
             printf("OOPS: %s in %s, line %d, function %s\n", #check, __FILE__, __LINE__, __PRETTY_FUNCTION__);\
-            abort -1;\
+            abort();\
         }
 
 #else
@@ -209,15 +209,15 @@ bool StackOk(const Stack *st)
         && (st->data != NULL) && (st->data != (st_t*)-1)
         && (st->capacity > 0)
         && (0 <= st->size) && (st->size <= st->capacity)
-        BY_DESIGN(&& (fabs(st->data[st->capacity] - BIRD) < EPS) && (fabs(st->data[-1] - BIRD) < EPS));     ///ПРОВЕРКА (ST->CAPACITY > 0) ЛИШНЯЯ
-    /// ТАК КАК ЕСТЬ (ST->size >= 0) && (ST->size <= ST->CAPACITY) - не лишняя т.к. иначе не проверяется случай равенства нулю
- ///НЕТ ПРОВЕРКИ НА ИЗМЕНЕНИЕ ДАННЫХ В СТЕКЕ - не обязательно
- ///НЕТ КАНАРЕЕК - fixed
+        BY_DESIGN(&& (fabs(st->data[st->capacity] - BIRD) < EPS) && (fabs(st->data[-1] - BIRD) < EPS));     ///пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ (ST->CAPACITY > 0) пїЅпїЅпїЅпїЅпїЅпїЅ
+    /// пїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅ (ST->size >= 0) && (ST->size <= ST->CAPACITY) - пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅ.пїЅ. пїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ
+ ///пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅ - пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+ ///пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ - fixed
 }
 
 Stack *StackCtor(Stack *st, int len)
 {
-    st->data = (st_t*)calloc(len + 2, sizeof(st_t)) + 1;  //!! А ЕСЛИ ВЕРНЕТ NULL - fixed in StackOk
+    st->data = (st_t*)calloc(len + 2, sizeof(st_t)) + 1;  //!! пїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ NULL - fixed in StackOk
 
     st->capacity = len;
     st->size = 0;
@@ -311,7 +311,7 @@ int StackCap_x2(Stack *st)
 {
     ST_ASSERT(st);
 
-    BY_DESIGN(st->data = (st_t*)realloc(st->data - 1, (st->capacity * 2 + 2) * sizeof(st_t)) + 1);  //REALLOC ТОЖЕ МОЖЕТ ВЕРНУТЬ NULL - fixed in StackOk
+    BY_DESIGN(st->data = (st_t*)realloc(st->data - 1, (st->capacity * 2 + 2) * sizeof(st_t)) + 1);  //REALLOC пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ NULL - fixed in StackOk
     st->capacity *= 2;
     BY_DESIGN(st->data[st->capacity] = BIRD);
 
@@ -473,8 +473,8 @@ st_t StackPop(Stack *st)
     assert(StackPop(st) == 199);
     assert(Stacksize(st) == 4);
     StackDtor(st);
-///ЮНИТ ТЕСТЫ НЕ ВЫЗЫВАЮТ ОШИБОЧНЫХ СИТУАЦИЙ: ЧТЕНИЕ ИЗ ПУСТОГО СТЕКА И Т Д - они и не должны валить прогу
-/// они должны проверять, что всё работает (кажется)
+///пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ: пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅ пїЅ пїЅ - пїЅпїЅпїЅ пїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ
+/// пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ, пїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ (пїЅпїЅпїЅпїЅпїЅпїЅпїЅ)
 
     return 0;
 }*/

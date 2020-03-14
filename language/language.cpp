@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include <assert.h>
-#include <sys\stat.h>
+#include <sys/types.h>
+#include <sys/stat.h>
+#include <unistd.h>
 #include <string.h>
 #include <stdlib.h>
 //#include <TXlib.h>
@@ -8,46 +10,47 @@
 
 
 
-const int MaxArr = 100;
-const int MaxStr = 100;
-const int Max_func_count = 10;
+const long MaxArr = 100;
+const long MaxStr = 100;
+const long Max_func_count = 10;
 
 const char* s = NULL;
-int str_num = 1;
+long str_num = 1;
 
 
-const int l_branch = 0;
-const int r_branch = 1;
+const long l_branch = 0;
+const long r_branch = 1;
 
-const int DONT_ADD_ROOT = 0;
-const int      ADD_ROOT = 1;
+const long DONT_ADD_ROOT = 0;
+const long      ADD_ROOT = 1;
 
-const int CONST_ = 0;
-const int VALUE = 1;
-const int OPERATION = 2;
-const int OPERATOR = 3;
-const int OPER_IF = 4;
-const int OPER_A = 5;
-const int OPER_VALUE_create = 6;
-const int OPER_SRAWN = 7;
-const int FUNC_create = 8;
-const int OPER_OUT = 9;
-const int OPER_IN = 10;
-const int FUNC_DO = 11;
-const int OPER_RET = 12;
+const long CONST_ = 0;
+const long VALUE = 1;
+const long OPERATION = 2;
+const long OPERATOR = 3;
+const long OPER_IF = 4;
+const long OPER_A = 5;
+const long OPER_VALUE_create = 6;
+const long OPER_SRAWN = 7;
+const long FUNC_create = 8;
+const long OPER_OUT = 9;
+const long OPER_IN = 10;
+const long FUNC_DO = 11;
+const long OPER_RET = 12;
+const long VOID = 13;
 
-const int OP_plus = 1;
-const int OP_minus = 2;
-const int OP_mul = 3;
-const int OP_div = 4;
-const int OP_sqrt = 5;
+const long OP_plus = 1;
+const long OP_minus = 2;
+const long OP_mul = 3;
+const long OP_div = 4;
+const long OP_sqrt = 5;
 
-const int SRAWN_AbEq = 1;
-const int SRAWN_Ab   = 2;
-const int SRAWN_BeEq = 3;
-const int SRAWN_Be   = 4;
-const int SRAWN_Eq   = 5;
-const int SRAWN_NoEq = 6;
+const long SRAWN_AbEq = 1;
+const long SRAWN_Ab   = 2;
+const long SRAWN_BeEq = 3;
+const long SRAWN_Be   = 4;
+const long SRAWN_Eq   = 5;
+const long SRAWN_NoEq = 6;
 
 
 #define TREE_Assert(tree) if(!TreeOk(tree)) Assert(0);
@@ -56,39 +59,39 @@ const int SRAWN_NoEq = 6;
 
 struct Node
 {
-    int type;
+    long type;
     double info;
     Node* left;
     Node* right;
     Node* parent;
-    int child_count;
+    long child_count;
 };
 
 struct Tree
 {
     Node* root;
-    int count;
+    long count;
 };
 
 
 Node* N_poison = (Node*)-1;
 
 
-int tree_count(Node* node);
+long tree_count(Node* node);
 bool TreeOk(const Tree* tree);
 bool NodeOk(const Node* node);
-int NodeCtor(Node* node, int type, const double info);
-int NodeDtor(Node* node);
-int TreeCtor(Tree* tree, Node* root);
-int TreeDtor(Tree* tree);
+long NodeCtor(Node* node, long type, const double info);
+long NodeDtor(Node* node);
+long TreeCtor(Tree* tree, Node* root);
+long TreeDtor(Tree* tree);
 
-int PasteNode(Tree* tree, Node* node, Node* node_par, const int branch, int add_root);
+long PasteNode(Tree* tree, Node* node, Node* node_par, const long branch, long add_root);
 Node* oper_node_create(Node* node, Node* node1, Node* node2, char oper);
 Node** read_code(const char* in_name);
-int print_node(FILE* out_file, const Node* node);
-int print_tree(FILE* out_file, const Node* node);
-int print_code(FILE* out_file, Node** big_root);
-int skipspaces();
+long print_node(FILE* out_file, const Node* node);
+long print_tree(FILE* out_file, const Node* node);
+long print_code(FILE* out_file, Node** big_root);
+long skipspaces();
 
 Node** GetG(const char* str);
 Node* GetE();
@@ -110,7 +113,7 @@ Node* GetRET();
 
 
 
-int tree_count(Node* node)
+long tree_count(Node* node)
 {
     if (node == nullptr)
         return 0;
@@ -138,10 +141,11 @@ bool NodeOk(const Node* node)
          || node->type == OPER_OUT
          || node->type == OPER_IN
          || node->type == OPER_RET
-         || node->type == FUNC_DO);
+         || node->type == FUNC_DO
+         || node->type == VOID);
 }
 
-int NodeCtor(Node* node, int type, const double info)
+long NodeCtor(Node* node, long type, const double info)
 {
     Assert(node != nullptr);
     Assert(type == CONST_
@@ -156,7 +160,8 @@ int NodeCtor(Node* node, int type, const double info)
         || type == OPER_OUT
         || type == OPER_IN
         || type == OPER_RET
-        || type == FUNC_DO);
+        || type == FUNC_DO
+        || type == VOID);
 
     node->type = type;
     node->info = info;
@@ -168,7 +173,7 @@ int NodeCtor(Node* node, int type, const double info)
     return 0;
 }
 
-int NodeDtor(Node* node)
+long NodeDtor(Node* node)
 {
     if (node == nullptr || node == N_poison)
         return 0;
@@ -185,7 +190,7 @@ int NodeDtor(Node* node)
     return 0;
 }
 
-int TreeCtor(Tree* tree, Node* root)
+long TreeCtor(Tree* tree, Node* root)
 {
     tree->root = root;
     tree->count = 0;
@@ -194,7 +199,7 @@ int TreeCtor(Tree* tree, Node* root)
     return 0;
 }
 
-int TreeDtor(Tree* tree)
+long TreeDtor(Tree* tree)
 {
     TREE_Assert(tree)
 
@@ -203,7 +208,7 @@ int TreeDtor(Tree* tree)
     return 0;
 }
 
-int PasteNode(Tree* tree, Node* node, Node* node_par, const int branch, int add_root)
+long PasteNode(Tree* tree, Node* node, Node* node_par, const long branch, long add_root)
 {
     NODE_Assert(node)
     Assert(branch == l_branch || branch == r_branch);
@@ -280,7 +285,7 @@ Node** GetG(const char* str)
 
     skipspaces();
 
-    for (int i = 1; *s != '\0'; i++)
+    for (long i = 1; *s != '\0'; i++)
     {
         root[i] = GetFunc_create();
         skipspaces();
@@ -301,7 +306,7 @@ Node* GetE()
 
     while (*s == '-' || *s == '+')
     {
-        int op = *s;
+        long op = *s;
         s++;
 
         skipspaces();
@@ -335,7 +340,7 @@ Node* GetT()
 
     while (*s == '*' || *s == '/')
     {
-        int op = *s;
+        long op = *s;
         s++;
 
         skipspaces();
@@ -440,8 +445,8 @@ Node* GetD()
     skipspaces();
 
     double val = 0;
-    int n;
-    sscanf(s, "%lf%n", &val, &n);
+    long n;
+    sscanf(s, "%lf%ln", &val, &n);
     s += n;
 
     Node* node = (Node*)calloc(1, sizeof(Node));
@@ -463,14 +468,14 @@ Node* GetVal_create()
     skipspaces();
 
     char* name = (char*)calloc(MaxStr, sizeof(char));
-    int len = 0;
-    sscanf(s, "%[a-z_]%n", name, &len);
+    long len = 0;
+    sscanf(s, "%[a-z_]%ln", name, &len);
     s += len;
 
     skipspaces();
 
     Node* node = (Node*)calloc(1, sizeof(Node));
-    NodeCtor(node, OPER_VALUE_create, (int)name);
+    NodeCtor(node, OPER_VALUE_create, (long)name);
 
     return node;
 }
@@ -566,14 +571,14 @@ Node* GetVal()
     skipspaces();
 
     char* name = (char*)calloc(MaxStr, sizeof(char));
-    int len = 0;
-    sscanf(s, "%[a-z_]%n", name, &len);
+    long len = 0;
+    sscanf(s, "%[a-z_]%ln", name, &len);
     s += len;
 
     skipspaces();
 
     Node* node = (Node*)calloc(1, sizeof(Node));
-    NodeCtor(node, VALUE, (int)name);
+    NodeCtor(node, VALUE, (long)name);
 
     skipspaces();
     return node;
@@ -615,12 +620,12 @@ Node* GetOUT()
     skipspaces();
 
     char* name = (char*)calloc(MaxStr, sizeof(char));
-    int len = 0;
-    sscanf(s, "%[a-z_]%n", name, &len);
+    long len = 0;
+    sscanf(s, "%[a-z_]%ln", name, &len);
     s += len;
 
     Node* node = (Node*)calloc(1, sizeof(Node));
-    NodeCtor(node, OPER_OUT, (int)name);
+    NodeCtor(node, OPER_OUT, (long)name);
 
 
     skipspaces();
@@ -639,12 +644,12 @@ Node* GetIN()
     skipspaces();
 
     char* name = (char*)calloc(MaxStr, sizeof(char));
-    int len = 0;
-    sscanf(s, "%[a-z_]%n", name, &len);
+    long len = 0;
+    sscanf(s, "%[a-z_]%ln", name, &len);
     s += len;
 
     Node* node = (Node*)calloc(1, sizeof(Node));
-    NodeCtor(node, OPER_IN, (int)name);
+    NodeCtor(node, OPER_IN, (long)name);
 
 
     skipspaces();
@@ -757,12 +762,12 @@ Node* GetFunc_create()
     skipspaces();
 
     char* name = (char*)calloc(MaxStr, sizeof(char));
-    int len = 0;
-    sscanf(s, "%[a-z_]%n", name, &len);
+    long len = 0;
+    sscanf(s, "%[a-z_]%ln", name, &len);
     s += len;
 
     Node* node = (Node*)calloc(1, sizeof(Node));
-    NodeCtor(node, FUNC_create, (int)name);
+    NodeCtor(node, FUNC_create, (long)name);
 
     skipspaces();
 
@@ -778,7 +783,7 @@ Node* GetFunc_create()
 
         node3->left = node2;
         node2->parent = node3;
-        node2 = node3;
+        node3 = node2;
     }
 
     node->left = node1;
@@ -807,32 +812,34 @@ Node* GetFunc_DO()
     skipspaces();
 
     char* name = (char*)calloc(MaxStr, sizeof(char));
-    int len = 0;
-    sscanf(s, "%[a-z_]%n", name, &len);
+    long len = 0;
+    sscanf(s, "%[a-z_]%ln", name, &len);
     s += len;
 
     Node* node = (Node*)calloc(1, sizeof(Node));
-    NodeCtor(node, FUNC_DO, (int)name);
+    NodeCtor(node, FUNC_DO, (long)name);
 
     skipspaces();
 
-    Node* node1 = (Node*)calloc(1, sizeof(Node));///////
-    NodeCtor(node1, CONST_, 0);//////////
-    node1->right = GetP();/////////////////////////
+    Node* node1 = (Node*)calloc(1, sizeof(Node));
+    NodeCtor(node1, VOID, 0);
+    node1->right = GetP();
+    node1->right->parent = node1;
     Node* node3 = node1;
 
     skipspaces();
 
-    while ('a' <= *s && *s <= 'z' || '0' <= *s && *s <= '9' || *s == ')' || *s == '(')//////////////////////
+    while ('a' <= *s && *s <= 'z' || '0' <= *s && *s <= '9' || *s == ')' || *s == '(')
     {
         skipspaces();
-        Node* node2 = (Node*)calloc(1, sizeof(Node));///////
-        NodeCtor(node2, CONST_, 0);//////////
-        node2->right = GetP();//////////////////////////
+        Node* node2 = (Node*)calloc(1, sizeof(Node));
+        NodeCtor(node2, VOID, 0);
+        node2->right = GetP();
+        node2->right->parent = node2;
 
         node3->left = node2;
         node2->parent = node3;
-        node2 = node3;
+        node3 = node2;
     }
 
     node->left = node1;
@@ -871,7 +878,7 @@ Node** read_code(const char* in_name)
 
     struct stat file_stat;
     stat(in_name, &file_stat);
-    int file_len = file_stat.st_size;
+    long file_len = file_stat.st_size;
 
     char* text = (char*)calloc(file_len, sizeof(char));
     fread(text, sizeof(char), file_len, in_file);
@@ -884,7 +891,7 @@ Node** read_code(const char* in_name)
     return rez;
 }
 
-int skipspaces()
+long skipspaces()
 {
     while (*s == ' ' || *s == '\n' || *s == '\t')
     {
@@ -895,7 +902,7 @@ int skipspaces()
     return 0;
 }
 
-int print_node(FILE* out_file, const Node* node)
+long print_node(FILE* out_file, const Node* node)
 {
     Assert(out_file != nullptr);
 
@@ -913,7 +920,7 @@ int print_node(FILE* out_file, const Node* node)
             break;
 
         case OPERATION:
-            switch ( (int)(node->info + 0.1) )
+            switch ( (long)(node->info + 0.1) )
             {
                 case OP_plus:
                     fprintf(out_file, " + ");
@@ -935,13 +942,18 @@ int print_node(FILE* out_file, const Node* node)
             break;
 
         case VALUE:
-            fprintf(out_file, "%s", (char*)(int)(node->info + 0.1));
-            if (node->parent->type == VALUE || node->parent->type == FUNC_create)
+            fprintf(out_file, "%s", (char*)(long)(node->info + 0.1));
+            if (node->parent && (
+                   node->parent->type == VALUE
+                || node->parent->type == FUNC_create
+                || node->parent->type == VOID
+                )
+            )
                 fprintf(out_file, " ");
             break;
 
         case OPER_VALUE_create:
-            fprintf(out_file, "CREATE %s", (char*)(int)(node->info + 0.1));
+            fprintf(out_file, "CREATE %s", (char*)(long)(node->info + 0.1));
             break;
 
         case OPER_A:
@@ -951,8 +963,11 @@ int print_node(FILE* out_file, const Node* node)
         case OPER_IF:
             break;
 
+        case VOID:
+            break;
+
         case OPER_SRAWN:
-            switch ( (int)(node->info + 0.1) )
+            switch ( (long)(node->info + 0.1) )
             {
                 case SRAWN_Ab:
                     fprintf(out_file, " > ");
@@ -980,11 +995,11 @@ int print_node(FILE* out_file, const Node* node)
             break;
 
         case OPER_OUT:
-            fprintf(out_file, "OUT %s", (char*)(int)(node->info + 0.1));
+            fprintf(out_file, "OUT %s", (char*)(long)(node->info + 0.1));
             break;
 
         case OPER_IN:
-            fprintf(out_file, "IN %s", (char*)(int)(node->info + 0.1));
+            fprintf(out_file, "IN %s", (char*)(long)(node->info + 0.1));
             break;
 
         case FUNC_DO:
@@ -1001,7 +1016,7 @@ int print_node(FILE* out_file, const Node* node)
     return 0;
 }
 
-int print_tree(FILE* out_file, const Node* node)
+long print_tree(FILE* out_file, const Node* node)
 {
     Assert(out_file != nullptr);
 
@@ -1026,15 +1041,14 @@ int print_tree(FILE* out_file, const Node* node)
     if (node->type == FUNC_create)
     {
         fprintf(out_file, "FUNC ");
-        fprintf(out_file, "%s ", (char*)(int)(node->info + 0.1));
+        fprintf(out_file, "%s ", (char*)(long)(node->info + 0.1));
     }
 
     if (node->type == FUNC_DO)
     {
         fprintf(out_file, "DO ");
-        fprintf(out_file, "%s ", (char*)(int)(node->info + 0.1));
+        fprintf(out_file, "%s ", (char*)(long)(node->info + 0.1));
     }
-
 
     print_tree(out_file, node->left);
     print_node(out_file, node);
@@ -1047,10 +1061,10 @@ int print_tree(FILE* out_file, const Node* node)
     return 0;
 }
 
-int print_code(FILE* out_file, Node** big_root)
+long print_code(FILE* out_file, Node** big_root)
 {
 
-    for (int i = 0; big_root[i] != nullptr && i < Max_func_count; i++)
+    for (long i = 0; big_root[i] != nullptr && i < Max_func_count; i++)
     {
         print_tree(out_file, big_root[i]);
         fprintf(out_file, "\n\n\n");
@@ -1058,20 +1072,4 @@ int print_code(FILE* out_file, Node** big_root)
 
     return 0;
 }
-
-
-/*int main()
-{
-    char in_name[MaxStr] = "code.txt";
-    char out_name[MaxStr] = "recode.txt";
-
-    Node** big_root = read_code(in_name);
-
-    FILE* out_file = fopen(out_name, "w");
-
-    print_code(out_file, big_root);
-    print_code(stdout, big_root);
-
-    fclose(out_file);
-}*/
 

@@ -1,0 +1,26 @@
+FUNC main z
+{
+	CREATE a;
+	IN a;
+
+	CREATE b;
+	IN b;
+
+	CREATE c;
+	
+	c = DO mul a a a;
+	
+	OUT c;
+	c = @ c;
+	OUT c;
+
+	IF c # 6 c = b + a;
+	OUT c;
+	RET 0;
+
+}
+
+FUNC mul q w e
+{
+	RET q * w * e;
+}
